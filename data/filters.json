@@ -1,0 +1,190 @@
+{
+  "categories": [
+    {
+      "id": "aaaaaaaa-bbbb-cccc-8732-eab39171c001",
+      "value": "aaaaaaaa-bbbb-cccc-8732-eab39171c001",
+      "name": "Konst"
+    },
+    {
+      "id": "aaaaaaaa-bbbb-cccc-8732-eab39171c002",
+      "value": "aaaaaaaa-bbbb-cccc-8732-eab39171c002",
+      "name": "Film"
+    },
+    {
+      "id": "aaaaaaaa-bbbb-cccc-8732-eab39171c003",
+      "value": "aaaaaaaa-bbbb-cccc-8732-eab39171c003",
+      "name": "Litteratur"
+    },
+    {
+      "id": "aaaaaaaa-bbbb-cccc-8732-eab39171c005",
+      "value": "aaaaaaaa-bbbb-cccc-8732-eab39171c005",
+      "name": "Dans"
+    },
+    {
+      "id": "aaaaaaaa-bbbb-cccc-8732-eab39171c007",
+      "value": "aaaaaaaa-bbbb-cccc-8732-eab39171c007",
+      "name": "Musik"
+    },
+    {
+      "id": "aaaaaaaa-bbbb-cccc-8732-eab39171c009",
+      "value": "aaaaaaaa-bbbb-cccc-8732-eab39171c009",
+      "name": "Teater"
+    },
+    {
+      "id": "aaaaaaaa-bbbb-cccc-8732-eab39171c010",
+      "value": "aaaaaaaa-bbbb-cccc-8732-eab39171c010",
+      "name": "Seminarium, föreläsning, samtal"
+    },
+    {
+      "id": "aaaaaaaa-bbbb-cccc-8732-eab39171c011",
+      "value": "aaaaaaaa-bbbb-cccc-8732-eab39171c011",
+      "name": "Vandring/guidad tur"
+    },
+    {
+      "id": "aaaaaaaa-bbbb-cccc-8732-eab39171c012",
+      "value": "aaaaaaaa-bbbb-cccc-8732-eab39171c012",
+      "name": "Workshop och prova på"
+    },
+    {
+      "id": "aaaaaaaa-bbbb-cccc-8732-eab39171c013",
+      "value": "aaaaaaaa-bbbb-cccc-8732-eab39171c013",
+      "name": "Mat"
+    },
+    {
+      "id": "aaaaaaaa-bbbb-cccc-8732-eab39171c014",
+      "value": "aaaaaaaa-bbbb-cccc-8732-eab39171c014",
+      "name": "Öppet hus och visning"
+    },
+    {
+      "id": "aaaaaaaa-bbbb-cccc-8732-eab39171c015",
+      "value": "aaaaaaaa-bbbb-cccc-8732-eab39171c015",
+      "name": "Frågesport, spel och gaming"
+    }
+  ],
+  "locations": [
+    {
+      "id": "aaaaaaaa-bbbb-cccc-8732-eab39171a001",
+      "value": "aaaaaaaa-bbbb-cccc-8732-eab39171a001",
+      "name": "Utomhus"
+    },
+    {
+      "id": "aaaaaaaa-bbbb-cccc-8732-eab39171a002",
+      "value": "aaaaaaaa-bbbb-cccc-8732-eab39171a002",
+      "name": "Inomhus"
+    },
+    {
+      "id": "aaaaaaaa-bbbb-cccc-8732-eab39171a003",
+      "value": "aaaaaaaa-bbbb-cccc-8732-eab39171a003",
+      "name": "Scen"
+    },
+    {
+      "id": "aaaaaaaa-bbbb-cccc-8732-eab39171a004",
+      "value": "aaaaaaaa-bbbb-cccc-8732-eab39171a004",
+      "name": "Digitalt"
+    }
+  ],
+  "languages": [
+    {
+      "id": "fb739f12-fb5b-430e-8a75-112dfbb5518e",
+      "value": "fb739f12-fb5b-430e-8a75-112dfbb5518e",
+      "name": "Italienska"
+    },
+    {
+      "id": "72994d31-514a-4a7f-8aeb-13bc19febb62",
+      "value": "72994d31-514a-4a7f-8aeb-13bc19febb62",
+      "name": "Spanska"
+    },
+    {
+      "id": "c393a8bc-523f-4ba8-9f0e-180359a08669",
+      "value": "c393a8bc-523f-4ba8-9f0e-180359a08669",
+      "name": "Kinesiska (mandarin)"
+    },
+    {
+      "id": "f2c67bd4-f80d-4201-975b-1bc7043e957d",
+      "value": "f2c67bd4-f80d-4201-975b-1bc7043e957d",
+      "name": "Engelska"
+    },
+    {
+      "id": "51c09063-feb5-4eb6-83dc-2a637eb180ca",
+      "value": "51c09063-feb5-4eb6-83dc-2a637eb180ca",
+      "name": "Polska"
+    },
+    {
+      "id": "0735ef42-3047-4a72-ba13-61eb8bce2703",
+      "value": "0735ef42-3047-4a72-ba13-61eb8bce2703",
+      "name": "Svenska"
+    },
+    {
+      "id": "1971fd9a-72ac-4161-bba6-6cf655be7b1f",
+      "value": "1971fd9a-72ac-4161-bba6-6cf655be7b1f",
+      "name": "Evenemanget kräver inga språkkunskaper"
+    },
+    {
+      "id": "dbb3c50d-c344-48d7-841f-78249f1f56d5",
+      "value": "dbb3c50d-c344-48d7-841f-78249f1f56d5",
+      "name": "Tyska"
+    },
+    {
+      "id": "22157d26-b64e-4ebf-a733-9a2151308ddd",
+      "value": "22157d26-b64e-4ebf-a733-9a2151308ddd",
+      "name": "Arabiska"
+    },
+    {
+      "id": "b0337dfb-1c00-4a79-b80e-a39c5031d88a",
+      "value": "b0337dfb-1c00-4a79-b80e-a39c5031d88a",
+      "name": "Finska"
+    },
+    {
+      "id": "327bbd07-b58f-47c3-8962-c5eada5bd4c8",
+      "value": "327bbd07-b58f-47c3-8962-c5eada5bd4c8",
+      "name": "Franska"
+    },
+    {
+      "id": "187006e4-c513-4ab0-acf1-f0543aa34b3c",
+      "value": "187006e4-c513-4ab0-acf1-f0543aa34b3c",
+      "name": "Ryska"
+    },
+    {
+      "id": "5f25aa27-e1a5-48a0-8507-f1eb2828484c",
+      "value": "5f25aa27-e1a5-48a0-8507-f1eb2828484c",
+      "name": "Ukrainska"
+    }
+  ],
+  "accessibilities": [
+    {
+      "id": "aaaaaaaa-bbbb-cccc-8732-eab39171b001",
+      "value": "aaaaaaaa-bbbb-cccc-8732-eab39171b001",
+      "name": "Hiss anpassad för rullstol"
+    },
+    {
+      "id": "aaaaaaaa-bbbb-cccc-8732-eab39171b002",
+      "value": "aaaaaaaa-bbbb-cccc-8732-eab39171b002",
+      "name": "Toalett tillgänglig med rullstol"
+    },
+    {
+      "id": "aaaaaaaa-bbbb-cccc-8732-eab39171b003",
+      "value": "aaaaaaaa-bbbb-cccc-8732-eab39171b003",
+      "name": "Tillgänglighet anpassad för rullstol"
+    },
+    {
+      "id": "aaaaaaaa-bbbb-cccc-8732-eab39171b004",
+      "value": "aaaaaaaa-bbbb-cccc-8732-eab39171b004",
+      "name": "Tillgänglighet för synskadade"
+    },
+    {
+      "id": "aaaaaaaa-bbbb-cccc-8732-eab39171b005",
+      "value": "aaaaaaaa-bbbb-cccc-8732-eab39171b005",
+      "name": "God miljö för hörselskadade"
+    },
+    {
+      "id": "aaaaaaaa-bbbb-cccc-8732-eab39171b006",
+      "value": "aaaaaaaa-bbbb-cccc-8732-eab39171b006",
+      "name": "Barnvagnsvänligt"
+    },
+    {
+      "id": "aaaaaaaa-bbbb-cccc-8732-eab39171b007",
+      "value": "aaaaaaaa-bbbb-cccc-8732-eab39171b007",
+      "name": "Erbjuds på teckenspråk"
+    }
+  ]
+}

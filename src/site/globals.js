@@ -1,0 +1,1 @@
+const SHOW_CATEGORIES_IN_LIST = false;

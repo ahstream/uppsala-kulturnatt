@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Uppsala Kulturnatt 2026</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="top-bar">
+        <h1>Uppsala Kulturnatt 2026</h1>
+        <button class="login-button" type="button">Login</button>
+      </div>
+      <nav class="tabs">
+        <button id="tab-program" class="events-tab active" type="button" aria-label="Event (0)" title="Event (0)"><span aria-hidden="true">&#128197;</span> <span class="event-count">(0)</span></button>
+        <button id="tab-favorites" class="favorites-tab" type="button" aria-label="Favoriter (0)" title="Favoriter (0)"><span aria-hidden="true">★</span> <span class="favorite-count">(0)</span></button>
+        <button id="tab-live" class="live-tab" type="button" aria-label="Live (0)" title="Live (0)"><i class="fa-solid fa-clock" aria-hidden="true"></i> <span class="live-count">(0)</span></button>
+      </nav>
+      <div class="filter-status">
+        <div id="filtered-events" class="filtered-events" aria-live="polite">Filtered events: 0</div>
+        <button id="show-filters" class="clear-search" type="button" aria-label="Show filters" title="Show filters" aria-expanded="false" aria-pressed="false"><i class="fa-solid fa-filter" aria-hidden="true"></i> <span id="filter-count"></span></button>
+        <button id="clear-filters" class="clear-search clear-icon" type="button" aria-label="Clear filters" title="Clear filters" disabled><span aria-hidden="true">&#10005;</span></button>
+      </div>
+      <section id="filter-panel" class="filter-panel" aria-label="Filters" hidden>
+        <div class="primary-filters">
+          <label><input id="children-filter" type="checkbox" /> För barn</label>
+          <label><input id="free-filter" type="checkbox" /> Gratis</label>
+        </div>
+        <div class="filters">
+          <div class="multi-filter">
+            <details id="category-menu" class="filter-menu">
+              <summary id="category-summary">All categories</summary>
+              <div id="category-options" class="filter-options">
+                <label><input type="checkbox" value="all" checked /> All categories</label>
+              </div>
+            </details>
+          </div>
+          <div class="multi-filter">
+            <details id="language-menu" class="filter-menu">
+              <summary id="language-summary">All languages</summary>
+              <div id="language-options" class="filter-options">
+                <label><input type="checkbox" value="all" checked /> All languages</label>
+              </div>
+            </details>
+          </div>
+          <div class="multi-filter">
+            <details id="location-menu" class="filter-menu">
+              <summary id="location-summary">All locations</summary>
+              <div id="location-options" class="filter-options">
+                <label><input type="checkbox" value="all" checked /> All locations</label>
+              </div>
+            </details>
+          </div>
+          <div class="multi-filter">
+            <details id="accessibility-menu" class="filter-menu">
+              <summary id="accessibility-summary">All accessibilities</summary>
+              <div id="accessibility-options" class="filter-options">
+                <label><input type="checkbox" value="all" checked /> All accessibilities</label>
+              </div>
+            </details>
+          </div>
+        </div>
+        <label class="search-field">
+          <input id="event-search" type="search" placeholder="Search title or description" autocomplete="off" />
+        </label>
+      </section>
+    </header>
+
+    <main>
+      <div id="status">Loading events…</div>
+      <div id="list" class="list"></div>
+    </main>
+
+    <script src="globals.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
