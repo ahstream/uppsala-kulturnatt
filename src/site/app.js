@@ -6,6 +6,7 @@ const $activeTabHeading = document.getElementById('active-tab-heading');
 const $programSortControls = document.getElementById('program-sort-controls');
 const $programSortStart = document.getElementById('program-sort-start');
 const $programSortSeen = document.getElementById('program-sort-seen');
+const $themeToggle = document.getElementById('theme-toggle');
 const $list = document.getElementById('list');
 const $search = document.getElementById('event-search');
 const $clearFilters = document.getElementById('clear-filters');
@@ -43,6 +44,18 @@ let lastScrollY = window.scrollY;
 let stickyDownScrollDistance = 0;
 const RECENT_EVENT_WINDOW_MS = 60 * 60 * 1000;
 const SOON_EVENT_WINDOW_MS = 60 * 60 * 1000;
+
+function setTheme(theme) {
+  document.body.dataset.theme = theme;
+  localStorage.setItem('theme', theme);
+  const isLight = theme === 'light';
+  $themeToggle.innerHTML = isLight ? '<i class="fa-solid fa-moon" aria-hidden="true"></i>' : '<i class="fa-regular fa-sun" aria-hidden="true"></i>';
+  const label = isLight ? 'Byt till mörkt läge' : 'Byt till ljust läge';
+  $themeToggle.setAttribute('aria-label', label);
+  $themeToggle.title = label;
+}
+
+setTheme(localStorage.getItem('theme') === 'light' ? 'light' : 'dark');
 
 function eventStartTime(event) {
   return new Date(event.start || event.startTime || 0).getTime();
@@ -341,7 +354,7 @@ function createCategoryChip(category) {
 }
 
 function setFavoriteIcon(star, isFavorite) {
-  star.innerHTML = isFavorite ? '<i class="fa-solid fa-star" aria-hidden="true"></i>' : '<svg class="favorite-star-outline" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.75l2.84 5.76 6.36.92-4.6 4.48 1.09 6.33L12 17.25l-5.69 2.99 1.09-6.33-4.6-4.48 6.36-.92L12 2.75z"></path></svg>';
+  star.innerHTML = isFavorite ? '<i class="fa-solid fa-star" aria-hidden="true"></i>' : '<i class="fa-sharp fa-regular fa-star" aria-hidden="true"></i>';
 }
 
 function updateClearFiltersButton() {
@@ -356,10 +369,11 @@ function updateFilterCount() {
 }
 
 function updateShowFiltersButton(countLabel = $filterCount.textContent) {
-  const label = $filterPanel.hidden ? 'Visa' : 'Dölj';
-  $showFiltersLabel.textContent = label;
-  $showFilters.setAttribute('aria-label', `${label} filter${countLabel}`);
-  $showFilters.title = `${label} filter${countLabel}`;
+  const label = '<i class="fa-solid fa-filter" aria-hidden="true"></i>';
+  const actionLabel = $filterPanel.hidden ? 'Visa filter' : 'Dölj filter';
+  $showFiltersLabel.innerHTML = label;
+  $showFilters.setAttribute('aria-label', `${actionLabel}${countLabel}`);
+  $showFilters.title = `${actionLabel}${countLabel}`;
 }
 
 function updateSelectedFilters(filteredEventCount) {
@@ -368,13 +382,13 @@ function updateSelectedFilters(filteredEventCount) {
   if ($childrenFilter.checked) selectedFilters.push('Barn');
   if ($freeFilter.checked) selectedFilters.push('Gratis');
   for (const filter of multiFilters) selectedFilters.push(...selectedFilterValues(filter));
-  if ($fromFilter.value) selectedFilters.push(`From ${$fromFilter.value}`);
-  if ($toFilter.value) selectedFilters.push(`To ${$toFilter.value}`);
+  if ($fromFilter.value) selectedFilters.push(`Från ${$fromFilter.value}`);
+  if ($toFilter.value) selectedFilters.push(`Till ${$toFilter.value}`);
   const selectedFilterText = selectedFilters.length > 0 ? selectedFilters.join(', ') : 'Inga';
   $selectedFilters.replaceChildren();
   const label = document.createElement('span');
   label.className = 'filter-label';
-  label.textContent = 'Filter:';
+  label.textContent = 'FILTER:';
   const values = document.createElement('span');
   values.textContent = ` ${selectedFilterText} (${filteredEventCount})`;
   $selectedFilters.append(label, values);
@@ -554,9 +568,11 @@ function renderList(events) {
     titleGroup.className = 'event-title-group';
     titleGroup.appendChild(titleText);
 
+    const titleLine = document.createElement('div');
+    titleLine.className = 'line title-line';
+    titleLine.appendChild(titleGroup);
+
     timeLine.appendChild(timeLabel);
-    timeLine.appendChild(document.createTextNode(' '));
-    timeLine.appendChild(titleGroup);
 
     const parentTitle = ev.parentTitle || ev.parent || ev.groupTitle;
     let parentLine = null;
@@ -621,7 +637,7 @@ function renderList(events) {
       }
     });
     titleGroup.appendChild(star);
-    timeLine.title = `${timeText} ${titleText.textContent}`;
+    titleLine.title = `${timeText} ${titleText.textContent}`;
 
     let details = null;
 
@@ -659,7 +675,14 @@ function renderList(events) {
       }
     });
 
+    if (ev.isCancelled) {
+      const cancelledBadge = document.createElement('div');
+      cancelledBadge.className = 'cancelled-badge';
+      cancelledBadge.textContent = 'INSTÄLLT';
+      card.appendChild(cancelledBadge);
+    }
     card.appendChild(timeLine);
+    card.appendChild(titleLine);
     if (parentLine) card.appendChild(parentLine);
     if (locationLine.textContent) card.appendChild(locationLine);
     const updated = formatLocalDateTime(ev.updated);
@@ -670,12 +693,6 @@ function renderList(events) {
       card.appendChild(updatedLine);
     }
     card.appendChild(tags);
-    if (ev.isCancelled) {
-      const cancelledBadge = document.createElement('div');
-      cancelledBadge.className = 'cancelled-badge';
-      cancelledBadge.textContent = 'INSTÄLLT';
-      card.appendChild(cancelledBadge);
-    }
     $list.appendChild(card);
   }
 }
@@ -719,6 +736,9 @@ tabs.live.addEventListener('click', () => setActive('live'));
 tabs.recent.addEventListener('click', () => setActive('recent'));
 tabs.soon.addEventListener('click', () => setActive('soon'));
 tabs.later.addEventListener('click', () => setActive('later'));
+$themeToggle.addEventListener('click', () => {
+  setTheme(document.body.dataset.theme === 'light' ? 'dark' : 'light');
+});
 $programSortStart.addEventListener('click', () => {
   programSortMode = 'start';
   updateProgramSortControls();

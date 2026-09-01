@@ -1,1 +1,1 @@
-const SHOW_CATEGORIES_IN_LIST = false;
+const SHOW_CATEGORIES_IN_LIST = true;

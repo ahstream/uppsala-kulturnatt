@@ -87,6 +87,7 @@ export function finalizeEvents(events: any[], filters: any) {
   const out = events.map((ev) => {
     const copy: any = { ...(ev || {}) };
     if (typeof copy.about === 'string') copy.about = copy.about.trim();
+    if (typeof copy.title === 'string') copy.title = copy.title.replace(/^:+/, '').trim();
     let evCats: any[] = [];
     if (Array.isArray(copy.categories)) evCats = copy.categories;
     else if (Array.isArray(copy.category)) evCats = copy.category;
