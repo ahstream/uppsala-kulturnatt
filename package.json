@@ -1,6 +1,6 @@
 {
   "name": "uppsala-kulturnatt",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "CLI to fetch events from Kulturnatten API",
   "main": "dist/cli/fetchEvents.js",
   "scripts": {
