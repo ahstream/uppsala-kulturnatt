@@ -25,6 +25,23 @@ body {
   padding: 24px;
 }
 
+header,
+main {
+  width: min(100%, 960px);
+  margin-inline: auto;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 12px;
+  }
+
+  header,
+  main {
+    width: 100%;
+  }
+}
+
 header {
   position: sticky;
   top: 0;
@@ -283,6 +300,11 @@ h1 {
   font-size: 0.95rem;
 }
 
+.filter-label {
+  color: var(--text);
+  font-weight: 700;
+}
+
 .filter-header {
   display: flex;
   align-items: flex-start;
@@ -381,7 +403,7 @@ main {
 .list {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
 }
 
 .card {
@@ -411,8 +433,7 @@ main {
 }
 
 .card + .card {
-  border-top: 1px solid transparent;
-  border-image: linear-gradient(90deg, var(--accent-2), var(--accent), var(--accent-2)) 1;
+  border-top: 2px solid rgba(255, 255, 255, 0.14);
 }
 
 .card:focus-visible {
@@ -425,11 +446,12 @@ main {
 }
 
 .time-line {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3px;
   font-size: 0.95rem;
   font-weight: 400;
+}
+
+.event-time {
+  margin-right: 4px;
 }
 
 .event-title {
@@ -438,9 +460,7 @@ main {
 }
 
 .event-title-group {
-  display: inline-flex;
-  align-items: baseline;
-  flex-wrap: wrap;
+  display: inline;
 }
 
 .secondary {
@@ -490,8 +510,16 @@ main {
 }
 
 .star.inactive {
-  opacity: 0.45;
-  color: var(--muted);
+  color: #ffffff;
+}
+
+.favorite-star-outline {
+  width: 0.95rem;
+  height: 0.95rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linejoin: round;
+  stroke-width: 1.35;
 }
 
 .event-details {

@@ -340,6 +340,10 @@ function createCategoryChip(category) {
   return tag;
 }
 
+function setFavoriteIcon(star, isFavorite) {
+  star.innerHTML = isFavorite ? '<i class="fa-solid fa-star" aria-hidden="true"></i>' : '<svg class="favorite-star-outline" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.75l2.84 5.76 6.36.92-4.6 4.48 1.09 6.33L12 17.25l-5.69 2.99 1.09-6.33-4.6-4.48 6.36-.92L12 2.75z"></path></svg>';
+}
+
 function updateClearFiltersButton() {
   $clearFilters.disabled = !$search.value && !$childrenFilter.checked && !$freeFilter.checked && !$fromFilter.value && !$toFilter.value && multiFilters.every((filter) => selectedFilterValues(filter).length === 0);
 }
@@ -367,7 +371,13 @@ function updateSelectedFilters(filteredEventCount) {
   if ($fromFilter.value) selectedFilters.push(`From ${$fromFilter.value}`);
   if ($toFilter.value) selectedFilters.push(`To ${$toFilter.value}`);
   const selectedFilterText = selectedFilters.length > 0 ? selectedFilters.join(', ') : 'Inga';
-  $selectedFilters.textContent = `Filter: ${selectedFilterText} (${filteredEventCount})`;
+  $selectedFilters.replaceChildren();
+  const label = document.createElement('span');
+  label.className = 'filter-label';
+  label.textContent = 'Filter:';
+  const values = document.createElement('span');
+  values.textContent = ` ${selectedFilterText} (${filteredEventCount})`;
+  $selectedFilters.append(label, values);
 }
 
 function closeFilters() {
@@ -531,6 +541,10 @@ function renderList(events) {
     const endValue = ev.end || ev.endTime || ev.endTimeText ? formatLocalClockTime(ev.end || ev.endTime || ev.endTimeText) : null;
     const timeText = endValue ? `${startValue}–${endValue}` : startValue;
 
+    const timeLabel = document.createElement('span');
+    timeLabel.className = 'event-time';
+    timeLabel.textContent = timeText;
+
     const titleText = document.createElement('span');
     titleText.className = 'event-title';
     const eventTitle = ev.title || ev.name || ev.displayName || 'Untitled';
@@ -540,7 +554,8 @@ function renderList(events) {
     titleGroup.className = 'event-title-group';
     titleGroup.appendChild(titleText);
 
-    timeLine.appendChild(document.createTextNode(`${timeText} `));
+    timeLine.appendChild(timeLabel);
+    timeLine.appendChild(document.createTextNode(' '));
     timeLine.appendChild(titleGroup);
 
     const parentTitle = ev.parentTitle || ev.parent || ev.groupTitle;
@@ -582,19 +597,21 @@ function renderList(events) {
     const favs = loadFavorites();
     const myid = idFor(ev);
     const active = favs.includes(myid);
-    star.innerText = active ? '★' : '☆';
+    setFavoriteIcon(star, active);
     star.setAttribute('aria-pressed', String(active));
     if (!active) star.classList.add('inactive');
-    star.onclick = () => {
+    star.onclick = (event) => {
+      event.stopPropagation();
       const cur = loadFavorites();
       const i = cur.indexOf(myid);
       if (i === -1) cur.push(myid);
       else cur.splice(i, 1);
       saveFavorites(cur);
       updateTabCounts();
-      star.innerText = cur.includes(myid) ? '★' : '☆';
-      star.classList.toggle('inactive', !cur.includes(myid));
-      star.setAttribute('aria-pressed', String(cur.includes(myid)));
+      const isFavorite = cur.includes(myid);
+      setFavoriteIcon(star, isFavorite);
+      star.classList.toggle('inactive', !isFavorite);
+      star.setAttribute('aria-pressed', String(isFavorite));
     };
     star.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' || event.key === ' ') {
