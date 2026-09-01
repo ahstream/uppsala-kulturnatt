@@ -67,6 +67,7 @@ export async function fetchEvents(opts: FetchOptions = {}) {
   const payload = opts.payload ?? {};
   const method = opts.method;
   const paginate = opts.paginate ?? true;
+  const checked = Date.now();
 
   const defaultHeaders: Record<string, string> = {
     Accept: '*/*',
@@ -145,6 +146,7 @@ export async function fetchEvents(opts: FetchOptions = {}) {
       try {
         const eid = it && (it.id ?? it.value) ? (it.id ?? it.value) : '';
         it.url = `${baseUrl}${eid}`;
+        it.checked = checked;
       } catch (_e) {
         // ignore
       }
@@ -161,6 +163,7 @@ export async function fetchEvents(opts: FetchOptions = {}) {
       try {
         const eid = it && (it.id ?? it.value) ? (it.id ?? it.value) : '';
         it.url = `${baseUrl}${eid}`;
+        it.checked = checked;
       } catch (_e) {}
     }
     return data;
@@ -172,6 +175,7 @@ export async function fetchEvents(opts: FetchOptions = {}) {
       try {
         const eid = it && (it.id ?? it.value) ? (it.id ?? it.value) : '';
         it.url = `${baseUrl}${eid}`;
+        it.checked = checked;
       } catch (_e) {}
     }
     return (data as any).events;
@@ -181,6 +185,7 @@ export async function fetchEvents(opts: FetchOptions = {}) {
       try {
         const eid = it && (it.id ?? it.value) ? (it.id ?? it.value) : '';
         it.url = `${baseUrl}${eid}`;
+        it.checked = checked;
       } catch (_e) {}
     }
     return (data as any).items;
@@ -190,6 +195,7 @@ export async function fetchEvents(opts: FetchOptions = {}) {
       try {
         const eid = it && (it.id ?? it.value) ? (it.id ?? it.value) : '';
         it.url = `${baseUrl}${eid}`;
+        it.checked = checked;
       } catch (_e) {}
     }
     return (data as any).data;
@@ -199,6 +205,7 @@ export async function fetchEvents(opts: FetchOptions = {}) {
       try {
         const eid = it && (it.id ?? it.value) ? (it.id ?? it.value) : '';
         it.url = `${baseUrl}${eid}`;
+        it.checked = checked;
       } catch (_e) {}
     }
     return (data as any).results;

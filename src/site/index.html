@@ -11,65 +11,90 @@
     <header>
       <div class="top-bar">
         <h1>Uppsala Kulturnatt 2026</h1>
-        <button class="login-button" type="button">Login</button>
+        <div class="top-actions">
+          <button class="config-button" type="button" aria-label="Configuration" title="Configuration"><i class="fa-solid fa-gear" aria-hidden="true"></i></button>
+          <button class="login-button" type="button">Login</button>
+        </div>
       </div>
       <nav class="tabs">
-        <button id="tab-program" class="events-tab active" type="button" aria-label="Event (0)" title="Event (0)"><span aria-hidden="true">&#128197;</span> <span class="event-count">(0)</span></button>
-        <button id="tab-favorites" class="favorites-tab" type="button" aria-label="Favoriter (0)" title="Favoriter (0)"><span aria-hidden="true">★</span> <span class="favorite-count">(0)</span></button>
-        <button id="tab-live" class="live-tab" type="button" aria-label="Live (0)" title="Live (0)"><i class="fa-solid fa-clock" aria-hidden="true"></i> <span class="live-count">(0)</span></button>
+        <button id="tab-program" class="events-tab active" type="button" aria-label="Alla 0" title="Alla evenemang (0 st)"><span aria-hidden="true">&#128197;</span> <span class="tab-label">Alla</span> <span class="event-count">0</span></button>
+        <button id="tab-subevent" class="subevent-tab" type="button" aria-label="Inslag 0" title="Del av evenemang (0 st)"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> <span class="tab-label">Inslag</span> <span class="subevent-count">0</span></button>
+        <button id="tab-cancelled" class="cancelled-tab" type="button" aria-label="Inställt 0" title="Inställda evenemang (0 st)"><i class="fa-solid fa-ban" aria-hidden="true"></i> <span class="tab-label">Inställt</span> <span class="cancelled-count">0</span></button>
+        <button id="tab-favorites" class="favorites-tab" type="button" aria-label="Favorit 0" title="Favoritevenemang (0 st)"><span aria-hidden="true">★</span> <span class="tab-label">Favorit</span> <span class="favorite-count">0</span></button>
+        <button id="tab-live" class="live-tab" type="button" aria-label="Nu 0" title="Pågående evenemang (0 st)"><i class="fa-solid fa-clock" aria-hidden="true"></i> <span class="tab-label">Nu</span> <span class="live-count">0</span></button>
+        <button id="tab-recent" class="recent-tab" type="button" aria-label="Nyss 0" title="Nyligen startade evenemang (0 st)"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i> <span class="tab-label">Nyss</span> <span class="recent-count">0</span></button>
+        <button id="tab-soon" class="soon-tab" type="button" aria-label="Snart 0" title="Strax startade evenemang (0 st)"><i class="fa-solid fa-clock-rotate-left fa-flip-horizontal" aria-hidden="true"></i> <span class="tab-label">Snart</span> <span class="soon-count">0</span></button>
+        <button id="tab-later" class="later-tab" type="button" aria-label="Sen 0" title="Senare startade evenemang (0 st)"><i class="fa-solid fa-hourglass-start" aria-hidden="true"></i> <span class="tab-label">Sen</span> <span class="later-count">0</span></button>
       </nav>
-      <div class="filter-status">
-        <div id="filtered-events" class="filtered-events" aria-live="polite">Filtered events: 0</div>
-        <button id="show-filters" class="clear-search" type="button" aria-label="Show filters" title="Show filters" aria-expanded="false" aria-pressed="false"><i class="fa-solid fa-filter" aria-hidden="true"></i> <span id="filter-count"></span></button>
-        <button id="clear-filters" class="clear-search clear-icon" type="button" aria-label="Clear filters" title="Clear filters" disabled><span aria-hidden="true">&#10005;</span></button>
-      </div>
-      <section id="filter-panel" class="filter-panel" aria-label="Filters" hidden>
-        <div class="primary-filters">
-          <label><input id="children-filter" type="checkbox" /> För barn</label>
-          <label><input id="free-filter" type="checkbox" /> Gratis</label>
+      <div class="filter-search-section">
+        <div class="filter-header">
+          <div id="selected-filters" class="selected-filters" aria-live="polite"></div>
+          <button id="show-filters" class="clear-search" type="button" aria-label="Visa filter" title="Visa filter" aria-expanded="false" aria-pressed="false"><span id="show-filters-label">Visa</span> <span id="filter-count" hidden></span></button>
+          <button id="clear-filters" class="clear-search clear-icon" type="button" aria-label="Rensa filter" title="Rensa filter" disabled><span aria-hidden="true">&#10005;</span></button>
         </div>
-        <div class="filters">
-          <div class="multi-filter">
-            <details id="category-menu" class="filter-menu">
-              <summary id="category-summary">All categories</summary>
-              <div id="category-options" class="filter-options">
-                <label><input type="checkbox" value="all" checked /> All categories</label>
-              </div>
-            </details>
+        <section id="filter-panel" class="filter-panel" aria-label="Filters" hidden>
+          <div class="primary-filters">
+            <label><input id="children-filter" type="checkbox" /> Barn</label>
+            <label><input id="free-filter" type="checkbox" /> Gratis</label>
           </div>
-          <div class="multi-filter">
-            <details id="language-menu" class="filter-menu">
-              <summary id="language-summary">All languages</summary>
-              <div id="language-options" class="filter-options">
-                <label><input type="checkbox" value="all" checked /> All languages</label>
-              </div>
-            </details>
+          <div class="filters">
+            <div class="multi-filter">
+              <details id="category-menu" class="filter-menu">
+                <summary id="category-summary">All categories</summary>
+                <div id="category-options" class="filter-options">
+                  <label><input type="checkbox" value="all" checked /> All categories</label>
+                </div>
+              </details>
+            </div>
+            <div class="multi-filter">
+              <details id="language-menu" class="filter-menu">
+                <summary id="language-summary">All languages</summary>
+                <div id="language-options" class="filter-options">
+                  <label><input type="checkbox" value="all" checked /> All languages</label>
+                </div>
+              </details>
+            </div>
+            <div class="multi-filter">
+              <details id="location-menu" class="filter-menu">
+                <summary id="location-summary">All locations</summary>
+                <div id="location-options" class="filter-options">
+                  <label><input type="checkbox" value="all" checked /> All locations</label>
+                </div>
+              </details>
+            </div>
+            <div class="multi-filter">
+              <details id="accessibility-menu" class="filter-menu">
+                <summary id="accessibility-summary">All accessibilities</summary>
+                <div id="accessibility-options" class="filter-options">
+                  <label><input type="checkbox" value="all" checked /> All accessibilities</label>
+                </div>
+              </details>
+            </div>
           </div>
-          <div class="multi-filter">
-            <details id="location-menu" class="filter-menu">
-              <summary id="location-summary">All locations</summary>
-              <div id="location-options" class="filter-options">
-                <label><input type="checkbox" value="all" checked /> All locations</label>
-              </div>
-            </details>
+          <div class="time-filters">
+            <select id="from-filter" aria-label="From hour">
+              <option value="">From</option>
+            </select>
+            <select id="to-filter" aria-label="To hour">
+              <option value="">To</option>
+            </select>
           </div>
-          <div class="multi-filter">
-            <details id="accessibility-menu" class="filter-menu">
-              <summary id="accessibility-summary">All accessibilities</summary>
-              <div id="accessibility-options" class="filter-options">
-                <label><input type="checkbox" value="all" checked /> All accessibilities</label>
-              </div>
-            </details>
-          </div>
-        </div>
+        </section>
         <label class="search-field">
-          <input id="event-search" type="search" placeholder="Search title or description" autocomplete="off" />
+          <input id="event-search" type="search" placeholder="Sök titel eller plats" autocomplete="off" />
         </label>
-      </section>
+      </div>
     </header>
 
     <main>
       <div id="status">Loading events…</div>
+      <div class="list-subheader-row">
+        <h2 id="active-tab-heading" class="list-subheader">Alla evenemang</h2>
+        <div id="program-sort-controls" class="program-sort-controls" aria-label="Sortera program">
+          <button id="program-sort-start" class="sort-option active" type="button" aria-pressed="true">Starttid</button>
+          <button id="program-sort-seen" class="sort-option" type="button" aria-pressed="false">Nyast</button>
+        </div>
+      </div>
       <div id="list" class="list"></div>
     </main>
 

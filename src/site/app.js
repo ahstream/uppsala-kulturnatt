@@ -1,20 +1,32 @@
-const DATA_PATH = '../../data/packedEvents.json';
+const DATA_PATH = '/data/packedEvents.json';
 
 const $header = document.querySelector('header');
 const $status = document.getElementById('status');
+const $activeTabHeading = document.getElementById('active-tab-heading');
+const $programSortControls = document.getElementById('program-sort-controls');
+const $programSortStart = document.getElementById('program-sort-start');
+const $programSortSeen = document.getElementById('program-sort-seen');
 const $list = document.getElementById('list');
 const $search = document.getElementById('event-search');
 const $clearFilters = document.getElementById('clear-filters');
 const $childrenFilter = document.getElementById('children-filter');
 const $freeFilter = document.getElementById('free-filter');
+const $fromFilter = document.getElementById('from-filter');
+const $toFilter = document.getElementById('to-filter');
 const $showFilters = document.getElementById('show-filters');
+const $showFiltersLabel = document.getElementById('show-filters-label');
 const $filterPanel = document.getElementById('filter-panel');
 const $filterCount = document.getElementById('filter-count');
-const $filteredEvents = document.getElementById('filtered-events');
+const $selectedFilters = document.getElementById('selected-filters');
 const tabs = {
   program: document.getElementById('tab-program'),
+  subevent: document.getElementById('tab-subevent'),
+  cancelled: document.getElementById('tab-cancelled'),
   favorites: document.getElementById('tab-favorites'),
   live: document.getElementById('tab-live'),
+  recent: document.getElementById('tab-recent'),
+  soon: document.getElementById('tab-soon'),
+  later: document.getElementById('tab-later'),
 };
 const multiFilters = [
   { menu: document.getElementById('category-menu'), options: document.getElementById('category-options'), summary: document.getElementById('category-summary'), eventProperty: 'categoryNames', allLabel: 'All categories', selectedLabel: 'categories' },
@@ -25,7 +37,93 @@ const multiFilters = [
 
 let allEvents = [];
 let activeTab = 'program';
+let programSortMode = 'start';
 let filtersOpenedAt = 0;
+let lastScrollY = window.scrollY;
+let stickyDownScrollDistance = 0;
+const RECENT_EVENT_WINDOW_MS = 60 * 60 * 1000;
+const SOON_EVENT_WINDOW_MS = 60 * 60 * 1000;
+
+function eventStartTime(event) {
+  return new Date(event.start || event.startTime || 0).getTime();
+}
+
+function eventEndTime(event) {
+  return new Date(event.end || event.endTime || 0).getTime();
+}
+
+function populateHourFilter(select) {
+  for (let hour = 0; hour < 24; hour += 1) {
+    const option = document.createElement('option');
+    option.value = String(hour).padStart(2, '0');
+    option.textContent = option.value;
+    select.appendChild(option);
+  }
+}
+
+function numericSortValue(value) {
+  const number = Number(value);
+  return Number.isFinite(number) ? number : Number.POSITIVE_INFINITY;
+}
+
+function compareByStartTime(firstEvent, secondEvent) {
+  const sortKeyDiff = numericSortValue(firstEvent.sortKeyTime) - numericSortValue(secondEvent.sortKeyTime);
+  if (sortKeyDiff !== 0) return sortKeyDiff;
+
+  const startDiff = eventStartTime(firstEvent) - eventStartTime(secondEvent);
+  if (startDiff !== 0) return startDiff;
+
+  const endDiff = eventEndTime(firstEvent) - eventEndTime(secondEvent);
+  if (endDiff !== 0) return endDiff;
+
+  return String(firstEvent.title || firstEvent.name || '').localeCompare(String(secondEvent.title || secondEvent.name || ''), 'sv-SE');
+}
+
+function compareByUpdatedSortKey(firstEvent, secondEvent) {
+  const sortKeyDiff = numericSortValue(firstEvent.sortKeyUpdated) - numericSortValue(secondEvent.sortKeyUpdated);
+  return sortKeyDiff || compareByStartTime(firstEvent, secondEvent);
+}
+
+function sortProgramEvents(events) {
+  return events.slice().sort(programSortMode === 'updated' ? compareByUpdatedSortKey : compareByStartTime);
+}
+
+function updateProgramSortControls() {
+  const sortingByStart = programSortMode === 'start';
+  $programSortStart.classList.toggle('active', sortingByStart);
+  $programSortStart.setAttribute('aria-pressed', String(sortingByStart));
+  $programSortSeen.classList.toggle('active', !sortingByStart);
+  $programSortSeen.setAttribute('aria-pressed', String(!sortingByStart));
+}
+
+function eventsInWindow(events, fromTime, toTime) {
+  return events.filter((event) => {
+    if (event.isCancelled) return false;
+    const startTime = eventStartTime(event);
+    return Number.isFinite(startTime) && startTime >= fromTime && startTime <= toTime;
+  });
+}
+
+function laterEvents(events, fromTime) {
+  return events.filter((event) => {
+    if (event.isCancelled) return false;
+    const startTime = eventStartTime(event);
+    return Number.isFinite(startTime) && startTime > fromTime;
+  });
+}
+
+function tabTooltip(tab) {
+  return tabs[tab].title.replace(/\s*\([^)]*\)\s*$/, '');
+}
+
+function liveEvents(events, currentTime) {
+  return events.filter((event) => {
+    if (event.isCancelled) return false;
+    const startTime = eventStartTime(event);
+    const endTime = eventEndTime(event);
+    return Number.isFinite(startTime) && Number.isFinite(endTime) && startTime <= currentTime && endTime >= currentTime;
+  });
+}
 
 function formatLocalClockTime(value) {
   if (!value && value !== 0) return '—';
@@ -59,6 +157,21 @@ function formatLocalClockTime(value) {
   return raw;
 }
 
+function formatLocalDateTime(value) {
+  if (!value && value !== 0) return null;
+
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return null;
+
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  const hour = String(date.getHours()).padStart(2, '0');
+  const minute = String(date.getMinutes()).padStart(2, '0');
+  const second = String(date.getSeconds()).padStart(2, '0');
+  return `${year}-${month}-${day} ${hour}:${minute}:${second}`;
+}
+
 function idFor(e) {
   return e.id || e.externalId || e.value || e.eventId || JSON.stringify(e).slice(0, 8);
 }
@@ -77,18 +190,40 @@ function saveFavorites(arr) {
 
 function updateTabCounts() {
   const favorites = loadFavorites();
+  const now = Date.now();
   const activeCount = allEvents.filter((event) => !event.isCancelled).length;
+  const subeventCount = allEvents.filter((event) => event.type === 'subEvent').length;
+  const cancelledCount = allEvents.filter((event) => event.isCancelled).length;
   const favoriteCount = allEvents.filter((event) => favorites.includes(idFor(event))).length;
+  const liveCount = liveEvents(allEvents, now).length;
+  const recentCount = eventsInWindow(allEvents, now - RECENT_EVENT_WINDOW_MS, now).length;
+  const soonCount = eventsInWindow(allEvents, now, now + SOON_EVENT_WINDOW_MS).length;
+  const laterCount = laterEvents(allEvents, now + SOON_EVENT_WINDOW_MS).length;
 
-  tabs.program.querySelector('.event-count').textContent = `(${activeCount})`;
-  tabs.program.setAttribute('aria-label', `Event (${activeCount})`);
-  tabs.program.title = `Event (${activeCount})`;
-  tabs.favorites.querySelector('.favorite-count').textContent = `(${favoriteCount})`;
-  tabs.favorites.setAttribute('aria-label', `Favoriter (${favoriteCount})`);
-  tabs.favorites.title = `Favoriter (${favoriteCount})`;
-  tabs.live.querySelector('.live-count').textContent = '(0)';
-  tabs.live.setAttribute('aria-label', 'Live (0)');
-  tabs.live.title = 'Live (0)';
+  tabs.program.querySelector('.event-count').textContent = String(activeCount);
+  tabs.program.setAttribute('aria-label', `Alla ${activeCount}`);
+  tabs.program.title = `Alla evenemang (${activeCount} st)`;
+  tabs.subevent.querySelector('.subevent-count').textContent = String(subeventCount);
+  tabs.subevent.setAttribute('aria-label', `Inslag ${subeventCount}`);
+  tabs.subevent.title = `Del av evenemang (${subeventCount} st)`;
+  tabs.cancelled.querySelector('.cancelled-count').textContent = String(cancelledCount);
+  tabs.cancelled.setAttribute('aria-label', `Inställt ${cancelledCount}`);
+  tabs.cancelled.title = `Inställda evenemang (${cancelledCount} st)`;
+  tabs.favorites.querySelector('.favorite-count').textContent = String(favoriteCount);
+  tabs.favorites.setAttribute('aria-label', `Favorit ${favoriteCount}`);
+  tabs.favorites.title = `Favoritevenemang (${favoriteCount} st)`;
+  tabs.live.querySelector('.live-count').textContent = String(liveCount);
+  tabs.live.setAttribute('aria-label', `Nu ${liveCount}`);
+  tabs.live.title = `Pågående evenemang (${liveCount} st)`;
+  tabs.recent.querySelector('.recent-count').textContent = String(recentCount);
+  tabs.recent.setAttribute('aria-label', `Nyss ${recentCount}`);
+  tabs.recent.title = `Nyligen startade evenemang (${recentCount} st)`;
+  tabs.soon.querySelector('.soon-count').textContent = String(soonCount);
+  tabs.soon.setAttribute('aria-label', `Snart ${soonCount}`);
+  tabs.soon.title = `Strax startade evenemang (${soonCount} st)`;
+  tabs.later.querySelector('.later-count').textContent = String(laterCount);
+  tabs.later.setAttribute('aria-label', `Sen ${laterCount}`);
+  tabs.later.title = `Senare startade evenemang (${laterCount} st)`;
 }
 
 function coordinatesToMapQuery(coordinates) {
@@ -103,7 +238,7 @@ function matchesSearch(event) {
   const searchTerm = $search.value.trim().toLocaleLowerCase('sv-SE');
   if (!searchTerm) return true;
 
-  return [event.title, event.parentTitle, event.type === 'event' ? event.about : null].some((value) =>
+  return [event.title, event.name, event.displayName, event.locationAlias, event.locationName, event.location].some((value) =>
     String(value ?? '')
       .toLocaleLowerCase('sv-SE')
       .includes(searchTerm),
@@ -134,6 +269,33 @@ function matchesFreeFilter(event) {
   return !$freeFilter.checked || event.isFree === true;
 }
 
+function clockMinutes(value) {
+  const formattedTime = formatLocalClockTime(value);
+  const match = formattedTime.match(/^(\d{1,2}):(\d{2})$/);
+  if (!match) return null;
+  return Number(match[1]) * 60 + Number(match[2]);
+}
+
+function filterStartClockMinutes(value) {
+  return /^\d{2}$/.test(value) ? Number(value) * 60 : null;
+}
+
+function filterEndClockMinutes(value) {
+  return /^\d{2}$/.test(value) ? Number(value) * 60 + 59 : null;
+}
+
+function matchesTimeFilters(event) {
+  const fromTime = filterStartClockMinutes($fromFilter.value);
+  const toTime = filterEndClockMinutes($toFilter.value);
+  if (fromTime === null && toTime === null) return true;
+
+  const startTime = clockMinutes(event.start || event.startTime || event.startTimeText || event.time);
+  const endTime = clockMinutes(event.end || event.endTime || event.endTimeText) ?? startTime;
+  if (startTime === null || endTime === null) return false;
+
+  return (fromTime === null || endTime >= fromTime) && (toTime === null || startTime <= toTime);
+}
+
 function populateMultiFilter(filter, items) {
   for (const item of items) {
     if (!item?.name) continue;
@@ -151,22 +313,68 @@ function updateFilterSummary(filter) {
   filter.summary.textContent = selectedValues.length === 0 ? filter.allLabel : `${selectedValues.length} ${filter.selectedLabel}`;
 }
 
+function addCategoryFilter(category) {
+  const categoryFilter = multiFilters[0];
+  const categoryInput = Array.from(categoryFilter.options.querySelectorAll('input:not([value="all"])')).find((input) => input.value === category);
+  if (!categoryInput) return;
+
+  for (const input of categoryFilter.options.querySelectorAll('input')) input.checked = false;
+  const allOption = categoryFilter.options.querySelector('input[value="all"]');
+  if (allOption) allOption.checked = false;
+  categoryInput.checked = true;
+  updateFilterSummary(categoryFilter);
+  updateClearFiltersButton();
+  updateFilterCount();
+  setActive(activeTab);
+}
+
+function createCategoryChip(category) {
+  const tag = document.createElement('button');
+  tag.type = 'button';
+  tag.className = 'chip';
+  tag.textContent = category;
+  tag.addEventListener('click', (event) => {
+    event.stopPropagation();
+    addCategoryFilter(category);
+  });
+  return tag;
+}
+
 function updateClearFiltersButton() {
-  $clearFilters.disabled = !$search.value && !$childrenFilter.checked && !$freeFilter.checked && multiFilters.every((filter) => selectedFilterValues(filter).length === 0);
+  $clearFilters.disabled = !$search.value && !$childrenFilter.checked && !$freeFilter.checked && !$fromFilter.value && !$toFilter.value && multiFilters.every((filter) => selectedFilterValues(filter).length === 0);
 }
 
 function updateFilterCount() {
-  const selectedCount = multiFilters.reduce((count, filter) => count + selectedFilterValues(filter).length, 0) + ($search.value.trim() ? 1 : 0) + ($childrenFilter.checked ? 1 : 0) + ($freeFilter.checked ? 1 : 0);
+  const selectedCount = multiFilters.reduce((count, filter) => count + selectedFilterValues(filter).length, 0) + ($search.value.trim() ? 1 : 0) + ($childrenFilter.checked ? 1 : 0) + ($freeFilter.checked ? 1 : 0) + ($fromFilter.value ? 1 : 0) + ($toFilter.value ? 1 : 0);
   const countLabel = selectedCount > 0 ? ` (${selectedCount})` : '';
   $filterCount.textContent = countLabel;
-  $showFilters.setAttribute('aria-label', `Show filters${countLabel}`);
-  $showFilters.title = `Show filters${countLabel}`;
+  updateShowFiltersButton(countLabel);
+}
+
+function updateShowFiltersButton(countLabel = $filterCount.textContent) {
+  const label = $filterPanel.hidden ? 'Visa' : 'Dölj';
+  $showFiltersLabel.textContent = label;
+  $showFilters.setAttribute('aria-label', `${label} filter${countLabel}`);
+  $showFilters.title = `${label} filter${countLabel}`;
+}
+
+function updateSelectedFilters(filteredEventCount) {
+  const selectedFilters = [];
+  if ($search.value.trim()) selectedFilters.push($search.value.trim());
+  if ($childrenFilter.checked) selectedFilters.push('Barn');
+  if ($freeFilter.checked) selectedFilters.push('Gratis');
+  for (const filter of multiFilters) selectedFilters.push(...selectedFilterValues(filter));
+  if ($fromFilter.value) selectedFilters.push(`From ${$fromFilter.value}`);
+  if ($toFilter.value) selectedFilters.push(`To ${$toFilter.value}`);
+  const selectedFilterText = selectedFilters.length > 0 ? selectedFilters.join(', ') : 'Inga';
+  $selectedFilters.textContent = `Filter: ${selectedFilterText} (${filteredEventCount})`;
 }
 
 function closeFilters() {
   $filterPanel.hidden = true;
   $showFilters.setAttribute('aria-expanded', 'false');
   $showFilters.setAttribute('aria-pressed', 'false');
+  updateShowFiltersButton();
 }
 
 function createEventDetails(ev, eventTitle) {
@@ -187,10 +395,7 @@ function createEventDetails(ev, eventTitle) {
       const categories = document.createElement('div');
       categories.className = 'tag-row has-tags';
       for (const category of categoryNames) {
-        const tag = document.createElement('span');
-        tag.className = 'chip';
-        tag.textContent = category;
-        categories.appendChild(tag);
+        categories.appendChild(createCategoryChip(category));
       }
       details.appendChild(categories);
     }
@@ -256,6 +461,20 @@ function createEventDetails(ev, eventTitle) {
     detailsList.appendChild(address);
   }
 
+  const checked = formatLocalDateTime(ev.checked);
+  if (checked) {
+    const checkedAt = document.createElement('li');
+    checkedAt.textContent = `Kontrollerad: ${checked}`;
+    detailsList.appendChild(checkedAt);
+  }
+
+  const updated = formatLocalDateTime(ev.updated);
+  if (updated) {
+    const updatedAt = document.createElement('li');
+    updatedAt.textContent = `Uppdaterad ${updated}`;
+    detailsList.appendChild(updatedAt);
+  }
+
   if (detailsList.childElementCount > 0) details.appendChild(detailsList);
 
   const mapQuery = coordinatesToMapQuery(ev.coordinates);
@@ -317,8 +536,12 @@ function renderList(events) {
     const eventTitle = ev.title || ev.name || ev.displayName || 'Untitled';
     titleText.textContent = eventTitle;
 
+    const titleGroup = document.createElement('span');
+    titleGroup.className = 'event-title-group';
+    titleGroup.appendChild(titleText);
+
     timeLine.appendChild(document.createTextNode(`${timeText} `));
-    timeLine.appendChild(titleText);
+    timeLine.appendChild(titleGroup);
 
     const parentTitle = ev.parentTitle || ev.parent || ev.groupTitle;
     let parentLine = null;
@@ -348,11 +571,7 @@ function renderList(events) {
     }
 
     for (const category of SHOW_CATEGORIES_IN_LIST ? categoryNames : []) {
-      const tag = document.createElement('button');
-      tag.type = 'button';
-      tag.className = 'chip';
-      tag.textContent = category;
-      tags.appendChild(tag);
+      tags.appendChild(createCategoryChip(category));
     }
 
     const star = document.createElement('span');
@@ -384,7 +603,7 @@ function renderList(events) {
         star.click();
       }
     });
-    timeLine.appendChild(star);
+    titleGroup.appendChild(star);
     timeLine.title = `${timeText} ${titleText.textContent}`;
 
     let details = null;
@@ -426,7 +645,20 @@ function renderList(events) {
     card.appendChild(timeLine);
     if (parentLine) card.appendChild(parentLine);
     if (locationLine.textContent) card.appendChild(locationLine);
+    const updated = formatLocalDateTime(ev.updated);
+    if (programSortMode === 'updated' && updated) {
+      const updatedLine = document.createElement('div');
+      updatedLine.className = 'line secondary updated-line';
+      updatedLine.textContent = `Uppdaterad ${updated}`;
+      card.appendChild(updatedLine);
+    }
     card.appendChild(tags);
+    if (ev.isCancelled) {
+      const cancelledBadge = document.createElement('div');
+      cancelledBadge.className = 'cancelled-badge';
+      cancelledBadge.textContent = 'INSTÄLLT';
+      card.appendChild(cancelledBadge);
+    }
     $list.appendChild(card);
   }
 }
@@ -435,27 +667,58 @@ function setActive(tab) {
   activeTab = tab;
   Object.values(tabs).forEach((b) => b.classList.remove('active'));
   tabs[tab].classList.add('active');
+  $activeTabHeading.textContent = tabTooltip(tab);
+  $programSortControls.hidden = tab !== 'program';
   const favs = loadFavorites();
+  const now = Date.now();
   let events = [];
   if (tab === 'program') {
-    events = allEvents.filter((event) => !event.isCancelled);
+    events = sortProgramEvents(allEvents.filter((event) => !event.isCancelled));
+  } else if (tab === 'subevent') {
+    events = allEvents.filter((event) => event.type === 'subEvent');
+  } else if (tab === 'cancelled') {
+    events = allEvents.filter((event) => event.isCancelled);
   } else if (tab === 'favorites') {
     events = allEvents.filter((event) => favs.includes(idFor(event)));
+  } else if (tab === 'live') {
+    events = liveEvents(allEvents, now);
+  } else if (tab === 'recent') {
+    events = eventsInWindow(allEvents, now - RECENT_EVENT_WINDOW_MS, now);
+  } else if (tab === 'soon') {
+    events = eventsInWindow(allEvents, now, now + SOON_EVENT_WINDOW_MS);
+  } else if (tab === 'later') {
+    events = laterEvents(allEvents, now + SOON_EVENT_WINDOW_MS);
   }
-  const filteredEvents = events.filter(matchesSearch).filter(matchesChildrenFilter).filter(matchesFreeFilter).filter(matchesMultiFilters);
-  $filteredEvents.textContent = `Filtered events: ${filteredEvents.length}`;
+  const filteredEvents = events.filter(matchesSearch).filter(matchesChildrenFilter).filter(matchesFreeFilter).filter(matchesMultiFilters).filter(matchesTimeFilters);
+  updateSelectedFilters(filteredEvents.length);
   renderList(filteredEvents);
 }
 
 tabs.program.addEventListener('click', () => setActive('program'));
+tabs.subevent.addEventListener('click', () => setActive('subevent'));
+tabs.cancelled.addEventListener('click', () => setActive('cancelled'));
 tabs.favorites.addEventListener('click', () => setActive('favorites'));
 tabs.live.addEventListener('click', () => setActive('live'));
+tabs.recent.addEventListener('click', () => setActive('recent'));
+tabs.soon.addEventListener('click', () => setActive('soon'));
+tabs.later.addEventListener('click', () => setActive('later'));
+$programSortStart.addEventListener('click', () => {
+  programSortMode = 'start';
+  updateProgramSortControls();
+  setActive('program');
+});
+$programSortSeen.addEventListener('click', () => {
+  programSortMode = 'updated';
+  updateProgramSortControls();
+  setActive('program');
+});
 $showFilters.addEventListener('click', () => {
   const openingFilters = $filterPanel.hidden;
   $filterPanel.hidden = !openingFilters;
   if (openingFilters) filtersOpenedAt = Date.now();
   $showFilters.setAttribute('aria-expanded', String(!$filterPanel.hidden));
   $showFilters.setAttribute('aria-pressed', String(!$filterPanel.hidden));
+  updateShowFiltersButton();
 });
 $search.addEventListener('input', () => {
   updateClearFiltersButton();
@@ -472,10 +735,29 @@ $freeFilter.addEventListener('change', () => {
   updateFilterCount();
   setActive(activeTab);
 });
+for (const timeFilter of [$fromFilter, $toFilter]) {
+  timeFilter.addEventListener('input', () => {
+    updateClearFiltersButton();
+    updateFilterCount();
+    setActive(activeTab);
+  });
+}
 window.addEventListener(
   'scroll',
   () => {
     if (!$filterPanel.hidden && Date.now() - filtersOpenedAt > 200) closeFilters();
+    const currentScrollY = window.scrollY;
+    const scrollDelta = currentScrollY - lastScrollY;
+    if (Math.abs(scrollDelta) < 8) return;
+
+    if (scrollDelta < 0) {
+      stickyDownScrollDistance = 0;
+      $header.classList.remove('is-unstuck');
+    } else if (!$header.classList.contains('is-unstuck')) {
+      stickyDownScrollDistance += scrollDelta;
+      if (stickyDownScrollDistance >= window.innerHeight * 0.25) $header.classList.add('is-unstuck');
+    }
+    lastScrollY = currentScrollY;
   },
   { passive: true },
 );
@@ -483,6 +765,8 @@ $clearFilters.addEventListener('click', () => {
   $search.value = '';
   $childrenFilter.checked = false;
   $freeFilter.checked = false;
+  $fromFilter.value = '';
+  $toFilter.value = '';
   for (const filter of multiFilters) {
     for (const input of filter.options.querySelectorAll('input')) input.checked = input.value === 'all';
     filter.menu.open = false;
@@ -522,6 +806,8 @@ for (const filter of multiFilters) {
 async function main() {
   try {
     $status.textContent = 'Loading...';
+    populateHourFilter($fromFilter);
+    populateHourFilter($toFilter);
     const res = await fetch(DATA_PATH);
     if (!res.ok) throw new Error('Fetch failed: ' + res.status);
     const json = await res.json();

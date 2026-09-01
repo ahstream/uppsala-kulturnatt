@@ -3,7 +3,7 @@ import path from 'path';
 
 const DATA_DIR = path.resolve(__dirname, '..', 'data');
 
-const PARENT_FIELDS = ['organizer', 'webpage', 'about', 'categories', 'accessibilityOptions', 'languages', 'locationId', 'locationAlias', 'streetAddress', 'isCancelled', 'isForChildren', 'isFree', 'price', 'coordinates', 'url', 'webpage'];
+const PARENT_FIELDS = ['checked', 'organizer', 'webpage', 'about', 'categories', 'accessibilityOptions', 'languages', 'locationId', 'locationAlias', 'streetAddress', 'isCancelled', 'isForChildren', 'isFree', 'price', 'coordinates', 'url', 'webpage'];
 
 export function mergeEvents(events: any[], subEvents: any[]) {
   // build lookup by parent event id (match event.id or event.value)

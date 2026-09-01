@@ -39,6 +39,24 @@ function tryParseTimeLine(line: string) {
   return null;
 }
 
+function normalizeIdPart(value: string) {
+  return value
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]/gi, '');
+}
+
+function timestampFromStartTime(startTime: string | undefined) {
+  const timestamp = Date.parse(startTime || '');
+  return Number.isNaN(timestamp) ? '0' : String(timestamp);
+}
+
+function subEventId(parentEvent: any, subEvent: SubEvent) {
+  const parentId = parentEvent && (parentEvent.parentId ?? parentEvent.parentEventId ?? parentEvent.id ?? parentEvent.value) ? String(parentEvent.parentId ?? parentEvent.parentEventId ?? parentEvent.id ?? parentEvent.value) : 'event';
+  const title = normalizeIdPart(subEvent.title || parentEvent?.title || '');
+  return `${parentId}_${title}_${timestampFromStartTime(subEvent.startTime)}`;
+}
+
 export function getSubEvents(ev: any): SubEvent[] {
   const about = ev && typeof ev.about === 'string' ? ev.about : undefined;
   if (!about) return [];
@@ -110,16 +128,12 @@ export function getSubEvents(ev: any): SubEvent[] {
         i++;
       }
 
-      console.warn('Parsed line:', { line: ln, cleaned: cleanedLn, parsed });
-
-      const idx = subs.length + 1;
-      const sid = (ev && (ev.id || ev.value) ? ev.id || ev.value : 'event') + `-sub-${idx}`;
       const rawTitle = parsed.title || ev.title || '';
       let title = rawTitle.replace(/^,\s*/, '').replace(/- /g, '').trim();
       if (title.length > 0) title = title.charAt(0).toUpperCase() + title.slice(1);
       const startText = parsed.start;
       const endText = parsed.end ?? null;
-      const sub: SubEvent = { id: sid, title, startTimeText: startText, endTimeText: endText, raw: parsed.raw };
+      const sub: SubEvent = { id: '', title, startTimeText: startText, endTimeText: endText, raw: parsed.raw };
 
       // compute ISO UTC startTime based on global start date
       try {
@@ -144,15 +158,12 @@ export function getSubEvents(ev: any): SubEvent[] {
 
         // Helper to parse HH:MM or HH formats
         const parseHM = (t: string | null) => {
-          console.warn('Parsing time text:', { t });
           if (!t || typeof t !== 'string') return null;
           // accept 'HH:MM' or 'HH.MM' or 'HH', and allow spaces after the separator like 'HH: MM'
           const m = t.trim().match(/^(\d{1,2})(?:(?:[:.])\s*(\d{2}))?$/);
-          console.warn('Parsed time match:', { m });
           if (!m) return null;
           const hh = parseInt(m[1], 10);
           const mm = m[2] ? parseInt(m[2], 10) : 0;
-          console.warn('Parsed time components:', { hh, mm });
           if (!Number.isFinite(hh) || !Number.isFinite(mm)) return null;
           if (hh < 0 || hh > 23 || mm < 0 || mm > 59) return null;
           return { hh, mm };
@@ -160,7 +171,6 @@ export function getSubEvents(ev: any): SubEvent[] {
 
         const s = parseHM(startText);
         if (s) {
-          console.warn('Parsed start time components:', { s });
           // ensure numeric components
           const sh = Number(s.hh);
           const sm = Number(s.mm);
@@ -172,7 +182,6 @@ export function getSubEvents(ev: any): SubEvent[] {
           const realUtcTs = constructedUTC - tzOffsetMs;
           const startDate = new Date(realUtcTs);
 
-          console.warn('Computed start date (Sweden local -> UTC):', { startDate, tzOffsetMs });
           if (!isNaN(startDate.getTime())) sub.startTime = startDate.toISOString().replace(/\.\d{3}Z$/, '+00:00');
         }
 
@@ -198,7 +207,7 @@ export function getSubEvents(ev: any): SubEvent[] {
           parsed,
           startText,
           endText,
-          error: err && err.stack ? err.stack : String(err),
+          error: err instanceof Error ? err.stack : String(err),
         });
         // stop all processing immediately to surface the issue
         try {
@@ -210,7 +219,8 @@ export function getSubEvents(ev: any): SubEvent[] {
         }
       }
 
-      subs.push(sub); // placeholder to ensure correct index for next sub
+      sub.id = subEventId(ev, sub);
+      subs.push(sub);
     }
   }
 

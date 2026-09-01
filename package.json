@@ -4,7 +4,7 @@
   "description": "CLI to fetch events from Kulturnatten API",
   "main": "dist/cli/fetchEvents.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && node scripts/prepareDeploy.js",
     "createEvents": "tsx src/cli/createEvents.ts",
     "createFilters": "tsx src/cli/createFilters.ts",
     "createSubEvents": "tsx src/cli/createSubEvents.ts",
@@ -12,6 +12,7 @@
     "mergeEvents": "tsx src/cli/mergeEvents.ts",
     "finalizeEvents": "tsx src/cli/finalizeEvents.ts",
     "packEvents": "tsx src/cli/packEvents.ts",
+    "farmEvents": "tsx src/cli/farmEvents.ts",
     "start": "node scripts/startServer.js"
   },
   "dependencies": {

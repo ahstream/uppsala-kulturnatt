@@ -1,7 +1,7 @@
 [
   {
     "type": "subEvent",
-    "id": "a81f1a09-382a-4a27-b412-e7724a3a5f1d_workshopbinddinegenruska",
+    "id": "a81f1a09-382a-4a27-b412-e7724a3a5f1d_Workshopbinddinegenruska_1789200000000",
     "parentEventId": "a81f1a09-382a-4a27-b412-e7724a3a5f1d",
     "parentTitle": "Finsk bastuceremoni",
     "title": "Workshop “bind din egen ruska”",
@@ -12,7 +12,7 @@
   },
   {
     "type": "subEvent",
-    "id": "a81f1a09-382a-4a27-b412-e7724a3a5f1d_bastunrppendropintamedegenhanddukochbadklder",
+    "id": "a81f1a09-382a-4a27-b412-e7724a3a5f1d_BastunaroppendropinTamedegenhanddukochbadklader_1789203600000",
     "parentEventId": "a81f1a09-382a-4a27-b412-e7724a3a5f1d",
     "parentTitle": "Finsk bastuceremoni",
     "title": "Bastun är öppen, drop-in. Ta med egen handduk och badkläder.",
@@ -23,7 +23,7 @@
   },
   {
     "type": "subEvent",
-    "id": "226d06f1-0642-41d5-81d0-9629a356781b_dansalinedancehappyfeethappyfeetlinedancers",
+    "id": "226d06f1-0642-41d5-81d0-9629a356781b_DansaLinedanceHappyFeetHappyFeetLinedancers_1789200000000",
     "parentEventId": "226d06f1-0642-41d5-81d0-9629a356781b",
     "parentTitle": "Dansplats Resecentrum",
     "title": "Dansa Linedance Happy Feet Happy Feet (Linedancers)",
@@ -34,7 +34,7 @@
   },
   {
     "type": "subEvent",
-    "id": "226d06f1-0642-41d5-81d0-9629a356781b_albanskfolkdansmedtraditaalbanianfolkgrouptradita",
+    "id": "226d06f1-0642-41d5-81d0-9629a356781b_AlbanskfolkdansmedTraditaAlbanianFolkGroupTradita_1789204500000",
     "parentEventId": "226d06f1-0642-41d5-81d0-9629a356781b",
     "parentTitle": "Dansplats Resecentrum",
     "title": "Albansk folkdans med Tradita Albanian Folk Group Tradita",
@@ -45,7 +45,7 @@
   },
   {
     "type": "subEvent",
-    "id": "226d06f1-0642-41d5-81d0-9629a356781b_traditionellburundiskdanskaribucreations",
+    "id": "226d06f1-0642-41d5-81d0-9629a356781b_TraditionellburundiskdansKaribuCreations_1789207200000",
     "parentEventId": "226d06f1-0642-41d5-81d0-9629a356781b",
     "parentTitle": "Dansplats Resecentrum",
     "title": "Traditionell burundisk dans KaribuCreations",
@@ -56,7 +56,7 @@
   },
   {
     "type": "subEvent",
-    "id": "226d06f1-0642-41d5-81d0-9629a356781b_internationellseniordansgladaringen",
+    "id": "226d06f1-0642-41d5-81d0-9629a356781b_InternationellSeniordansGladaringen_1789209300000",
     "parentEventId": "226d06f1-0642-41d5-81d0-9629a356781b",
     "parentTitle": "Dansplats Resecentrum",
     "title": "Internationell Seniordans Glada ringen",
@@ -67,7 +67,7 @@
   },
   {
     "type": "subEvent",
-    "id": "226d06f1-0642-41d5-81d0-9629a356781b_folkdansuppvisningmedtenstafolkdanslagtenstafolkdanslag",
+    "id": "226d06f1-0642-41d5-81d0-9629a356781b_FolkdansuppvisningmedTenstafolkdanslagTenstafolkdanslag_1789212000000",
     "parentEventId": "226d06f1-0642-41d5-81d0-9629a356781b",
     "parentTitle": "Dansplats Resecentrum",
     "title": "Folkdansuppvisning med Tensta folkdanslag Tensta folkdanslag",
@@ -78,7 +78,7 @@
   },
   {
     "type": "subEvent",
-    "id": "226d06f1-0642-41d5-81d0-9629a356781b_squaredansuppvisninguppsalavikingsquaredancers",
+    "id": "226d06f1-0642-41d5-81d0-9629a356781b_SquaredansuppvisningUppsalaVikingSquaredancers_1789214700000",
     "parentEventId": "226d06f1-0642-41d5-81d0-9629a356781b",
     "parentTitle": "Dansplats Resecentrum",
     "title": "Squaredans uppvisning Uppsala Viking Squaredancers",
@@ -89,7 +89,7 @@
   },
   {
     "type": "subEvent",
-    "id": "226d06f1-0642-41d5-81d0-9629a356781b_sudanesiskadansgldjeifrgochtonsvensksudanskafreningensudanesesocietyinswedensudanesiskafreningeniuppsalasydsudanesiskafreningenisverige",
+    "id": "226d06f1-0642-41d5-81d0-9629a356781b_SudanesiskaDansgladjeifargochtonSvenskSudanskaforeningenSudaneseSocietyinSwedenSudanesiskaforeningeniUppsalaSydsudanesiskaforeningeniSverige_1789217400000",
     "parentEventId": "226d06f1-0642-41d5-81d0-9629a356781b",
     "parentTitle": "Dansplats Resecentrum",
     "title": "Sudanesiska Dansglädje i färg och ton Svensk Sudanska föreningen, Sudanese Society in Sweden, Sudanesiska föreningen i Uppsala & Sydsudanesiska föreningen i Sverige",
@@ -100,7 +100,7 @@
   },
   {
     "type": "subEvent",
-    "id": "226d06f1-0642-41d5-81d0-9629a356781b_dansuppvisningavdansstudioninorbydansstudioninorby",
+    "id": "226d06f1-0642-41d5-81d0-9629a356781b_DansuppvisningavDansstudioniNorbyDansstudioniNorby_1789221900000",
     "parentEventId": "226d06f1-0642-41d5-81d0-9629a356781b",
     "parentTitle": "Dansplats Resecentrum",
     "title": "Dansuppvisning av Dansstudion i Norby Dansstudion i Norby",
@@ -111,7 +111,7 @@
   },
   {
     "type": "subEvent",
-    "id": "226d06f1-0642-41d5-81d0-9629a356781b_fcbdstylemedaizumeaizumedancecollective",
+    "id": "226d06f1-0642-41d5-81d0-9629a356781b_FCBDStylemedAizumeAizumeDanceCollective_1789225500000",
     "parentEventId": "226d06f1-0642-41d5-81d0-9629a356781b",
     "parentTitle": "Dansplats Resecentrum",
     "title": "FCBD® Style med Aizume! Aizume Dance Collective",
@@ -122,7 +122,7 @@
   },
   {
     "type": "subEvent",
-    "id": "226d06f1-0642-41d5-81d0-9629a356781b_dansuppvisningmededgedancestudiosedgedancestudios",
+    "id": "226d06f1-0642-41d5-81d0-9629a356781b_DansuppvisningmedEdgeDanceStudiosEdgeDanceStudios_1789228200000",
     "parentEventId": "226d06f1-0642-41d5-81d0-9629a356781b",
     "parentTitle": "Dansplats Resecentrum",
     "title": "Dansuppvisning med Edge Dance Studios Edge Dance Studios",
@@ -133,7 +133,7 @@
   },
   {
     "type": "subEvent",
-    "id": "226d06f1-0642-41d5-81d0-9629a356781b_capoeirauppvisningfreningenicapoeira",
+    "id": "226d06f1-0642-41d5-81d0-9629a356781b_CapoeirauppvisningForeningeniecapoeira_1789231800000",
     "parentEventId": "226d06f1-0642-41d5-81d0-9629a356781b",
     "parentTitle": "Dansplats Resecentrum",
     "title": "Capoeirauppvisning Föreningen iê capoeira",
@@ -144,7 +144,7 @@
   },
   {
     "type": "subEvent",
-    "id": "226d06f1-0642-41d5-81d0-9629a356781b_uppsaladansakademiuppsaladansakademiaktivungdom",
+    "id": "226d06f1-0642-41d5-81d0-9629a356781b_UppsalaDansakademiUppsalaDansakademiAktivungdom_1789235400000",
     "parentEventId": "226d06f1-0642-41d5-81d0-9629a356781b",
     "parentTitle": "Dansplats Resecentrum",
     "title": "Uppsala Dansakademi Uppsala Dansakademi Aktiv ungdom",
@@ -155,7 +155,7 @@
   },
   {
     "type": "subEvent",
-    "id": "226d06f1-0642-41d5-81d0-9629a356781b_dansshowmedtourmalinetourmaline",
+    "id": "226d06f1-0642-41d5-81d0-9629a356781b_DansshowmedTourmalineTourmaline_1789244100000",
     "parentEventId": "226d06f1-0642-41d5-81d0-9629a356781b",
     "parentTitle": "Dansplats Resecentrum",
     "title": "Dansshow med Tourmaline! Tourmaline",
@@ -166,7 +166,238 @@
   },
   {
     "type": "subEvent",
-    "id": "290ed8d8-e4c8-43a2-8b2e-dc290066027e_invigningochvlkomna",
+    "id": "af1558bf-d565-40cd-8a09-cf97b447e0a2_Fyrisgardenscenen_1789201800000",
+    "parentEventId": "af1558bf-d565-40cd-8a09-cf97b447e0a2",
+    "parentTitle": "Kulturnatten på Forumtorget",
+    "title": "Fyrisgården (scenen)",
+    "startTimeText": "10:30",
+    "endTimeText": "11:00",
+    "startTime": "2026-09-12T08:30:00+00:00",
+    "endTime": "2026-09-12T09:00:00+00:00"
+  },
+  {
+    "type": "subEvent",
+    "id": "af1558bf-d565-40cd-8a09-cf97b447e0a2_CirkusFukurdansbanan_1789203600000",
+    "parentEventId": "af1558bf-d565-40cd-8a09-cf97b447e0a2",
+    "parentTitle": "Kulturnatten på Forumtorget",
+    "title": "Cirkus Fukur (dansbanan)",
+    "startTimeText": "11:00",
+    "endTimeText": "11:30",
+    "startTime": "2026-09-12T09:00:00+00:00",
+    "endTime": "2026-09-12T09:30:00+00:00"
+  },
+  {
+    "type": "subEvent",
+    "id": "af1558bf-d565-40cd-8a09-cf97b447e0a2_Edelajvscenen_1789205400000",
+    "parentEventId": "af1558bf-d565-40cd-8a09-cf97b447e0a2",
+    "parentTitle": "Kulturnatten på Forumtorget",
+    "title": "Edelajv (scenen)",
+    "startTimeText": "11:30",
+    "endTimeText": "12:00",
+    "startTime": "2026-09-12T09:30:00+00:00",
+    "endTime": "2026-09-12T10:00:00+00:00"
+  },
+  {
+    "type": "subEvent",
+    "id": "af1558bf-d565-40cd-8a09-cf97b447e0a2_UppsalaVokalensemblescenen_1789207200000",
+    "parentEventId": "af1558bf-d565-40cd-8a09-cf97b447e0a2",
+    "parentTitle": "Kulturnatten på Forumtorget",
+    "title": "Uppsala Vokalensemble (scenen)",
+    "startTimeText": "12:00",
+    "endTimeText": "12:30",
+    "startTime": "2026-09-12T10:00:00+00:00",
+    "endTime": "2026-09-12T10:30:00+00:00"
+  },
+  {
+    "type": "subEvent",
+    "id": "af1558bf-d565-40cd-8a09-cf97b447e0a2_TimeforCrimemedAndersDanelldansbanan_1789209000000",
+    "parentEventId": "af1558bf-d565-40cd-8a09-cf97b447e0a2",
+    "parentTitle": "Kulturnatten på Forumtorget",
+    "title": "Time for Crime med Anders Danell (dansbanan)",
+    "startTimeText": "12:30",
+    "endTimeText": "13:00",
+    "startTime": "2026-09-12T10:30:00+00:00",
+    "endTime": "2026-09-12T11:00:00+00:00"
+  },
+  {
+    "type": "subEvent",
+    "id": "af1558bf-d565-40cd-8a09-cf97b447e0a2_ShrekTheMusicalscenen_1789210800000",
+    "parentEventId": "af1558bf-d565-40cd-8a09-cf97b447e0a2",
+    "parentTitle": "Kulturnatten på Forumtorget",
+    "title": "Shrek The Musical (scenen)",
+    "startTimeText": "13:00",
+    "endTimeText": "13:30",
+    "startTime": "2026-09-12T11:00:00+00:00",
+    "endTime": "2026-09-12T11:30:00+00:00"
+  },
+  {
+    "type": "subEvent",
+    "id": "af1558bf-d565-40cd-8a09-cf97b447e0a2_Brukssextettendansbanan_1789212600000",
+    "parentEventId": "af1558bf-d565-40cd-8a09-cf97b447e0a2",
+    "parentTitle": "Kulturnatten på Forumtorget",
+    "title": "Brukssextetten (dansbanan)",
+    "startTimeText": "13:30",
+    "endTimeText": "14:00",
+    "startTime": "2026-09-12T11:30:00+00:00",
+    "endTime": "2026-09-12T12:00:00+00:00"
+  },
+  {
+    "type": "subEvent",
+    "id": "af1558bf-d565-40cd-8a09-cf97b447e0a2_TheGloryfiresscenen_1789214400000",
+    "parentEventId": "af1558bf-d565-40cd-8a09-cf97b447e0a2",
+    "parentTitle": "Kulturnatten på Forumtorget",
+    "title": "The Gloryfires (scenen)",
+    "startTimeText": "14:00",
+    "endTimeText": "14:30",
+    "startTime": "2026-09-12T12:00:00+00:00",
+    "endTime": "2026-09-12T12:30:00+00:00"
+  },
+  {
+    "type": "subEvent",
+    "id": "af1558bf-d565-40cd-8a09-cf97b447e0a2_DansshowerfranUDCUDAOrientaldansbanan_1789216200000",
+    "parentEventId": "af1558bf-d565-40cd-8a09-cf97b447e0a2",
+    "parentTitle": "Kulturnatten på Forumtorget",
+    "title": "Dansshower från UDC UDA Oriental (dansbanan)",
+    "startTimeText": "14:30",
+    "endTimeText": "15:00",
+    "startTime": "2026-09-12T12:30:00+00:00",
+    "endTime": "2026-09-12T13:00:00+00:00"
+  },
+  {
+    "type": "subEvent",
+    "id": "af1558bf-d565-40cd-8a09-cf97b447e0a2_NorraUpplandsKammarorkesterscenen_1789218000000",
+    "parentEventId": "af1558bf-d565-40cd-8a09-cf97b447e0a2",
+    "parentTitle": "Kulturnatten på Forumtorget",
+    "title": "Norra Upplands Kammarorkester (scenen)",
+    "startTimeText": "15:00",
+    "endTimeText": "15:30",
+    "startTime": "2026-09-12T13:00:00+00:00",
+    "endTime": "2026-09-12T13:30:00+00:00"
+  },
+  {
+    "type": "subEvent",
+    "id": "af1558bf-d565-40cd-8a09-cf97b447e0a2_Verbafonscenen_1789220700000",
+    "parentEventId": "af1558bf-d565-40cd-8a09-cf97b447e0a2",
+    "parentTitle": "Kulturnatten på Forumtorget",
+    "title": "Verbafon (scenen)",
+    "startTimeText": "15:45",
+    "endTimeText": "16:15",
+    "startTime": "2026-09-12T13:45:00+00:00",
+    "endTime": "2026-09-12T14:15:00+00:00"
+  },
+  {
+    "type": "subEvent",
+    "id": "af1558bf-d565-40cd-8a09-cf97b447e0a2_KnivstaVoicesscenen_1789223400000",
+    "parentEventId": "af1558bf-d565-40cd-8a09-cf97b447e0a2",
+    "parentTitle": "Kulturnatten på Forumtorget",
+    "title": "Knivsta Voices (scenen)",
+    "startTimeText": "16:30",
+    "endTimeText": "17:00",
+    "startTime": "2026-09-12T14:30:00+00:00",
+    "endTime": "2026-09-12T15:00:00+00:00"
+  },
+  {
+    "type": "subEvent",
+    "id": "af1558bf-d565-40cd-8a09-cf97b447e0a2_CanillaEnskarscenen_1789225200000",
+    "parentEventId": "af1558bf-d565-40cd-8a09-cf97b447e0a2",
+    "parentTitle": "Kulturnatten på Forumtorget",
+    "title": "Canilla Enskär (scenen)",
+    "startTimeText": "17:00",
+    "endTimeText": "17:30",
+    "startTime": "2026-09-12T15:00:00+00:00",
+    "endTime": "2026-09-12T15:30:00+00:00"
+  },
+  {
+    "type": "subEvent",
+    "id": "af1558bf-d565-40cd-8a09-cf97b447e0a2_DansshowerfranUDCUDAOrientalBollywooddansbanan_1789227000000",
+    "parentEventId": "af1558bf-d565-40cd-8a09-cf97b447e0a2",
+    "parentTitle": "Kulturnatten på Forumtorget",
+    "title": "Dansshower från UDC UDA Oriental Bollywood (dansbanan)",
+    "startTimeText": "17:30",
+    "endTimeText": "18:00",
+    "startTime": "2026-09-12T15:30:00+00:00",
+    "endTime": "2026-09-12T16:00:00+00:00"
+  },
+  {
+    "type": "subEvent",
+    "id": "af1558bf-d565-40cd-8a09-cf97b447e0a2_JosefinaCerdascenen_1789228800000",
+    "parentEventId": "af1558bf-d565-40cd-8a09-cf97b447e0a2",
+    "parentTitle": "Kulturnatten på Forumtorget",
+    "title": "Josefina Cerda (scenen)",
+    "startTimeText": "18:00",
+    "endTimeText": "18:30",
+    "startTime": "2026-09-12T16:00:00+00:00",
+    "endTime": "2026-09-12T16:30:00+00:00"
+  },
+  {
+    "type": "subEvent",
+    "id": "af1558bf-d565-40cd-8a09-cf97b447e0a2_Thornbergscenen_1789232400000",
+    "parentEventId": "af1558bf-d565-40cd-8a09-cf97b447e0a2",
+    "parentTitle": "Kulturnatten på Forumtorget",
+    "title": "Thornberg (scenen)",
+    "startTimeText": "19:00",
+    "endTimeText": "20:00",
+    "startTime": "2026-09-12T17:00:00+00:00",
+    "endTime": "2026-09-12T18:00:00+00:00"
+  },
+  {
+    "type": "subEvent",
+    "id": "af1558bf-d565-40cd-8a09-cf97b447e0a2_AngelinaUndascenen_1789236000000",
+    "parentEventId": "af1558bf-d565-40cd-8a09-cf97b447e0a2",
+    "parentTitle": "Kulturnatten på Forumtorget",
+    "title": "Angelina Unda (scenen)",
+    "startTimeText": "20:00",
+    "endTimeText": "20:30",
+    "startTime": "2026-09-12T18:00:00+00:00",
+    "endTime": "2026-09-12T18:30:00+00:00"
+  },
+  {
+    "type": "subEvent",
+    "id": "af1558bf-d565-40cd-8a09-cf97b447e0a2_SilentDisco_1789236000000",
+    "parentEventId": "af1558bf-d565-40cd-8a09-cf97b447e0a2",
+    "parentTitle": "Kulturnatten på Forumtorget",
+    "title": "Silent Disco",
+    "startTimeText": "20:00",
+    "endTimeText": "24:00",
+    "startTime": "2026-09-12T18:00:00+00:00",
+    "endTime": null
+  },
+  {
+    "type": "subEvent",
+    "id": "af1558bf-d565-40cd-8a09-cf97b447e0a2_Storscenen_1789237800000",
+    "parentEventId": "af1558bf-d565-40cd-8a09-cf97b447e0a2",
+    "parentTitle": "Kulturnatten på Forumtorget",
+    "title": "Stor (scenen)",
+    "startTimeText": "20:30",
+    "endTimeText": "21:00",
+    "startTime": "2026-09-12T18:30:00+00:00",
+    "endTime": "2026-09-12T19:00:00+00:00"
+  },
+  {
+    "type": "subEvent",
+    "id": "af1558bf-d565-40cd-8a09-cf97b447e0a2_Grandenscenen_1789239600000",
+    "parentEventId": "af1558bf-d565-40cd-8a09-cf97b447e0a2",
+    "parentTitle": "Kulturnatten på Forumtorget",
+    "title": "Gränden (scenen)",
+    "startTimeText": "21:00",
+    "endTimeText": "22:00",
+    "startTime": "2026-09-12T19:00:00+00:00",
+    "endTime": "2026-09-12T20:00:00+00:00"
+  },
+  {
+    "type": "subEvent",
+    "id": "af1558bf-d565-40cd-8a09-cf97b447e0a2_TimBerglingDJTBAscenen_1789243200000",
+    "parentEventId": "af1558bf-d565-40cd-8a09-cf97b447e0a2",
+    "parentTitle": "Kulturnatten på Forumtorget",
+    "title": "Tim Bergling + DJ TBA (scenen)",
+    "startTimeText": "22:00",
+    "endTimeText": "24:00",
+    "startTime": "2026-09-12T20:00:00+00:00",
+    "endTime": null
+  },
+  {
+    "type": "subEvent",
+    "id": "290ed8d8-e4c8-43a2-8b2e-dc290066027e_Invigningochvalkomna_1789203600000",
     "parentEventId": "290ed8d8-e4c8-43a2-8b2e-dc290066027e",
     "parentTitle": "Livemusik, dans och musikal på KulturKnatten i Odinslund",
     "title": "Invigning och välkomna!",
@@ -177,7 +408,7 @@
   },
   {
     "type": "subEvent",
-    "id": "290ed8d8-e4c8-43a2-8b2e-dc290066027e_vispopmarianne",
+    "id": "290ed8d8-e4c8-43a2-8b2e-dc290066027e_VispopMarianne_1789203900000",
     "parentEventId": "290ed8d8-e4c8-43a2-8b2e-dc290066027e",
     "parentTitle": "Livemusik, dans och musikal på KulturKnatten i Odinslund",
     "title": "Vispop, Marianne",
@@ -188,7 +419,7 @@
   },
   {
     "type": "subEvent",
-    "id": "290ed8d8-e4c8-43a2-8b2e-dc290066027e_musikalenshrekjrchanges",
+    "id": "290ed8d8-e4c8-43a2-8b2e-dc290066027e_MusikalenShrekJrChanges_1789205700000",
     "parentEventId": "290ed8d8-e4c8-43a2-8b2e-dc290066027e",
     "parentTitle": "Livemusik, dans och musikal på KulturKnatten i Odinslund",
     "title": "Musikalen Shrek Jr., Changes",
@@ -199,7 +430,7 @@
   },
   {
     "type": "subEvent",
-    "id": "290ed8d8-e4c8-43a2-8b2e-dc290066027e_sngochdansfrnmusikalhagmarkensskola",
+    "id": "290ed8d8-e4c8-43a2-8b2e-dc290066027e_SangochdansfranmusikalHagmarkensskola_1789208100000",
     "parentEventId": "290ed8d8-e4c8-43a2-8b2e-dc290066027e",
     "parentTitle": "Livemusik, dans och musikal på KulturKnatten i Odinslund",
     "title": "Sång och dans från musikal, Hagmarkens skola",
@@ -210,7 +441,7 @@
   },
   {
     "type": "subEvent",
-    "id": "290ed8d8-e4c8-43a2-8b2e-dc290066027e_jamaikanskdancehallactiveimmortals",
+    "id": "290ed8d8-e4c8-43a2-8b2e-dc290066027e_JamaikanskdancehallActiveImmortals_1789209900000",
     "parentEventId": "290ed8d8-e4c8-43a2-8b2e-dc290066027e",
     "parentTitle": "Livemusik, dans och musikal på KulturKnatten i Odinslund",
     "title": "Jamaikansk dancehall, Active Immortals",
@@ -221,7 +452,7 @@
   },
   {
     "type": "subEvent",
-    "id": "290ed8d8-e4c8-43a2-8b2e-dc290066027e_dansstudiefrmjandetskulturskola",
+    "id": "290ed8d8-e4c8-43a2-8b2e-dc290066027e_DansStudieframjandetsKulturskola_1789212900000",
     "parentEventId": "290ed8d8-e4c8-43a2-8b2e-dc290066027e",
     "parentTitle": "Livemusik, dans och musikal på KulturKnatten i Odinslund",
     "title": "Dans, Studiefrämjandets Kulturskola",
@@ -232,7 +463,7 @@
   },
   {
     "type": "subEvent",
-    "id": "290ed8d8-e4c8-43a2-8b2e-dc290066027e_folkdansfyrisgillet",
+    "id": "290ed8d8-e4c8-43a2-8b2e-dc290066027e_FolkdansFyrisgillet_1789214700000",
     "parentEventId": "290ed8d8-e4c8-43a2-8b2e-dc290066027e",
     "parentTitle": "Livemusik, dans och musikal på KulturKnatten i Odinslund",
     "title": "Folkdans, Fyrisgillet",
@@ -243,7 +474,7 @@
   },
   {
     "type": "subEvent",
-    "id": "290ed8d8-e4c8-43a2-8b2e-dc290066027e_jamaikankdancehallactiveimmortals",
+    "id": "290ed8d8-e4c8-43a2-8b2e-dc290066027e_JamaikankdancehallActiveImmortals_1789216200000",
     "parentEventId": "290ed8d8-e4c8-43a2-8b2e-dc290066027e",
     "parentTitle": "Livemusik, dans och musikal på KulturKnatten i Odinslund",
     "title": "Jamaikank dancehall, Active Immortals",
@@ -254,7 +485,7 @@
   },
   {
     "type": "subEvent",
-    "id": "290ed8d8-e4c8-43a2-8b2e-dc290066027e_sngochdansfrnmusikalhagmarkensskola",
+    "id": "290ed8d8-e4c8-43a2-8b2e-dc290066027e_SangochdansfranmusikalHagmarkensskola_1789218000000",
     "parentEventId": "290ed8d8-e4c8-43a2-8b2e-dc290066027e",
     "parentTitle": "Livemusik, dans och musikal på KulturKnatten i Odinslund",
     "title": "Sång och dans från musikal, Hagmarkens skola",
@@ -265,7 +496,7 @@
   },
   {
     "type": "subEvent",
-    "id": "290ed8d8-e4c8-43a2-8b2e-dc290066027e_dansstudiefrmjandetskulturskola",
+    "id": "290ed8d8-e4c8-43a2-8b2e-dc290066027e_DansStudieframjandetsKulturskola_1789221000000",
     "parentEventId": "290ed8d8-e4c8-43a2-8b2e-dc290066027e",
     "parentTitle": "Livemusik, dans och musikal på KulturKnatten i Odinslund",
     "title": "Dans, Studiefrämjandets Kulturskola",
@@ -276,7 +507,7 @@
   },
   {
     "type": "subEvent",
-    "id": "290ed8d8-e4c8-43a2-8b2e-dc290066027e_musikaldrmmarchanges",
+    "id": "290ed8d8-e4c8-43a2-8b2e-dc290066027e_MusikaldrommarChanges_1789222800000",
     "parentEventId": "290ed8d8-e4c8-43a2-8b2e-dc290066027e",
     "parentTitle": "Livemusik, dans och musikal på KulturKnatten i Odinslund",
     "title": "Musikaldrömmar, Changes",
@@ -287,7 +518,7 @@
   },
   {
     "type": "subEvent",
-    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_rumriksfrbundetungamusikanteruppsaladistriktet",
+    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_RUMRiksforbundetUngaMusikanterUppsaladistriktet_1789203600000",
     "parentEventId": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d",
     "parentTitle": "Livemusik på S:t Eriks torg",
     "title": "RUM Riksförbundet Unga Musikanter Uppsaladistriktet",
@@ -298,7 +529,7 @@
   },
   {
     "type": "subEvent",
-    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_showkrenharmonyheights",
+    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_ShowkorenHarmonyHeights_1789209600000",
     "parentEventId": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d",
     "parentTitle": "Livemusik på S:t Eriks torg",
     "title": "Showkören Harmony Heights",
@@ -309,7 +540,7 @@
   },
   {
     "type": "subEvent",
-    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_donatellodisciples",
+    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_DonatelloDisciples_1789212600000",
     "parentEventId": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d",
     "parentTitle": "Livemusik på S:t Eriks torg",
     "title": "Donatello Disciples",
@@ -320,7 +551,7 @@
   },
   {
     "type": "subEvent",
-    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_sighstinskakapellet",
+    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_SiGHstinskaKapellet_1789215600000",
     "parentEventId": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d",
     "parentTitle": "Livemusik på S:t Eriks torg",
     "title": "SiGHstinska Kapellet",
@@ -331,7 +562,7 @@
   },
   {
     "type": "subEvent",
-    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_highwater",
+    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_Highwater_1789218600000",
     "parentEventId": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d",
     "parentTitle": "Livemusik på S:t Eriks torg",
     "title": "Highwater",
@@ -342,7 +573,7 @@
   },
   {
     "type": "subEvent",
-    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_rootslagen",
+    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_Rootslagen_1789221600000",
     "parentEventId": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d",
     "parentTitle": "Livemusik på S:t Eriks torg",
     "title": "Rootslagen",
@@ -353,7 +584,7 @@
   },
   {
     "type": "subEvent",
-    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_dieschwedenbomben",
+    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_DieSchwedenbomben_1789224600000",
     "parentEventId": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d",
     "parentTitle": "Livemusik på S:t Eriks torg",
     "title": "Die Schwedenbomben",
@@ -364,7 +595,7 @@
   },
   {
     "type": "subEvent",
-    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_ronster",
+    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_Ronster_1789227600000",
     "parentEventId": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d",
     "parentTitle": "Livemusik på S:t Eriks torg",
     "title": "Ronster",
@@ -375,7 +606,7 @@
   },
   {
     "type": "subEvent",
-    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_ellitheblackshades",
+    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_ElliTheBlackShades_1789230600000",
     "parentEventId": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d",
     "parentTitle": "Livemusik på S:t Eriks torg",
     "title": "Elli & The Black Shades",
@@ -386,7 +617,7 @@
   },
   {
     "type": "subEvent",
-    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_thegloryfires",
+    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_TheGloryfires_1789233600000",
     "parentEventId": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d",
     "parentTitle": "Livemusik på S:t Eriks torg",
     "title": "The Gloryfires",
@@ -397,7 +628,7 @@
   },
   {
     "type": "subEvent",
-    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_ardisco",
+    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_ARDISCo_1789236600000",
     "parentEventId": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d",
     "parentTitle": "Livemusik på S:t Eriks torg",
     "title": "ARDIS & Co",
@@ -408,7 +639,7 @@
   },
   {
     "type": "subEvent",
-    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_arsadi",
+    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_ARSADI_1789239600000",
     "parentEventId": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d",
     "parentTitle": "Livemusik på S:t Eriks torg",
     "title": "ARSADI",
@@ -419,7 +650,7 @@
   },
   {
     "type": "subEvent",
-    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_starchild",
+    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_Starchild_1789242600000",
     "parentEventId": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d",
     "parentTitle": "Livemusik på S:t Eriks torg",
     "title": "Starchild",
@@ -430,7 +661,7 @@
   },
   {
     "type": "subEvent",
-    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_timeforaction",
+    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_TimeForAction_1789245600000",
     "parentEventId": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d",
     "parentTitle": "Livemusik på S:t Eriks torg",
     "title": "Time For Action",
@@ -441,7 +672,7 @@
   },
   {
     "type": "subEvent",
-    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_mrbobsmachinery",
+    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_MRBOBSMACHINERY_1789248600000",
     "parentEventId": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d",
     "parentTitle": "Livemusik på S:t Eriks torg",
     "title": "MR BOB'S MACHINERY",
@@ -452,7 +683,7 @@
   },
   {
     "type": "subEvent",
-    "id": "51665eae-274e-49b3-938c-49921b07b179_komochtadetlugntenstundilstltet",
+    "id": "51665eae-274e-49b3-938c-49921b07b179_Komochtadetlugntenstundilastaltet_1789203600000",
     "parentEventId": "51665eae-274e-49b3-938c-49921b07b179",
     "parentTitle": "Kom och ta det lugnt en stund i lästältet!",
     "title": "Kom och ta det lugnt en stund i lästältet!",
@@ -463,7 +694,7 @@
   },
   {
     "type": "subEvent",
-    "id": "51665eae-274e-49b3-938c-49921b07b179_sngstund",
+    "id": "51665eae-274e-49b3-938c-49921b07b179_Sangstund_1789205400000",
     "parentEventId": "51665eae-274e-49b3-938c-49921b07b179",
     "parentTitle": "Kom och ta det lugnt en stund i lästältet!",
     "title": ": Sångstund",
@@ -474,7 +705,7 @@
   },
   {
     "type": "subEvent",
-    "id": "51665eae-274e-49b3-938c-49921b07b179_sagostund",
+    "id": "51665eae-274e-49b3-938c-49921b07b179_Sagostund_1789214400000",
     "parentEventId": "51665eae-274e-49b3-938c-49921b07b179",
     "parentTitle": "Kom och ta det lugnt en stund i lästältet!",
     "title": ": Sagostund",
@@ -485,7 +716,7 @@
   },
   {
     "type": "subEvent",
-    "id": "51665eae-274e-49b3-938c-49921b07b179_dansaenbok",
+    "id": "51665eae-274e-49b3-938c-49921b07b179_Dansaenbok_1789219800000",
     "parentEventId": "51665eae-274e-49b3-938c-49921b07b179",
     "parentTitle": "Kom och ta det lugnt en stund i lästältet!",
     "title": ": Dansa en bok",
@@ -496,7 +727,7 @@
   },
   {
     "type": "subEvent",
-    "id": "ea7d215e-238d-4edc-9345-b43eb2d50a8f_ukrainska",
+    "id": "ea7d215e-238d-4edc-9345-b43eb2d50a8f_Ukrainska_1789203600000",
     "parentEventId": "ea7d215e-238d-4edc-9345-b43eb2d50a8f",
     "parentTitle": "Sagostunder hela dagen!",
     "title": "Ukrainska",
@@ -507,7 +738,7 @@
   },
   {
     "type": "subEvent",
-    "id": "ea7d215e-238d-4edc-9345-b43eb2d50a8f_kinesiska",
+    "id": "ea7d215e-238d-4edc-9345-b43eb2d50a8f_Kinesiska_1789205400000",
     "parentEventId": "ea7d215e-238d-4edc-9345-b43eb2d50a8f",
     "parentTitle": "Sagostunder hela dagen!",
     "title": "Kinesiska",
@@ -518,7 +749,7 @@
   },
   {
     "type": "subEvent",
-    "id": "ea7d215e-238d-4edc-9345-b43eb2d50a8f_polska",
+    "id": "ea7d215e-238d-4edc-9345-b43eb2d50a8f_Polska_1789209000000",
     "parentEventId": "ea7d215e-238d-4edc-9345-b43eb2d50a8f",
     "parentTitle": "Sagostunder hela dagen!",
     "title": "Polska",
@@ -529,7 +760,7 @@
   },
   {
     "type": "subEvent",
-    "id": "ea7d215e-238d-4edc-9345-b43eb2d50a8f_turkiska",
+    "id": "ea7d215e-238d-4edc-9345-b43eb2d50a8f_Turkiska_1789210800000",
     "parentEventId": "ea7d215e-238d-4edc-9345-b43eb2d50a8f",
     "parentTitle": "Sagostunder hela dagen!",
     "title": "Turkiska",
@@ -540,7 +771,7 @@
   },
   {
     "type": "subEvent",
-    "id": "ea7d215e-238d-4edc-9345-b43eb2d50a8f_arabiska",
+    "id": "ea7d215e-238d-4edc-9345-b43eb2d50a8f_Arabiska_1789212600000",
     "parentEventId": "ea7d215e-238d-4edc-9345-b43eb2d50a8f",
     "parentTitle": "Sagostunder hela dagen!",
     "title": "Arabiska",
@@ -551,7 +782,7 @@
   },
   {
     "type": "subEvent",
-    "id": "ea7d215e-238d-4edc-9345-b43eb2d50a8f_svenska",
+    "id": "ea7d215e-238d-4edc-9345-b43eb2d50a8f_Svenska_1789214400000",
     "parentEventId": "ea7d215e-238d-4edc-9345-b43eb2d50a8f",
     "parentTitle": "Sagostunder hela dagen!",
     "title": "Svenska",
@@ -562,7 +793,7 @@
   },
   {
     "type": "subEvent",
-    "id": "ea7d215e-238d-4edc-9345-b43eb2d50a8f_persiska",
+    "id": "ea7d215e-238d-4edc-9345-b43eb2d50a8f_Persiska_1789216200000",
     "parentEventId": "ea7d215e-238d-4edc-9345-b43eb2d50a8f",
     "parentTitle": "Sagostunder hela dagen!",
     "title": "Persiska",
@@ -573,7 +804,7 @@
   },
   {
     "type": "subEvent",
-    "id": "ea7d215e-238d-4edc-9345-b43eb2d50a8f_grekiska",
+    "id": "ea7d215e-238d-4edc-9345-b43eb2d50a8f_Grekiska_1789218000000",
     "parentEventId": "ea7d215e-238d-4edc-9345-b43eb2d50a8f",
     "parentTitle": "Sagostunder hela dagen!",
     "title": "Grekiska",
@@ -584,7 +815,7 @@
   },
   {
     "type": "subEvent",
-    "id": "ea7d215e-238d-4edc-9345-b43eb2d50a8f_franska",
+    "id": "ea7d215e-238d-4edc-9345-b43eb2d50a8f_Franska_1789219800000",
     "parentEventId": "ea7d215e-238d-4edc-9345-b43eb2d50a8f",
     "parentTitle": "Sagostunder hela dagen!",
     "title": "Franska",
@@ -595,7 +826,7 @@
   },
   {
     "type": "subEvent",
-    "id": "ea7d215e-238d-4edc-9345-b43eb2d50a8f_engelska",
+    "id": "ea7d215e-238d-4edc-9345-b43eb2d50a8f_Engelska_1789221600000",
     "parentEventId": "ea7d215e-238d-4edc-9345-b43eb2d50a8f",
     "parentTitle": "Sagostunder hela dagen!",
     "title": "Engelska",
@@ -606,7 +837,7 @@
   },
   {
     "type": "subEvent",
-    "id": "ea7d215e-238d-4edc-9345-b43eb2d50a8f_katalanska",
+    "id": "ea7d215e-238d-4edc-9345-b43eb2d50a8f_Katalanska_1789223400000",
     "parentEventId": "ea7d215e-238d-4edc-9345-b43eb2d50a8f",
     "parentTitle": "Sagostunder hela dagen!",
     "title": "Katalanska",
@@ -617,7 +848,7 @@
   },
   {
     "type": "subEvent",
-    "id": "529b6a18-5f9f-4d8b-81f6-d0b93b336810_workshopyngreca37r",
+    "id": "529b6a18-5f9f-4d8b-81f6-d0b93b336810_Workshopyngreca37ar_1789203600000",
     "parentEventId": "529b6a18-5f9f-4d8b-81f6-d0b93b336810",
     "parentTitle": "Rörelse, dans, workshop och föreställning med Kulturskolan",
     "title": "Workshop yngre ca 3-7 år",
@@ -628,7 +859,7 @@
   },
   {
     "type": "subEvent",
-    "id": "529b6a18-5f9f-4d8b-81f6-d0b93b336810_workshopldreca812r",
+    "id": "529b6a18-5f9f-4d8b-81f6-d0b93b336810_Workshopaldreca812ar_1789205400000",
     "parentEventId": "529b6a18-5f9f-4d8b-81f6-d0b93b336810",
     "parentTitle": "Rörelse, dans, workshop och föreställning med Kulturskolan",
     "title": "Workshop äldre ca 8-12 år",
@@ -639,7 +870,7 @@
   },
   {
     "type": "subEvent",
-    "id": "529b6a18-5f9f-4d8b-81f6-d0b93b336810_dansrrelsebanaitrdgrden",
+    "id": "529b6a18-5f9f-4d8b-81f6-d0b93b336810_Dansrorelsebanaitradgarden_1789207200000",
     "parentEventId": "529b6a18-5f9f-4d8b-81f6-d0b93b336810",
     "parentTitle": "Rörelse, dans, workshop och föreställning med Kulturskolan",
     "title": "Dans/rörelsebana i trädgården",
@@ -650,7 +881,7 @@
   },
   {
     "type": "subEvent",
-    "id": "529b6a18-5f9f-4d8b-81f6-d0b93b336810_frestllningmnstrlarochplaneter",
+    "id": "529b6a18-5f9f-4d8b-81f6-d0b93b336810_ForestallningManstralarochplaneter_1789210800000",
     "parentEventId": "529b6a18-5f9f-4d8b-81f6-d0b93b336810",
     "parentTitle": "Rörelse, dans, workshop och föreställning med Kulturskolan",
     "title": "Föreställning: Månstrålar och planeter",
@@ -661,7 +892,7 @@
   },
   {
     "type": "subEvent",
-    "id": "529b6a18-5f9f-4d8b-81f6-d0b93b336810_workshopyngreca37r",
+    "id": "529b6a18-5f9f-4d8b-81f6-d0b93b336810_Workshopyngreca37ar_1789212600000",
     "parentEventId": "529b6a18-5f9f-4d8b-81f6-d0b93b336810",
     "parentTitle": "Rörelse, dans, workshop och föreställning med Kulturskolan",
     "title": "Workshop yngre ca 3-7 år",
@@ -672,7 +903,7 @@
   },
   {
     "type": "subEvent",
-    "id": "529b6a18-5f9f-4d8b-81f6-d0b93b336810_workshopldreca812r",
+    "id": "529b6a18-5f9f-4d8b-81f6-d0b93b336810_Workshopaldreca812ar_1789214400000",
     "parentEventId": "529b6a18-5f9f-4d8b-81f6-d0b93b336810",
     "parentTitle": "Rörelse, dans, workshop och föreställning med Kulturskolan",
     "title": "Workshop äldre ca 8-12 år",
@@ -683,7 +914,7 @@
   },
   {
     "type": "subEvent",
-    "id": "529b6a18-5f9f-4d8b-81f6-d0b93b336810_dansrrelsebanaitrdgrden",
+    "id": "529b6a18-5f9f-4d8b-81f6-d0b93b336810_Dansrorelsebanaitradgarden_1789216200000",
     "parentEventId": "529b6a18-5f9f-4d8b-81f6-d0b93b336810",
     "parentTitle": "Rörelse, dans, workshop och föreställning med Kulturskolan",
     "title": "Dans/rörelsebana i trädgården",
@@ -694,7 +925,7 @@
   },
   {
     "type": "subEvent",
-    "id": "529b6a18-5f9f-4d8b-81f6-d0b93b336810_frestllningmnstrlarochplaneter",
+    "id": "529b6a18-5f9f-4d8b-81f6-d0b93b336810_ForestallningManstralarochplaneter_1789219800000",
     "parentEventId": "529b6a18-5f9f-4d8b-81f6-d0b93b336810",
     "parentTitle": "Rörelse, dans, workshop och föreställning med Kulturskolan",
     "title": "Föreställning: Månstrålar och planeter",
@@ -705,7 +936,7 @@
   },
   {
     "type": "subEvent",
-    "id": "529b6a18-5f9f-4d8b-81f6-d0b93b336810_workshopyngreca37r",
+    "id": "529b6a18-5f9f-4d8b-81f6-d0b93b336810_Workshopyngreca37ar_1789221600000",
     "parentEventId": "529b6a18-5f9f-4d8b-81f6-d0b93b336810",
     "parentTitle": "Rörelse, dans, workshop och föreställning med Kulturskolan",
     "title": "Workshop yngre ca 3-7 år",
@@ -716,7 +947,7 @@
   },
   {
     "type": "subEvent",
-    "id": "529b6a18-5f9f-4d8b-81f6-d0b93b336810_workshopldreca812r",
+    "id": "529b6a18-5f9f-4d8b-81f6-d0b93b336810_Workshopaldreca812ar_1789223400000",
     "parentEventId": "529b6a18-5f9f-4d8b-81f6-d0b93b336810",
     "parentTitle": "Rörelse, dans, workshop och föreställning med Kulturskolan",
     "title": "Workshop äldre ca 8-12 år",
@@ -727,7 +958,7 @@
   },
   {
     "type": "subEvent",
-    "id": "cf9a1aa5-541d-44b8-ab9b-68db09005049_muddytrailblueslillascenen",
+    "id": "cf9a1aa5-541d-44b8-ab9b-68db09005049_MuddyTrailBluesLillascenen_1789204500000",
     "parentEventId": "cf9a1aa5-541d-44b8-ab9b-68db09005049",
     "parentTitle": "Livemusik på Vaksala torg",
     "title": "Muddy Trail Blues (Lilla scenen)",
@@ -738,7 +969,7 @@
   },
   {
     "type": "subEvent",
-    "id": "cf9a1aa5-541d-44b8-ab9b-68db09005049_uppsalaindianchoirstorascenen",
+    "id": "cf9a1aa5-541d-44b8-ab9b-68db09005049_UppsalaIndianChoirStorascenen_1789206300000",
     "parentEventId": "cf9a1aa5-541d-44b8-ab9b-68db09005049",
     "parentTitle": "Livemusik på Vaksala torg",
     "title": "Uppsala Indian Choir (Stora scenen)",
@@ -749,7 +980,7 @@
   },
   {
     "type": "subEvent",
-    "id": "cf9a1aa5-541d-44b8-ab9b-68db09005049_isinkpenlillascenen",
+    "id": "cf9a1aa5-541d-44b8-ab9b-68db09005049_IsInkpenLillascenen_1789208100000",
     "parentEventId": "cf9a1aa5-541d-44b8-ab9b-68db09005049",
     "parentTitle": "Livemusik på Vaksala torg",
     "title": "Is Inkpen (Lilla scenen)",
@@ -760,7 +991,7 @@
   },
   {
     "type": "subEvent",
-    "id": "cf9a1aa5-541d-44b8-ab9b-68db09005049_invigningstalavlindaeskilssonkulturnmndensordfrandestorascenen",
+    "id": "cf9a1aa5-541d-44b8-ab9b-68db09005049_InvigningstalavLindaEskilssonKulturnamndensordforandeStorascenen_1789209900000",
     "parentEventId": "cf9a1aa5-541d-44b8-ab9b-68db09005049",
     "parentTitle": "Livemusik på Vaksala torg",
     "title": "Invigningstal av Linda Eskilsson, Kulturnämndens ordförande (Stora scenen)",
@@ -771,7 +1002,7 @@
   },
   {
     "type": "subEvent",
-    "id": "cf9a1aa5-541d-44b8-ab9b-68db09005049_gustafliljenstolpe50daysstorascenen",
+    "id": "cf9a1aa5-541d-44b8-ab9b-68db09005049_GustafLiljenstolpe50DaysStorascenen_1789210800000",
     "parentEventId": "cf9a1aa5-541d-44b8-ab9b-68db09005049",
     "parentTitle": "Livemusik på Vaksala torg",
     "title": "Gustaf Liljenstolpe/50Days (Stora scenen)",
@@ -782,7 +1013,7 @@
   },
   {
     "type": "subEvent",
-    "id": "cf9a1aa5-541d-44b8-ab9b-68db09005049_knivstasunelillascenen",
+    "id": "cf9a1aa5-541d-44b8-ab9b-68db09005049_KnivstasuneLillascenen_1789212600000",
     "parentEventId": "cf9a1aa5-541d-44b8-ab9b-68db09005049",
     "parentTitle": "Livemusik på Vaksala torg",
     "title": "Knivstasune (Lilla scenen)",
@@ -793,7 +1024,7 @@
   },
   {
     "type": "subEvent",
-    "id": "cf9a1aa5-541d-44b8-ab9b-68db09005049_tectylstorascenen",
+    "id": "cf9a1aa5-541d-44b8-ab9b-68db09005049_TectylStorascenen_1789214400000",
     "parentEventId": "cf9a1aa5-541d-44b8-ab9b-68db09005049",
     "parentTitle": "Livemusik på Vaksala torg",
     "title": "Tectyl (Stora scenen)",
@@ -804,7 +1035,7 @@
   },
   {
     "type": "subEvent",
-    "id": "cf9a1aa5-541d-44b8-ab9b-68db09005049_imahjertstedtloveadrianssonlillascenen",
+    "id": "cf9a1aa5-541d-44b8-ab9b-68db09005049_ImaHjertstedtLoveAdrianssonLillascenen_1789216200000",
     "parentEventId": "cf9a1aa5-541d-44b8-ab9b-68db09005049",
     "parentTitle": "Livemusik på Vaksala torg",
     "title": "Ima Hjertstedt & Love Adriansson (Lilla scenen)",
@@ -815,7 +1046,7 @@
   },
   {
     "type": "subEvent",
-    "id": "cf9a1aa5-541d-44b8-ab9b-68db09005049_candymenstorascenen",
+    "id": "cf9a1aa5-541d-44b8-ab9b-68db09005049_CandyMenStorascenen_1789218000000",
     "parentEventId": "cf9a1aa5-541d-44b8-ab9b-68db09005049",
     "parentTitle": "Livemusik på Vaksala torg",
     "title": "Candy Men (Stora scenen)",
@@ -826,7 +1057,7 @@
   },
   {
     "type": "subEvent",
-    "id": "cf9a1aa5-541d-44b8-ab9b-68db09005049_alexanderschninglillascenen",
+    "id": "cf9a1aa5-541d-44b8-ab9b-68db09005049_AlexanderSchoningLillascenen_1789219800000",
     "parentEventId": "cf9a1aa5-541d-44b8-ab9b-68db09005049",
     "parentTitle": "Livemusik på Vaksala torg",
     "title": "Alexander Schöning (Lilla scenen)",
@@ -837,7 +1068,7 @@
   },
   {
     "type": "subEvent",
-    "id": "8cb6598e-f0a4-451f-85da-2ca0e1974a09_biblioteketrppet",
+    "id": "8cb6598e-f0a4-451f-85da-2ca0e1974a09_Biblioteketaroppet_1789200000000",
     "parentEventId": "8cb6598e-f0a4-451f-85da-2ca0e1974a09",
     "parentTitle": "Öppet på Carolina Rediviva",
     "title": "Biblioteket är öppet.",
@@ -848,7 +1079,7 @@
   },
   {
     "type": "subEvent",
-    "id": "8cb6598e-f0a4-451f-85da-2ca0e1974a09_utstllningssalenmedbutikrppen",
+    "id": "8cb6598e-f0a4-451f-85da-2ca0e1974a09_Utstallningssalenmedbutikaroppen_1789207200000",
     "parentEventId": "8cb6598e-f0a4-451f-85da-2ca0e1974a09",
     "parentTitle": "Öppet på Carolina Rediviva",
     "title": "Utställningssalen med butik är öppen.",
@@ -859,7 +1090,7 @@
   },
   {
     "type": "subEvent",
-    "id": "8cb6598e-f0a4-451f-85da-2ca0e1974a09_cafcarolinarppet",
+    "id": "8cb6598e-f0a4-451f-85da-2ca0e1974a09_CafeCarolinaaroppet_1789207200000",
     "parentEventId": "8cb6598e-f0a4-451f-85da-2ca0e1974a09",
     "parentTitle": "Öppet på Carolina Rediviva",
     "title": "Café Carolina är öppet.",
@@ -870,7 +1101,7 @@
   },
   {
     "type": "subEvent",
-    "id": "8cb6598e-f0a4-451f-85da-2ca0e1974a09_rithrnaochskattjaktikafet",
+    "id": "8cb6598e-f0a4-451f-85da-2ca0e1974a09_Rithornaochskattjaktikafeet_1789207200000",
     "parentEventId": "8cb6598e-f0a4-451f-85da-2ca0e1974a09",
     "parentTitle": "Öppet på Carolina Rediviva",
     "title": "Rithörna och skattjakt i kaféet.",
@@ -881,7 +1112,7 @@
   },
   {
     "type": "subEvent",
-    "id": "8cb6598e-f0a4-451f-85da-2ca0e1974a09_familjevisningavboksalen25platsergratisbiljetterhmtasifrvgiinformationsdiskenfrnden29",
+    "id": "8cb6598e-f0a4-451f-85da-2ca0e1974a09_Familjevisningavboksalen25platsergratisbiljetterhamtasiforvagiinformationsdiskenfranden29_1789207200000",
     "parentEventId": "8cb6598e-f0a4-451f-85da-2ca0e1974a09",
     "parentTitle": "Öppet på Carolina Rediviva",
     "title": "Familjevisning av boksalen (25 platser, gratisbiljetter hämtas i förväg i informationsdisken från den 2/9).",
@@ -892,7 +1123,7 @@
   },
   {
     "type": "subEvent",
-    "id": "8cb6598e-f0a4-451f-85da-2ca0e1974a09_visningavboksalen25platsergratisbiljetterhmtasifrvgiinformationsdiskenfrnden29",
+    "id": "8cb6598e-f0a4-451f-85da-2ca0e1974a09_Visningavboksalen25platsergratisbiljetterhamtasiforvagiinformationsdiskenfranden29_1789210800000",
     "parentEventId": "8cb6598e-f0a4-451f-85da-2ca0e1974a09",
     "parentTitle": "Öppet på Carolina Rediviva",
     "title": "Visning av boksalen (25 platser, gratisbiljetter hämtas i förväg i informationsdisken från den 2/9).",
@@ -903,7 +1134,7 @@
   },
   {
     "type": "subEvent",
-    "id": "8cb6598e-f0a4-451f-85da-2ca0e1974a09_visningmatshglundarkivarievisarandersbureskarta1626ochcartamarina1539iutstllningssalen",
+    "id": "8cb6598e-f0a4-451f-85da-2ca0e1974a09_VisningMatsHoglundarkivarievisarAndersBureskarta1626ochCartaMarina1539iutstallningssalen_1789210800000",
     "parentEventId": "8cb6598e-f0a4-451f-85da-2ca0e1974a09",
     "parentTitle": "Öppet på Carolina Rediviva",
     "title": "Visning: Mats Höglund, arkivarie, visar Anders Bures karta (1626) och Carta Marina (1539) i utställningssalen.",
@@ -914,7 +1145,7 @@
   },
   {
     "type": "subEvent",
-    "id": "8cb6598e-f0a4-451f-85da-2ca0e1974a09_frelsninguniversitetshusetiuppsalaannahambergantikvariekonstvetaretidskriftslsesalentlssevenutstllningeniutstllningssalen",
+    "id": "8cb6598e-f0a4-451f-85da-2ca0e1974a09_ForelasningUniversitetshusetiUppsalaAnnaHambergantikvariekonstvetareTidskriftslasesalenTLSSeavenutstallningeniutstallningssalen_1789212600000",
     "parentEventId": "8cb6598e-f0a4-451f-85da-2ca0e1974a09",
     "parentTitle": "Öppet på Carolina Rediviva",
     "title": "Föreläsning: Universitetshuset i Uppsala, Anna Hamberg, antikvarie, konstvetare. Tidskriftsläsesalen (TLS). Se även utställningen i utställningssalen.",
@@ -925,7 +1156,7 @@
   },
   {
     "type": "subEvent",
-    "id": "8cb6598e-f0a4-451f-85da-2ca0e1974a09_rektorandershagfeldtdelarutretsdisaprismedefterfljandefrelsningtidskriftslsesalentls",
+    "id": "8cb6598e-f0a4-451f-85da-2ca0e1974a09_RektorAndersHagfeldtdelarutaretsDisaprismedefterfoljandeforelasningTidskriftslasesalenTLS_1789218000000",
     "parentEventId": "8cb6598e-f0a4-451f-85da-2ca0e1974a09",
     "parentTitle": "Öppet på Carolina Rediviva",
     "title": "Rektor Anders Hagfeldt delar ut årets Disapris med efterföljande föreläsning. Tidskriftsläsesalen (TLS).",
@@ -936,7 +1167,7 @@
   },
   {
     "type": "subEvent",
-    "id": "8cb6598e-f0a4-451f-85da-2ca0e1974a09_visningavboksalenpengelska25platsergratisbiljetterhmtasifrvgiinformationsdiskenfrnden29",
+    "id": "8cb6598e-f0a4-451f-85da-2ca0e1974a09_Visningavboksalenpaengelska25platsergratisbiljetterhamtasiforvagiinformationsdiskenfranden29_1789218000000",
     "parentEventId": "8cb6598e-f0a4-451f-85da-2ca0e1974a09",
     "parentTitle": "Öppet på Carolina Rediviva",
     "title": "Visning av boksalen på engelska (25 platser, gratisbiljetter hämtas i förväg i informationsdisken från den 2/9).",
@@ -947,7 +1178,7 @@
   },
   {
     "type": "subEvent",
-    "id": "8cb6598e-f0a4-451f-85da-2ca0e1974a09_carolinaredivivasjungersngeravensembleuruppsalaakademiskakammarkrochallsngasalen",
+    "id": "8cb6598e-f0a4-451f-85da-2ca0e1974a09_CarolinaRedivivasjungerSangeravensembleurUppsalaakademiskakammarkorochallsangAsalen_1789221600000",
     "parentEventId": "8cb6598e-f0a4-451f-85da-2ca0e1974a09",
     "parentTitle": "Öppet på Carolina Rediviva",
     "title": "Carolina Rediviva sjunger! Sånger av ensemble ur Uppsala akademiska kammarkör och allsång. A-salen.",
@@ -958,7 +1189,7 @@
   },
   {
     "type": "subEvent",
-    "id": "8cb6598e-f0a4-451f-85da-2ca0e1974a09_upptalkforskarsamtalomdigitalopinionsbildningtiktokpverkanochungavljarematteomagnaniprofessorvidinstitutionenfrinformationsteknologicafcarolina",
+    "id": "8cb6598e-f0a4-451f-85da-2ca0e1974a09_UppTalkforskarsamtalomdigitalopinionsbildningTikTokpaverkanochungavaljareMatteoMagnaniprofessorvidInstitutionenforinformationsteknologiCafeCarolina_1789228800000",
     "parentEventId": "8cb6598e-f0a4-451f-85da-2ca0e1974a09",
     "parentTitle": "Öppet på Carolina Rediviva",
     "title": "UppTalk: forskarsamtal om digital opinionsbildning – TikTok, påverkan och unga väljare. Matteo Magnani, professor vid Institutionen för informationsteknologi. Café Carolina.",
@@ -969,7 +1200,7 @@
   },
   {
     "type": "subEvent",
-    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_uppsalaspelmanslag",
+    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_Uppsalaspelmanslag_1789209000000",
     "parentEventId": "e7198f34-9ddb-43fe-a986-83ea8532026e",
     "parentTitle": "Musik på innergården!",
     "title": "Uppsala spelmanslag",
@@ -980,7 +1211,7 @@
   },
   {
     "type": "subEvent",
-    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_jojjecband",
+    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_JojjeCband_1789210800000",
     "parentEventId": "e7198f34-9ddb-43fe-a986-83ea8532026e",
     "parentTitle": "Musik på innergården!",
     "title": "Jojje C band",
@@ -991,7 +1222,7 @@
   },
   {
     "type": "subEvent",
-    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_michaeljonsochthetreutigers",
+    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_MichaelJonsochTheTreutigers_1789212600000",
     "parentEventId": "e7198f34-9ddb-43fe-a986-83ea8532026e",
     "parentTitle": "Musik på innergården!",
     "title": "Michael Jons och The Treutigers",
@@ -1002,7 +1233,7 @@
   },
   {
     "type": "subEvent",
-    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_sargonsziggurat",
+    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_SargonsZiggurat_1789214400000",
     "parentEventId": "e7198f34-9ddb-43fe-a986-83ea8532026e",
     "parentTitle": "Musik på innergården!",
     "title": "Sargons Ziggurat",
@@ -1013,7 +1244,7 @@
   },
   {
     "type": "subEvent",
-    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_ronster",
+    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_Ronster_1789216200000",
     "parentEventId": "e7198f34-9ddb-43fe-a986-83ea8532026e",
     "parentTitle": "Musik på innergården!",
     "title": "Ronster",
@@ -1024,7 +1255,7 @@
   },
   {
     "type": "subEvent",
-    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_uppsalafeministkr",
+    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_Uppsalafeministkor_1789218000000",
     "parentEventId": "e7198f34-9ddb-43fe-a986-83ea8532026e",
     "parentTitle": "Musik på innergården!",
     "title": "Uppsala feministkör",
@@ -1035,7 +1266,7 @@
   },
   {
     "type": "subEvent",
-    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_moontrash",
+    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_Moontrash_1789219800000",
     "parentEventId": "e7198f34-9ddb-43fe-a986-83ea8532026e",
     "parentTitle": "Musik på innergården!",
     "title": "Moontrash",
@@ -1046,7 +1277,7 @@
   },
   {
     "type": "subEvent",
-    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_hinkmat",
+    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_Hinkmat_1789221600000",
     "parentEventId": "e7198f34-9ddb-43fe-a986-83ea8532026e",
     "parentTitle": "Musik på innergården!",
     "title": "Hinkmat",
@@ -1057,7 +1288,7 @@
   },
   {
     "type": "subEvent",
-    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_lightinyourlife",
+    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_Lightinyourlife_1789223400000",
     "parentEventId": "e7198f34-9ddb-43fe-a986-83ea8532026e",
     "parentTitle": "Musik på innergården!",
     "title": "Light in your life",
@@ -1068,7 +1299,7 @@
   },
   {
     "type": "subEvent",
-    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_revanschen",
+    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_Revanschen_1789225200000",
     "parentEventId": "e7198f34-9ddb-43fe-a986-83ea8532026e",
     "parentTitle": "Musik på innergården!",
     "title": "Revanschen",
@@ -1079,7 +1310,7 @@
   },
   {
     "type": "subEvent",
-    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_backenhem",
+    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_Backenhem_1789227000000",
     "parentEventId": "e7198f34-9ddb-43fe-a986-83ea8532026e",
     "parentTitle": "Musik på innergården!",
     "title": "Backen hem",
@@ -1090,7 +1321,7 @@
   },
   {
     "type": "subEvent",
-    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_harmonyheights",
+    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_HarmonyHeights_1789228800000",
     "parentEventId": "e7198f34-9ddb-43fe-a986-83ea8532026e",
     "parentTitle": "Musik på innergården!",
     "title": "Harmony Heights",
@@ -1101,7 +1332,7 @@
   },
   {
     "type": "subEvent",
-    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_elements",
+    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_Elements_1789230600000",
     "parentEventId": "e7198f34-9ddb-43fe-a986-83ea8532026e",
     "parentTitle": "Musik på innergården!",
     "title": "Elements",
@@ -1112,7 +1343,7 @@
   },
   {
     "type": "subEvent",
-    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_syndet",
+    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_Syndet_1789232400000",
     "parentEventId": "e7198f34-9ddb-43fe-a986-83ea8532026e",
     "parentTitle": "Musik på innergården!",
     "title": "Syndet",
@@ -1123,7 +1354,7 @@
   },
   {
     "type": "subEvent",
-    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_almostdeadmen",
+    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_AlmostDeadmen_1789234200000",
     "parentEventId": "e7198f34-9ddb-43fe-a986-83ea8532026e",
     "parentTitle": "Musik på innergården!",
     "title": "Almost Dead men",
@@ -1134,7 +1365,7 @@
   },
   {
     "type": "subEvent",
-    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_butterutter",
+    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_ButterUtter_1789236000000",
     "parentEventId": "e7198f34-9ddb-43fe-a986-83ea8532026e",
     "parentTitle": "Musik på innergården!",
     "title": "Butter Utter",
@@ -1145,7 +1376,7 @@
   },
   {
     "type": "subEvent",
-    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_chuck",
+    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_Chuck_1789237800000",
     "parentEventId": "e7198f34-9ddb-43fe-a986-83ea8532026e",
     "parentTitle": "Musik på innergården!",
     "title": "Chuck",
@@ -1156,7 +1387,7 @@
   },
   {
     "type": "subEvent",
-    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_vikhaedan",
+    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_VIKHAEDAN_1789239600000",
     "parentEventId": "e7198f34-9ddb-43fe-a986-83ea8532026e",
     "parentTitle": "Musik på innergården!",
     "title": "VIK HAEDAN",
@@ -1167,7 +1398,7 @@
   },
   {
     "type": "subEvent",
-    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_malakka",
+    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_Malakka_1789241400000",
     "parentEventId": "e7198f34-9ddb-43fe-a986-83ea8532026e",
     "parentTitle": "Musik på innergården!",
     "title": "Malakka",
@@ -1178,7 +1409,7 @@
   },
   {
     "type": "subEvent",
-    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_threedeadfingers",
+    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_ThreeDeadFingers_1789243200000",
     "parentEventId": "e7198f34-9ddb-43fe-a986-83ea8532026e",
     "parentTitle": "Musik på innergården!",
     "title": "Three Dead Fingers",
@@ -1189,7 +1420,7 @@
   },
   {
     "type": "subEvent",
-    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_mrthzz",
+    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_Morthzz_1789245000000",
     "parentEventId": "e7198f34-9ddb-43fe-a986-83ea8532026e",
     "parentTitle": "Musik på innergården!",
     "title": "Mörthzz",
@@ -1200,7 +1431,7 @@
   },
   {
     "type": "subEvent",
-    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_able",
+    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_Able_1789234200000",
     "parentEventId": "e7198f34-9ddb-43fe-a986-83ea8532026e",
     "parentTitle": "Musik på innergården!",
     "title": "Able",
@@ -1211,7 +1442,7 @@
   },
   {
     "type": "subEvent",
-    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_monopunkswe",
+    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_MonopunkSwe_1789237800000",
     "parentEventId": "e7198f34-9ddb-43fe-a986-83ea8532026e",
     "parentTitle": "Musik på innergården!",
     "title": "Monopunk Swe",
@@ -1222,7 +1453,7 @@
   },
   {
     "type": "subEvent",
-    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_spektakel",
+    "id": "e7198f34-9ddb-43fe-a986-83ea8532026e_Spektakel_1789241400000",
     "parentEventId": "e7198f34-9ddb-43fe-a986-83ea8532026e",
     "parentTitle": "Musik på innergården!",
     "title": "Spektakel",
@@ -1233,7 +1464,7 @@
   },
   {
     "type": "subEvent",
-    "id": "6c3d3e19-4022-4f8c-a9c0-8589ec08046a_larstranviksjrapporterominlandsvattnenimnniskanstidslder",
+    "id": "6c3d3e19-4022-4f8c-a9c0-8589ec08046a_LarsTranvikSjorapporterOminlandsvattnenimanniskanstidsalder_1789210800000",
     "parentEventId": "6c3d3e19-4022-4f8c-a9c0-8589ec08046a",
     "parentTitle": "Linnéträdgårdens Orangeri",
     "title": "Lars Tranvik, Sjörapporter. Om inlandsvattnen i människans tidsålder.",
@@ -1244,7 +1475,7 @@
   },
   {
     "type": "subEvent",
-    "id": "6c3d3e19-4022-4f8c-a9c0-8589ec08046a_fyriskvartettenmusikavbeethoven",
+    "id": "6c3d3e19-4022-4f8c-a9c0-8589ec08046a_FyriskvartettenmusikavBeethoven_1789214400000",
     "parentEventId": "6c3d3e19-4022-4f8c-a9c0-8589ec08046a",
     "parentTitle": "Linnéträdgårdens Orangeri",
     "title": "Fyriskvartetten, musik av Beethoven.",
@@ -1255,7 +1486,7 @@
   },
   {
     "type": "subEvent",
-    "id": "6c3d3e19-4022-4f8c-a9c0-8589ec08046a_gudrunanderssonakademikerochborgarerumsliginteraktioni1700taletsuppsala",
+    "id": "6c3d3e19-4022-4f8c-a9c0-8589ec08046a_GudrunAnderssonAkademikerochborgareRumsliginteraktioni1700taletsUppsala_1789218000000",
     "parentEventId": "6c3d3e19-4022-4f8c-a9c0-8589ec08046a",
     "parentTitle": "Linnéträdgårdens Orangeri",
     "title": "Gudrun Andersson, Akademiker och borgare. Rumslig interaktion i 1700-talets Uppsala",
@@ -1266,7 +1497,7 @@
   },
   {
     "type": "subEvent",
-    "id": "6c3d3e19-4022-4f8c-a9c0-8589ec08046a_grevinnanbraheochbraniculamedmidgrdspipare1700talsdanser",
+    "id": "6c3d3e19-4022-4f8c-a9c0-8589ec08046a_GrevinnanBraheochBraniculamedMidgardspipare1700talsdanser_1789221600000",
     "parentEventId": "6c3d3e19-4022-4f8c-a9c0-8589ec08046a",
     "parentTitle": "Linnéträdgårdens Orangeri",
     "title": "Grevinnan Brahe och Branicula med Midgårds pipare, 1700-talsdanser.",
@@ -1277,7 +1508,7 @@
   },
   {
     "type": "subEvent",
-    "id": "6c3d3e19-4022-4f8c-a9c0-8589ec08046a_annasvenssonbotaniskabroderierpresentationochprovap",
+    "id": "6c3d3e19-4022-4f8c-a9c0-8589ec08046a_AnnaSvenssonBotaniskabroderierpresentationochprovapa_1789225200000",
     "parentEventId": "6c3d3e19-4022-4f8c-a9c0-8589ec08046a",
     "parentTitle": "Linnéträdgårdens Orangeri",
     "title": "Anna Svensson, Botaniska broderier, presentation och prova på.",
@@ -1288,7 +1519,7 @@
   },
   {
     "type": "subEvent",
-    "id": "6c3d3e19-4022-4f8c-a9c0-8589ec08046a_gluntarnasvnnerallsngmedgluntar",
+    "id": "6c3d3e19-4022-4f8c-a9c0-8589ec08046a_GluntarnasvannerallsangmedGluntar_1789228800000",
     "parentEventId": "6c3d3e19-4022-4f8c-a9c0-8589ec08046a",
     "parentTitle": "Linnéträdgårdens Orangeri",
     "title": "Gluntarnas vänner, allsång med Gluntar.",
@@ -1299,7 +1530,7 @@
   },
   {
     "type": "subEvent",
-    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_konstbruket",
+    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_Konstbruket_1789214400000",
     "parentEventId": "a8862c26-f3e0-48f6-844c-312be090c7f6",
     "parentTitle": "Livemusik på Walmstedtska gården",
     "title": "Konstbruket",
@@ -1310,7 +1541,7 @@
   },
   {
     "type": "subEvent",
-    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_jsb",
+    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_JSB_1789216200000",
     "parentEventId": "a8862c26-f3e0-48f6-844c-312be090c7f6",
     "parentTitle": "Livemusik på Walmstedtska gården",
     "title": "JSB",
@@ -1321,7 +1552,7 @@
   },
   {
     "type": "subEvent",
-    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_showorkesterndeonmnbara",
+    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_ShoworkesterndeOnamnbara_1789218000000",
     "parentEventId": "a8862c26-f3e0-48f6-844c-312be090c7f6",
     "parentTitle": "Livemusik på Walmstedtska gården",
     "title": "Showorkestern de Onämnbara",
@@ -1332,7 +1563,7 @@
   },
   {
     "type": "subEvent",
-    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_ekebybluesband",
+    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_EkebyBluesBand_1789219800000",
     "parentEventId": "a8862c26-f3e0-48f6-844c-312be090c7f6",
     "parentTitle": "Livemusik på Walmstedtska gården",
     "title": "Ekeby Blues Band",
@@ -1343,7 +1574,7 @@
   },
   {
     "type": "subEvent",
-    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_brjetull",
+    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_BorjeTull_1789221600000",
     "parentEventId": "a8862c26-f3e0-48f6-844c-312be090c7f6",
     "parentTitle": "Livemusik på Walmstedtska gården",
     "title": "Börje Tull",
@@ -1354,7 +1585,7 @@
   },
   {
     "type": "subEvent",
-    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_jonaslefvert",
+    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_JonasLefvert_1789223400000",
     "parentEventId": "a8862c26-f3e0-48f6-844c-312be090c7f6",
     "parentTitle": "Livemusik på Walmstedtska gården",
     "title": "Jonas Lefvert",
@@ -1365,7 +1596,7 @@
   },
   {
     "type": "subEvent",
-    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_drskapenshus",
+    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_Darskapenshus_1789225200000",
     "parentEventId": "a8862c26-f3e0-48f6-844c-312be090c7f6",
     "parentTitle": "Livemusik på Walmstedtska gården",
     "title": "Dårskapens hus",
@@ -1376,7 +1607,7 @@
   },
   {
     "type": "subEvent",
-    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_jabado",
+    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_Jabado_1789227000000",
     "parentEventId": "a8862c26-f3e0-48f6-844c-312be090c7f6",
     "parentTitle": "Livemusik på Walmstedtska gården",
     "title": "Jabado",
@@ -1387,7 +1618,7 @@
   },
   {
     "type": "subEvent",
-    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_hambergexpress",
+    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_HambergExpress_1789228800000",
     "parentEventId": "a8862c26-f3e0-48f6-844c-312be090c7f6",
     "parentTitle": "Livemusik på Walmstedtska gården",
     "title": "Hamberg Express",
@@ -1398,7 +1629,7 @@
   },
   {
     "type": "subEvent",
-    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_jazzcommitments",
+    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_Jazzcommitments_1789230600000",
     "parentEventId": "a8862c26-f3e0-48f6-844c-312be090c7f6",
     "parentTitle": "Livemusik på Walmstedtska gården",
     "title": "Jazz commitments",
@@ -1409,7 +1640,7 @@
   },
   {
     "type": "subEvent",
-    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_powerplay",
+    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_PowerPlay_1789232400000",
     "parentEventId": "a8862c26-f3e0-48f6-844c-312be090c7f6",
     "parentTitle": "Livemusik på Walmstedtska gården",
     "title": "PowerPlay",
@@ -1420,7 +1651,7 @@
   },
   {
     "type": "subEvent",
-    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_jacobkilstrm",
+    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_JacobKilstrom_1789234200000",
     "parentEventId": "a8862c26-f3e0-48f6-844c-312be090c7f6",
     "parentTitle": "Livemusik på Walmstedtska gården",
     "title": "Jacob Kilström",
@@ -1431,7 +1662,7 @@
   },
   {
     "type": "subEvent",
-    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_soulpicnic",
+    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_SoulPicnic_1789236000000",
     "parentEventId": "a8862c26-f3e0-48f6-844c-312be090c7f6",
     "parentTitle": "Livemusik på Walmstedtska gården",
     "title": "Soul Picnic",
@@ -1442,7 +1673,7 @@
   },
   {
     "type": "subEvent",
-    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_runestrutz",
+    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_RuneStrutz_1789237800000",
     "parentEventId": "a8862c26-f3e0-48f6-844c-312be090c7f6",
     "parentTitle": "Livemusik på Walmstedtska gården",
     "title": "Rune Strutz",
@@ -1453,7 +1684,7 @@
   },
   {
     "type": "subEvent",
-    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_martinandthemidnightmen",
+    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_Martinandthemidnightmen_1789239600000",
     "parentEventId": "a8862c26-f3e0-48f6-844c-312be090c7f6",
     "parentTitle": "Livemusik på Walmstedtska gården",
     "title": "Martin and the midnight men",
@@ -1464,7 +1695,7 @@
   },
   {
     "type": "subEvent",
-    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_ourlocalgang",
+    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_Ourlocalgang_1789241400000",
     "parentEventId": "a8862c26-f3e0-48f6-844c-312be090c7f6",
     "parentTitle": "Livemusik på Walmstedtska gården",
     "title": "Our local gang!",
@@ -1475,7 +1706,7 @@
   },
   {
     "type": "subEvent",
-    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_thegreeting",
+    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_TheGreeting_1789243200000",
     "parentEventId": "a8862c26-f3e0-48f6-844c-312be090c7f6",
     "parentTitle": "Livemusik på Walmstedtska gården",
     "title": "The Greeting",
@@ -1486,7 +1717,7 @@
   },
   {
     "type": "subEvent",
-    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_blvattnet",
+    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_Blavattnet_1789245000000",
     "parentEventId": "a8862c26-f3e0-48f6-844c-312be090c7f6",
     "parentTitle": "Livemusik på Walmstedtska gården",
     "title": "Blåvattnet",
@@ -1497,7 +1728,7 @@
   },
   {
     "type": "subEvent",
-    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_myheartisametronome",
+    "id": "a8862c26-f3e0-48f6-844c-312be090c7f6_Myheartisametronome_1789246800000",
     "parentEventId": "a8862c26-f3e0-48f6-844c-312be090c7f6",
     "parentTitle": "Livemusik på Walmstedtska gården",
     "title": "My heart is a metronome",
@@ -1508,7 +1739,7 @@
   },
   {
     "type": "subEvent",
-    "id": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c_byggdittegetkvarter",
+    "id": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c_Byggdittegetkvarter_1789214400000",
     "parentEventId": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c",
     "parentTitle": "Öppet hus på Fyriskällan",
     "title": "Bygg ditt eget kvarter",
@@ -1519,7 +1750,7 @@
   },
   {
     "type": "subEvent",
-    "id": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c_provapworkshopislktforskningrdunyfikenpdinslktbjrklingebygdensslktforskarfreningrpplatsfrattsvarapfrgorochhjlpadigattkommaigngmeddinslktforskning",
+    "id": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c_ProvapaworkshopislaktforskningArdunyfikenpadinslaktBjorklingebygdensslaktforskarforeningarpaplatsforattsvarapafragorochhjalpadigattkommaigangmeddinslaktforskning_1789214400000",
     "parentEventId": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c",
     "parentTitle": "Öppet hus på Fyriskällan",
     "title": "Prova-på-workshop i släktforskning. Är du nyfiken på din släkt? Björklingebygdens släktforskarförening är på plats för att svara på frågor och hjälpa dig att komma igång med din släktforskning.",
@@ -1530,7 +1761,7 @@
   },
   {
     "type": "subEvent",
-    "id": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c_visningavstadsarkivetsochfolkrrelsearkivetsarkivmagasin",
+    "id": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c_Visningavstadsarkivetsochfolkrorelsearkivetsarkivmagasin_1789216200000",
     "parentEventId": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c",
     "parentTitle": "Öppet hus på Fyriskällan",
     "title": "Visning av stadsarkivets och folkrörelsearkivets arkivmagasin.",
@@ -1541,7 +1772,7 @@
   },
   {
     "type": "subEvent",
-    "id": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c_visningavvalaffischerjennyjanssonochmattiassigfridssonfrnstatsvetenskapligainstitutionenberttaromvalaffischerpolitiskasprketochpartibudskap",
+    "id": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c_VisningavvalaffischerJennyJanssonochMattiasSigfridssonfranStatsvetenskapligainstitutionenberattaromvalaffischerpolitiskaspraketochpartibudskap_1789221600000",
     "parentEventId": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c",
     "parentTitle": "Öppet hus på Fyriskällan",
     "title": "Visning av valaffischer. Jenny Jansson och Mattias Sigfridsson från Statsvetenskapliga institutionen berättar om valaffischer, politiska språket och partibudskap.",
@@ -1552,7 +1783,7 @@
   },
   {
     "type": "subEvent",
-    "id": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c_hgahgensveariketsvagga",
+    "id": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c_HagahogenSveariketsvagga_1789225200000",
     "parentEventId": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c",
     "parentTitle": "Öppet hus på Fyriskällan",
     "title": "Hågahögen – Svearikets vagga",
@@ -1563,7 +1794,7 @@
   },
   {
     "type": "subEvent",
-    "id": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c_visningavstadsarkivetsochfolkrrelsearkivetsarkivmagasin",
+    "id": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c_Visningavstadsarkivetsochfolkrorelsearkivetsarkivmagasin_1789228800000",
     "parentEventId": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c",
     "parentTitle": "Öppet hus på Fyriskällan",
     "title": "Visning av stadsarkivets och folkrörelsearkivets arkivmagasin.",
@@ -1574,7 +1805,7 @@
   },
   {
     "type": "subEvent",
-    "id": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c_brnneriet",
+    "id": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c_Branneriet_1789232400000",
     "parentEventId": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c",
     "parentTitle": "Öppet hus på Fyriskällan",
     "title": "Bränneriet",
@@ -1585,7 +1816,7 @@
   },
   {
     "type": "subEvent",
-    "id": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c_ttreuter",
+    "id": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c_TTReuter_1789239600000",
     "parentEventId": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c",
     "parentTitle": "Öppet hus på Fyriskällan",
     "title": "TT Reuter",
@@ -1596,7 +1827,7 @@
   },
   {
     "type": "subEvent",
-    "id": "092ed71d-9d17-479d-8bb3-02b2b2f71e13_paxvobiscum",
+    "id": "092ed71d-9d17-479d-8bb3-02b2b2f71e13_PaxVobiscum_1789215300000",
     "parentEventId": "092ed71d-9d17-479d-8bb3-02b2b2f71e13",
     "parentTitle": "Livemusik på Fyristorg",
     "title": "Pax Vobiscum",
@@ -1607,7 +1838,7 @@
   },
   {
     "type": "subEvent",
-    "id": "092ed71d-9d17-479d-8bb3-02b2b2f71e13_atomicspitfire",
+    "id": "092ed71d-9d17-479d-8bb3-02b2b2f71e13_AtomicSpitfire_1789218000000",
     "parentEventId": "092ed71d-9d17-479d-8bb3-02b2b2f71e13",
     "parentTitle": "Livemusik på Fyristorg",
     "title": "Atomic Spitfire",
@@ -1618,7 +1849,7 @@
   },
   {
     "type": "subEvent",
-    "id": "092ed71d-9d17-479d-8bb3-02b2b2f71e13_drownintime",
+    "id": "092ed71d-9d17-479d-8bb3-02b2b2f71e13_Drownintime_1789220700000",
     "parentEventId": "092ed71d-9d17-479d-8bb3-02b2b2f71e13",
     "parentTitle": "Livemusik på Fyristorg",
     "title": "Drown in time",
@@ -1629,7 +1860,7 @@
   },
   {
     "type": "subEvent",
-    "id": "092ed71d-9d17-479d-8bb3-02b2b2f71e13_distortedtimes",
+    "id": "092ed71d-9d17-479d-8bb3-02b2b2f71e13_DistortedTimes_1789223400000",
     "parentEventId": "092ed71d-9d17-479d-8bb3-02b2b2f71e13",
     "parentTitle": "Livemusik på Fyristorg",
     "title": "Distorted Times",
@@ -1640,7 +1871,7 @@
   },
   {
     "type": "subEvent",
-    "id": "092ed71d-9d17-479d-8bb3-02b2b2f71e13_pegasus",
+    "id": "092ed71d-9d17-479d-8bb3-02b2b2f71e13_Pegasus_1789226100000",
     "parentEventId": "092ed71d-9d17-479d-8bb3-02b2b2f71e13",
     "parentTitle": "Livemusik på Fyristorg",
     "title": "Pegasus",
@@ -1651,7 +1882,7 @@
   },
   {
     "type": "subEvent",
-    "id": "092ed71d-9d17-479d-8bb3-02b2b2f71e13_canvas",
+    "id": "092ed71d-9d17-479d-8bb3-02b2b2f71e13_Canvas_1789228800000",
     "parentEventId": "092ed71d-9d17-479d-8bb3-02b2b2f71e13",
     "parentTitle": "Livemusik på Fyristorg",
     "title": "Canvas",
@@ -1662,7 +1893,7 @@
   },
   {
     "type": "subEvent",
-    "id": "092ed71d-9d17-479d-8bb3-02b2b2f71e13_stonebrigade",
+    "id": "092ed71d-9d17-479d-8bb3-02b2b2f71e13_StoneBrigade_1789232400000",
     "parentEventId": "092ed71d-9d17-479d-8bb3-02b2b2f71e13",
     "parentTitle": "Livemusik på Fyristorg",
     "title": "Stone Brigade",
@@ -1673,7 +1904,7 @@
   },
   {
     "type": "subEvent",
-    "id": "092ed71d-9d17-479d-8bb3-02b2b2f71e13_thebushdeviltrackers",
+    "id": "092ed71d-9d17-479d-8bb3-02b2b2f71e13_TheBushDevilTrackers_1789235100000",
     "parentEventId": "092ed71d-9d17-479d-8bb3-02b2b2f71e13",
     "parentTitle": "Livemusik på Fyristorg",
     "title": "The Bush Devil Trackers",
@@ -1684,7 +1915,7 @@
   },
   {
     "type": "subEvent",
-    "id": "092ed71d-9d17-479d-8bb3-02b2b2f71e13_diekristibrd",
+    "id": "092ed71d-9d17-479d-8bb3-02b2b2f71e13_DieKristiBrud_1789237800000",
     "parentEventId": "092ed71d-9d17-479d-8bb3-02b2b2f71e13",
     "parentTitle": "Livemusik på Fyristorg",
     "title": "Die Kristi Brüd",
@@ -1695,7 +1926,7 @@
   },
   {
     "type": "subEvent",
-    "id": "092ed71d-9d17-479d-8bb3-02b2b2f71e13_happyshittyband",
+    "id": "092ed71d-9d17-479d-8bb3-02b2b2f71e13_HappyShittyBand_1789240500000",
     "parentEventId": "092ed71d-9d17-479d-8bb3-02b2b2f71e13",
     "parentTitle": "Livemusik på Fyristorg",
     "title": "Happy Shitty Band",
@@ -1706,7 +1937,7 @@
   },
   {
     "type": "subEvent",
-    "id": "092ed71d-9d17-479d-8bb3-02b2b2f71e13_haerdsmaelta",
+    "id": "092ed71d-9d17-479d-8bb3-02b2b2f71e13_Haerdsmaelta_1789243200000",
     "parentEventId": "092ed71d-9d17-479d-8bb3-02b2b2f71e13",
     "parentTitle": "Livemusik på Fyristorg",
     "title": "Haerdsmaelta",
@@ -1717,7 +1948,7 @@
   },
   {
     "type": "subEvent",
-    "id": "092ed71d-9d17-479d-8bb3-02b2b2f71e13_theoverthrone",
+    "id": "092ed71d-9d17-479d-8bb3-02b2b2f71e13_TheOverthrone_1789245900000",
     "parentEventId": "092ed71d-9d17-479d-8bb3-02b2b2f71e13",
     "parentTitle": "Livemusik på Fyristorg",
     "title": "The Overthrone",
@@ -1728,7 +1959,7 @@
   },
   {
     "type": "subEvent",
-    "id": "092ed71d-9d17-479d-8bb3-02b2b2f71e13_scentofsurface",
+    "id": "092ed71d-9d17-479d-8bb3-02b2b2f71e13_Scentofsurface_1789248600000",
     "parentEventId": "092ed71d-9d17-479d-8bb3-02b2b2f71e13",
     "parentTitle": "Livemusik på Fyristorg",
     "title": "Scent of surface",
@@ -1739,7 +1970,7 @@
   },
   {
     "type": "subEvent",
-    "id": "f80d2c62-dfc8-4750-a5f5-ec2b54217000_fatswallerexperience",
+    "id": "f80d2c62-dfc8-4750-a5f5-ec2b54217000_FatsWallerExperience_1789216200000",
     "parentEventId": "f80d2c62-dfc8-4750-a5f5-ec2b54217000",
     "parentTitle": "Katalins Lördagsjazz - Kulturnatt!",
     "title": "Fats Waller Experience",
@@ -1750,7 +1981,7 @@
   },
   {
     "type": "subEvent",
-    "id": "f80d2c62-dfc8-4750-a5f5-ec2b54217000_claesjansonjanssonfour",
+    "id": "f80d2c62-dfc8-4750-a5f5-ec2b54217000_ClaesJansonJanssonFour_1789221600000",
     "parentEventId": "f80d2c62-dfc8-4750-a5f5-ec2b54217000",
     "parentTitle": "Katalins Lördagsjazz - Kulturnatt!",
     "title": "Claes Janson & Jansson Four",
@@ -1761,7 +1992,7 @@
   },
   {
     "type": "subEvent",
-    "id": "f80d2c62-dfc8-4750-a5f5-ec2b54217000_zoiefinerbromanderstrinetts",
+    "id": "f80d2c62-dfc8-4750-a5f5-ec2b54217000_ZoieFinerBromandersTrinetts_1789227000000",
     "parentEventId": "f80d2c62-dfc8-4750-a5f5-ec2b54217000",
     "parentTitle": "Katalins Lördagsjazz - Kulturnatt!",
     "title": "Zoie Finer Bromanders Trinetts",
@@ -1772,7 +2003,7 @@
   },
   {
     "type": "subEvent",
-    "id": "f80d2c62-dfc8-4750-a5f5-ec2b54217000_ihuvudetpthomasarnesen",
+    "id": "f80d2c62-dfc8-4750-a5f5-ec2b54217000_IhuvudetpaThomasArnesen_1789232400000",
     "parentEventId": "f80d2c62-dfc8-4750-a5f5-ec2b54217000",
     "parentTitle": "Katalins Lördagsjazz - Kulturnatt!",
     "title": "I huvudet på Thomas Arnesen",
@@ -1783,7 +2014,7 @@
   },
   {
     "type": "subEvent",
-    "id": "f80d2c62-dfc8-4750-a5f5-ec2b54217000_helenaanderssonbromanderjotrio",
+    "id": "f80d2c62-dfc8-4750-a5f5-ec2b54217000_HelenaAnderssonBromanderAJOTrio_1789237800000",
     "parentEventId": "f80d2c62-dfc8-4750-a5f5-ec2b54217000",
     "parentTitle": "Katalins Lördagsjazz - Kulturnatt!",
     "title": "Helena Andersson Bromander & ÅJO Trio",
@@ -1794,7 +2025,7 @@
   },
   {
     "type": "subEvent",
-    "id": "f80d2c62-dfc8-4750-a5f5-ec2b54217000_bluesfriends",
+    "id": "f80d2c62-dfc8-4750-a5f5-ec2b54217000_BluesFriends_1789243200000",
     "parentEventId": "f80d2c62-dfc8-4750-a5f5-ec2b54217000",
     "parentTitle": "Katalins Lördagsjazz - Kulturnatt!",
     "title": "Blues Friends.",
@@ -1805,7 +2036,7 @@
   },
   {
     "type": "subEvent",
-    "id": "1ceef33b-d65c-4f88-817d-e1b67887d831_jagsomleonardenungdomsbokavthomasszendrfljmedpenhistoriaunder1900taletsungerndrbokenkommervaracentrumifredraget",
+    "id": "1ceef33b-d65c-4f88-817d-e1b67887d831_JagsomLeonardenungdomsbokavThomasSzendroFoljmedpaenhistoriaunder1900taletsUngernDarbokenkommervaracentrumiforedraget_1789218000000",
     "parentEventId": "1ceef33b-d65c-4f88-817d-e1b67887d831",
     "parentTitle": "15.00 \"jag är som Leonardo - Thomas Szendrö",
     "title": "Jag som Leonard  en ungdomsbok av Thomas Szendrö. Följ med på en historia under 1900-talets Ungern. Där boken kommer vara centrum i föredraget.",
@@ -1816,7 +2047,7 @@
   },
   {
     "type": "subEvent",
-    "id": "f413afdc-1d83-41d2-839d-f22dc44be2af_jazz",
+    "id": "f413afdc-1d83-41d2-839d-f22dc44be2af_Jazz_1789218000000",
     "parentEventId": "f413afdc-1d83-41d2-839d-f22dc44be2af",
     "parentTitle": "Barnens Dansdag",
     "title": "Jazz",
@@ -1827,7 +2058,7 @@
   },
   {
     "type": "subEvent",
-    "id": "f413afdc-1d83-41d2-839d-f22dc44be2af_street",
+    "id": "f413afdc-1d83-41d2-839d-f22dc44be2af_Street_1789218000000",
     "parentEventId": "f413afdc-1d83-41d2-839d-f22dc44be2af",
     "parentTitle": "Barnens Dansdag",
     "title": "Street",
@@ -1838,7 +2069,7 @@
   },
   {
     "type": "subEvent",
-    "id": "f413afdc-1d83-41d2-839d-f22dc44be2af_jazz",
+    "id": "f413afdc-1d83-41d2-839d-f22dc44be2af_Jazz_1789221600000",
     "parentEventId": "f413afdc-1d83-41d2-839d-f22dc44be2af",
     "parentTitle": "Barnens Dansdag",
     "title": "Jazz",
@@ -1849,7 +2080,7 @@
   },
   {
     "type": "subEvent",
-    "id": "f413afdc-1d83-41d2-839d-f22dc44be2af_street",
+    "id": "f413afdc-1d83-41d2-839d-f22dc44be2af_Street_1789221600000",
     "parentEventId": "f413afdc-1d83-41d2-839d-f22dc44be2af",
     "parentTitle": "Barnens Dansdag",
     "title": "Street",
@@ -1860,7 +2091,7 @@
   },
   {
     "type": "subEvent",
-    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_ericcullhed",
+    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_EricCullhed_1789221600000",
     "parentEventId": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8",
     "parentTitle": "Kulturnatten i Missionskyrkan 2026",
     "title": ": Eric Cullhed",
@@ -1871,7 +2102,7 @@
   },
   {
     "type": "subEvent",
-    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_sheilakalusumu",
+    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_SheilaKalusumu_1789222800000",
     "parentEventId": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8",
     "parentTitle": "Kulturnatten i Missionskyrkan 2026",
     "title": ": Sheila Kalusumu",
@@ -1882,7 +2113,7 @@
   },
   {
     "type": "subEvent",
-    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_christinawahldn",
+    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_ChristinaWahlden_1789224000000",
     "parentEventId": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8",
     "parentTitle": "Kulturnatten i Missionskyrkan 2026",
     "title": ": Christina Wahldén",
@@ -1893,7 +2124,7 @@
   },
   {
     "type": "subEvent",
-    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_jonasburmanochjoachimvogel",
+    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_JonasBurmanochJoachimVogel_1789225200000",
     "parentEventId": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8",
     "parentTitle": "Kulturnatten i Missionskyrkan 2026",
     "title": ": Jonas Burman och Joachim Vogel",
@@ -1904,7 +2135,7 @@
   },
   {
     "type": "subEvent",
-    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_gunnarardelius",
+    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_GunnarArdelius_1789226400000",
     "parentEventId": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8",
     "parentTitle": "Kulturnatten i Missionskyrkan 2026",
     "title": ": Gunnar Ardelius",
@@ -1915,7 +2146,7 @@
   },
   {
     "type": "subEvent",
-    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_carinaburman",
+    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_CarinaBurman_1789227600000",
     "parentEventId": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8",
     "parentTitle": "Kulturnatten i Missionskyrkan 2026",
     "title": ": Carina Burman",
@@ -1926,7 +2157,7 @@
   },
   {
     "type": "subEvent",
-    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_ulrikalagerlf",
+    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_UlrikaLagerlof_1789228800000",
     "parentEventId": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8",
     "parentTitle": "Kulturnatten i Missionskyrkan 2026",
     "title": ": Ulrika Lagerlöf",
@@ -1937,7 +2168,7 @@
   },
   {
     "type": "subEvent",
-    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_ellinorskagegrd",
+    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_EllinorSkagegard_1789230000000",
     "parentEventId": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8",
     "parentTitle": "Kulturnatten i Missionskyrkan 2026",
     "title": ": Ellinor Skagegård",
@@ -1948,7 +2179,7 @@
   },
   {
     "type": "subEvent",
-    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_larshger",
+    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_LarsHager_1789231200000",
     "parentEventId": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8",
     "parentTitle": "Kulturnatten i Missionskyrkan 2026",
     "title": ": Lars Häger",
@@ -1959,7 +2190,7 @@
   },
   {
     "type": "subEvent",
-    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_kinapohjanenochalexandergagliano",
+    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_KinaPohjanenochAlexanderGagliano_1789232400000",
     "parentEventId": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8",
     "parentTitle": "Kulturnatten i Missionskyrkan 2026",
     "title": ": Kina Pohjanen och Alexander Gagliano",
@@ -1970,7 +2201,7 @@
   },
   {
     "type": "subEvent",
-    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_carlhenrikcarlsson",
+    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_CarlHenrikCarlsson_1789233600000",
     "parentEventId": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8",
     "parentTitle": "Kulturnatten i Missionskyrkan 2026",
     "title": ": Carl Henrik Carlsson",
@@ -1981,7 +2212,7 @@
   },
   {
     "type": "subEvent",
-    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_elinylvasdotter",
+    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_ElinYlvasdotter_1789234800000",
     "parentEventId": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8",
     "parentTitle": "Kulturnatten i Missionskyrkan 2026",
     "title": ": Elin Ylvasdotter",
@@ -1992,7 +2223,7 @@
   },
   {
     "type": "subEvent",
-    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_sarabackmanprytz",
+    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_SaraBackmanPrytz_1789236000000",
     "parentEventId": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8",
     "parentTitle": "Kulturnatten i Missionskyrkan 2026",
     "title": ": Sara Backman Prytz",
@@ -2003,7 +2234,7 @@
   },
   {
     "type": "subEvent",
-    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_emmafrans",
+    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_EmmaFrans_1789237200000",
     "parentEventId": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8",
     "parentTitle": "Kulturnatten i Missionskyrkan 2026",
     "title": ": Emma Frans",
@@ -2014,7 +2245,7 @@
   },
   {
     "type": "subEvent",
-    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_olalarsmo",
+    "id": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8_OlaLarsmo_1789238400000",
     "parentEventId": "ee7249a2-ab3e-4c5b-89ac-4efd3ba9aab8",
     "parentTitle": "Kulturnatten i Missionskyrkan 2026",
     "title": ": Ola Larsmo",
@@ -2025,7 +2256,7 @@
   },
   {
     "type": "subEvent",
-    "id": "7abc44ef-438e-4463-bae2-eece1818866c_socialdans",
+    "id": "7abc44ef-438e-4463-bae2-eece1818866c_Socialdans_1789221600000",
     "parentEventId": "7abc44ef-438e-4463-bae2-eece1818866c",
     "parentTitle": "Prova-på Bugg och socialdans med UBSS",
     "title": "Socialdans",
@@ -2036,7 +2267,7 @@
   },
   {
     "type": "subEvent",
-    "id": "7abc44ef-438e-4463-bae2-eece1818866c_provapbugg",
+    "id": "7abc44ef-438e-4463-bae2-eece1818866c_ProvapaBugg_1789223400000",
     "parentEventId": "7abc44ef-438e-4463-bae2-eece1818866c",
     "parentTitle": "Prova-på Bugg och socialdans med UBSS",
     "title": "Prova-på Bugg",
@@ -2047,7 +2278,7 @@
   },
   {
     "type": "subEvent",
-    "id": "7abc44ef-438e-4463-bae2-eece1818866c_socialdans",
+    "id": "7abc44ef-438e-4463-bae2-eece1818866c_Socialdans_1789225200000",
     "parentEventId": "7abc44ef-438e-4463-bae2-eece1818866c",
     "parentTitle": "Prova-på Bugg och socialdans med UBSS",
     "title": "Socialdans",
@@ -2058,7 +2289,7 @@
   },
   {
     "type": "subEvent",
-    "id": "7abc44ef-438e-4463-bae2-eece1818866c_show",
+    "id": "7abc44ef-438e-4463-bae2-eece1818866c_Show_1789227000000",
     "parentEventId": "7abc44ef-438e-4463-bae2-eece1818866c",
     "parentTitle": "Prova-på Bugg och socialdans med UBSS",
     "title": "Show",
@@ -2069,7 +2300,7 @@
   },
   {
     "type": "subEvent",
-    "id": "7abc44ef-438e-4463-bae2-eece1818866c_provapbugg",
+    "id": "7abc44ef-438e-4463-bae2-eece1818866c_ProvapaBugg_1789228800000",
     "parentEventId": "7abc44ef-438e-4463-bae2-eece1818866c",
     "parentTitle": "Prova-på Bugg och socialdans med UBSS",
     "title": "Prova-på Bugg",
@@ -2080,7 +2311,7 @@
   },
   {
     "type": "subEvent",
-    "id": "7abc44ef-438e-4463-bae2-eece1818866c_socialdans",
+    "id": "7abc44ef-438e-4463-bae2-eece1818866c_Socialdans_1789230600000",
     "parentEventId": "7abc44ef-438e-4463-bae2-eece1818866c",
     "parentTitle": "Prova-på Bugg och socialdans med UBSS",
     "title": "Socialdans",
@@ -2091,7 +2322,7 @@
   },
   {
     "type": "subEvent",
-    "id": "f625dc74-1348-4014-b7ea-0bd8e6a1daee_allsngskonsertfrbarn",
+    "id": "f625dc74-1348-4014-b7ea-0bd8e6a1daee_Allsangskonsertforbarn_1789221600000",
     "parentEventId": "f625dc74-1348-4014-b7ea-0bd8e6a1daee",
     "parentTitle": "Körstafett i Missionskyrkan",
     "title": "Allsångskonsert för barn!",
@@ -2102,7 +2333,7 @@
   },
   {
     "type": "subEvent",
-    "id": "f625dc74-1348-4014-b7ea-0bd8e6a1daee_tonprakt",
+    "id": "f625dc74-1348-4014-b7ea-0bd8e6a1daee_Tonprakt_1789225200000",
     "parentEventId": "f625dc74-1348-4014-b7ea-0bd8e6a1daee",
     "parentTitle": "Körstafett i Missionskyrkan",
     "title": "Tonprakt",
@@ -2113,7 +2344,7 @@
   },
   {
     "type": "subEvent",
-    "id": "f625dc74-1348-4014-b7ea-0bd8e6a1daee_stenhagensmanskr",
+    "id": "f625dc74-1348-4014-b7ea-0bd8e6a1daee_Stenhagensmanskor_1789227000000",
     "parentEventId": "f625dc74-1348-4014-b7ea-0bd8e6a1daee",
     "parentTitle": "Körstafett i Missionskyrkan",
     "title": "Stenhagens manskör",
@@ -2124,7 +2355,7 @@
   },
   {
     "type": "subEvent",
-    "id": "f625dc74-1348-4014-b7ea-0bd8e6a1daee_bbkk",
+    "id": "f625dc74-1348-4014-b7ea-0bd8e6a1daee_BBKK_1789228800000",
     "parentEventId": "f625dc74-1348-4014-b7ea-0bd8e6a1daee",
     "parentTitle": "Körstafett i Missionskyrkan",
     "title": "BBKK",
@@ -2135,7 +2366,7 @@
   },
   {
     "type": "subEvent",
-    "id": "f625dc74-1348-4014-b7ea-0bd8e6a1daee_rediviva",
+    "id": "f625dc74-1348-4014-b7ea-0bd8e6a1daee_Rediviva_1789230600000",
     "parentEventId": "f625dc74-1348-4014-b7ea-0bd8e6a1daee",
     "parentTitle": "Körstafett i Missionskyrkan",
     "title": "Rediviva",
@@ -2146,7 +2377,7 @@
   },
   {
     "type": "subEvent",
-    "id": "f625dc74-1348-4014-b7ea-0bd8e6a1daee_missionskyrkansvokalensemble",
+    "id": "f625dc74-1348-4014-b7ea-0bd8e6a1daee_MissionskyrkansVokalensemble_1789232400000",
     "parentEventId": "f625dc74-1348-4014-b7ea-0bd8e6a1daee",
     "parentTitle": "Körstafett i Missionskyrkan",
     "title": "Missionskyrkans Vokalensemble",
@@ -2157,7 +2388,7 @@
   },
   {
     "type": "subEvent",
-    "id": "f625dc74-1348-4014-b7ea-0bd8e6a1daee_lacappella",
+    "id": "f625dc74-1348-4014-b7ea-0bd8e6a1daee_LaCappella_1789234200000",
     "parentEventId": "f625dc74-1348-4014-b7ea-0bd8e6a1daee",
     "parentTitle": "Körstafett i Missionskyrkan",
     "title": "La Cappella",
@@ -2168,7 +2399,7 @@
   },
   {
     "type": "subEvent",
-    "id": "f625dc74-1348-4014-b7ea-0bd8e6a1daee_uppslaget",
+    "id": "f625dc74-1348-4014-b7ea-0bd8e6a1daee_Uppslaget_1789236000000",
     "parentEventId": "f625dc74-1348-4014-b7ea-0bd8e6a1daee",
     "parentTitle": "Körstafett i Missionskyrkan",
     "title": "Uppslaget",
@@ -2179,7 +2410,7 @@
   },
   {
     "type": "subEvent",
-    "id": "f625dc74-1348-4014-b7ea-0bd8e6a1daee_harmonyheights",
+    "id": "f625dc74-1348-4014-b7ea-0bd8e6a1daee_HarmonyHeights_1789237800000",
     "parentEventId": "f625dc74-1348-4014-b7ea-0bd8e6a1daee",
     "parentTitle": "Körstafett i Missionskyrkan",
     "title": "Harmony Heights",
@@ -2190,7 +2421,7 @@
   },
   {
     "type": "subEvent",
-    "id": "669498b0-7693-45ec-a49f-ea123f1b1d4c_bellmansokndapsalmer",
+    "id": "669498b0-7693-45ec-a49f-ea123f1b1d4c_BELLMANSOKANDAPSALMER_1789227000000",
     "parentEventId": "669498b0-7693-45ec-a49f-ea123f1b1d4c",
     "parentTitle": "Konsert och Café Samariten ",
     "title": "”BELLMANS OKÄNDA PSALMER”",
@@ -2201,7 +2432,7 @@
   },
   {
     "type": "subEvent",
-    "id": "669498b0-7693-45ec-a49f-ea123f1b1d4c_hrvindengersvar",
+    "id": "669498b0-7693-45ec-a49f-ea123f1b1d4c_HORVINDENGERSVAR_1789234200000",
     "parentEventId": "669498b0-7693-45ec-a49f-ea123f1b1d4c",
     "parentTitle": "Konsert och Café Samariten ",
     "title": "”HÖR, VINDEN GER SVAR”",
@@ -2212,7 +2443,7 @@
   },
   {
     "type": "subEvent",
-    "id": "669498b0-7693-45ec-a49f-ea123f1b1d4c_korsvgarochlivsvgar",
+    "id": "669498b0-7693-45ec-a49f-ea123f1b1d4c_KORSVAGAROCHLIVSVAGAR_1789239600000",
     "parentEventId": "669498b0-7693-45ec-a49f-ea123f1b1d4c",
     "parentTitle": "Konsert och Café Samariten ",
     "title": "”KORSVÄGAR OCH LIVSVÄGAR”",
@@ -2223,7 +2454,7 @@
   },
   {
     "type": "subEvent",
-    "id": "a670a50c-2d01-4c1e-90ed-964e1a3c1609_lrdigdansabugg",
+    "id": "a670a50c-2d01-4c1e-90ed-964e1a3c1609_LardigdansaBugg_1789225200000",
     "parentEventId": "a670a50c-2d01-4c1e-90ed-964e1a3c1609",
     "parentTitle": "Lär dig dansa bugg, salsa och tango!",
     "title": "Lär dig dansa 💜 Bugg!",
@@ -2234,7 +2465,7 @@
   },
   {
     "type": "subEvent",
-    "id": "a670a50c-2d01-4c1e-90ed-964e1a3c1609_lrdigdansasalsamerengue",
+    "id": "a670a50c-2d01-4c1e-90ed-964e1a3c1609_LardigdansaSalsaMerengue_1789228800000",
     "parentEventId": "a670a50c-2d01-4c1e-90ed-964e1a3c1609",
     "parentTitle": "Lär dig dansa bugg, salsa och tango!",
     "title": "Lär dig dansa 🧡 Salsa & Merengue!",
@@ -2245,7 +2476,7 @@
   },
   {
     "type": "subEvent",
-    "id": "a670a50c-2d01-4c1e-90ed-964e1a3c1609_lrdigdansatango",
+    "id": "a670a50c-2d01-4c1e-90ed-964e1a3c1609_LardigdansaTango_1789232400000",
     "parentEventId": "a670a50c-2d01-4c1e-90ed-964e1a3c1609",
     "parentTitle": "Lär dig dansa bugg, salsa och tango!",
     "title": "Lär dig dansa 💚Tango!",
@@ -2256,7 +2487,7 @@
   },
   {
     "type": "subEvent",
-    "id": "92994e26-3879-4020-bc92-ea36236b3216_engelska",
+    "id": "92994e26-3879-4020-bc92-ea36236b3216_Engelska_1789228800000",
     "parentEventId": "92994e26-3879-4020-bc92-ea36236b3216",
     "parentTitle": "Visningar museets samlingar -  landskap",
     "title": "Engelska",
@@ -2267,7 +2498,7 @@
   },
   {
     "type": "subEvent",
-    "id": "92994e26-3879-4020-bc92-ea36236b3216_svenska",
+    "id": "92994e26-3879-4020-bc92-ea36236b3216_Svenska_1789232400000",
     "parentEventId": "92994e26-3879-4020-bc92-ea36236b3216",
     "parentTitle": "Visningar museets samlingar -  landskap",
     "title": "Svenska",
@@ -2278,7 +2509,7 @@
   },
   {
     "type": "subEvent",
-    "id": "1482c2ff-2cfd-4ce2-8534-fb67e3a253a0_engelska",
+    "id": "1482c2ff-2cfd-4ce2-8534-fb67e3a253a0_Engelska_1789228800000",
     "parentEventId": "1482c2ff-2cfd-4ce2-8534-fb67e3a253a0",
     "parentTitle": "Visningar museets samlingar - landskap",
     "title": "Engelska",
@@ -2289,7 +2520,7 @@
   },
   {
     "type": "subEvent",
-    "id": "1482c2ff-2cfd-4ce2-8534-fb67e3a253a0_svenska",
+    "id": "1482c2ff-2cfd-4ce2-8534-fb67e3a253a0_Svenska_1789232400000",
     "parentEventId": "1482c2ff-2cfd-4ce2-8534-fb67e3a253a0",
     "parentTitle": "Visningar museets samlingar - landskap",
     "title": "Svenska",
@@ -2300,7 +2531,7 @@
   },
   {
     "type": "subEvent",
-    "id": "a50905f9-3412-4b41-b81f-fbe13950d07b_brnneriet",
+    "id": "a50905f9-3412-4b41-b81f-fbe13950d07b_Branneriet_1789232400000",
     "parentEventId": "a50905f9-3412-4b41-b81f-fbe13950d07b",
     "parentTitle": "Livemusik med Bränneriet och TT Reuter",
     "title": "Bränneriet",
@@ -2311,7 +2542,7 @@
   },
   {
     "type": "subEvent",
-    "id": "a50905f9-3412-4b41-b81f-fbe13950d07b_ttreuter",
+    "id": "a50905f9-3412-4b41-b81f-fbe13950d07b_TTReuter_1789239600000",
     "parentEventId": "a50905f9-3412-4b41-b81f-fbe13950d07b",
     "parentTitle": "Livemusik med Bränneriet och TT Reuter",
     "title": "TT Reuter",
@@ -2322,7 +2553,7 @@
   },
   {
     "type": "subEvent",
-    "id": "cb311993-3726-4f48-b3a0-f02babcaa672_engelska",
+    "id": "cb311993-3726-4f48-b3a0-f02babcaa672_Engelska_1789228800000",
     "parentEventId": "cb311993-3726-4f48-b3a0-f02babcaa672",
     "parentTitle": "Visningar museets samlingar - landskap",
     "title": "Engelska",
@@ -2333,7 +2564,7 @@
   },
   {
     "type": "subEvent",
-    "id": "cb311993-3726-4f48-b3a0-f02babcaa672_svenska",
+    "id": "cb311993-3726-4f48-b3a0-f02babcaa672_Svenska_1789232400000",
     "parentEventId": "cb311993-3726-4f48-b3a0-f02babcaa672",
     "parentTitle": "Visningar museets samlingar - landskap",
     "title": "Svenska",
@@ -2344,7 +2575,7 @@
   },
   {
     "type": "subEvent",
-    "id": "fac75ec1-ae87-4c2e-90a7-a18350a4c864_ingmarimproviseradbergmanmedteaterprego",
+    "id": "fac75ec1-ae87-4c2e-90a7-a18350a4c864_IngmarimproviseradBergmanmedTeaterPrego_1789239600000",
     "parentEventId": "fac75ec1-ae87-4c2e-90a7-a18350a4c864",
     "parentTitle": "Improviserad Ingmar Bergman med Teater Prego",
     "title": "Ingmar improviserad Bergman med Teater Prego",
@@ -2355,7 +2586,7 @@
   },
   {
     "type": "subEvent",
-    "id": "fac75ec1-ae87-4c2e-90a7-a18350a4c864_improteatermedteaterprego",
+    "id": "fac75ec1-ae87-4c2e-90a7-a18350a4c864_ImproteatermedTeaterPrego_1789244100000",
     "parentEventId": "fac75ec1-ae87-4c2e-90a7-a18350a4c864",
     "parentTitle": "Improviserad Ingmar Bergman med Teater Prego",
     "title": "Improteater med Teater Prego --------",
@@ -2366,7 +2597,7 @@
   },
   {
     "type": "subEvent",
-    "id": "b152f0b0-b69f-43ec-a51a-9105600200b8_ingmarimproviseradbergmanmedteaterprego",
+    "id": "b152f0b0-b69f-43ec-a51a-9105600200b8_IngmarimproviseradBergmanmedTeaterPrego_1789239600000",
     "parentEventId": "b152f0b0-b69f-43ec-a51a-9105600200b8",
     "parentTitle": "Improvisationsteater med Teater Prego",
     "title": "Ingmar improviserad Bergman med Teater Prego",
@@ -2377,7 +2608,7 @@
   },
   {
     "type": "subEvent",
-    "id": "b152f0b0-b69f-43ec-a51a-9105600200b8_improteatermedteaterprego",
+    "id": "b152f0b0-b69f-43ec-a51a-9105600200b8_ImproteatermedTeaterPrego_1789244100000",
     "parentEventId": "b152f0b0-b69f-43ec-a51a-9105600200b8",
     "parentTitle": "Improvisationsteater med Teater Prego",
     "title": "Improteater med Teater Prego",

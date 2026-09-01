@@ -53,7 +53,7 @@ async function main() {
     return;
   }
 
-  const outSubs: { id: string; parentEventId: string | null; parentTitle: string; title: string; startTimeText: string; endTimeText?: string | null; startTime?: string; endTime?: string | null }[] = [];
+  const outSubs: { type: string; id: string; parentEventId: string | null; parentTitle: string; title: string; startTimeText: string; endTimeText?: string | null; startTime?: string; endTime?: string | null }[] = [];
   const nonSubs: any[] = [];
   let totalFound = 0;
 
@@ -68,30 +68,18 @@ async function main() {
     if (!subs || subs.length === 0) {
       nonSubs.push({ type: 'event', title: ev.title ?? '', about: ev.about ?? '' });
     }
-    const parentIdForId = ev.id ?? ev.value ?? 'event';
     for (const s of subs) {
-      const normalized = (s.title || '')
-        .toLowerCase()
-        .replace(/\s+/g, '')
-        .replace(/[^a-z0-9]/g, '');
-      const sid = `${parentIdForId}_${normalized}`;
-      outSubs.push({ type: 'subEvent', id: sid, parentEventId: ev.id ?? ev.value ?? null, parentTitle: ev.title ?? '', title: s.title, startTimeText: s.startTimeText, endTimeText: s.endTimeText ?? null, startTime: s.startTime ?? undefined, endTime: s.endTime ?? null });
+      outSubs.push({ type: 'subEvent', id: s.id, parentEventId: ev.id ?? ev.value ?? null, parentTitle: ev.title ?? '', title: s.title, startTimeText: s.startTimeText, endTimeText: s.endTimeText ?? null, startTime: s.startTime ?? undefined, endTime: s.endTime ?? null });
       totalFound++;
     }
   } else {
     for (const ev of events) {
       const subs = getSubEvents(ev);
-      const parentIdForId = ev.id ?? ev.value ?? 'event';
       if (!subs || subs.length === 0) {
         nonSubs.push({ type: 'event', title: ev.title ?? '', about: ev.about ?? '' });
       }
       for (const s of subs) {
-        const normalized = (s.title || '')
-          .toLowerCase()
-          .replace(/\s+/g, '')
-          .replace(/[^a-z0-9]/g, '');
-        const sid = `${parentIdForId}_${normalized}`;
-        outSubs.push({ type: 'subEvent', id: sid, parentEventId: ev.id ?? ev.value ?? null, parentTitle: ev.title ?? '', title: s.title, startTimeText: s.startTimeText, endTimeText: s.endTimeText ?? null, startTime: s.startTime ?? undefined, endTime: s.endTime ?? null });
+        outSubs.push({ type: 'subEvent', id: s.id, parentEventId: ev.id ?? ev.value ?? null, parentTitle: ev.title ?? '', title: s.title, startTimeText: s.startTimeText, endTimeText: s.endTimeText ?? null, startTime: s.startTime ?? undefined, endTime: s.endTime ?? null });
         totalFound++;
       }
     }
