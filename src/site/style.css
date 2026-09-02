@@ -15,6 +15,9 @@
   --detail-bg: rgba(255, 255, 255, 0.04);
   --card-shadow: rgba(2, 6, 23, 0.5);
   --star-inactive: #aaa7a7;
+  --topbar-bg: #7c3aed;
+  --topbar-text: #f8fafc;
+  --topbar-control-border: rgba(248, 250, 252, 0.55);
 }
 
 body[data-theme='light'] {
@@ -51,7 +54,7 @@ body {
   background: var(--bg);
   color: var(--text);
   margin: 0;
-  padding: 24px;
+  padding: 0;
 }
 
 header,
@@ -60,11 +63,11 @@ main {
   margin-inline: auto;
 }
 
-@media (max-width: 640px) {
-  body {
-    padding: 12px;
-  }
+.page-content {
+  padding: 10px;
+}
 
+@media (max-width: 640px) {
   header,
   main {
     width: 100%;
@@ -88,12 +91,28 @@ header.is-unstuck {
 }
 
 .top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  margin: 0;
+  background: var(--topbar-bg);
+  box-shadow: 0 2px 10px var(--card-shadow);
+}
+
+.top-bar-inner {
   display: flex;
-  flex-basis: 100%;
   align-items: center;
   justify-content: space-between;
-  padding: 0;
-  background: var(--bg);
+  width: min(100%, 960px);
+  margin-inline: auto;
+  padding: 4px;
+}
+
+.site-title {
+  margin: 5px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--topbar-text);
 }
 
 .top-actions {
@@ -102,19 +121,20 @@ header.is-unstuck {
   gap: 6px;
 }
 
-h1 {
-  margin: 0;
-}
-
 .login-button,
 .theme-toggle {
-  padding: 7px 9px;
-  border: 1px solid var(--border);
+  padding: 3px 5px;
+  border: 1px solid var(--topbar-control-border);
   border-radius: 4px;
-  background: transparent;
-  color: var(--control-text);
+  background: rgba(255, 255, 255, 0.14);
+  color: var(--topbar-text);
   cursor: pointer;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+}
+
+.theme-toggle {
+  border: none;
+  background: transparent;
 }
 
 .theme-toggle {
@@ -125,7 +145,7 @@ h1 {
 }
 
 .theme-toggle {
-  border-color: var(--border);
+  border-color: var(--topbar-control-border);
 }
 
 .tabs {
@@ -140,7 +160,7 @@ h1 {
   background: transparent;
   border: 1px solid var(--border);
   color: var(--muted);
-  padding: 8px 12px;
+  padding: 2px 4px;
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.95rem;
@@ -328,10 +348,6 @@ h1 {
   background: var(--card);
   color: var(--input-text);
   font: inherit;
-}
-
-#from-filter {
-  padding-right: 24px;
 }
 
 .selected-filters {
