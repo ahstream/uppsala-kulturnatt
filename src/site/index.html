@@ -10,88 +10,90 @@
   <body>
     <div class="top-bar">
       <div class="top-bar-inner">
-        <span class="site-title">Uppsala Kulturnatt 2026</span>
+        <a class="site-title" href="./">Uppsala Kulturnatt 2026</a>
         <div class="top-actions">
-          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Byt till ljust läge" title="Byt till ljust läge"><i class="fa-regular fa-sun" aria-hidden="true"></i></button>
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Byt till ljust läge" title="Byt till ljust läge"><i class="fa-solid fa-sun" aria-hidden="true"></i></button>
           <button class="login-button" type="button" disabled>Login</button>
         </div>
       </div>
     </div>
+    <header>
+      <select id="tab-select" class="tabs-select" aria-label="Välj vy">
+        <option id="tab-program" value="program" title="xAlla evenemang (0 st)" selected>&#128197; Alla evenemang (0)</option>
+        <option id="tab-subevent" value="subevent" title="Del av evenemang (0 st)">&#128194; Inslag i evenemang (0)</option>
+        <option id="tab-cancelled" value="cancelled" title="Inställda evenemang (0 st)">&#128683; Inställda evenemang (0)</option>
+        <option id="tab-favorites" value="favorites" title="Favoritevenemang (0 st)">&#11088; Favoriter (0)</option>
+        <option id="tab-live" value="live" title="Pågående evenemang (0 st)">&#128336; Pågående (0)</option>
+        <option id="tab-recent" value="recent" title="Just startade evenemang (0 st)">&#9194; Just startade (0)</option>
+        <option id="tab-soon" value="soon" title="Strax startade evenemang (0 st)">&#9193; Startar strax (0)</option>
+        <option id="tab-later" value="later" title="Senare startade evenemang (0 st)">&#8987; Startar senare (0)</option>
+      </select>
+    </header>
     <div class="page-content">
-      <header>
-        <select id="tab-select" class="tabs-select" aria-label="Välj vy">
-          <option id="tab-program" value="program" title="Alla evenemang (0 st)" selected>&#128197; Alla (0)</option>
-          <option id="tab-subevent" value="subevent" title="Del av evenemang (0 st)">&#128194; Inslag (0)</option>
-          <option id="tab-cancelled" value="cancelled" title="Inställda evenemang (0 st)">&#128683; Inställt (0)</option>
-          <option id="tab-favorites" value="favorites" title="Favoritevenemang (0 st)">&#11088; Favorit (0)</option>
-          <option id="tab-live" value="live" title="Pågående evenemang (0 st)">&#128336; Nu (0)</option>
-          <option id="tab-recent" value="recent" title="Nyligen startade evenemang (0 st)">&#9194; Nyss (0)</option>
-          <option id="tab-soon" value="soon" title="Strax startade evenemang (0 st)">&#9193; Snart (0)</option>
-          <option id="tab-later" value="later" title="Senare startade evenemang (0 st)">&#8987; Sen (0)</option>
-        </select>
-        <div class="search-row">
-          <label class="search-field">
-            <input id="event-search" type="search" placeholder="Sök titel eller plats" autocomplete="off" />
-          </label>
-          <button id="clear-filters" class="clear-search clear-icon" type="button" aria-label="Rensa filter" title="Rensa filter" disabled><span aria-hidden="true">&#10005;</span></button>
-          <button id="show-filters" class="clear-search filter-toggle" type="button" aria-label="Visa filter" title="Visa filter" aria-expanded="false" aria-pressed="false">
-            <span id="show-filters-label"><i class="fa-solid fa-filter" aria-hidden="true"></i></span> <span id="filter-count" hidden></span>
-          </button>
-        </div>
-        <div class="filter-header">
-          <div id="selected-filters" class="selected-filters" aria-live="polite"></div>
-        </div>
-        <div id="filter-search-section" class="filter-search-section" hidden>
-          <section id="filter-panel" class="filter-panel" aria-label="Filters" hidden>
-            <div class="primary-filters">
-              <label><input id="children-filter" type="checkbox" /> Barn</label>
-              <label><input id="free-filter" type="checkbox" /> Gratis</label>
+      <div class="search-row">
+        <label class="search-field">
+          <input id="event-search" type="search" placeholder="Sök titel eller plats" autocomplete="off" />
+        </label>
+        <button id="clear-filters" class="clear-search clear-icon" type="button" aria-label="Rensa filter" title="Rensa filter" disabled><span aria-hidden="true">&#10005;</span></button>
+        <button id="show-filters" class="clear-search filter-toggle" type="button" aria-label="Visa filter" title="Visa filter" aria-expanded="false" aria-pressed="false">
+          <span id="show-filters-label"><i class="fa-solid fa-filter" aria-hidden="true"></i></span> <span id="filter-count" hidden></span>
+        </button>
+      </div>
+      <div class="filter-header">
+        <div id="selected-filters" class="selected-filters" aria-live="polite"></div>
+      </div>
+      <div id="filter-search-section" class="filter-search-section" hidden>
+        <section id="filter-panel" class="filter-panel" aria-label="Filters" hidden>
+          <div class="primary-filters">
+            <label><input id="children-filter" type="checkbox" /> Barn</label>
+            <label><input id="adults-filter" type="checkbox" /> Vuxna</label>
+            <label><input id="free-filter" type="checkbox" /> Gratis</label>
+            <label><input id="paid-filter" type="checkbox" /> Kostar</label>
+          </div>
+          <div class="filters">
+            <div class="multi-filter">
+              <details id="category-menu" class="filter-menu">
+                <summary id="category-summary">Alla kategorier</summary>
+                <div id="category-options" class="filter-options">
+                  <label><input type="checkbox" value="all" checked /> Alla kategorier</label>
+                </div>
+              </details>
             </div>
-            <div class="filters">
-              <div class="multi-filter">
-                <details id="category-menu" class="filter-menu">
-                  <summary id="category-summary">All categories</summary>
-                  <div id="category-options" class="filter-options">
-                    <label><input type="checkbox" value="all" checked /> All categories</label>
-                  </div>
-                </details>
-              </div>
-              <div class="multi-filter">
-                <details id="language-menu" class="filter-menu">
-                  <summary id="language-summary">All languages</summary>
-                  <div id="language-options" class="filter-options">
-                    <label><input type="checkbox" value="all" checked /> All languages</label>
-                  </div>
-                </details>
-              </div>
-              <div class="multi-filter">
-                <details id="location-menu" class="filter-menu">
-                  <summary id="location-summary">All locations</summary>
-                  <div id="location-options" class="filter-options">
-                    <label><input type="checkbox" value="all" checked /> All locations</label>
-                  </div>
-                </details>
-              </div>
-              <div class="multi-filter">
-                <details id="accessibility-menu" class="filter-menu">
-                  <summary id="accessibility-summary">All accessibilities</summary>
-                  <div id="accessibility-options" class="filter-options">
-                    <label><input type="checkbox" value="all" checked /> All accessibilities</label>
-                  </div>
-                </details>
-              </div>
-              <div class="time-filters">
-                <select id="from-filter" aria-label="Från timme">
-                  <option value="">Från</option>
-                </select>
-                <select id="to-filter" aria-label="Till timme">
-                  <option value="">Till</option>
-                </select>
-              </div>
+            <div class="multi-filter">
+              <details id="language-menu" class="filter-menu">
+                <summary id="language-summary">Alla språk</summary>
+                <div id="language-options" class="filter-options">
+                  <label><input type="checkbox" value="all" checked /> Alla språk</label>
+                </div>
+              </details>
             </div>
-          </section>
-        </div>
-      </header>
+            <div class="multi-filter">
+              <details id="location-menu" class="filter-menu">
+                <summary id="location-summary">Alla platser</summary>
+                <div id="location-options" class="filter-options">
+                  <label><input type="checkbox" value="all" checked /> Alla platser</label>
+                </div>
+              </details>
+            </div>
+            <div class="multi-filter">
+              <details id="accessibility-menu" class="filter-menu">
+                <summary id="accessibility-summary">All tillgänglighet</summary>
+                <div id="accessibility-options" class="filter-options">
+                  <label><input type="checkbox" value="all" checked /> All tillgänglighet</label>
+                </div>
+              </details>
+            </div>
+            <div class="time-filters">
+              <select id="from-filter" aria-label="Från timme">
+                <option value="">Från</option>
+              </select>
+              <select id="to-filter" aria-label="Till timme">
+                <option value="">Till</option>
+              </select>
+            </div>
+          </div>
+        </section>
+      </div>
 
       <main>
         <div id="status">Loading events…</div>

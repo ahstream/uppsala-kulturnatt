@@ -64,7 +64,7 @@ main {
 }
 
 .page-content {
-  padding: 10px;
+  padding: 0 10px 10px 10px;
 }
 
 @media (max-width: 640px) {
@@ -76,7 +76,7 @@ main {
 
 header {
   position: sticky;
-  top: 0;
+  top: 38px;
   z-index: 2;
   display: flex;
   align-items: center;
@@ -84,10 +84,7 @@ header {
   row-gap: 0px;
   flex-wrap: wrap;
   background: var(--bg);
-}
-
-header.is-unstuck {
-  position: static;
+  padding: 10px;
 }
 
 .top-bar {
@@ -113,6 +110,7 @@ header.is-unstuck {
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--topbar-text);
+  text-decoration: none;
 }
 
 .top-actions {
@@ -165,7 +163,7 @@ header.is-unstuck {
   flex-basis: 100%;
   align-items: center;
   column-gap: 20px;
-  row-gap: 4px;
+  row-gap: 6px;
   margin: 4px 0;
   flex-wrap: wrap;
 }
@@ -192,7 +190,7 @@ header.is-unstuck {
 .primary-filters {
   display: flex;
   flex-basis: 100%;
-  gap: 12px;
+  gap: 6px;
   color: var(--text);
   font-size: 0.95rem;
 }
@@ -202,7 +200,6 @@ header.is-unstuck {
   flex-basis: 100%;
   align-items: center;
   gap: 8px;
-  margin-top: 6px;
   margin-bottom: 4px;
 }
 
@@ -312,7 +309,7 @@ header.is-unstuck {
 
 .selected-filters {
   min-width: 0;
-  padding-left: 2px;
+  padding: 4px 0 0 2px;
   overflow-wrap: anywhere;
   color: var(--muted);
   font-size: 0.8rem;
@@ -485,6 +482,7 @@ body[data-theme='light'] .cancelled-badge {
   color: var(--muted);
   font-size: 0.95rem;
   line-height: 1.15;
+  padding-top: 1px;
 }
 
 .tag-row {
@@ -559,7 +557,7 @@ body[data-theme='light'] .cancelled-badge {
 }
 
 .event-about {
-  margin: 4px 0;
+  margin: 0;
   color: var(--input-text);
   white-space: pre-line;
 }

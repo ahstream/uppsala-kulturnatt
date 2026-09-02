@@ -11,7 +11,9 @@ const $list = document.getElementById('list');
 const $search = document.getElementById('event-search');
 const $clearFilters = document.getElementById('clear-filters');
 const $childrenFilter = document.getElementById('children-filter');
+const $adultsFilter = document.getElementById('adults-filter');
 const $freeFilter = document.getElementById('free-filter');
+const $paidFilter = document.getElementById('paid-filter');
 const $fromFilter = document.getElementById('from-filter');
 const $toFilter = document.getElementById('to-filter');
 const $showFilters = document.getElementById('show-filters');
@@ -32,10 +34,10 @@ const tabs = {
   later: document.getElementById('tab-later'),
 };
 const multiFilters = [
-  { menu: document.getElementById('category-menu'), options: document.getElementById('category-options'), summary: document.getElementById('category-summary'), eventProperty: 'categoryNames', allLabel: 'All categories', selectedLabel: 'categories' },
-  { menu: document.getElementById('language-menu'), options: document.getElementById('language-options'), summary: document.getElementById('language-summary'), eventProperty: 'languageNames', allLabel: 'All languages', selectedLabel: 'languages' },
-  { menu: document.getElementById('location-menu'), options: document.getElementById('location-options'), summary: document.getElementById('location-summary'), eventProperty: 'locationNames', allLabel: 'All locations', selectedLabel: 'locations' },
-  { menu: document.getElementById('accessibility-menu'), options: document.getElementById('accessibility-options'), summary: document.getElementById('accessibility-summary'), eventProperty: 'accessibilityNames', allLabel: 'All accessibilities', selectedLabel: 'accessibilities' },
+  { menu: document.getElementById('category-menu'), options: document.getElementById('category-options'), summary: document.getElementById('category-summary'), eventProperty: 'categoryNames', allLabel: 'Alla kategorier', selectedLabel: 'categories' },
+  { menu: document.getElementById('language-menu'), options: document.getElementById('language-options'), summary: document.getElementById('language-summary'), eventProperty: 'languageNames', allLabel: 'Alla språk', selectedLabel: 'languages' },
+  { menu: document.getElementById('location-menu'), options: document.getElementById('location-options'), summary: document.getElementById('location-summary'), eventProperty: 'locationNames', allLabel: 'Alla platser', selectedLabel: 'locations' },
+  { menu: document.getElementById('accessibility-menu'), options: document.getElementById('accessibility-options'), summary: document.getElementById('accessibility-summary'), eventProperty: 'accessibilityNames', allLabel: 'All tillgänglighet', selectedLabel: 'accessibilities' },
 ];
 
 let allEvents = [];
@@ -44,14 +46,14 @@ let programSortMode = 'start';
 let filtersOpenedAt = 0;
 let lastScrollY = window.scrollY;
 let stickyDownScrollDistance = 0;
-const RECENT_EVENT_WINDOW_MS = 60 * 60 * 1000;
-const SOON_EVENT_WINDOW_MS = 60 * 60 * 1000;
+const RECENT_EVENT_WINDOW_MS = 15 * 60 * 1000;
+const SOON_EVENT_WINDOW_MS = 45 * 60 * 1000;
 
 function setTheme(theme) {
   document.body.dataset.theme = theme;
   localStorage.setItem('theme', theme);
   const isLight = theme === 'light';
-  $themeToggle.innerHTML = isLight ? '<i class="fa-solid fa-moon" aria-hidden="true"></i>' : '<i class="fa-regular fa-sun" aria-hidden="true"></i>';
+  $themeToggle.innerHTML = isLight ? '<i class="fa-solid fa-moon" aria-hidden="true"></i>' : '<i class="fa-solid fa-sun" aria-hidden="true"></i>';
   const label = isLight ? 'Byt till mörkt läge' : 'Byt till ljust läge';
   $themeToggle.setAttribute('aria-label', label);
   $themeToggle.title = label;
@@ -65,6 +67,17 @@ function eventStartTime(event) {
 
 function eventEndTime(event) {
   return new Date(event.end || event.endTime || 0).getTime();
+}
+
+function eventCurrentTime() {
+  if (typeof FAKE_TODAY_DATE !== 'string') return Date.now();
+  const match = FAKE_TODAY_DATE.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (!match) return Date.now();
+
+  const now = new Date();
+  const fakeNow = new Date(now);
+  fakeNow.setFullYear(Number(match[1]), Number(match[2]) - 1, Number(match[3]));
+  return fakeNow.getTime();
 }
 
 function populateHourFilter(select) {
@@ -209,7 +222,7 @@ function saveFavorites(arr) {
 
 function updateTabCounts() {
   const favorites = loadFavorites();
-  const now = Date.now();
+  const now = eventCurrentTime();
   const activeCount = allEvents.filter((event) => !event.isCancelled).length;
   const subeventCount = allEvents.filter((event) => event.type === 'subEvent').length;
   const cancelledCount = allEvents.filter((event) => event.isCancelled).length;
@@ -219,22 +232,22 @@ function updateTabCounts() {
   const soonCount = eventsInWindow(allEvents, now, now + SOON_EVENT_WINDOW_MS).length;
   const laterCount = laterEvents(allEvents, now + SOON_EVENT_WINDOW_MS).length;
 
-  tabs.program.textContent = `\u{1F4C5} Alla (${activeCount})`;
+  tabs.program.textContent = `\u{1F4C5} Alla evenemang (${activeCount})`;
   tabs.program.title = `Alla evenemang (${activeCount} st)`;
-  tabs.subevent.textContent = `\u{1F4C2} Inslag (${subeventCount})`;
-  tabs.subevent.title = `Del av evenemang (${subeventCount} st)`;
-  tabs.cancelled.textContent = `\u{1F6AB} Inställt (${cancelledCount})`;
+  tabs.subevent.textContent = `\u{1F4C2} Inslag i evenemang (${subeventCount})`;
+  tabs.subevent.title = `Inslag i evenemang (${subeventCount} st)`;
+  tabs.cancelled.textContent = `\u{1F6AB} Inställda (${cancelledCount})`;
   tabs.cancelled.title = `Inställda evenemang (${cancelledCount} st)`;
-  tabs.favorites.textContent = `\u2B50 Favorit (${favoriteCount})`;
+  tabs.favorites.textContent = `\u2B50 Favoriter (${favoriteCount})`;
   tabs.favorites.title = `Favoritevenemang (${favoriteCount} st)`;
-  tabs.live.textContent = `\u{1F550} Nu (${liveCount})`;
+  tabs.live.textContent = `\u{1F550} Pågående (${liveCount})`;
   tabs.live.title = `Pågående evenemang (${liveCount} st)`;
-  tabs.recent.textContent = `\u23EA Nyss (${recentCount})`;
-  tabs.recent.title = `Nyligen startade evenemang (${recentCount} st)`;
-  tabs.soon.textContent = `\u23E9 Snart (${soonCount})`;
-  tabs.soon.title = `Strax startade evenemang (${soonCount} st)`;
-  tabs.later.textContent = `\u23F3 Sen (${laterCount})`;
-  tabs.later.title = `Senare startade evenemang (${laterCount} st)`;
+  tabs.recent.textContent = `\u23EA Startat nyss (${recentCount})`;
+  tabs.recent.title = `Evenemang som startat nyss (${recentCount} st)`;
+  tabs.soon.textContent = `\u23E9 Startar strax (${soonCount})`;
+  tabs.soon.title = `Evenemang som startar strax (${soonCount} st)`;
+  tabs.later.textContent = `\u23F3 Startar senare (${laterCount})`;
+  tabs.later.title = `Evenemang som startar senare (${laterCount} st)`;
 }
 
 function coordinatesToMapQuery(coordinates) {
@@ -273,11 +286,15 @@ function matchesMultiFilters(event) {
 }
 
 function matchesChildrenFilter(event) {
-  return !$childrenFilter.checked || event.isForChildren === true;
+  if ($childrenFilter.checked) return event.isForChildren === true;
+  if ($adultsFilter.checked) return event.isForChildren === false;
+  return true;
 }
 
 function matchesFreeFilter(event) {
-  return !$freeFilter.checked || event.isFree === true;
+  if ($freeFilter.checked) return event.isFree === true;
+  if ($paidFilter.checked) return event.isFree === false;
+  return true;
 }
 
 function clockMinutes(value) {
@@ -356,11 +373,11 @@ function setFavoriteIcon(star, isFavorite) {
 }
 
 function updateClearFiltersButton() {
-  $clearFilters.disabled = !$search.value && !$childrenFilter.checked && !$freeFilter.checked && !$fromFilter.value && !$toFilter.value && multiFilters.every((filter) => selectedFilterValues(filter).length === 0);
+  $clearFilters.disabled = !$search.value && !$childrenFilter.checked && !$adultsFilter.checked && !$freeFilter.checked && !$paidFilter.checked && !$fromFilter.value && !$toFilter.value && multiFilters.every((filter) => selectedFilterValues(filter).length === 0);
 }
 
 function updateFilterCount() {
-  const selectedCount = multiFilters.reduce((count, filter) => count + selectedFilterValues(filter).length, 0) + ($search.value.trim() ? 1 : 0) + ($childrenFilter.checked ? 1 : 0) + ($freeFilter.checked ? 1 : 0) + ($fromFilter.value ? 1 : 0) + ($toFilter.value ? 1 : 0);
+  const selectedCount = multiFilters.reduce((count, filter) => count + selectedFilterValues(filter).length, 0) + ($search.value.trim() ? 1 : 0) + ($childrenFilter.checked ? 1 : 0) + ($adultsFilter.checked ? 1 : 0) + ($freeFilter.checked ? 1 : 0) + ($paidFilter.checked ? 1 : 0) + ($fromFilter.value ? 1 : 0) + ($toFilter.value ? 1 : 0);
   const countLabel = selectedCount > 0 ? ` (${selectedCount})` : '';
   $filterCount.textContent = countLabel;
   updateShowFiltersButton(countLabel);
@@ -378,7 +395,9 @@ function updateSelectedFilters(filteredEventCount) {
   const selectedFilters = [];
   if ($search.value.trim()) selectedFilters.push($search.value.trim());
   if ($childrenFilter.checked) selectedFilters.push('Barn');
+  if ($adultsFilter.checked) selectedFilters.push('Vuxna');
   if ($freeFilter.checked) selectedFilters.push('Gratis');
+  if ($paidFilter.checked) selectedFilters.push('Kostar');
   for (const filter of multiFilters) selectedFilters.push(...selectedFilterValues(filter));
   if ($fromFilter.value) selectedFilters.push(`Från ${$fromFilter.value}`);
   if ($toFilter.value) selectedFilters.push(`Till ${$toFilter.value}`);
@@ -453,9 +472,9 @@ function createEventDetails(ev, eventTitle) {
     detailsList.appendChild(accessibility);
   }
 
-  if (ev.organizer || ev.url) {
+  if (ev.organizer) {
     const organizer = document.createElement('li');
-    if (ev.organizer) organizer.textContent = 'Arrangör: ';
+    organizer.textContent = 'Arrangör: ';
     if (ev.webpage) {
       const link = document.createElement('a');
       link.href = ev.webpage;
@@ -466,16 +485,19 @@ function createEventDetails(ev, eventTitle) {
     } else if (ev.organizer) {
       organizer.appendChild(document.createTextNode(ev.organizer));
     }
-    if (ev.organizer && ev.url) organizer.appendChild(document.createTextNode(' | '));
-    if (ev.url) {
-      const eventPage = document.createElement('a');
-      eventPage.href = ev.url;
-      eventPage.target = '_blank';
-      eventPage.rel = 'noopener noreferrer';
-      eventPage.textContent = 'Evenemangsida';
-      organizer.appendChild(eventPage);
-    }
     detailsList.appendChild(organizer);
+  }
+
+  if (ev.url) {
+    const source = document.createElement('li');
+    source.appendChild(document.createTextNode('Källa: '));
+    const link = document.createElement('a');
+    link.href = ev.url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = 'kulturnatten.uppsala.se';
+    source.appendChild(link);
+    detailsList.appendChild(source);
   }
 
   if (ev.streetAddress) {
@@ -537,7 +559,7 @@ function createEventDetails(ev, eventTitle) {
 function renderList(events) {
   $list.innerHTML = '';
   if (!events || events.length === 0) {
-    $list.innerHTML = '<div class="no-events">No events</div>';
+    $list.innerHTML = '<div class="no-events">Inga evenemang</div>';
     return;
   }
   let openCard = null;
@@ -703,7 +725,7 @@ function setActive(tab) {
   $activeTabHeading.textContent = `${tabIcon(tab)} ${tabTooltip(tab)}`;
   $programSortControls.hidden = tab !== 'program';
   const favs = loadFavorites();
-  const now = Date.now();
+  const now = eventCurrentTime();
   let events = [];
   if (tab === 'program') {
     events = sortProgramEvents(allEvents.filter((event) => !event.isCancelled));
@@ -756,11 +778,25 @@ $search.addEventListener('input', () => {
   setActive(activeTab);
 });
 $childrenFilter.addEventListener('change', () => {
+  if ($childrenFilter.checked) $adultsFilter.checked = false;
+  updateClearFiltersButton();
+  updateFilterCount();
+  setActive(activeTab);
+});
+$adultsFilter.addEventListener('change', () => {
+  if ($adultsFilter.checked) $childrenFilter.checked = false;
   updateClearFiltersButton();
   updateFilterCount();
   setActive(activeTab);
 });
 $freeFilter.addEventListener('change', () => {
+  if ($freeFilter.checked) $paidFilter.checked = false;
+  updateClearFiltersButton();
+  updateFilterCount();
+  setActive(activeTab);
+});
+$paidFilter.addEventListener('change', () => {
+  if ($paidFilter.checked) $freeFilter.checked = false;
   updateClearFiltersButton();
   updateFilterCount();
   setActive(activeTab);
@@ -794,7 +830,9 @@ window.addEventListener(
 $clearFilters.addEventListener('click', () => {
   $search.value = '';
   $childrenFilter.checked = false;
+  $adultsFilter.checked = false;
   $freeFilter.checked = false;
+  $paidFilter.checked = false;
   $fromFilter.value = '';
   $toFilter.value = '';
   for (const filter of multiFilters) {

@@ -1,1 +1,3 @@
 const SHOW_CATEGORIES_IN_LIST = true;
+
+const FAKE_TODAY_DATE = '2026-09-12';
