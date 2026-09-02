@@ -19,24 +19,29 @@
     </div>
     <div class="page-content">
       <header>
-        <nav class="tabs">
-          <button id="tab-program" class="events-tab active" type="button" aria-label="Alla 0" title="Alla evenemang (0 st)"><span aria-hidden="true">&#128197;</span> <span class="tab-label">Alla</span> <span class="event-count">0</span></button>
-          <button id="tab-subevent" class="subevent-tab" type="button" aria-label="Inslag 0" title="Del av evenemang (0 st)"><i class="fa-solid fa-layer-group" aria-hidden="true"></i> <span class="tab-label">Inslag</span> <span class="subevent-count">0</span></button>
-          <button id="tab-cancelled" class="cancelled-tab" type="button" aria-label="Inställt 0" title="Inställda evenemang (0 st)"><i class="fa-solid fa-ban" aria-hidden="true"></i> <span class="tab-label">Inställt</span> <span class="cancelled-count">0</span></button>
-          <button id="tab-favorites" class="favorites-tab" type="button" aria-label="Favorit 0" title="Favoritevenemang (0 st)"><span aria-hidden="true">★</span> <span class="tab-label">Favorit</span> <span class="favorite-count">0</span></button>
-          <button id="tab-live" class="live-tab" type="button" aria-label="Nu 0" title="Pågående evenemang (0 st)"><i class="fa-solid fa-clock" aria-hidden="true"></i> <span class="tab-label">Nu</span> <span class="live-count">0</span></button>
-          <button id="tab-recent" class="recent-tab" type="button" aria-label="Nyss 0" title="Nyligen startade evenemang (0 st)"><i class="fa-solid fa-clock-rotate-left" aria-hidden="true"></i> <span class="tab-label">Nyss</span> <span class="recent-count">0</span></button>
-          <button id="tab-soon" class="soon-tab" type="button" aria-label="Snart 0" title="Strax startade evenemang (0 st)"><i class="fa-solid fa-clock-rotate-left fa-flip-horizontal" aria-hidden="true"></i> <span class="tab-label">Snart</span> <span class="soon-count">0</span></button>
-          <button id="tab-later" class="later-tab" type="button" aria-label="Sen 0" title="Senare startade evenemang (0 st)"><i class="fa-solid fa-hourglass-start" aria-hidden="true"></i> <span class="tab-label">Sen</span> <span class="later-count">0</span></button>
-        </nav>
-        <div class="filter-search-section">
-          <div class="filter-header">
-            <div id="selected-filters" class="selected-filters" aria-live="polite"></div>
-            <button id="show-filters" class="clear-search filter-toggle" type="button" aria-label="Visa filter" title="Visa filter" aria-expanded="false" aria-pressed="false">
-              <span id="show-filters-label"><i class="fa-solid fa-filter" aria-hidden="true"></i></span> <span id="filter-count" hidden></span>
-            </button>
-            <button id="clear-filters" class="clear-search clear-icon" type="button" aria-label="Rensa filter" title="Rensa filter" disabled><span aria-hidden="true">&#10005;</span></button>
-          </div>
+        <select id="tab-select" class="tabs-select" aria-label="Välj vy">
+          <option id="tab-program" value="program" title="Alla evenemang (0 st)" selected>&#128197; Alla (0)</option>
+          <option id="tab-subevent" value="subevent" title="Del av evenemang (0 st)">&#128194; Inslag (0)</option>
+          <option id="tab-cancelled" value="cancelled" title="Inställda evenemang (0 st)">&#128683; Inställt (0)</option>
+          <option id="tab-favorites" value="favorites" title="Favoritevenemang (0 st)">&#11088; Favorit (0)</option>
+          <option id="tab-live" value="live" title="Pågående evenemang (0 st)">&#128336; Nu (0)</option>
+          <option id="tab-recent" value="recent" title="Nyligen startade evenemang (0 st)">&#9194; Nyss (0)</option>
+          <option id="tab-soon" value="soon" title="Strax startade evenemang (0 st)">&#9193; Snart (0)</option>
+          <option id="tab-later" value="later" title="Senare startade evenemang (0 st)">&#8987; Sen (0)</option>
+        </select>
+        <div class="search-row">
+          <label class="search-field">
+            <input id="event-search" type="search" placeholder="Sök titel eller plats" autocomplete="off" />
+          </label>
+          <button id="clear-filters" class="clear-search clear-icon" type="button" aria-label="Rensa filter" title="Rensa filter" disabled><span aria-hidden="true">&#10005;</span></button>
+          <button id="show-filters" class="clear-search filter-toggle" type="button" aria-label="Visa filter" title="Visa filter" aria-expanded="false" aria-pressed="false">
+            <span id="show-filters-label"><i class="fa-solid fa-filter" aria-hidden="true"></i></span> <span id="filter-count" hidden></span>
+          </button>
+        </div>
+        <div class="filter-header">
+          <div id="selected-filters" class="selected-filters" aria-live="polite"></div>
+        </div>
+        <div id="filter-search-section" class="filter-search-section" hidden>
           <section id="filter-panel" class="filter-panel" aria-label="Filters" hidden>
             <div class="primary-filters">
               <label><input id="children-filter" type="checkbox" /> Barn</label>
@@ -85,9 +90,6 @@
               </div>
             </div>
           </section>
-          <label class="search-field">
-            <input id="event-search" type="search" placeholder="Sök titel eller plats" autocomplete="off" />
-          </label>
         </div>
       </header>
 
@@ -96,7 +98,9 @@
         <div class="list-subheader-row">
           <h2 id="active-tab-heading" class="list-subheader">Alla evenemang</h2>
           <div id="program-sort-controls" class="program-sort-controls" aria-label="Sortera program">
+            <span>Sortering:</span>
             <button id="program-sort-start" class="sort-option active" type="button" aria-pressed="true">Starttid</button>
+            <span aria-hidden="true">|</span>
             <button id="program-sort-seen" class="sort-option" type="button" aria-pressed="false">Nyast</button>
           </div>
         </div>

@@ -16,9 +16,11 @@ const $fromFilter = document.getElementById('from-filter');
 const $toFilter = document.getElementById('to-filter');
 const $showFilters = document.getElementById('show-filters');
 const $showFiltersLabel = document.getElementById('show-filters-label');
+const $filterSearchSection = document.getElementById('filter-search-section');
 const $filterPanel = document.getElementById('filter-panel');
 const $filterCount = document.getElementById('filter-count');
 const $selectedFilters = document.getElementById('selected-filters');
+const $tabSelect = document.getElementById('tab-select');
 const tabs = {
   program: document.getElementById('tab-program'),
   subevent: document.getElementById('tab-subevent'),
@@ -129,6 +131,10 @@ function tabTooltip(tab) {
   return tabs[tab].title.replace(/\s*\([^)]*\)\s*$/, '');
 }
 
+function tabIcon(tab) {
+  return tabs[tab].textContent.trim().split(/\s+/)[0];
+}
+
 function liveEvents(events, currentTime) {
   return events.filter((event) => {
     if (event.isCancelled) return false;
@@ -213,29 +219,21 @@ function updateTabCounts() {
   const soonCount = eventsInWindow(allEvents, now, now + SOON_EVENT_WINDOW_MS).length;
   const laterCount = laterEvents(allEvents, now + SOON_EVENT_WINDOW_MS).length;
 
-  tabs.program.querySelector('.event-count').textContent = String(activeCount);
-  tabs.program.setAttribute('aria-label', `Alla ${activeCount}`);
+  tabs.program.textContent = `\u{1F4C5} Alla (${activeCount})`;
   tabs.program.title = `Alla evenemang (${activeCount} st)`;
-  tabs.subevent.querySelector('.subevent-count').textContent = String(subeventCount);
-  tabs.subevent.setAttribute('aria-label', `Inslag ${subeventCount}`);
+  tabs.subevent.textContent = `\u{1F4C2} Inslag (${subeventCount})`;
   tabs.subevent.title = `Del av evenemang (${subeventCount} st)`;
-  tabs.cancelled.querySelector('.cancelled-count').textContent = String(cancelledCount);
-  tabs.cancelled.setAttribute('aria-label', `Inställt ${cancelledCount}`);
+  tabs.cancelled.textContent = `\u{1F6AB} Inställt (${cancelledCount})`;
   tabs.cancelled.title = `Inställda evenemang (${cancelledCount} st)`;
-  tabs.favorites.querySelector('.favorite-count').textContent = String(favoriteCount);
-  tabs.favorites.setAttribute('aria-label', `Favorit ${favoriteCount}`);
+  tabs.favorites.textContent = `\u2B50 Favorit (${favoriteCount})`;
   tabs.favorites.title = `Favoritevenemang (${favoriteCount} st)`;
-  tabs.live.querySelector('.live-count').textContent = String(liveCount);
-  tabs.live.setAttribute('aria-label', `Nu ${liveCount}`);
+  tabs.live.textContent = `\u{1F550} Nu (${liveCount})`;
   tabs.live.title = `Pågående evenemang (${liveCount} st)`;
-  tabs.recent.querySelector('.recent-count').textContent = String(recentCount);
-  tabs.recent.setAttribute('aria-label', `Nyss ${recentCount}`);
+  tabs.recent.textContent = `\u23EA Nyss (${recentCount})`;
   tabs.recent.title = `Nyligen startade evenemang (${recentCount} st)`;
-  tabs.soon.querySelector('.soon-count').textContent = String(soonCount);
-  tabs.soon.setAttribute('aria-label', `Snart ${soonCount}`);
+  tabs.soon.textContent = `\u23E9 Snart (${soonCount})`;
   tabs.soon.title = `Strax startade evenemang (${soonCount} st)`;
-  tabs.later.querySelector('.later-count').textContent = String(laterCount);
-  tabs.later.setAttribute('aria-label', `Sen ${laterCount}`);
+  tabs.later.textContent = `\u23F3 Sen (${laterCount})`;
   tabs.later.title = `Senare startade evenemang (${laterCount} st)`;
 }
 
@@ -388,13 +386,14 @@ function updateSelectedFilters(filteredEventCount) {
   $selectedFilters.replaceChildren();
   const label = document.createElement('span');
   label.className = 'filter-label';
-  label.textContent = 'FILTER:';
+  label.textContent = 'Filter:';
   const values = document.createElement('span');
   values.textContent = ` ${selectedFilterText} (${filteredEventCount})`;
   $selectedFilters.append(label, values);
 }
 
 function closeFilters() {
+  $filterSearchSection.hidden = true;
   $filterPanel.hidden = true;
   $showFilters.setAttribute('aria-expanded', 'false');
   $showFilters.setAttribute('aria-pressed', 'false');
@@ -545,6 +544,7 @@ function renderList(events) {
   for (const ev of events) {
     const card = document.createElement('div');
     card.className = 'card';
+    card.classList.toggle('cancelled', Boolean(ev.isCancelled));
     card.tabIndex = 0;
     card.setAttribute('role', 'button');
 
@@ -699,9 +699,8 @@ function renderList(events) {
 
 function setActive(tab) {
   activeTab = tab;
-  Object.values(tabs).forEach((b) => b.classList.remove('active'));
-  tabs[tab].classList.add('active');
-  $activeTabHeading.textContent = tabTooltip(tab);
+  $tabSelect.value = tab;
+  $activeTabHeading.textContent = `${tabIcon(tab)} ${tabTooltip(tab)}`;
   $programSortControls.hidden = tab !== 'program';
   const favs = loadFavorites();
   const now = Date.now();
@@ -728,14 +727,7 @@ function setActive(tab) {
   renderList(filteredEvents);
 }
 
-tabs.program.addEventListener('click', () => setActive('program'));
-tabs.subevent.addEventListener('click', () => setActive('subevent'));
-tabs.cancelled.addEventListener('click', () => setActive('cancelled'));
-tabs.favorites.addEventListener('click', () => setActive('favorites'));
-tabs.live.addEventListener('click', () => setActive('live'));
-tabs.recent.addEventListener('click', () => setActive('recent'));
-tabs.soon.addEventListener('click', () => setActive('soon'));
-tabs.later.addEventListener('click', () => setActive('later'));
+$tabSelect.addEventListener('change', () => setActive($tabSelect.value));
 $themeToggle.addEventListener('click', () => {
   setTheme(document.body.dataset.theme === 'light' ? 'dark' : 'light');
 });
@@ -750,11 +742,12 @@ $programSortSeen.addEventListener('click', () => {
   setActive('program');
 });
 $showFilters.addEventListener('click', () => {
-  const openingFilters = $filterPanel.hidden;
+  const openingFilters = $filterSearchSection.hidden;
+  $filterSearchSection.hidden = !openingFilters;
   $filterPanel.hidden = !openingFilters;
   if (openingFilters) filtersOpenedAt = Date.now();
-  $showFilters.setAttribute('aria-expanded', String(!$filterPanel.hidden));
-  $showFilters.setAttribute('aria-pressed', String(!$filterPanel.hidden));
+  $showFilters.setAttribute('aria-expanded', String(!$filterSearchSection.hidden));
+  $showFilters.setAttribute('aria-pressed', String(!$filterSearchSection.hidden));
   updateShowFiltersButton();
 });
 $search.addEventListener('input', () => {
