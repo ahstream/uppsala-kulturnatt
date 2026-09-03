@@ -13,6 +13,7 @@
   --active-tab-text: #111827;
   --chip-text: #b8c7cf;
   --detail-bg: rgba(255, 255, 255, 0.04);
+  --filter-control-hover-bg: rgba(6, 182, 212, 0.24);
   --card-shadow: rgba(2, 6, 23, 0.5);
   --star-inactive: #aaa7a7;
   --topbar-bg: #7c3aed;
@@ -35,6 +36,7 @@ body[data-theme='light'] {
   --active-tab-text: #78350f;
   --chip-text: #334155;
   --detail-bg: rgba(15, 23, 42, 0.04);
+  --filter-control-hover-bg: rgba(8, 145, 178, 0.18);
   --card-shadow: rgba(15, 23, 42, 0.12);
   --star-inactive: #969494;
 }
@@ -68,11 +70,21 @@ main,
 }
 
 @media (min-width: 641px) {
+  header,
+  .page-content {
+    width: min(100%, 960px);
+    margin-inline: auto;
+    padding: 0 10px;
+  }
+
   main,
   .search-row,
   .filter-header,
-  .filter-search-section {
-    padding: 0 10px;
+  .filter-search-section,
+  .selected-filters {
+    width: 100%;
+    margin-inline: 0;
+    padding-inline: 0;
   }
 }
 
@@ -133,7 +145,7 @@ header {
 .top-actions {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
 .finished-visibility-toggle,
@@ -158,7 +170,26 @@ header {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 1.6rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  transition:
+    background-color 150ms ease,
+    box-shadow 150ms ease;
+}
+
+.finished-visibility-toggle:hover,
+.theme-toggle:hover,
+.login-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 6px rgba(2, 6, 23, 0.24);
+}
+
+.finished-visibility-toggle:focus-visible,
+.theme-toggle:focus-visible,
+.login-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .theme-toggle {
@@ -166,6 +197,7 @@ header {
 }
 
 .login-button {
+  min-height: 2rem;
   padding: 4px 8px;
   border: 1px solid var(--topbar-control-border);
   border-radius: 4px;
@@ -175,6 +207,9 @@ header {
   font: inherit;
   font-size: 0.95rem;
   margin-left: 0px;
+  transition:
+    background-color 150ms ease,
+    box-shadow 150ms ease;
 }
 
 .auth-dialog {
@@ -316,11 +351,13 @@ header {
   padding: 8px;
   border: 1px solid var(--border-subtle);
   border-radius: 4px;
-  background: dimgray;
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.12), var(--detail-bg) 42%, rgba(255, 209, 102, 0.08));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 body[data-theme='light'] .filter-search-section-inner {
-  background: lightgray;
+  background: #e6f4f6;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 .primary-filters {
@@ -377,6 +414,10 @@ body[data-theme='light'] .filter-search-section-inner {
   color: var(--control-text);
   cursor: pointer;
   font-size: 0.95rem;
+  transition:
+    background-color 150ms ease,
+    box-shadow 150ms ease,
+    transform 150ms ease;
 }
 
 .clear-search:disabled {
@@ -409,6 +450,18 @@ body[data-theme='light'] .filter-search-section-inner {
   border-color: var(--text);
   background: var(--detail-bg);
   color: var(--text);
+}
+
+#show-filters:hover,
+#clear-filters:not(:disabled):hover {
+  background: var(--filter-control-hover-bg);
+  box-shadow: 0 2px 6px var(--card-shadow);
+}
+
+#show-filters:focus-visible,
+#clear-filters:not(:disabled):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .multi-filter {
@@ -638,13 +691,24 @@ body[data-theme='light'] .card.cancelled {
 .chip {
   appearance: none;
   border: 1px solid var(--border-subtle);
-  background: linear-gradient(90deg, rgba(255, 209, 102, 0.18), rgba(6, 182, 212, 0.18));
+  background-color: transparent;
+  background-image: linear-gradient(90deg, rgba(255, 209, 102, 0.18), rgba(6, 182, 212, 0.18));
   color: var(--chip-text);
   padding: 3px 7px;
   border-radius: 0;
   font-size: 0.95rem;
   line-height: 1.1;
   cursor: pointer;
+  transition: background-color 150ms ease;
+}
+
+.chip:hover {
+  background-color: var(--filter-control-hover-bg);
+}
+
+.chip:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 2px;
 }
 
 .star {
@@ -805,6 +869,11 @@ select.tabs-select,
   background-repeat: no-repeat;
   background-position: right 5px center;
   padding-right: 32px;
+}
+
+body[data-theme='dark'] select.tabs-select,
+body[data-theme='dark'] .time-filters select {
+  background-image: url('arrow-white.svg');
 }
 
 .time-filters select {
