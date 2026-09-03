@@ -9,6 +9,7 @@ const $programSortStart = document.getElementById('program-sort-start');
 const $programSortSeen = document.getElementById('program-sort-seen');
 const $finishedVisibilityToggle = document.getElementById('finished-visibility-toggle');
 const $themeToggle = document.getElementById('theme-toggle');
+const $loginButton = document.getElementById('login-button');
 const $list = document.getElementById('list');
 const $search = document.getElementById('event-search');
 const $clearFilters = document.getElementById('clear-filters');
@@ -49,6 +50,9 @@ let allEvents = [];
 let activeTab = 'program';
 let programSortMode = 'start';
 let hideFinishedEvents = false;
+let firebaseUser = null;
+let settingsDocument = null;
+let cloudSyncTimer = null;
 let filtersOpenedAt = 0;
 let lastScrollY = window.scrollY;
 let stickyDownScrollDistance = 0;
@@ -63,11 +67,13 @@ function setTheme(theme, persist = true) {
   const label = isLight ? 'Byt till mörkt läge' : 'Byt till ljust läge';
   $themeToggle.setAttribute('aria-label', label);
   $themeToggle.title = label;
+  if (persist) scheduleCloudSettingsSync();
 }
 
 const savedTheme = localStorage.getItem('theme');
 const initialTheme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
 setTheme(initialTheme, false);
+hideFinishedEvents = localStorage.getItem('hideFinishedEvents') === 'true';
 
 function eventStartTime(event) {
   return new Date(event.start || event.startTime || 0).getTime();
@@ -251,6 +257,88 @@ function loadFavorites() {
 }
 function saveFavorites(arr) {
   localStorage.setItem('favorites', JSON.stringify(arr));
+  scheduleCloudSettingsSync();
+}
+
+function localSettings() {
+  return {
+    theme: document.body.dataset.theme,
+    favorites: loadFavorites(),
+    hideFinishedEvents,
+  };
+}
+
+function applySettings(settings) {
+  if (settings && (settings.theme === 'light' || settings.theme === 'dark')) setTheme(settings.theme, false);
+  if (settings && Array.isArray(settings.favorites)) localStorage.setItem('favorites', JSON.stringify(settings.favorites));
+  if (settings && typeof settings.hideFinishedEvents === 'boolean') {
+    hideFinishedEvents = settings.hideFinishedEvents;
+    localStorage.setItem('hideFinishedEvents', String(hideFinishedEvents));
+  }
+  updateFinishedVisibilityToggle();
+}
+
+function scheduleCloudSettingsSync() {
+  if (!settingsDocument) return;
+  window.clearTimeout(cloudSyncTimer);
+  cloudSyncTimer = window.setTimeout(() => {
+    settingsDocument.set(localSettings(), { merge: true }).catch((error) => console.error('Firebase settings sync failed:', error));
+  }, 300);
+}
+
+async function syncSettingsWithFirebase() {
+  if (!settingsDocument) return;
+  try {
+    const snapshot = await settingsDocument.get();
+    const local = localSettings();
+    const remote = snapshot.exists ? snapshot.data() : null;
+    if (remote) {
+      applySettings({
+        ...remote,
+        favorites: [...new Set([...(Array.isArray(remote.favorites) ? remote.favorites : []), ...local.favorites])],
+      });
+    }
+    await settingsDocument.set(localSettings(), { merge: true });
+    updateTabCounts();
+    setActive(activeTab);
+  } catch (error) {
+    console.error('Firebase settings sync failed:', error);
+  }
+}
+
+function initFirebase() {
+  if (typeof firebase === 'undefined' || !FIREBASE_CONFIG) {
+    $loginButton.title = 'Firebase är inte konfigurerat';
+    return;
+  }
+
+  try {
+    firebase.initializeApp(FIREBASE_CONFIG);
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+    auth.onAuthStateChanged(async (user) => {
+      firebaseUser = user;
+      settingsDocument = user ? db.collection('users').doc(user.uid) : null;
+      $loginButton.textContent = user ? 'Logga ut' : 'Logga in';
+      $loginButton.title = user ? `Logga ut (${user.displayName || user.email || 'användare'})` : 'Logga in med Google';
+      if (user) await syncSettingsWithFirebase();
+    });
+    $loginButton.addEventListener('click', async () => {
+      try {
+        if (firebaseUser) {
+          await auth.signOut();
+        } else {
+          await auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+        }
+      } catch (error) {
+        console.error('Firebase authentication failed:', error);
+        $status.textContent = 'Inloggningen misslyckades.';
+      }
+    });
+  } catch (error) {
+    console.error('Firebase initialization failed:', error);
+    $loginButton.title = 'Firebase kunde inte startas';
+  }
 }
 
 function updateTabCounts() {
@@ -968,6 +1056,7 @@ function setActive(tab) {
 $tabSelect.addEventListener('change', () => setActive($tabSelect.value));
 $finishedVisibilityToggle.addEventListener('click', () => {
   hideFinishedEvents = !hideFinishedEvents;
+  localStorage.setItem('hideFinishedEvents', String(hideFinishedEvents));
   updateFinishedVisibilityToggle();
   updateTabCounts();
   setActive(activeTab);
@@ -1119,4 +1208,5 @@ async function main() {
   }
 }
 
+initFirebase();
 main();
