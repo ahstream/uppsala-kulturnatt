@@ -49,9 +49,9 @@ let stickyDownScrollDistance = 0;
 const RECENT_EVENT_WINDOW_MS = 15 * 60 * 1000;
 const SOON_EVENT_WINDOW_MS = 45 * 60 * 1000;
 
-function setTheme(theme) {
+function setTheme(theme, persist = true) {
   document.body.dataset.theme = theme;
-  localStorage.setItem('theme', theme);
+  if (persist) localStorage.setItem('theme', theme);
   const isLight = theme === 'light';
   $themeToggle.innerHTML = isLight ? '<i class="fa-solid fa-moon" aria-hidden="true"></i>' : '<i class="fa-solid fa-sun" aria-hidden="true"></i>';
   const label = isLight ? 'Byt till mörkt läge' : 'Byt till ljust läge';
@@ -59,7 +59,9 @@ function setTheme(theme) {
   $themeToggle.title = label;
 }
 
-setTheme(localStorage.getItem('theme') === 'light' ? 'light' : 'dark');
+const savedTheme = localStorage.getItem('theme');
+const initialTheme = savedTheme === 'light' || savedTheme === 'dark' ? savedTheme : window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+setTheme(initialTheme, false);
 
 function eventStartTime(event) {
   return new Date(event.start || event.startTime || 0).getTime();
@@ -500,12 +502,6 @@ function createEventDetails(ev, eventTitle) {
     detailsList.appendChild(source);
   }
 
-  if (ev.streetAddress) {
-    const address = document.createElement('li');
-    address.textContent = `Address: ${ev.streetAddress}`;
-    detailsList.appendChild(address);
-  }
-
   const checked = formatLocalDateTime(ev.checked);
   if (checked) {
     const checkedAt = document.createElement('li');
@@ -520,6 +516,12 @@ function createEventDetails(ev, eventTitle) {
     detailsList.appendChild(updatedAt);
   }
 
+  if (ev.streetAddress) {
+    const address = document.createElement('li');
+    address.textContent = `Address: ${ev.streetAddress}`;
+    detailsList.appendChild(address);
+  }
+
   if (detailsList.childElementCount > 0) details.appendChild(detailsList);
 
   const mapQuery = coordinatesToMapQuery(ev.coordinates);
@@ -527,7 +529,7 @@ function createEventDetails(ev, eventTitle) {
     const mapToggle = document.createElement('button');
     mapToggle.type = 'button';
     mapToggle.className = 'map-toggle';
-    mapToggle.textContent = 'Show map';
+    mapToggle.textContent = 'Visa karta';
     mapToggle.setAttribute('aria-expanded', 'false');
 
     const map = document.createElement('iframe');
@@ -545,7 +547,7 @@ function createEventDetails(ev, eventTitle) {
         mapLoaded = true;
       }
       map.hidden = !map.hidden;
-      mapToggle.textContent = map.hidden ? 'Show map' : 'Hide map';
+      mapToggle.textContent = map.hidden ? 'Visa karta' : 'Göm karta';
       mapToggle.setAttribute('aria-expanded', String(!map.hidden));
     });
 
@@ -576,10 +578,22 @@ function renderList(events) {
     const startValue = formatLocalClockTime(ev.start || ev.startTime || ev.startTimeText || ev.time || '—');
     const endValue = ev.end || ev.endTime || ev.endTimeText ? formatLocalClockTime(ev.end || ev.endTime || ev.endTimeText) : null;
     const timeText = endValue ? `${startValue}–${endValue}` : startValue;
+    const endTime = eventEndTime(ev);
+    const isFinished = !ev.isCancelled && Number.isFinite(endTime) && endTime < eventCurrentTime();
+    card.classList.toggle('finished', isFinished);
 
     const timeLabel = document.createElement('span');
     timeLabel.className = 'event-time';
+    timeLabel.classList.toggle('finished', isFinished);
     timeLabel.textContent = timeText;
+
+    const eventStatus = ev.isCancelled ? '(INSTÄLLD)' : isFinished ? '(AVSLUTAD)' : null;
+    if (eventStatus) {
+      const statusLabel = document.createElement('span');
+      statusLabel.className = 'event-status';
+      statusLabel.textContent = eventStatus;
+      timeLine.appendChild(statusLabel);
+    }
 
     const titleText = document.createElement('span');
     titleText.className = 'event-title';
@@ -594,7 +608,7 @@ function renderList(events) {
     titleLine.className = 'line title-line';
     titleLine.appendChild(titleGroup);
 
-    timeLine.appendChild(timeLabel);
+    timeLine.prepend(timeLabel);
 
     const parentTitle = ev.parentTitle || ev.parent || ev.groupTitle;
     let parentLine = null;
@@ -697,12 +711,6 @@ function renderList(events) {
       }
     });
 
-    if (ev.isCancelled) {
-      const cancelledBadge = document.createElement('div');
-      cancelledBadge.className = 'cancelled-badge';
-      cancelledBadge.textContent = 'INSTÄLLT';
-      card.appendChild(cancelledBadge);
-    }
     card.appendChild(timeLine);
     card.appendChild(titleLine);
     if (parentLine) card.appendChild(parentLine);

@@ -58,9 +58,22 @@ body {
 }
 
 header,
-main {
+main,
+.search-row,
+.filter-header,
+.filter-search-section,
+.selected-filters {
   width: min(100%, 960px);
   margin-inline: auto;
+}
+
+@media (min-width: 641px) {
+  main,
+  .search-row,
+  .filter-header,
+  .filter-search-section {
+    padding: 0 10px;
+  }
 }
 
 .page-content {
@@ -69,7 +82,11 @@ main {
 
 @media (max-width: 640px) {
   header,
-  main {
+  main,
+  .search-row,
+  .filter-header,
+  .filter-search-section,
+  .selected-filters {
     width: 100%;
   }
 }
@@ -177,14 +194,18 @@ header {
   flex-basis: 100%;
   flex-direction: column;
   gap: 4px;
-  padding: 8px;
-  border: 1px solid var(--border-subtle);
   border-radius: 4px;
   margin-top: 10px;
 }
 
 .filter-search-section[hidden] {
   display: none;
+}
+
+.filter-search-section-inner {
+  padding: 8px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
 }
 
 .primary-filters {
@@ -224,8 +245,9 @@ header {
 }
 
 .search-field input:focus-visible {
-  outline: 2px solid var(--accent-2);
-  outline-offset: 2px;
+  border-color: var(--accent-2);
+  outline: none;
+  box-shadow: inset 0 0 0 1px var(--accent-2);
 }
 
 .clear-search {
@@ -299,6 +321,8 @@ header {
 }
 
 .time-filters select {
+  box-sizing: border-box;
+  width: 4.5rem;
   padding: 7px 9px;
   border: 1px solid var(--border);
   border-radius: 4px;
@@ -434,20 +458,12 @@ main {
   background: #7f1d1d;
 }
 
+.card.finished {
+  opacity: 0.75;
+}
+
 body[data-theme='light'] .card.cancelled {
   background: #fee2e2;
-}
-
-.cancelled-badge {
-  margin: 0 0 16px 0;
-  color: #fca5a5;
-  font-size: 1.3rem;
-  font-weight: 700;
-  text-align: left;
-}
-
-body[data-theme='light'] .cancelled-badge {
-  color: #991b1b;
 }
 
 .card + .card {
@@ -469,9 +485,17 @@ body[data-theme='light'] .cancelled-badge {
   font-weight: 400;
 }
 
+.event-status {
+  margin-left: 5px;
+}
+
 .event-title {
   font-size: 0.95rem;
   font-weight: 700;
+}
+
+.card.finished .event-title {
+  font-weight: 400;
 }
 
 .event-title-group {
@@ -549,7 +573,7 @@ body[data-theme='light'] .cancelled-badge {
 }
 
 .event-details a {
-  color: var(--control-text);
+  color: inherit;
 }
 
 .event-details .tag-row.has-tags {
@@ -593,4 +617,21 @@ body[data-theme='light'] .cancelled-badge {
 .no-events {
   color: var(--muted);
   padding: 12px 0;
+}
+
+select.tabs-select,
+.time-filters select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-image: url('arrow.svg');
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+  padding-right: 32px;
+}
+
+.time-filters select {
+  background-position: right 0px center;
+  padding-right: 16px;
 }

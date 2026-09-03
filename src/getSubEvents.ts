@@ -188,7 +188,8 @@ export function getSubEvents(ev: any): SubEvent[] {
         if (endText) {
           const e = parseHM(endText);
           if (e) {
-            const constructedEndUTC = Date.UTC(base.getUTCFullYear(), base.getUTCMonth(), base.getUTCDate(), e.hh, e.mm, 0);
+            const endDayOffset = s && e.hh * 60 + e.mm <= s.hh * 60 + s.mm ? 1 : 0;
+            const constructedEndUTC = Date.UTC(base.getUTCFullYear(), base.getUTCMonth(), base.getUTCDate() + endDayOffset, e.hh, e.mm, 0);
             const realEndUtcTs = constructedEndUTC - tzOffsetMs;
             const endDate = new Date(realEndUtcTs);
             if (!isNaN(endDate.getTime())) sub.endTime = endDate.toISOString().replace(/\.\d{3}Z$/, '+00:00');

@@ -43,56 +43,58 @@
         <div id="selected-filters" class="selected-filters" aria-live="polite"></div>
       </div>
       <div id="filter-search-section" class="filter-search-section" hidden>
-        <section id="filter-panel" class="filter-panel" aria-label="Filters" hidden>
-          <div class="primary-filters">
-            <label><input id="children-filter" type="checkbox" /> Barn</label>
-            <label><input id="adults-filter" type="checkbox" /> Vuxna</label>
-            <label><input id="free-filter" type="checkbox" /> Gratis</label>
-            <label><input id="paid-filter" type="checkbox" /> Kostar</label>
-          </div>
-          <div class="filters">
-            <div class="multi-filter">
-              <details id="category-menu" class="filter-menu">
-                <summary id="category-summary">Alla kategorier</summary>
-                <div id="category-options" class="filter-options">
-                  <label><input type="checkbox" value="all" checked /> Alla kategorier</label>
-                </div>
-              </details>
+        <div class="filter-search-section-inner">
+          <section id="filter-panel" class="filter-panel" aria-label="Filters" hidden>
+            <div class="primary-filters">
+              <label><input id="children-filter" type="checkbox" /> Barn</label>
+              <label><input id="adults-filter" type="checkbox" /> Vuxna</label>
+              <label><input id="free-filter" type="checkbox" /> Gratis</label>
+              <label><input id="paid-filter" type="checkbox" /> Kostar</label>
             </div>
-            <div class="multi-filter">
-              <details id="language-menu" class="filter-menu">
-                <summary id="language-summary">Alla språk</summary>
-                <div id="language-options" class="filter-options">
-                  <label><input type="checkbox" value="all" checked /> Alla språk</label>
-                </div>
-              </details>
+            <div class="filters">
+              <div class="multi-filter">
+                <details id="category-menu" class="filter-menu">
+                  <summary id="category-summary">Alla kategorier</summary>
+                  <div id="category-options" class="filter-options">
+                    <label><input type="checkbox" value="all" checked /> Alla kategorier</label>
+                  </div>
+                </details>
+              </div>
+              <div class="multi-filter">
+                <details id="language-menu" class="filter-menu">
+                  <summary id="language-summary">Alla språk</summary>
+                  <div id="language-options" class="filter-options">
+                    <label><input type="checkbox" value="all" checked /> Alla språk</label>
+                  </div>
+                </details>
+              </div>
+              <div class="multi-filter">
+                <details id="location-menu" class="filter-menu">
+                  <summary id="location-summary">Alla platser</summary>
+                  <div id="location-options" class="filter-options">
+                    <label><input type="checkbox" value="all" checked /> Alla platser</label>
+                  </div>
+                </details>
+              </div>
+              <div class="multi-filter">
+                <details id="accessibility-menu" class="filter-menu">
+                  <summary id="accessibility-summary">All tillgänglighet</summary>
+                  <div id="accessibility-options" class="filter-options">
+                    <label><input type="checkbox" value="all" checked /> All tillgänglighet</label>
+                  </div>
+                </details>
+              </div>
+              <div class="time-filters">
+                <select id="from-filter" aria-label="Från timme">
+                  <option value="">Från</option>
+                </select>
+                <select id="to-filter" aria-label="Till timme">
+                  <option value="">Till</option>
+                </select>
+              </div>
             </div>
-            <div class="multi-filter">
-              <details id="location-menu" class="filter-menu">
-                <summary id="location-summary">Alla platser</summary>
-                <div id="location-options" class="filter-options">
-                  <label><input type="checkbox" value="all" checked /> Alla platser</label>
-                </div>
-              </details>
-            </div>
-            <div class="multi-filter">
-              <details id="accessibility-menu" class="filter-menu">
-                <summary id="accessibility-summary">All tillgänglighet</summary>
-                <div id="accessibility-options" class="filter-options">
-                  <label><input type="checkbox" value="all" checked /> All tillgänglighet</label>
-                </div>
-              </details>
-            </div>
-            <div class="time-filters">
-              <select id="from-filter" aria-label="Från timme">
-                <option value="">Från</option>
-              </select>
-              <select id="to-filter" aria-label="Till timme">
-                <option value="">Till</option>
-              </select>
-            </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
 
       <main>

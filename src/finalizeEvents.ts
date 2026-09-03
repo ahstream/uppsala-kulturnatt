@@ -1,3 +1,11 @@
+function normalizeEndTime(startTime: unknown, endTime: unknown) {
+  if (typeof startTime !== 'string' || typeof endTime !== 'string') return endTime;
+  const startTimestamp = Date.parse(startTime);
+  const endTimestamp = Date.parse(endTime);
+  if (!Number.isFinite(startTimestamp) || !Number.isFinite(endTimestamp) || endTimestamp > startTimestamp) return endTime;
+  return new Date(endTimestamp + 24 * 60 * 60 * 1000).toISOString().replace(/\.\d{3}Z$/, '+00:00');
+}
+
 export function finalizeEvents(events: any[], filters: any) {
   const cats = filters && (filters.categories || filters.category) ? filters.categories || filters.category : [];
 
@@ -88,6 +96,7 @@ export function finalizeEvents(events: any[], filters: any) {
     const copy: any = { ...(ev || {}) };
     if (typeof copy.about === 'string') copy.about = copy.about.trim();
     if (typeof copy.title === 'string') copy.title = copy.title.replace(/^:+/, '').trim();
+    copy.endTime = normalizeEndTime(copy.startTime, copy.endTime);
     let evCats: any[] = [];
     if (Array.isArray(copy.categories)) evCats = copy.categories;
     else if (Array.isArray(copy.category)) evCats = copy.category;
