@@ -136,7 +136,6 @@ header {
   gap: 3px;
 }
 
-.login-button,
 .finished-visibility-toggle,
 .theme-toggle {
   padding: 3px 5px;
@@ -164,6 +163,113 @@ header {
 
 .theme-toggle {
   border-color: var(--topbar-control-border);
+}
+
+.login-button {
+  padding: 4px 8px;
+  border: 1px solid var(--topbar-control-border);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--topbar-text);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.85rem;
+}
+
+.auth-dialog {
+  width: min(calc(100% - 24px), 360px);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--card);
+  color: var(--text);
+  box-shadow: 0 18px 50px var(--card-shadow);
+}
+
+.auth-dialog::backdrop {
+  background: rgba(2, 6, 23, 0.65);
+}
+
+.auth-form {
+  display: grid;
+  gap: 12px;
+}
+
+.auth-dialog-header,
+.auth-email-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.auth-dialog h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.auth-form label {
+  display: grid;
+  gap: 5px;
+  font-size: 0.9rem;
+}
+
+.auth-form input,
+.auth-email-actions button,
+.google-login-button,
+.auth-close {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--detail-bg);
+  color: var(--input-text);
+  font: inherit;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 7px 8px;
+}
+
+.auth-email-actions button,
+.google-login-button {
+  padding: 7px 9px;
+  cursor: pointer;
+}
+
+.auth-email-actions button:first-child {
+  background: var(--accent);
+  color: var(--active-tab-text);
+  border-color: var(--accent);
+}
+
+.auth-close {
+  padding: 3px 7px;
+  cursor: pointer;
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.google-login-button {
+  width: 100%;
+}
+
+.auth-message {
+  min-height: 1.2em;
+  margin: -3px 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
 }
 
 .tabs-select {

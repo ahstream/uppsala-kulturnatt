@@ -16,7 +16,7 @@ if (!fs.existsSync(SOURCE_DATA_PATH)) {
 fs.mkdirSync(TARGET_DATA_DIR, { recursive: true });
 fs.copyFileSync(SOURCE_DATA_PATH, TARGET_DATA_PATH);
 
-fs.writeFileSync(HEADERS_PATH, ['/', '  Cache-Control: no-store, no-cache, must-revalidate, max-age=0', '  CDN-Cache-Control: no-store', '', '/index.html', '  Cache-Control: no-store, no-cache, must-revalidate, max-age=0', '  CDN-Cache-Control: no-store', '', '/app.js', '  Cache-Control: no-store, no-cache, must-revalidate, max-age=0', '  CDN-Cache-Control: no-store', '', '/style.css', '  Cache-Control: no-store, no-cache, must-revalidate, max-age=0', '  CDN-Cache-Control: no-store', '', '/data/packedEvents.json', '  Cache-Control: no-store, no-cache, must-revalidate, max-age=0', '  CDN-Cache-Control: no-store', ''].join('\n'), 'utf8');
+fs.writeFileSync(HEADERS_PATH, ['/*', '  Cross-Origin-Opener-Policy: same-origin-allow-popups', '', '/', '  Cache-Control: no-store, no-cache, must-revalidate, max-age=0', '  CDN-Cache-Control: no-store', '', '/index.html', '  Cache-Control: no-store, no-cache, must-revalidate, max-age=0', '  CDN-Cache-Control: no-store', '', '/app.js', '  Cache-Control: no-store, no-cache, must-revalidate, max-age=0', '  CDN-Cache-Control: no-store', '', '/style.css', '  Cache-Control: no-store, no-cache, must-revalidate, max-age=0', '  CDN-Cache-Control: no-store', '', '/data/packedEvents.json', '  Cache-Control: no-store, no-cache, must-revalidate, max-age=0', '  CDN-Cache-Control: no-store', ''].join('\n'), 'utf8');
 
 console.log('Copied', path.relative(ROOT_DIR, SOURCE_DATA_PATH), 'to', path.relative(ROOT_DIR, TARGET_DATA_PATH));
 console.log('Wrote', path.relative(ROOT_DIR, HEADERS_PATH));

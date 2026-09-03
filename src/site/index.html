@@ -18,6 +18,23 @@
         </div>
       </div>
     </div>
+    <dialog id="auth-dialog" class="auth-dialog" aria-labelledby="auth-dialog-title">
+      <form id="auth-form" method="dialog" class="auth-form">
+        <div class="auth-dialog-header">
+          <h2 id="auth-dialog-title">Logga in</h2>
+          <button class="auth-close" type="button" value="cancel" aria-label="Stäng inloggning" title="Stäng"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+        </div>
+        <label>E-post<input id="auth-email" type="email" autocomplete="email" required /></label>
+        <label>Lösenord<input id="auth-password" type="password" autocomplete="current-password" minlength="6" required /></label>
+        <p id="auth-message" class="auth-message" role="status" aria-live="polite"></p>
+        <div class="auth-email-actions">
+          <button type="submit" name="action" value="sign-in">Logga in</button>
+          <button type="submit" name="action" value="register">Skapa konto</button>
+        </div>
+        <div class="auth-divider">eller</div>
+        <button id="google-login-button" class="google-login-button" type="button"><i class="fa-brands fa-google" aria-hidden="true"></i> Fortsätt med Google</button>
+      </form>
+    </dialog>
     <header>
       <select id="tab-select" class="tabs-select" aria-label="Välj vy">
         <option id="tab-program" value="program" title="xAlla evenemang (0 st)" selected>&#128197; Alla evenemang (0)</option>
@@ -115,9 +132,8 @@
       </main>
     </div>
 
-    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.18.0/firebase-auth-compat.js"></script>
     <script src="globals.js"></script>
     <script src="app.js"></script>
   </body>

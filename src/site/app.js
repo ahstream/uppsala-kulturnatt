@@ -10,6 +10,13 @@ const $programSortSeen = document.getElementById('program-sort-seen');
 const $finishedVisibilityToggle = document.getElementById('finished-visibility-toggle');
 const $themeToggle = document.getElementById('theme-toggle');
 const $loginButton = document.getElementById('login-button');
+const $authDialog = document.getElementById('auth-dialog');
+const $authForm = document.getElementById('auth-form');
+const $authEmail = document.getElementById('auth-email');
+const $authPassword = document.getElementById('auth-password');
+const $authMessage = document.getElementById('auth-message');
+const $googleLoginButton = document.getElementById('google-login-button');
+const $authClose = document.querySelector('.auth-close');
 const $list = document.getElementById('list');
 const $search = document.getElementById('event-search');
 const $clearFilters = document.getElementById('clear-filters');
@@ -50,9 +57,8 @@ let allEvents = [];
 let activeTab = 'program';
 let programSortMode = 'start';
 let hideFinishedEvents = false;
+let firebaseAuth = null;
 let firebaseUser = null;
-let settingsDocument = null;
-let cloudSyncTimer = null;
 let filtersOpenedAt = 0;
 let lastScrollY = window.scrollY;
 let stickyDownScrollDistance = 0;
@@ -67,7 +73,6 @@ function setTheme(theme, persist = true) {
   const label = isLight ? 'Byt till mörkt läge' : 'Byt till ljust läge';
   $themeToggle.setAttribute('aria-label', label);
   $themeToggle.title = label;
-  if (persist) scheduleCloudSettingsSync();
 }
 
 const savedTheme = localStorage.getItem('theme');
@@ -257,15 +262,6 @@ function loadFavorites() {
 }
 function saveFavorites(arr) {
   localStorage.setItem('favorites', JSON.stringify(arr));
-  scheduleCloudSettingsSync();
-}
-
-function localSettings() {
-  return {
-    theme: document.body.dataset.theme,
-    favorites: loadFavorites(),
-    hideFinishedEvents,
-  };
 }
 
 function applySettings(settings) {
@@ -278,65 +274,30 @@ function applySettings(settings) {
   updateFinishedVisibilityToggle();
 }
 
-function scheduleCloudSettingsSync() {
-  if (!settingsDocument) return;
-  window.clearTimeout(cloudSyncTimer);
-  cloudSyncTimer = window.setTimeout(() => {
-    settingsDocument.set(localSettings(), { merge: true }).catch((error) => console.error('Firebase settings sync failed:', error));
-  }, 300);
+function showAuthMessage(message = '') {
+  $authMessage.textContent = message;
 }
 
-async function syncSettingsWithFirebase() {
-  if (!settingsDocument) return;
-  try {
-    const snapshot = await settingsDocument.get();
-    const local = localSettings();
-    const remote = snapshot.exists ? snapshot.data() : null;
-    if (remote) {
-      applySettings({
-        ...remote,
-        favorites: [...new Set([...(Array.isArray(remote.favorites) ? remote.favorites : []), ...local.favorites])],
-      });
-    }
-    await settingsDocument.set(localSettings(), { merge: true });
-    updateTabCounts();
-    setActive(activeTab);
-  } catch (error) {
-    console.error('Firebase settings sync failed:', error);
-  }
+function updateAuthenticationUi(user) {
+  firebaseUser = user;
+  $loginButton.textContent = user ? 'Logga ut' : 'Logga in';
+  $loginButton.title = user ? `Logga ut (${user.displayName || user.email || 'användare'})` : 'Logga in';
 }
 
-function initFirebase() {
+function initFirebaseAuthentication() {
   if (typeof firebase === 'undefined' || !FIREBASE_CONFIG) {
+    $loginButton.disabled = true;
     $loginButton.title = 'Firebase är inte konfigurerat';
     return;
   }
 
   try {
     firebase.initializeApp(FIREBASE_CONFIG);
-    const auth = firebase.auth();
-    const db = firebase.firestore();
-    auth.onAuthStateChanged(async (user) => {
-      firebaseUser = user;
-      settingsDocument = user ? db.collection('users').doc(user.uid) : null;
-      $loginButton.textContent = user ? 'Logga ut' : 'Logga in';
-      $loginButton.title = user ? `Logga ut (${user.displayName || user.email || 'användare'})` : 'Logga in med Google';
-      if (user) await syncSettingsWithFirebase();
-    });
-    $loginButton.addEventListener('click', async () => {
-      try {
-        if (firebaseUser) {
-          await auth.signOut();
-        } else {
-          await auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
-        }
-      } catch (error) {
-        console.error('Firebase authentication failed:', error);
-        $status.textContent = 'Inloggningen misslyckades.';
-      }
-    });
+    firebaseAuth = firebase.auth();
+    firebaseAuth.onAuthStateChanged(updateAuthenticationUi);
   } catch (error) {
     console.error('Firebase initialization failed:', error);
+    $loginButton.disabled = true;
     $loginButton.title = 'Firebase kunde inte startas';
   }
 }
@@ -1064,6 +1025,54 @@ $finishedVisibilityToggle.addEventListener('click', () => {
 $themeToggle.addEventListener('click', () => {
   setTheme(document.body.dataset.theme === 'light' ? 'dark' : 'light');
 });
+$loginButton.addEventListener('click', async () => {
+  if (!firebaseAuth) return;
+  if (firebaseUser) {
+    try {
+      await firebaseAuth.signOut();
+    } catch (error) {
+      console.error('Firebase sign-out failed:', error);
+      $status.textContent = `Utloggningen misslyckades: ${error?.message || error}`;
+    }
+    return;
+  }
+
+  showAuthMessage();
+  $authForm.reset();
+  $authDialog.showModal();
+  $authEmail.focus();
+});
+$authClose.addEventListener('click', () => $authDialog.close());
+$authForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  if (!firebaseAuth) return;
+
+  const action = event.submitter?.value;
+  const email = $authEmail.value.trim();
+  const password = $authPassword.value;
+  try {
+    showAuthMessage('Väntar...');
+    if (action === 'register') {
+      await firebaseAuth.createUserWithEmailAndPassword(email, password);
+    } else {
+      await firebaseAuth.signInWithEmailAndPassword(email, password);
+    }
+    $authDialog.close();
+  } catch (error) {
+    console.error('Firebase email authentication failed:', error);
+    showAuthMessage(error?.message || 'Inloggningen misslyckades.');
+  }
+});
+$googleLoginButton.addEventListener('click', async () => {
+  if (!firebaseAuth) return;
+  try {
+    await firebaseAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    $authDialog.close();
+  } catch (error) {
+    console.error('Firebase Google authentication failed:', error);
+    showAuthMessage(error?.message || 'Google-inloggningen misslyckades.');
+  }
+});
 $programSortStart.addEventListener('click', () => {
   programSortMode = 'start';
   updateProgramSortControls();
@@ -1208,5 +1217,5 @@ async function main() {
   }
 }
 
-initFirebase();
+initFirebaseAuthentication();
 main();
