@@ -126,11 +126,6 @@
   },
   {
     "type": "event",
-    "title": "Läslusens bokdamm",
-    "about": "Kom och prova lyckan i vår fiskdamm full av barnböcker för alla åldrar! Biljett kan köpas i bokhandeln eller på plats. "
-  },
-  {
-    "type": "event",
     "title": "Yoga under himlens rymd",
     "about": "Välkommen att Yoga Under Himlens Rymd i Eklundshofsparken! \r\nNaturen får vara med. Solens strålar mot huden när du sträcker armarna mot himlen. Lukten av gräs när du ligger ner. Frisk luft i varje andetag. Fåglarna som kvittrar när du lyssnar på ljuden i meditation. Rymd och utrymme. Tillsammans med andra som också vill yoga, komma i balans och till helhet. I vördnad för livet. ⁣\r\n\r\nDu får du röra kroppen till yogans härliga rörelser, öppna upp och sträcka ut och släppa på spänningar och känslor som satt sig i kroppen.⁣\r\nDu behöver ingen tidigare erfarenhet av yoga, du leds genom de övningar vi gör. Klassen avslutas med en midfulness-meditation i naturen.⁣  \r\nEn påminnelse om att vara närvarande här och nu. Levande. ⁣\r\nVi knyter an till yogans tusenåriga tradition.\r\n\r\nTa gärna med: ⁣\r\n\r\n< kläder efter väder ⁣\r\n\r\n< Det kan vara bra att ha en filt, jacka eller varmare tröja att sätta på under meditationen.⁣  \r\n\r\n\r\nVad händer⁣ om det blir regn?  Enkelt! Då flyttar vi bara in yogaklassen till våra lokaler 100m bort!  \r\n\r\nHur hittar jag till yogan?⁣ \r\n\r\nPlats: Vi ses utanför Uppsala Yogaskola, Elundshovsvägen 1g, en kort promenad från Studenternas och går sen gemensamt till parken bakom Eklundshofs fastigheter, Eklundshofsvägen 7 Uppsala (mellan Eklundshofs fastigheter och Pollacksbacken)⁣\r\nDu kan ta dig hit med buss 12 eller 4 kliv av vid Pollacksbacken och gå sista biten. Eller cykla 10 minuter från stan. Eller promenera från ditt hem om du bor nära.\r\n\r\nFrågor? Hör gärna av dig till susanna@uppsalayogaskola.se"
   },
@@ -143,6 +138,11 @@
     "type": "event",
     "title": "Geologi till nytta och nöje",
     "about": "Upplands Amatörgeologer (UAG) visar sin verksamhet och berättar om geologi, visar mineral, bergarter och smycken som människan använt i tusentals år."
+  },
+  {
+    "type": "event",
+    "title": "Läslusens bokdamm",
+    "about": "Kom och prova lyckan i vår fiskdamm full av barnböcker för alla åldrar! Biljett kan köpas i bokhandeln eller på plats. "
   },
   {
     "type": "event",
@@ -316,11 +316,6 @@
   },
   {
     "type": "event",
-    "title": "Bokförsäljning på gågatan",
-    "about": "Några av våra böcker söker nya hem. Får de bo hos dig? Vi säljer både barn- och vuxenböcker.\r\nPlats: Gågatan (vid regn: inne på Stadsbiblioteket)\r\n"
-  },
-  {
-    "type": "event",
     "title": "Aikido-lek!",
     "about": "Kom och upptäck rörelseglädje med Aikido-lek!\r\n\r\nVi bjuder på en lekfull timme, kl. 11-12 lördag den 12 september, på Budohuset i Ekeby, för barn 6-8 och medföljande vuxna.\r\nAikido är en fredlig och tävlingsfri kampsport från Japan som bygger på att skapa harmoni istället för konflikt.\r\n\r\nI aikido tränar alla utifrån sina egna förutsättningar. Det har mindre betydelse om man är liten eller stor, kort eller lång, svag eller stark. För vår träning bygger på teknik, rörelseglädje och trygghet - inte storlek, prestation och fysiskt styrka. Vi betonar den sociala gemenskapen och lusten att leka.\r\n\r\n(Ha gärna mjuka kläder med långa ärmar och ben, då vi rullar på tatami-mattor.)"
   },
@@ -333,6 +328,11 @@
     "type": "event",
     "title": "Till nytta och nöje - växterna vi skördar",
     "about": "Hur använder vi rötter blad, stjälkar, blommor, frukter och frön? Lär dig mer om hur vi använder växter i mat, kläder och medicin i Botaniska trädgårdens fina skördeutställning i Orangerisalen, Linneanum. Kulturnatten är sista chansen att se utställningen!"
+  },
+  {
+    "type": "event",
+    "title": "Bokförsäljning på gågatan",
+    "about": "Några av våra böcker söker nya hem. Får de bo hos dig? Vi säljer både barn- och vuxenböcker.\r\nPlats: Gågatan (vid regn: inne på Stadsbiblioteket)\r\n"
   },
   {
     "type": "event",
@@ -611,13 +611,13 @@
   },
   {
     "type": "event",
-    "title": "Sex författare berättar 8 minuter var",
-    "about": "Sex författare från Uppsala författarsällskap läser och eller berättar om sina böcker. "
+    "title": "Republikanskt bokbord  och stadvandring",
+    "about": "Republikansk stadsvandring\r\nTa del av Uppsalas och Sverigess historia på platser i staden som varit betydelsefulla för demokratiseringen av landet under ledning av Niclas Malmberg, ordförande republikanska föreningen. Samling kl 10.00 vid statyn. Samling kl 10.00 vid statyn Gustav Wasa på Uppsala slotts borgård. Alla är välkomna att delta och utan kostnad, men skicka gärna föranmälan till niclas@salsta-slott.se\r\n\r\nVälkomna sedan kl 12 till Republikanskt bokbord. Vi kommer att informera om Republikanska föreningen och dess syfte, sälja böcker , dekaler, tygkassar, samt tips-tävlingar mm. I år medverkar också föreningen Unga republikaner. Vi vill öka kunskapen om Sveriges statsskick och om fakta respektive myter kring monarkin.\r\nMonarkin är principiellt oförenlig med demokrati.\r\nKungafamiljens medlemmar saknar ännu grundläggande fri och rättigheter som religionsfrihet och rätten att själv välja sin partner.\r\nEtt ytterligare argument är att Sverige ska leva upp till barnkonventionens krav. En ökad debatt kring statsskicket och där ökad kunskap kommer att bidra till att riksdagen måste ta initiativ till en utredning i frågan. Tiden och demokratin är på våran sida. vi siktar mot att en president i Sverige kommer att ha samma fuktion som den nuvarande statschefen/kungen, dvs cermoniella. Det innebär att maktbalansen inte förändras och att övergången till republik blir smidig.\r\n"
   },
   {
     "type": "event",
-    "title": "Republikanskt bokbord  och stadvandring",
-    "about": "Republikansk stadsvandring\r\nTa del av Uppsalas och Sverigess historia på platser i staden som varit betydelsefulla för demokratiseringen av landet under ledning av Niclas Malmberg, ordförande republikanska föreningen. Samling kl 10.00 vid statyn. Samling kl 10.00 vid statyn Gustav Wasa på Uppsala slotts borgård. Alla är välkomna att delta och utan kostnad, men skicka gärna föranmälan till niclas@salsta-slott.se\r\n\r\nVälkomna sedan kl 12 till Republikanskt bokbord. Vi kommer att informera om Republikanska föreningen och dess syfte, sälja böcker , dekaler, tygkassar, samt tips-tävlingar mm. I år medverkar också föreningen Unga republikaner. Vi vill öka kunskapen om Sveriges statsskick och om fakta respektive myter kring monarkin.\r\nMonarkin är principiellt oförenlig med demokrati.\r\nKungafamiljens medlemmar saknar ännu grundläggande fri och rättigheter som religionsfrihet och rätten att själv välja sin partner.\r\nEtt ytterligare argument är att Sverige ska leva upp till barnkonventionens krav. En ökad debatt kring statsskicket och där ökad kunskap kommer att bidra till att riksdagen måste ta initiativ till en utredning i frågan. Tiden och demokratin är på våran sida. vi siktar mot att en president i Sverige kommer att ha samma fuktion som den nuvarande statschefen/kungen, dvs cermoniella. Det innebär att maktbalansen inte förändras och att övergången till republik blir smidig.\r\n"
+    "title": "Sex författare berättar 8 minuter var",
+    "about": "Sex författare från Uppsala författarsällskap läser och eller berättar om sina böcker. "
   },
   {
     "type": "event",
@@ -1471,13 +1471,13 @@
   },
   {
     "type": "event",
-    "title": "Kort Skattkammarvisning polska",
-    "about": "Short tour of the Cathedral's Treasury museum in Polish. Max 14 attendees, tickets in the Cathedral Shop from 10.00 same day. We regret the Treasury is not accessible with wheelchair/walking frame/children's pram due to difficult emergency exits."
+    "title": "Samtal på Intiman",
+    "about": "Teaterns dramaturg Vesna Stanisic samtalar med författare och regissörer. Här träffar hon Amer Sarsour och pratar om att dramatisera en bok."
   },
   {
     "type": "event",
-    "title": "Samtal på Intiman",
-    "about": "Teaterns dramaturg Vesna Stanisic samtalar med författare och regissörer. Här träffar hon Amer Sarsour och pratar om att dramatisera en bok."
+    "title": "Kort Skattkammarvisning polska",
+    "about": "Short tour of the Cathedral's Treasury museum in Polish. Max 14 attendees, tickets in the Cathedral Shop from 10.00 same day. We regret the Treasury is not accessible with wheelchair/walking frame/children's pram due to difficult emergency exits."
   },
   {
     "type": "event",
@@ -1586,13 +1586,13 @@
   },
   {
     "type": "event",
-    "title": "Kort Skattkammarvisning svenska",
-    "about": "Guiden visar några av sina favoriter i domkyrkans museum Skattkammaren. Max 14 deltagare, visningsbiljett i Katedralbutiken från 10.00 samma dag. Tyvärr ej tillgängligt med rullstol/rollator/barnvagn pga. svåra utrymningsvägar."
+    "title": "Framtidens ljud på KMR",
+    "about": "Kulturnatten är här igen! Vi på KMR Studios vill bjuda in till en föreläsning om Dolby Atmos och rumsligt ljud! Under föreläsningen ”Dolby Atmos – Framtidens Ljud” ger Filip Killander – VD och grundare för KMR – en engagerande inblick i hur det rumsliga ljudformatet Dolby Atmos används i en modern musikstudio. Deltagarna får ta del av spännande, praktiska demonstrationer samt lära sig om den innovativa teknik och kreativitet som ligger bakom produktion av rumsligt ljud. Utöver föreläsningen får besökarna möta producenter och medarbetare från både KMR Studios och skivbolaget som arbetar aktivt med processen av att ta en idé och göra den till färdig, utgiven musik, i en professionell och nutida produktionsmiljö.  \r\n\r\nKMR Studios finns på St Olofsgatan 10A, i innergården till Skandalhuset – ett stenkast från Uppsala Domkyrka och intill Gamla Universitetshuset.   \r\n\r\nDeltagande kostar 150kr och kräver bokning som görs genom eventsidan som anges på denna sida."
   },
   {
     "type": "event",
-    "title": "Framtidens ljud på KMR",
-    "about": "Kulturnatten är här igen! Vi på KMR Studios vill bjuda in till en föreläsning om Dolby Atmos och rumsligt ljud! Under föreläsningen ”Dolby Atmos – Framtidens Ljud” ger Filip Killander – VD och grundare för KMR – en engagerande inblick i hur det rumsliga ljudformatet Dolby Atmos används i en modern musikstudio. Deltagarna får ta del av spännande, praktiska demonstrationer samt lära sig om den innovativa teknik och kreativitet som ligger bakom produktion av rumsligt ljud. Utöver föreläsningen får besökarna möta producenter och medarbetare från både KMR Studios och skivbolaget som arbetar aktivt med processen av att ta en idé och göra den till färdig, utgiven musik, i en professionell och nutida produktionsmiljö.  \r\n\r\nKMR Studios finns på St Olofsgatan 10A, i innergården till Skandalhuset – ett stenkast från Uppsala Domkyrka och intill Gamla Universitetshuset.   \r\n\r\nDeltagande kostar 150kr och kräver bokning som görs genom eventsidan som anges på denna sida."
+    "title": "Kort Skattkammarvisning svenska",
+    "about": "Guiden visar några av sina favoriter i domkyrkans museum Skattkammaren. Max 14 deltagare, visningsbiljett i Katedralbutiken från 10.00 samma dag. Tyvärr ej tillgängligt med rullstol/rollator/barnvagn pga. svåra utrymningsvägar."
   },
   {
     "type": "event",
@@ -1946,13 +1946,13 @@
   },
   {
     "type": "event",
-    "title": "Kort Skattkammarvisning svenska",
-    "about": "Guiden visar några av sina favoriter i domkyrkans museum Skattkammaren. Max 14 deltagare, visningsbiljett i Katedralbutiken från 10.00 samma dag. Tyvärr ej tillgängligt med rullstol/rollator/barnvagn pga. svåra utrymningsvägar."
+    "title": "Uppsala mixtape & Linnea Hildén",
+    "about": "Tillsammans med historiska arkivfilmer som visar Uppsalavyer från förra seklet, skapar den finska kompositören och musikern Linnea Hildén en helt unik konsertupplevelse på Uppsala slotts borggård. \r\n\r\nLinnea Hildén, med examen i både elektronisk komposition och jazz, rör sig i ett gränsland mellan ambient, modern instrumentaljazz och filmmusik. Genom att kombinera studioproduktion och organiska MIDI-instrument med live-elektronik och cello, bygger hon detaljerade ljudlandskap fyllda av berättelser och känsla. \r\n\r\nMed rötterna djupt rotade i jazzen improviserar hon live med sin cello och effektpedaler. Resultatet blir ett djupt organiskt uttryck där musiken samspelar med de historiska filmerna som kommer att projiceras på slottets fasad. "
   },
   {
     "type": "event",
-    "title": "Uppsala mixtape & Linnea Hildén",
-    "about": "Tillsammans med historiska arkivfilmer som visar Uppsalavyer från förra seklet, skapar den finska kompositören och musikern Linnea Hildén en helt unik konsertupplevelse på Uppsala slotts borggård. \r\n\r\nLinnea Hildén, med examen i både elektronisk komposition och jazz, rör sig i ett gränsland mellan ambient, modern instrumentaljazz och filmmusik. Genom att kombinera studioproduktion och organiska MIDI-instrument med live-elektronik och cello, bygger hon detaljerade ljudlandskap fyllda av berättelser och känsla. \r\n\r\nMed rötterna djupt rotade i jazzen improviserar hon live med sin cello och effektpedaler. Resultatet blir ett djupt organiskt uttryck där musiken samspelar med de historiska filmerna som kommer att projiceras på slottets fasad. "
+    "title": "Kort Skattkammarvisning svenska",
+    "about": "Guiden visar några av sina favoriter i domkyrkans museum Skattkammaren. Max 14 deltagare, visningsbiljett i Katedralbutiken från 10.00 samma dag. Tyvärr ej tillgängligt med rullstol/rollator/barnvagn pga. svåra utrymningsvägar."
   },
   {
     "type": "event",

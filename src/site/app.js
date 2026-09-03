@@ -6,6 +6,7 @@ const $activeTabHeading = document.getElementById('active-tab-heading');
 const $programSortControls = document.getElementById('program-sort-controls');
 const $programSortStart = document.getElementById('program-sort-start');
 const $programSortSeen = document.getElementById('program-sort-seen');
+const $finishedVisibilityToggle = document.getElementById('finished-visibility-toggle');
 const $themeToggle = document.getElementById('theme-toggle');
 const $list = document.getElementById('list');
 const $search = document.getElementById('event-search');
@@ -32,6 +33,8 @@ const tabs = {
   recent: document.getElementById('tab-recent'),
   soon: document.getElementById('tab-soon'),
   later: document.getElementById('tab-later'),
+  finished: document.getElementById('tab-finished'),
+  unfinished: document.getElementById('tab-unfinished'),
 };
 const multiFilters = [
   { menu: document.getElementById('category-menu'), options: document.getElementById('category-options'), summary: document.getElementById('category-summary'), eventProperty: 'categoryNames', allLabel: 'Alla kategorier', selectedLabel: 'categories' },
@@ -43,6 +46,7 @@ const multiFilters = [
 let allEvents = [];
 let activeTab = 'program';
 let programSortMode = 'start';
+let hideFinishedEvents = false;
 let filtersOpenedAt = 0;
 let lastScrollY = window.scrollY;
 let stickyDownScrollDistance = 0;
@@ -67,8 +71,33 @@ function eventStartTime(event) {
   return new Date(event.start || event.startTime || 0).getTime();
 }
 
+function eventAssumedDuration(event) {
+  return event.type === 'subEvent' ? 60 * 60 * 1000 : 12 * 60 * 60 * 1000;
+}
+
 function eventEndTime(event) {
-  return new Date(event.end || event.endTime || 0).getTime();
+  if (event.end || event.endTime) return new Date(event.end || event.endTime).getTime();
+
+  const startTime = eventStartTime(event);
+  return Number.isFinite(startTime) ? startTime + eventAssumedDuration(event) : NaN;
+}
+
+function isFinishedEvent(event, currentTime = eventCurrentTime()) {
+  const endTime = eventEndTime(event);
+  return !event.isCancelled && Number.isFinite(endTime) && endTime < currentTime;
+}
+
+function visibleByFinishedToggle(events, tab, currentTime) {
+  if (!hideFinishedEvents) return events;
+  return events.filter((event) => !isFinishedEvent(event, currentTime));
+}
+
+function updateFinishedVisibilityToggle() {
+  const label = hideFinishedEvents ? 'Visa avslutade evenemang' : 'Dölj avslutade evenemang';
+  $finishedVisibilityToggle.innerHTML = hideFinishedEvents ? '<i class="fa-solid fa-eye-slash" aria-hidden="true"></i>' : '<i class="fa-solid fa-eye" aria-hidden="true"></i>';
+  $finishedVisibilityToggle.setAttribute('aria-label', label);
+  $finishedVisibilityToggle.setAttribute('aria-pressed', String(hideFinishedEvents));
+  $finishedVisibilityToggle.title = label;
 }
 
 function eventCurrentTime() {
@@ -225,14 +254,17 @@ function saveFavorites(arr) {
 function updateTabCounts() {
   const favorites = loadFavorites();
   const now = eventCurrentTime();
-  const activeCount = allEvents.filter((event) => !event.isCancelled).length;
-  const subeventCount = allEvents.filter((event) => event.type === 'subEvent').length;
+  const visibleEvents = hideFinishedEvents ? allEvents.filter((event) => !isFinishedEvent(event, now)) : allEvents;
+  const activeCount = visibleEvents.filter((event) => !event.isCancelled).length;
+  const subeventCount = visibleEvents.filter((event) => event.type === 'subEvent').length;
   const cancelledCount = allEvents.filter((event) => event.isCancelled).length;
-  const favoriteCount = allEvents.filter((event) => favorites.includes(idFor(event))).length;
-  const liveCount = liveEvents(allEvents, now).length;
-  const recentCount = eventsInWindow(allEvents, now - RECENT_EVENT_WINDOW_MS, now).length;
-  const soonCount = eventsInWindow(allEvents, now, now + SOON_EVENT_WINDOW_MS).length;
-  const laterCount = laterEvents(allEvents, now + SOON_EVENT_WINDOW_MS).length;
+  const favoriteCount = visibleEvents.filter((event) => favorites.includes(idFor(event))).length;
+  const liveCount = liveEvents(visibleEvents, now).length;
+  const recentCount = eventsInWindow(visibleEvents, now - RECENT_EVENT_WINDOW_MS, now).length;
+  const soonCount = eventsInWindow(visibleEvents, now, now + SOON_EVENT_WINDOW_MS).length;
+  const laterCount = laterEvents(visibleEvents, now + SOON_EVENT_WINDOW_MS).length;
+  const finishedCount = allEvents.filter((event) => isFinishedEvent(event, now)).length;
+  const unfinishedCount = allEvents.filter((event) => !event.isCancelled && !isFinishedEvent(event, now)).length;
 
   tabs.program.textContent = `\u{1F4C5} Alla evenemang (${activeCount})`;
   tabs.program.title = `Alla evenemang (${activeCount} st)`;
@@ -250,6 +282,10 @@ function updateTabCounts() {
   tabs.soon.title = `Evenemang som startar strax (${soonCount} st)`;
   tabs.later.textContent = `\u23F3 Startar senare (${laterCount})`;
   tabs.later.title = `Evenemang som startar senare (${laterCount} st)`;
+  tabs.finished.textContent = `\u2705 Avslutade (${finishedCount})`;
+  tabs.finished.title = `Avslutade evenemang (${finishedCount} st)`;
+  tabs.unfinished.textContent = `\u25EF Ej avslutade (${unfinishedCount})`;
+  tabs.unfinished.title = `Ej avslutade evenemang (${unfinishedCount} st)`;
 }
 
 function coordinatesToMapQuery(coordinates) {
@@ -306,6 +342,10 @@ function clockMinutes(value) {
   return Number(match[1]) * 60 + Number(match[2]);
 }
 
+function eventEndClockMinutes(event) {
+  return clockMinutes(event.end || event.endTime || event.endTimeText) ?? clockMinutes(new Date(eventEndTime(event)).toISOString());
+}
+
 function filterStartClockMinutes(value) {
   return /^\d{2}$/.test(value) ? Number(value) * 60 : null;
 }
@@ -320,7 +360,7 @@ function matchesTimeFilters(event) {
   if (fromTime === null && toTime === null) return true;
 
   const startTime = clockMinutes(event.start || event.startTime || event.startTimeText || event.time);
-  const endTime = clockMinutes(event.end || event.endTime || event.endTimeText) ?? startTime;
+  const endTime = eventEndClockMinutes(event);
   if (startTime === null || endTime === null) return false;
 
   return (fromTime === null || endTime >= fromTime) && (toTime === null || startTime <= toTime);
@@ -403,7 +443,8 @@ function updateSelectedFilters(filteredEventCount) {
   for (const filter of multiFilters) selectedFilters.push(...selectedFilterValues(filter));
   if ($fromFilter.value) selectedFilters.push(`Från ${$fromFilter.value}`);
   if ($toFilter.value) selectedFilters.push(`Till ${$toFilter.value}`);
-  const selectedFilterText = selectedFilters.length > 0 ? selectedFilters.join(', ') : 'Inga';
+  const finishedVisibilityText = hideFinishedEvents ? 'dölj avslutade' : 'visa avslutade';
+  const selectedFilterText = `${selectedFilters.length > 0 ? selectedFilters.join(', ') : 'Inga'} + ${finishedVisibilityText}`;
   $selectedFilters.replaceChildren();
   const label = document.createElement('span');
   label.className = 'filter-label';
@@ -411,6 +452,48 @@ function updateSelectedFilters(filteredEventCount) {
   const values = document.createElement('span');
   values.textContent = ` ${selectedFilterText} (${filteredEventCount})`;
   $selectedFilters.append(label, values);
+}
+
+function languageCountryCode(language) {
+  const normalizedLanguage = String(language).toLocaleLowerCase('sv-SE');
+  if (normalizedLanguage.includes('kräver inga språkkunskaper')) return null;
+  if (normalizedLanguage.includes('arabiska')) return 'sa';
+  if (normalizedLanguage.includes('engelska')) return 'gb';
+  if (normalizedLanguage.includes('finska')) return 'fi';
+  if (normalizedLanguage.includes('franska')) return 'fr';
+  if (normalizedLanguage.includes('italienska')) return 'it';
+  if (normalizedLanguage.includes('kinesiska')) return 'cn';
+  if (normalizedLanguage.includes('polska')) return 'pl';
+  if (normalizedLanguage.includes('ryska')) return 'ru';
+  if (normalizedLanguage.includes('spanska')) return 'es';
+  if (normalizedLanguage.includes('svenska')) return 'se';
+  if (normalizedLanguage.includes('tyska')) return 'de';
+  if (normalizedLanguage.includes('ukrainska')) return 'ua';
+  return null;
+}
+
+function displayLanguageName(language) {
+  return String(language).toLocaleLowerCase('sv-SE').includes('kräver inga språkkunskaper') ? 'Språkoberoende' : language;
+}
+
+function locationIconClass(location) {
+  const normalizedLocation = String(location).toLocaleLowerCase('sv-SE');
+  if (normalizedLocation.includes('inomhus')) return 'fa-solid fa-building';
+  if (normalizedLocation.includes('utomhus')) return 'fa-solid fa-tree';
+  if (normalizedLocation.includes('scen')) return 'fa-solid fa-masks-theater';
+  if (normalizedLocation.includes('digitalt')) return 'fa-solid fa-laptop';
+  return 'fa-solid fa-location-dot';
+}
+
+function accessibilityIconClass(accessibility) {
+  const normalizedAccessibility = String(accessibility).toLocaleLowerCase('sv-SE');
+  if (normalizedAccessibility.includes('barnvagn')) return 'fa-solid fa-baby-carriage';
+  if (normalizedAccessibility.includes('hörselskadade')) return 'fa-solid fa-ear-listen';
+  if (normalizedAccessibility.includes('hiss')) return 'fa-solid fa-elevator';
+  if (normalizedAccessibility.includes('rullstol') && normalizedAccessibility.includes('toalett')) return 'fa-solid fa-restroom';
+  if (normalizedAccessibility.includes('rullstol')) return 'fa-solid fa-wheelchair';
+  if (normalizedAccessibility.includes('synskadade')) return 'fa-solid fa-eye-low-vision';
+  return 'fa-solid fa-universal-access';
 }
 
 function closeFilters() {
@@ -456,22 +539,127 @@ function createEventDetails(ev, eventTitle) {
 
   if (typeof ev.isForChildren === 'boolean') {
     const audience = document.createElement('li');
-    audience.textContent = `Målgrupp: ${ev.isForChildren ? 'Barn och vuxna' : 'Vuxna'}`;
+    audience.appendChild(document.createTextNode('Målgrupp:'));
+    const audienceList = document.createElement('ul');
+    audienceList.className = 'accessibility-list';
+    const audienceListItem = document.createElement('li');
+    const audienceItem = document.createElement('span');
+    audienceItem.className = 'accessibility-item';
+    const audienceIcon = document.createElement('i');
+    audienceIcon.className = `fa-solid ${ev.isForChildren ? 'fa-children' : 'fa-user'} accessibility-icon`;
+    audienceIcon.setAttribute('aria-hidden', 'true');
+    audienceItem.appendChild(audienceIcon);
+    audienceItem.appendChild(document.createTextNode(ev.isForChildren ? 'Barn och vuxna' : 'Vuxna'));
+    audienceListItem.appendChild(audienceItem);
+    audienceList.appendChild(audienceListItem);
+    audience.appendChild(audienceList);
     detailsList.appendChild(audience);
   }
 
   const languageNames = Array.isArray(ev.languageNames) ? ev.languageNames.filter(Boolean) : [];
+  const languages = document.createElement('li');
+  languages.appendChild(document.createTextNode('Språk: '));
   if (languageNames.length > 0) {
-    const languages = document.createElement('li');
-    languages.textContent = `Språk: ${languageNames.join(', ')}`;
-    detailsList.appendChild(languages);
+    const languageList = document.createElement('ul');
+    languageList.className = 'language-list';
+    languageNames.forEach((language) => {
+      const languageListItem = document.createElement('li');
+      const languageItem = document.createElement('span');
+      languageItem.className = 'language-item';
+      const countryCode = languageCountryCode(language);
+      if (countryCode) {
+        const languageIcon = document.createElement('img');
+        languageIcon.className = 'language-country-icon';
+        languageIcon.src = `https://flagcdn.com/16x12/${countryCode}.png`;
+        languageIcon.srcset = `https://flagcdn.com/32x24/${countryCode}.png 2x`;
+        languageIcon.alt = '';
+        languageIcon.width = 16;
+        languageIcon.height = 12;
+        languageItem.appendChild(languageIcon);
+      } else {
+        const languageIcon = document.createElement('i');
+        languageIcon.className = 'fa-solid fa-globe language-country-icon';
+        languageIcon.setAttribute('aria-hidden', 'true');
+        languageItem.appendChild(languageIcon);
+      }
+      languageItem.appendChild(document.createTextNode(displayLanguageName(language)));
+      languageListItem.appendChild(languageItem);
+      languageList.appendChild(languageListItem);
+    });
+    languages.appendChild(languageList);
+  } else {
+    const languageList = document.createElement('ul');
+    languageList.className = 'language-list';
+    const languageListItem = document.createElement('li');
+    const languageItem = document.createElement('span');
+    languageItem.className = 'language-item';
+    const languageIcon = document.createElement('i');
+    languageIcon.className = 'fa-solid fa-globe language-country-icon';
+    languageIcon.setAttribute('aria-hidden', 'true');
+    languageItem.appendChild(languageIcon);
+    languageItem.appendChild(document.createTextNode('Ej angivet'));
+    languageListItem.appendChild(languageItem);
+    languageList.appendChild(languageListItem);
+    languages.appendChild(languageList);
   }
+  detailsList.appendChild(languages);
 
   const accessibilityNames = Array.isArray(ev.accessibilityNames) ? ev.accessibilityNames.filter(Boolean) : [];
+  const accessibility = document.createElement('li');
+  accessibility.appendChild(document.createTextNode('Tillgänglighet: '));
   if (accessibilityNames.length > 0) {
-    const accessibility = document.createElement('li');
-    accessibility.textContent = `Tillgänglighet: ${accessibilityNames.join(', ')}`;
-    detailsList.appendChild(accessibility);
+    const accessibilityList = document.createElement('ul');
+    accessibilityList.className = 'accessibility-list';
+    accessibilityNames.forEach((accessibilityName, index) => {
+      const accessibilityListItem = document.createElement('li');
+      const accessibilityItem = document.createElement('span');
+      accessibilityItem.className = 'accessibility-item';
+      const accessibilityIcon = document.createElement('i');
+      accessibilityIcon.className = `${accessibilityIconClass(accessibilityName)} accessibility-icon`;
+      accessibilityIcon.setAttribute('aria-hidden', 'true');
+      accessibilityItem.appendChild(accessibilityIcon);
+      accessibilityItem.appendChild(document.createTextNode(accessibilityName));
+      accessibilityListItem.appendChild(accessibilityItem);
+      accessibilityList.appendChild(accessibilityListItem);
+    });
+    accessibility.appendChild(accessibilityList);
+  } else {
+    const accessibilityList = document.createElement('ul');
+    accessibilityList.className = 'accessibility-list';
+    const accessibilityListItem = document.createElement('li');
+    const accessibilityItem = document.createElement('span');
+    accessibilityItem.className = 'accessibility-item';
+    const accessibilityIcon = document.createElement('i');
+    accessibilityIcon.className = 'fa-solid fa-circle-question accessibility-icon';
+    accessibilityIcon.setAttribute('aria-hidden', 'true');
+    accessibilityItem.appendChild(accessibilityIcon);
+    accessibilityItem.appendChild(document.createTextNode('Ej angivet'));
+    accessibilityListItem.appendChild(accessibilityItem);
+    accessibilityList.appendChild(accessibilityListItem);
+    accessibility.appendChild(accessibilityList);
+  }
+  detailsList.appendChild(accessibility);
+
+  const locationNames = Array.isArray(ev.locationNames) ? ev.locationNames.map((location) => String(location).trim()).filter(Boolean) : [];
+  if (locationNames.length > 0) {
+    const locations = document.createElement('li');
+    locations.appendChild(document.createTextNode('Plats: '));
+    const locationList = document.createElement('ul');
+    locationList.className = 'location-list';
+    locationNames.forEach((locationName) => {
+      const locationListItem = document.createElement('li');
+      const locationItem = document.createElement('span');
+      locationItem.className = 'location-item';
+      const locationIcon = document.createElement('i');
+      locationIcon.className = `${locationIconClass(locationName)} location-icon`;
+      locationIcon.setAttribute('aria-hidden', 'true');
+      locationItem.appendChild(locationIcon);
+      locationItem.appendChild(document.createTextNode(locationName));
+      locationListItem.appendChild(locationItem);
+      locationList.appendChild(locationListItem);
+    });
+    locations.appendChild(locationList);
+    detailsList.appendChild(locations);
   }
 
   if (ev.organizer) {
@@ -502,18 +690,38 @@ function createEventDetails(ev, eventTitle) {
     detailsList.appendChild(source);
   }
 
+  if (ev.type === 'subEvent') {
+    const startsAt = document.createElement('li');
+    startsAt.textContent = `Startar: ${formatLocalDateTime(ev.startTime) ?? ev.startTime}`;
+    detailsList.appendChild(startsAt);
+
+    const endsAt = document.createElement('li');
+    endsAt.textContent = `Slutar: ${ev.endTime ? (formatLocalDateTime(ev.endTime) ?? ev.endTime) : 'Ej angivet'}`;
+    detailsList.appendChild(endsAt);
+  }
+
+  const updated = formatLocalDateTime(ev.updated);
+  if (ev.startTime) {
+    const startsAt = document.createElement('li');
+    startsAt.textContent = `Startar: ${formatLocalDateTime(ev.startTime) ?? ev.startTime}`;
+    detailsList.appendChild(startsAt);
+
+    const endsAt = document.createElement('li');
+    endsAt.textContent = `Slutar: ${ev.endTime ? (formatLocalDateTime(ev.endTime) ?? ev.endTime) : 'Ej angivet'}`;
+    detailsList.appendChild(endsAt);
+  }
+
+  if (updated) {
+    const updatedAt = document.createElement('li');
+    updatedAt.textContent = `Uppdaterad ${updated}`;
+    detailsList.appendChild(updatedAt);
+  }
+
   const checked = formatLocalDateTime(ev.checked);
   if (checked) {
     const checkedAt = document.createElement('li');
     checkedAt.textContent = `Kontrollerad: ${checked}`;
     detailsList.appendChild(checkedAt);
-  }
-
-  const updated = formatLocalDateTime(ev.updated);
-  if (updated) {
-    const updatedAt = document.createElement('li');
-    updatedAt.textContent = `Uppdaterad ${updated}`;
-    detailsList.appendChild(updatedAt);
   }
 
   if (ev.streetAddress) {
@@ -578,8 +786,7 @@ function renderList(events) {
     const startValue = formatLocalClockTime(ev.start || ev.startTime || ev.startTimeText || ev.time || '—');
     const endValue = ev.end || ev.endTime || ev.endTimeText ? formatLocalClockTime(ev.end || ev.endTime || ev.endTimeText) : null;
     const timeText = endValue ? `${startValue}–${endValue}` : startValue;
-    const endTime = eventEndTime(ev);
-    const isFinished = !ev.isCancelled && Number.isFinite(endTime) && endTime < eventCurrentTime();
+    const isFinished = isFinishedEvent(ev);
     card.classList.toggle('finished', isFinished);
 
     const timeLabel = document.createElement('span');
@@ -751,13 +958,24 @@ function setActive(tab) {
     events = eventsInWindow(allEvents, now, now + SOON_EVENT_WINDOW_MS);
   } else if (tab === 'later') {
     events = laterEvents(allEvents, now + SOON_EVENT_WINDOW_MS);
+  } else if (tab === 'finished') {
+    events = allEvents.filter((event) => isFinishedEvent(event, now));
+  } else if (tab === 'unfinished') {
+    events = allEvents.filter((event) => !event.isCancelled && !isFinishedEvent(event, now));
   }
+  events = visibleByFinishedToggle(events, tab, now);
   const filteredEvents = events.filter(matchesSearch).filter(matchesChildrenFilter).filter(matchesFreeFilter).filter(matchesMultiFilters).filter(matchesTimeFilters);
   updateSelectedFilters(filteredEvents.length);
   renderList(filteredEvents);
 }
 
 $tabSelect.addEventListener('change', () => setActive($tabSelect.value));
+$finishedVisibilityToggle.addEventListener('click', () => {
+  hideFinishedEvents = !hideFinishedEvents;
+  updateFinishedVisibilityToggle();
+  updateTabCounts();
+  setActive(activeTab);
+});
 $themeToggle.addEventListener('click', () => {
   setTheme(document.body.dataset.theme === 'light' ? 'dark' : 'light');
 });
@@ -893,6 +1111,7 @@ async function main() {
     populateMultiFilter(multiFilters[1], Array.isArray(json?.languages) ? json.languages : []);
     populateMultiFilter(multiFilters[2], Array.isArray(json?.locations) ? json.locations : []);
     populateMultiFilter(multiFilters[3], Array.isArray(json?.accessibilities) ? json.accessibilities : []);
+    updateFinishedVisibilityToggle();
     updateClearFiltersButton();
     updateFilterCount();
     updateTabCounts();

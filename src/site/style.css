@@ -137,6 +137,7 @@ header {
 }
 
 .login-button,
+.finished-visibility-toggle,
 .theme-toggle {
   padding: 3px 5px;
   border: 1px solid var(--topbar-control-border);
@@ -147,11 +148,13 @@ header {
   font-size: 0.9rem;
 }
 
+.finished-visibility-toggle,
 .theme-toggle {
   border: none;
   background: transparent;
 }
 
+.finished-visibility-toggle,
 .theme-toggle {
   display: inline-flex;
   align-items: center;
@@ -590,6 +593,67 @@ body[data-theme='light'] .card.cancelled {
   margin: 4px 0 0;
   padding-left: 1.25rem;
   list-style-type: square;
+}
+
+.language-item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.language-country-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 16px;
+  height: 12px;
+  margin-right: 6px;
+  object-fit: cover;
+}
+
+.accessibility-item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.accessibility-icon {
+  flex: 0 0 auto;
+  width: 1em;
+  margin-right: 6px;
+  text-align: center;
+}
+
+.accessibility-list {
+  margin: 0.25rem 0 0;
+  padding-left: 0.5rem;
+  list-style: none;
+}
+
+.language-list {
+  margin: 0.25rem 0 0;
+  padding-left: 0.5rem;
+  list-style: none;
+}
+
+.location-item {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.location-icon {
+  flex: 0 0 auto;
+  width: 1em;
+  margin-right: 6px;
+  text-align: center;
+}
+
+.location-list {
+  margin: 0.25rem 0 0;
+  padding-left: 0.5rem;
+  list-style: none;
 }
 
 .event-map {

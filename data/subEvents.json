@@ -1794,6 +1794,17 @@
   },
   {
     "type": "subEvent",
+    "id": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c_BoksamtalmedHenrikVenantUppsalaMusikarkivSkivbolagetHeartworkRecordsgrundadesavHenrikVenantsomvarennyckelpersonpaskanskarockscenenunderpunkochpostpunkarenBokenVikanintedoHenrikVenantHeartworkRecordsochpunksceneniMalmoLundberattarhelahistorien_1789228800000",
+    "parentEventId": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c",
+    "parentTitle": "Öppet hus på Fyriskällan",
+    "title": "Boksamtal med Henrik Venant & Uppsala Musikarkiv. Skivbolaget Heartwork Records grundades av Henrik Venant som var en nyckelperson på skånska rockscenen under punkoch postpunkåren. Boken ”Vi kan inte dö – Henrik Venant, Heartwork Records och punkscenen i Malmö/Lund” berättar hela historien.",
+    "startTimeText": "18.00",
+    "endTimeText": "19.00",
+    "startTime": "2026-09-12T16:00:00+00:00",
+    "endTime": "2026-09-12T17:00:00+00:00"
+  },
+  {
+    "type": "subEvent",
     "id": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c_Visningavstadsarkivetsochfolkrorelsearkivetsarkivmagasin_1789228800000",
     "parentEventId": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c",
     "parentTitle": "Öppet hus på Fyriskällan",
@@ -1805,13 +1816,13 @@
   },
   {
     "type": "subEvent",
-    "id": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c_Branneriet_1789232400000",
+    "id": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c_Branneriet_1789234200000",
     "parentEventId": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c",
     "parentTitle": "Öppet hus på Fyriskällan",
     "title": "Bränneriet",
-    "startTimeText": "19.00",
+    "startTimeText": "19.30",
     "endTimeText": null,
-    "startTime": "2026-09-12T17:00:00+00:00",
+    "startTime": "2026-09-12T17:30:00+00:00",
     "endTime": null
   },
   {
@@ -2531,28 +2542,6 @@
   },
   {
     "type": "subEvent",
-    "id": "a50905f9-3412-4b41-b81f-fbe13950d07b_Branneriet_1789232400000",
-    "parentEventId": "a50905f9-3412-4b41-b81f-fbe13950d07b",
-    "parentTitle": "Livemusik med Bränneriet och TT Reuter",
-    "title": "Bränneriet",
-    "startTimeText": "19.00",
-    "endTimeText": null,
-    "startTime": "2026-09-12T17:00:00+00:00",
-    "endTime": null
-  },
-  {
-    "type": "subEvent",
-    "id": "a50905f9-3412-4b41-b81f-fbe13950d07b_TTReuter_1789239600000",
-    "parentEventId": "a50905f9-3412-4b41-b81f-fbe13950d07b",
-    "parentTitle": "Livemusik med Bränneriet och TT Reuter",
-    "title": "TT Reuter",
-    "startTimeText": "21.00",
-    "endTimeText": null,
-    "startTime": "2026-09-12T19:00:00+00:00",
-    "endTime": null
-  },
-  {
-    "type": "subEvent",
     "id": "cb311993-3726-4f48-b3a0-f02babcaa672_Engelska_1789228800000",
     "parentEventId": "cb311993-3726-4f48-b3a0-f02babcaa672",
     "parentTitle": "Visningar museets samlingar - landskap",
@@ -2572,6 +2561,28 @@
     "endTimeText": "19.30",
     "startTime": "2026-09-12T17:00:00+00:00",
     "endTime": "2026-09-12T17:30:00+00:00"
+  },
+  {
+    "type": "subEvent",
+    "id": "a50905f9-3412-4b41-b81f-fbe13950d07b_Branneriet_1789234200000",
+    "parentEventId": "a50905f9-3412-4b41-b81f-fbe13950d07b",
+    "parentTitle": "Livemusik med Bränneriet och TT Reuter",
+    "title": "Bränneriet",
+    "startTimeText": "19.30",
+    "endTimeText": null,
+    "startTime": "2026-09-12T17:30:00+00:00",
+    "endTime": null
+  },
+  {
+    "type": "subEvent",
+    "id": "a50905f9-3412-4b41-b81f-fbe13950d07b_TTReuter_1789239600000",
+    "parentEventId": "a50905f9-3412-4b41-b81f-fbe13950d07b",
+    "parentTitle": "Livemusik med Bränneriet och TT Reuter",
+    "title": "TT Reuter",
+    "startTimeText": "21.00",
+    "endTimeText": null,
+    "startTime": "2026-09-12T19:00:00+00:00",
+    "endTime": null
   },
   {
     "type": "subEvent",

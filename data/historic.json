@@ -12669,10 +12669,10 @@
     "endTimeText": "16.00",
     "startTime": "2026-09-12T12:00:00+00:00",
     "endTime": "2026-09-12T14:00:00+00:00",
-    "checked": 1788276962619,
+    "checked": 1788423708071,
     "organizer": "Fyriskällan",
     "webpage": "",
-    "about": "Program:\n14.00-19.00 Bygg ditt eget kvarter \nHämta inspiration från historien och bygg hus, träd och miljöer med hjälp av färdigmönstrade pappersmodeller. Klipp, klistra, smycka och måla. Målgrupp: barn och vuxna.\n\n14.00-16.00 Prova-på-workshop i släktforskning. Är du nyfiken på din släkt? Björklingebygdens släktforskarförening är på plats för att svara på frågor och hjälpa dig att komma igång med din släktforskning. \n\n14.30-15.30 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\n16.00-16.45 Visning av valaffischer. Jenny Jansson och Mattias Sigfridsson från Statsvetenskapliga institutionen berättar om valaffischer, politiska språket och partibudskap. \n\n17.00-17.45 Hågahögen – Svearikets vagga\nAnders Kaliff, professor i arkeologi, berättar om Hågahögen med utgångspunkt från sin bok Håga, kung Björn och Svearikets vagga: arkeologi i myternas gränsland.\n\n18.00-19.00 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\nLivemusik i samarbete med Uppsala Musikarkiv: \n19.00 Bränneriet\nNybildat Uppsala-band som enligt en kritiker spelar ”funk utan att det är funk”. Med ett ålderspann mellan 17 och 55 i kvintetten blandas erfarenhet med barnsliga infall. Fredrik Hardenborg, Alexis Hardenborg, Lasse Blom, Rolf Staflin, Joel Svensson och Johannes Berjlund.\n\n21.00 TT Reuter\n1979 tog Henrik Venant, Peter Puders, Peter Ivarss och Peter Strauss avstamp i punken och skapade helt egna uttryck. TT Reuter blev ett av de mest tongivande banden i sin genre och släppte två studioalbum och ett livealbum fram till upplösningen 1981. Bandet återuppstod under 2010-talet och släppte ett fjärde album 2021. TT Reuter består idag av: Henrik Venant: sång, gitarr Peter Polfeldt: gitarr, sång Mathias Rask-Andersen: bas, sång Jonas Eriksson Slove: trummor \n\nUnder dagen även lokalhistorisk bokrea.",
+    "about": "Program:\n14.00-19.00 Bygg ditt eget kvarter \nHämta inspiration från historien och bygg hus, träd och miljöer med hjälp av färdigmönstrade pappersmodeller. Klipp, klistra, smycka och måla. Målgrupp: barn och vuxna.\n\n14.00-16.00 Prova-på-workshop i släktforskning. Är du nyfiken på din släkt? Björklingebygdens släktforskarförening är på plats för att svara på frågor och hjälpa dig att komma igång med din släktforskning. \n\n14.30-15.30 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\n16.00-16.45 Visning av valaffischer. Jenny Jansson och Mattias Sigfridsson från Statsvetenskapliga institutionen berättar om valaffischer, politiska språket och partibudskap. \n\n17.00-17.45 Hågahögen – Svearikets vagga\nAnders Kaliff, professor i arkeologi, berättar om Hågahögen med utgångspunkt från sin bok Håga, kung Björn och Svearikets vagga: arkeologi i myternas gränsland.\n\n18.00-19.00 Boksamtal med Henrik Venant & Uppsala Musikarkiv. Skivbolaget Heartwork Records grundades av Henrik Venant som var en nyckelperson på skånska rockscenen under punk- och postpunkåren. Boken ”Vi kan inte dö – Henrik Venant, Heartwork Records och punkscenen i Malmö/Lund” berättar hela historien.\n\n18.00-19.00 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\n\n\nLivemusik i samarbete med Uppsala Musikarkiv: \n19.30 Bränneriet\nNybildat Uppsala-band som enligt en kritiker spelar ”funk utan att det är funk”. Med ett ålderspann mellan 17 och 55 i kvintetten blandas erfarenhet med barnsliga infall. Bränneriet består av Fredrik Hardenborg, Alexis Hardenborg, Lasse Blom, Rolf Staflin, Joel Svensson och Johannes Berjlund.\n\n21.00 TT Reuter\nTT Reuter tog avstamp i den svenska punkexplosionen 1979, men sökte sig snabbt bortom punkens ramar. Kantiga gitarrer, mörk intensitet och kompromisslös experimentlusta gav bandet ett helt eget uttryck och en plats bland den svenska postpunkens mest särpräglade namn. Två studioalbum och ett livealbum följde innan bandet upplöstes 1981. Under 2010-talet återvände TT Reuter till scenen, och 2021 kom bandets fjärde album. \nPå Kulturnatten blir spelningen också något av en hemkomst. Sångaren och grundaren Henrik Venant föddes i Uppsala, och med två Uppsalabor i dagens sättning finns det gott om lokala trådar i TT Reuter. \nTT Reuter idag: Henrik Venant – sång, gitarr,Erik Flodén – gitarr, sång, Mathias Rask-Andersen – bas, sång och Jonas Eriksson Slove – trummor.\n\nUnder dagen även utställning om rösträtt och lokalhistorisk bokrea.",
     "locationId": "aaaaaaaa-bbbb-cccc-8732-eab39171a002",
     "locationAlias": "Fyriskällan",
     "streetAddress": "S:t Olofsgatan 15",
@@ -12686,8 +12686,8 @@
     },
     "url": "https://kulturnatten.uppsala.se/program/event/?externalId=b979cd7e-e10c-4e1b-9f8f-52480dcf838c",
     "categoryNames": [
-      "Öppet hus och visning",
-      "Workshop och prova på"
+      "Workshop och prova på",
+      "Öppet hus och visning"
     ],
     "languageNames": [
       "Svenska"
@@ -12696,16 +12696,16 @@
       "Inomhus"
     ],
     "accessibilityNames": [
-      "Tillgänglighet anpassad för rullstol",
       "Toalett tillgänglig med rullstol",
+      "Tillgänglighet anpassad för rullstol",
       "God miljö för hörselskadade",
       "Barnvagnsvänligt"
     ],
     "created": 1788276962619,
-    "updated": 1788276962619,
-    "status": "new",
+    "updated": 1788423708071,
+    "status": "updated",
     "sortKeyTime": 271,
-    "sortKeyUpdated": 271
+    "sortKeyUpdated": 1
   },
   {
     "id": "5cdad61b-02d6-43c1-82cc-3778f4b73f0b",
@@ -13106,10 +13106,10 @@
     "endTimeText": "19.00",
     "startTime": "2026-09-12T12:00:00+00:00",
     "endTime": "2026-09-12T17:00:00+00:00",
-    "checked": 1788276962619,
+    "checked": 1788423708071,
     "organizer": "Fyriskällan",
     "webpage": "",
-    "about": "Program:\n14.00-19.00 Bygg ditt eget kvarter \nHämta inspiration från historien och bygg hus, träd och miljöer med hjälp av färdigmönstrade pappersmodeller. Klipp, klistra, smycka och måla. Målgrupp: barn och vuxna.\n\n14.00-16.00 Prova-på-workshop i släktforskning. Är du nyfiken på din släkt? Björklingebygdens släktforskarförening är på plats för att svara på frågor och hjälpa dig att komma igång med din släktforskning. \n\n14.30-15.30 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\n16.00-16.45 Visning av valaffischer. Jenny Jansson och Mattias Sigfridsson från Statsvetenskapliga institutionen berättar om valaffischer, politiska språket och partibudskap. \n\n17.00-17.45 Hågahögen – Svearikets vagga\nAnders Kaliff, professor i arkeologi, berättar om Hågahögen med utgångspunkt från sin bok Håga, kung Björn och Svearikets vagga: arkeologi i myternas gränsland.\n\n18.00-19.00 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\nLivemusik i samarbete med Uppsala Musikarkiv: \n19.00 Bränneriet\nNybildat Uppsala-band som enligt en kritiker spelar ”funk utan att det är funk”. Med ett ålderspann mellan 17 och 55 i kvintetten blandas erfarenhet med barnsliga infall. Fredrik Hardenborg, Alexis Hardenborg, Lasse Blom, Rolf Staflin, Joel Svensson och Johannes Berjlund.\n\n21.00 TT Reuter\n1979 tog Henrik Venant, Peter Puders, Peter Ivarss och Peter Strauss avstamp i punken och skapade helt egna uttryck. TT Reuter blev ett av de mest tongivande banden i sin genre och släppte två studioalbum och ett livealbum fram till upplösningen 1981. Bandet återuppstod under 2010-talet och släppte ett fjärde album 2021. TT Reuter består idag av: Henrik Venant: sång, gitarr Peter Polfeldt: gitarr, sång Mathias Rask-Andersen: bas, sång Jonas Eriksson Slove: trummor \n\nUnder dagen även lokalhistorisk bokrea.",
+    "about": "Program:\n14.00-19.00 Bygg ditt eget kvarter \nHämta inspiration från historien och bygg hus, träd och miljöer med hjälp av färdigmönstrade pappersmodeller. Klipp, klistra, smycka och måla. Målgrupp: barn och vuxna.\n\n14.00-16.00 Prova-på-workshop i släktforskning. Är du nyfiken på din släkt? Björklingebygdens släktforskarförening är på plats för att svara på frågor och hjälpa dig att komma igång med din släktforskning. \n\n14.30-15.30 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\n16.00-16.45 Visning av valaffischer. Jenny Jansson och Mattias Sigfridsson från Statsvetenskapliga institutionen berättar om valaffischer, politiska språket och partibudskap. \n\n17.00-17.45 Hågahögen – Svearikets vagga\nAnders Kaliff, professor i arkeologi, berättar om Hågahögen med utgångspunkt från sin bok Håga, kung Björn och Svearikets vagga: arkeologi i myternas gränsland.\n\n18.00-19.00 Boksamtal med Henrik Venant & Uppsala Musikarkiv. Skivbolaget Heartwork Records grundades av Henrik Venant som var en nyckelperson på skånska rockscenen under punk- och postpunkåren. Boken ”Vi kan inte dö – Henrik Venant, Heartwork Records och punkscenen i Malmö/Lund” berättar hela historien.\n\n18.00-19.00 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\n\n\nLivemusik i samarbete med Uppsala Musikarkiv: \n19.30 Bränneriet\nNybildat Uppsala-band som enligt en kritiker spelar ”funk utan att det är funk”. Med ett ålderspann mellan 17 och 55 i kvintetten blandas erfarenhet med barnsliga infall. Bränneriet består av Fredrik Hardenborg, Alexis Hardenborg, Lasse Blom, Rolf Staflin, Joel Svensson och Johannes Berjlund.\n\n21.00 TT Reuter\nTT Reuter tog avstamp i den svenska punkexplosionen 1979, men sökte sig snabbt bortom punkens ramar. Kantiga gitarrer, mörk intensitet och kompromisslös experimentlusta gav bandet ett helt eget uttryck och en plats bland den svenska postpunkens mest särpräglade namn. Två studioalbum och ett livealbum följde innan bandet upplöstes 1981. Under 2010-talet återvände TT Reuter till scenen, och 2021 kom bandets fjärde album. \nPå Kulturnatten blir spelningen också något av en hemkomst. Sångaren och grundaren Henrik Venant föddes i Uppsala, och med två Uppsalabor i dagens sättning finns det gott om lokala trådar i TT Reuter. \nTT Reuter idag: Henrik Venant – sång, gitarr,Erik Flodén – gitarr, sång, Mathias Rask-Andersen – bas, sång och Jonas Eriksson Slove – trummor.\n\nUnder dagen även utställning om rösträtt och lokalhistorisk bokrea.",
     "locationId": "aaaaaaaa-bbbb-cccc-8732-eab39171a002",
     "locationAlias": "Fyriskällan",
     "streetAddress": "S:t Olofsgatan 15",
@@ -13123,8 +13123,8 @@
     },
     "url": "https://kulturnatten.uppsala.se/program/event/?externalId=b979cd7e-e10c-4e1b-9f8f-52480dcf838c",
     "categoryNames": [
-      "Öppet hus och visning",
-      "Workshop och prova på"
+      "Workshop och prova på",
+      "Öppet hus och visning"
     ],
     "languageNames": [
       "Svenska"
@@ -13133,16 +13133,16 @@
       "Inomhus"
     ],
     "accessibilityNames": [
-      "Tillgänglighet anpassad för rullstol",
       "Toalett tillgänglig med rullstol",
+      "Tillgänglighet anpassad för rullstol",
       "God miljö för hörselskadade",
       "Barnvagnsvänligt"
     ],
     "created": 1788276962619,
-    "updated": 1788276962619,
-    "status": "new",
+    "updated": 1788423708071,
+    "status": "updated",
     "sortKeyTime": 280,
-    "sortKeyUpdated": 280
+    "sortKeyUpdated": 2
   },
   {
     "id": "31d4f393-7298-4111-9e04-848966080afd",
@@ -13490,8 +13490,8 @@
     "id": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c",
     "title": "Öppet hus på Fyriskällan",
     "titleEnglish": "Open house at Fyriskällan",
-    "about": "Program:\n14.00-19.00 Bygg ditt eget kvarter \nHämta inspiration från historien och bygg hus, träd och miljöer med hjälp av färdigmönstrade pappersmodeller. Klipp, klistra, smycka och måla. Målgrupp: barn och vuxna.\n\n14.00-16.00 Prova-på-workshop i släktforskning. Är du nyfiken på din släkt? Björklingebygdens släktforskarförening är på plats för att svara på frågor och hjälpa dig att komma igång med din släktforskning. \n\n14.30-15.30 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\n16.00-16.45 Visning av valaffischer. Jenny Jansson och Mattias Sigfridsson från Statsvetenskapliga institutionen berättar om valaffischer, politiska språket och partibudskap. \n\n17.00-17.45 Hågahögen – Svearikets vagga\nAnders Kaliff, professor i arkeologi, berättar om Hågahögen med utgångspunkt från sin bok Håga, kung Björn och Svearikets vagga: arkeologi i myternas gränsland.\n\n18.00-19.00 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\nLivemusik i samarbete med Uppsala Musikarkiv: \n19.00 Bränneriet\nNybildat Uppsala-band som enligt en kritiker spelar ”funk utan att det är funk”. Med ett ålderspann mellan 17 och 55 i kvintetten blandas erfarenhet med barnsliga infall. Fredrik Hardenborg, Alexis Hardenborg, Lasse Blom, Rolf Staflin, Joel Svensson och Johannes Berjlund.\n\n21.00 TT Reuter\n1979 tog Henrik Venant, Peter Puders, Peter Ivarss och Peter Strauss avstamp i punken och skapade helt egna uttryck. TT Reuter blev ett av de mest tongivande banden i sin genre och släppte två studioalbum och ett livealbum fram till upplösningen 1981. Bandet återuppstod under 2010-talet och släppte ett fjärde album 2021. TT Reuter består idag av: Henrik Venant: sång, gitarr Peter Polfeldt: gitarr, sång Mathias Rask-Andersen: bas, sång Jonas Eriksson Slove: trummor \n\nUnder dagen även lokalhistorisk bokrea.",
-    "aboutEnglish": "Program:\n14:00-19:00 Build your own neighborhood\nGet inspired by history and build houses, trees, and environments using pre-patterned paper models. Cut, paste, adorn, and paint. Target audience: children and adults.\n\n14.00-16.00 Trial workshop in genealogy\nAre you curious about your family? The Björklinge district genealogy association (Björklingebygdens släktforskarförening) will be on site to answer questions and help you get started with your genealogy.\n\n14.30-15.30 Tour of the city archives and the people's movement archives storage.\n\n16.00-16.45 Exhibition of election posters \nJenny Jansson and Mattias Sigfridsson from the Department of Political Science talks about election posters, political language, and party messages.\n\n17.00-17.45 Hågahögen – The Cradle of the Swedish Realm\nAnders Kaliff, professor of archaeology, talks about Hågahögen based on his book Håga, King Björn, and the Cradle of the Swedish Realm: Archaeology in the Borderland of Myths.\n\n18.00-19.00 Tour of the city archives and the people's movement archives storage.\n\nLive music in collaboration with Uppsala Music Archive:\n19.00 Bränneriet\nA newly formed Uppsala band that, according to one critic, plays 'funk without it being funk.' With an age range between 17 and 55 in the quintet, experience mixes with childish whims. Fredrik Hardenborg, Alexis Hardenborg, Lasse Blom, Rolf Staflin, Joel Svensson, and Johannes Berjlund.\n\n21:00 TT Reuter \nIn 1979, Henrik Venant, Peter Puders, Peter Ivarss, and Peter Strauss took inspiration from punk and created their own unique expressions. TT Reuter became one of the most influential bands in its genre, releasing two studio albums and a live album before disbanding in 1981. The band re-emerged in the 2010s and released a fourth album in 2021. TT Reuter currently consists of: Henrik Venant: vocals, guitar; Peter Polfeldt: guitar, vocals; Mathias Rask-Andersen: bass, vocals; Jonas Eriksson Slove: drums.\n\nDuring the day, there's also a local history book sale.",
+    "about": "Program:\n14.00-19.00 Bygg ditt eget kvarter \nHämta inspiration från historien och bygg hus, träd och miljöer med hjälp av färdigmönstrade pappersmodeller. Klipp, klistra, smycka och måla. Målgrupp: barn och vuxna.\n\n14.00-16.00 Prova-på-workshop i släktforskning. Är du nyfiken på din släkt? Björklingebygdens släktforskarförening är på plats för att svara på frågor och hjälpa dig att komma igång med din släktforskning. \n\n14.30-15.30 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\n16.00-16.45 Visning av valaffischer. Jenny Jansson och Mattias Sigfridsson från Statsvetenskapliga institutionen berättar om valaffischer, politiska språket och partibudskap. \n\n17.00-17.45 Hågahögen – Svearikets vagga\nAnders Kaliff, professor i arkeologi, berättar om Hågahögen med utgångspunkt från sin bok Håga, kung Björn och Svearikets vagga: arkeologi i myternas gränsland.\n\n18.00-19.00 Boksamtal med Henrik Venant & Uppsala Musikarkiv. Skivbolaget Heartwork Records grundades av Henrik Venant som var en nyckelperson på skånska rockscenen under punk- och postpunkåren. Boken ”Vi kan inte dö – Henrik Venant, Heartwork Records och punkscenen i Malmö/Lund” berättar hela historien.\n\n18.00-19.00 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\n\n\nLivemusik i samarbete med Uppsala Musikarkiv: \n19.30 Bränneriet\nNybildat Uppsala-band som enligt en kritiker spelar ”funk utan att det är funk”. Med ett ålderspann mellan 17 och 55 i kvintetten blandas erfarenhet med barnsliga infall. Bränneriet består av Fredrik Hardenborg, Alexis Hardenborg, Lasse Blom, Rolf Staflin, Joel Svensson och Johannes Berjlund.\n\n21.00 TT Reuter\nTT Reuter tog avstamp i den svenska punkexplosionen 1979, men sökte sig snabbt bortom punkens ramar. Kantiga gitarrer, mörk intensitet och kompromisslös experimentlusta gav bandet ett helt eget uttryck och en plats bland den svenska postpunkens mest särpräglade namn. Två studioalbum och ett livealbum följde innan bandet upplöstes 1981. Under 2010-talet återvände TT Reuter till scenen, och 2021 kom bandets fjärde album. \nPå Kulturnatten blir spelningen också något av en hemkomst. Sångaren och grundaren Henrik Venant föddes i Uppsala, och med två Uppsalabor i dagens sättning finns det gott om lokala trådar i TT Reuter. \nTT Reuter idag: Henrik Venant – sång, gitarr,Erik Flodén – gitarr, sång, Mathias Rask-Andersen – bas, sång och Jonas Eriksson Slove – trummor.\n\nUnder dagen även utställning om rösträtt och lokalhistorisk bokrea.",
+    "aboutEnglish": "Program:\n\n14:00-19:00 Build your own neighborhood\nGet inspired by history and build houses, trees, and environments using pre-patterned paper models. Cut, paste, adorn, and paint. Target audience: children and adults.\n\n14.00-16.00 Trial workshop in genealogy\nAre you curious about your family? The Björklinge district genealogy association (Björklingebygdens släktforskarförening) will be on site to answer questions and help you get started with your genealogy.\n\n14.30-15.30 Tour of the city archives and the people's movement archives storage.\n\n16.00-16.45 Exhibition of election posters \nMattias Sigfridsson from the Department of Political Science talks about election posters, political language, and party messages.\n\n17.00-17.45 Hågahögen – The Cradle of the Swedish Realm\nAnders Kaliff, professor of archaeology, talks about Hågahögen based on his book Håga, King Björn, and the Cradle of the Swedish Realm: Archaeology in the Borderland of Myths.\n\n18.00-19.00 Book Talk with Henrik Venant & the Uppsala Music Archive Heartwork Records was founded by Henrik Venant, a key figure on the rock scene in Skåne during the punk and post-punk years. The book We Cannot Die: Henrik Venant, Heartwork Records and the Punk Scene in Malmö/Lund tells the full story.\n\n18.00-19.00 Tour of the city archives and the people's movement archives storage.\n\nLive music in collaboration with Uppsala Music Archive:\n19.30 Bränneriet\nA newly formed Uppsala band that, according to one critic, plays 'funk without it being funk.' With an age range between 17 and 55 in the quintet, experience mixes with childish whims. Fredrik Hardenborg, Alexis Hardenborg, Lasse Blom, Rolf Staflin, Joel Svensson, and Johannes Berjlund.\n\n21:00 TT Reuter \nTT Reuter emerged from the Swedish punk explosion of 1979, but quickly moved beyond the boundaries of punk. Angular guitars, dark intensity, and an uncompromising spirit of experimentation gave the band a unique sound and secured its place among the most distinctive names in Swedish post-punk. Two studio albums and a live album followed before the band disbanded in 1981. During the 2010s, TT Reuter returned to the stage, and in 2021 the band released its fourth album.\n\nAt Kulturnatten, the performance will also be something of a homecoming. Singer and founder Henrik Venant was born in Uppsala, and with two Uppsala residents in the current lineup, TT Reuter has strong local connections.\n\nTT Reuter today:\n Henrik Venant – vocals, guitar\n Erik Flodén – guitar, vocals\n Mathias Rask-Andersen – bass, vocals\n Jonas Eriksson Slove – drums\n\nAlso during the day: an exhibition on voting rights and a local history book sale.\n",
     "aboutShort": "Pyssel för barn, prova på släktforskning, föredrag, arkivvisning, livemusik, valaffischer, bokrea.  ",
     "aboutShortEnglish": "",
     "organizer": "Fyriskällan",
@@ -13512,11 +13512,11 @@
       "longitude": 17.6356582
     },
     "url": "https://kulturnatten.uppsala.se/program/event/?externalId=b979cd7e-e10c-4e1b-9f8f-52480dcf838c",
-    "checked": 1788276962619,
+    "checked": 1788423708071,
     "type": "event",
     "categoryNames": [
-      "Öppet hus och visning",
-      "Workshop och prova på"
+      "Workshop och prova på",
+      "Öppet hus och visning"
     ],
     "languageNames": [
       "Svenska"
@@ -13525,16 +13525,16 @@
       "Inomhus"
     ],
     "accessibilityNames": [
-      "Tillgänglighet anpassad för rullstol",
       "Toalett tillgänglig med rullstol",
+      "Tillgänglighet anpassad för rullstol",
       "God miljö för hörselskadade",
       "Barnvagnsvänligt"
     ],
     "created": 1788276962619,
-    "updated": 1788276962619,
-    "status": "new",
+    "updated": 1788423708071,
+    "status": "updated",
     "sortKeyTime": 288,
-    "sortKeyUpdated": 288
+    "sortKeyUpdated": 3
   },
   {
     "id": "a8862c26-f3e0-48f6-844c-312be090c7f6",
@@ -14989,10 +14989,10 @@
     "endTimeText": "15.30",
     "startTime": "2026-09-12T12:30:00+00:00",
     "endTime": "2026-09-12T13:30:00+00:00",
-    "checked": 1788276962619,
+    "checked": 1788423708071,
     "organizer": "Fyriskällan",
     "webpage": "",
-    "about": "Program:\n14.00-19.00 Bygg ditt eget kvarter \nHämta inspiration från historien och bygg hus, träd och miljöer med hjälp av färdigmönstrade pappersmodeller. Klipp, klistra, smycka och måla. Målgrupp: barn och vuxna.\n\n14.00-16.00 Prova-på-workshop i släktforskning. Är du nyfiken på din släkt? Björklingebygdens släktforskarförening är på plats för att svara på frågor och hjälpa dig att komma igång med din släktforskning. \n\n14.30-15.30 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\n16.00-16.45 Visning av valaffischer. Jenny Jansson och Mattias Sigfridsson från Statsvetenskapliga institutionen berättar om valaffischer, politiska språket och partibudskap. \n\n17.00-17.45 Hågahögen – Svearikets vagga\nAnders Kaliff, professor i arkeologi, berättar om Hågahögen med utgångspunkt från sin bok Håga, kung Björn och Svearikets vagga: arkeologi i myternas gränsland.\n\n18.00-19.00 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\nLivemusik i samarbete med Uppsala Musikarkiv: \n19.00 Bränneriet\nNybildat Uppsala-band som enligt en kritiker spelar ”funk utan att det är funk”. Med ett ålderspann mellan 17 och 55 i kvintetten blandas erfarenhet med barnsliga infall. Fredrik Hardenborg, Alexis Hardenborg, Lasse Blom, Rolf Staflin, Joel Svensson och Johannes Berjlund.\n\n21.00 TT Reuter\n1979 tog Henrik Venant, Peter Puders, Peter Ivarss och Peter Strauss avstamp i punken och skapade helt egna uttryck. TT Reuter blev ett av de mest tongivande banden i sin genre och släppte två studioalbum och ett livealbum fram till upplösningen 1981. Bandet återuppstod under 2010-talet och släppte ett fjärde album 2021. TT Reuter består idag av: Henrik Venant: sång, gitarr Peter Polfeldt: gitarr, sång Mathias Rask-Andersen: bas, sång Jonas Eriksson Slove: trummor \n\nUnder dagen även lokalhistorisk bokrea.",
+    "about": "Program:\n14.00-19.00 Bygg ditt eget kvarter \nHämta inspiration från historien och bygg hus, träd och miljöer med hjälp av färdigmönstrade pappersmodeller. Klipp, klistra, smycka och måla. Målgrupp: barn och vuxna.\n\n14.00-16.00 Prova-på-workshop i släktforskning. Är du nyfiken på din släkt? Björklingebygdens släktforskarförening är på plats för att svara på frågor och hjälpa dig att komma igång med din släktforskning. \n\n14.30-15.30 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\n16.00-16.45 Visning av valaffischer. Jenny Jansson och Mattias Sigfridsson från Statsvetenskapliga institutionen berättar om valaffischer, politiska språket och partibudskap. \n\n17.00-17.45 Hågahögen – Svearikets vagga\nAnders Kaliff, professor i arkeologi, berättar om Hågahögen med utgångspunkt från sin bok Håga, kung Björn och Svearikets vagga: arkeologi i myternas gränsland.\n\n18.00-19.00 Boksamtal med Henrik Venant & Uppsala Musikarkiv. Skivbolaget Heartwork Records grundades av Henrik Venant som var en nyckelperson på skånska rockscenen under punk- och postpunkåren. Boken ”Vi kan inte dö – Henrik Venant, Heartwork Records och punkscenen i Malmö/Lund” berättar hela historien.\n\n18.00-19.00 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\n\n\nLivemusik i samarbete med Uppsala Musikarkiv: \n19.30 Bränneriet\nNybildat Uppsala-band som enligt en kritiker spelar ”funk utan att det är funk”. Med ett ålderspann mellan 17 och 55 i kvintetten blandas erfarenhet med barnsliga infall. Bränneriet består av Fredrik Hardenborg, Alexis Hardenborg, Lasse Blom, Rolf Staflin, Joel Svensson och Johannes Berjlund.\n\n21.00 TT Reuter\nTT Reuter tog avstamp i den svenska punkexplosionen 1979, men sökte sig snabbt bortom punkens ramar. Kantiga gitarrer, mörk intensitet och kompromisslös experimentlusta gav bandet ett helt eget uttryck och en plats bland den svenska postpunkens mest särpräglade namn. Två studioalbum och ett livealbum följde innan bandet upplöstes 1981. Under 2010-talet återvände TT Reuter till scenen, och 2021 kom bandets fjärde album. \nPå Kulturnatten blir spelningen också något av en hemkomst. Sångaren och grundaren Henrik Venant föddes i Uppsala, och med två Uppsalabor i dagens sättning finns det gott om lokala trådar i TT Reuter. \nTT Reuter idag: Henrik Venant – sång, gitarr,Erik Flodén – gitarr, sång, Mathias Rask-Andersen – bas, sång och Jonas Eriksson Slove – trummor.\n\nUnder dagen även utställning om rösträtt och lokalhistorisk bokrea.",
     "locationId": "aaaaaaaa-bbbb-cccc-8732-eab39171a002",
     "locationAlias": "Fyriskällan",
     "streetAddress": "S:t Olofsgatan 15",
@@ -15006,8 +15006,8 @@
     },
     "url": "https://kulturnatten.uppsala.se/program/event/?externalId=b979cd7e-e10c-4e1b-9f8f-52480dcf838c",
     "categoryNames": [
-      "Öppet hus och visning",
-      "Workshop och prova på"
+      "Workshop och prova på",
+      "Öppet hus och visning"
     ],
     "languageNames": [
       "Svenska"
@@ -15016,16 +15016,16 @@
       "Inomhus"
     ],
     "accessibilityNames": [
-      "Tillgänglighet anpassad för rullstol",
       "Toalett tillgänglig med rullstol",
+      "Tillgänglighet anpassad för rullstol",
       "God miljö för hörselskadade",
       "Barnvagnsvänligt"
     ],
     "created": 1788276962619,
-    "updated": 1788276962619,
-    "status": "new",
+    "updated": 1788423708071,
+    "status": "updated",
     "sortKeyTime": 320,
-    "sortKeyUpdated": 320
+    "sortKeyUpdated": 4
   },
   {
     "id": "d56ec4f2-d236-4a50-977f-bb1b01073edb",
@@ -18951,10 +18951,10 @@
     "endTimeText": "16.45",
     "startTime": "2026-09-12T14:00:00+00:00",
     "endTime": "2026-09-12T14:45:00+00:00",
-    "checked": 1788276962619,
+    "checked": 1788423708071,
     "organizer": "Fyriskällan",
     "webpage": "",
-    "about": "Program:\n14.00-19.00 Bygg ditt eget kvarter \nHämta inspiration från historien och bygg hus, träd och miljöer med hjälp av färdigmönstrade pappersmodeller. Klipp, klistra, smycka och måla. Målgrupp: barn och vuxna.\n\n14.00-16.00 Prova-på-workshop i släktforskning. Är du nyfiken på din släkt? Björklingebygdens släktforskarförening är på plats för att svara på frågor och hjälpa dig att komma igång med din släktforskning. \n\n14.30-15.30 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\n16.00-16.45 Visning av valaffischer. Jenny Jansson och Mattias Sigfridsson från Statsvetenskapliga institutionen berättar om valaffischer, politiska språket och partibudskap. \n\n17.00-17.45 Hågahögen – Svearikets vagga\nAnders Kaliff, professor i arkeologi, berättar om Hågahögen med utgångspunkt från sin bok Håga, kung Björn och Svearikets vagga: arkeologi i myternas gränsland.\n\n18.00-19.00 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\nLivemusik i samarbete med Uppsala Musikarkiv: \n19.00 Bränneriet\nNybildat Uppsala-band som enligt en kritiker spelar ”funk utan att det är funk”. Med ett ålderspann mellan 17 och 55 i kvintetten blandas erfarenhet med barnsliga infall. Fredrik Hardenborg, Alexis Hardenborg, Lasse Blom, Rolf Staflin, Joel Svensson och Johannes Berjlund.\n\n21.00 TT Reuter\n1979 tog Henrik Venant, Peter Puders, Peter Ivarss och Peter Strauss avstamp i punken och skapade helt egna uttryck. TT Reuter blev ett av de mest tongivande banden i sin genre och släppte två studioalbum och ett livealbum fram till upplösningen 1981. Bandet återuppstod under 2010-talet och släppte ett fjärde album 2021. TT Reuter består idag av: Henrik Venant: sång, gitarr Peter Polfeldt: gitarr, sång Mathias Rask-Andersen: bas, sång Jonas Eriksson Slove: trummor \n\nUnder dagen även lokalhistorisk bokrea.",
+    "about": "Program:\n14.00-19.00 Bygg ditt eget kvarter \nHämta inspiration från historien och bygg hus, träd och miljöer med hjälp av färdigmönstrade pappersmodeller. Klipp, klistra, smycka och måla. Målgrupp: barn och vuxna.\n\n14.00-16.00 Prova-på-workshop i släktforskning. Är du nyfiken på din släkt? Björklingebygdens släktforskarförening är på plats för att svara på frågor och hjälpa dig att komma igång med din släktforskning. \n\n14.30-15.30 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\n16.00-16.45 Visning av valaffischer. Jenny Jansson och Mattias Sigfridsson från Statsvetenskapliga institutionen berättar om valaffischer, politiska språket och partibudskap. \n\n17.00-17.45 Hågahögen – Svearikets vagga\nAnders Kaliff, professor i arkeologi, berättar om Hågahögen med utgångspunkt från sin bok Håga, kung Björn och Svearikets vagga: arkeologi i myternas gränsland.\n\n18.00-19.00 Boksamtal med Henrik Venant & Uppsala Musikarkiv. Skivbolaget Heartwork Records grundades av Henrik Venant som var en nyckelperson på skånska rockscenen under punk- och postpunkåren. Boken ”Vi kan inte dö – Henrik Venant, Heartwork Records och punkscenen i Malmö/Lund” berättar hela historien.\n\n18.00-19.00 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\n\n\nLivemusik i samarbete med Uppsala Musikarkiv: \n19.30 Bränneriet\nNybildat Uppsala-band som enligt en kritiker spelar ”funk utan att det är funk”. Med ett ålderspann mellan 17 och 55 i kvintetten blandas erfarenhet med barnsliga infall. Bränneriet består av Fredrik Hardenborg, Alexis Hardenborg, Lasse Blom, Rolf Staflin, Joel Svensson och Johannes Berjlund.\n\n21.00 TT Reuter\nTT Reuter tog avstamp i den svenska punkexplosionen 1979, men sökte sig snabbt bortom punkens ramar. Kantiga gitarrer, mörk intensitet och kompromisslös experimentlusta gav bandet ett helt eget uttryck och en plats bland den svenska postpunkens mest särpräglade namn. Två studioalbum och ett livealbum följde innan bandet upplöstes 1981. Under 2010-talet återvände TT Reuter till scenen, och 2021 kom bandets fjärde album. \nPå Kulturnatten blir spelningen också något av en hemkomst. Sångaren och grundaren Henrik Venant föddes i Uppsala, och med två Uppsalabor i dagens sättning finns det gott om lokala trådar i TT Reuter. \nTT Reuter idag: Henrik Venant – sång, gitarr,Erik Flodén – gitarr, sång, Mathias Rask-Andersen – bas, sång och Jonas Eriksson Slove – trummor.\n\nUnder dagen även utställning om rösträtt och lokalhistorisk bokrea.",
     "locationId": "aaaaaaaa-bbbb-cccc-8732-eab39171a002",
     "locationAlias": "Fyriskällan",
     "streetAddress": "S:t Olofsgatan 15",
@@ -18968,8 +18968,8 @@
     },
     "url": "https://kulturnatten.uppsala.se/program/event/?externalId=b979cd7e-e10c-4e1b-9f8f-52480dcf838c",
     "categoryNames": [
-      "Öppet hus och visning",
-      "Workshop och prova på"
+      "Workshop och prova på",
+      "Öppet hus och visning"
     ],
     "languageNames": [
       "Svenska"
@@ -18978,16 +18978,16 @@
       "Inomhus"
     ],
     "accessibilityNames": [
-      "Tillgänglighet anpassad för rullstol",
       "Toalett tillgänglig med rullstol",
+      "Tillgänglighet anpassad för rullstol",
       "God miljö för hörselskadade",
       "Barnvagnsvänligt"
     ],
     "created": 1788276962619,
-    "updated": 1788276962619,
-    "status": "new",
+    "updated": 1788423708071,
+    "status": "updated",
     "sortKeyTime": 405,
-    "sortKeyUpdated": 405
+    "sortKeyUpdated": 5
   },
   {
     "id": "e343185b-b730-4985-b4df-fae2e1087626",
@@ -21659,10 +21659,10 @@
     "endTimeText": "17.45",
     "startTime": "2026-09-12T15:00:00+00:00",
     "endTime": "2026-09-12T15:45:00+00:00",
-    "checked": 1788276962619,
+    "checked": 1788423708071,
     "organizer": "Fyriskällan",
     "webpage": "",
-    "about": "Program:\n14.00-19.00 Bygg ditt eget kvarter \nHämta inspiration från historien och bygg hus, träd och miljöer med hjälp av färdigmönstrade pappersmodeller. Klipp, klistra, smycka och måla. Målgrupp: barn och vuxna.\n\n14.00-16.00 Prova-på-workshop i släktforskning. Är du nyfiken på din släkt? Björklingebygdens släktforskarförening är på plats för att svara på frågor och hjälpa dig att komma igång med din släktforskning. \n\n14.30-15.30 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\n16.00-16.45 Visning av valaffischer. Jenny Jansson och Mattias Sigfridsson från Statsvetenskapliga institutionen berättar om valaffischer, politiska språket och partibudskap. \n\n17.00-17.45 Hågahögen – Svearikets vagga\nAnders Kaliff, professor i arkeologi, berättar om Hågahögen med utgångspunkt från sin bok Håga, kung Björn och Svearikets vagga: arkeologi i myternas gränsland.\n\n18.00-19.00 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\nLivemusik i samarbete med Uppsala Musikarkiv: \n19.00 Bränneriet\nNybildat Uppsala-band som enligt en kritiker spelar ”funk utan att det är funk”. Med ett ålderspann mellan 17 och 55 i kvintetten blandas erfarenhet med barnsliga infall. Fredrik Hardenborg, Alexis Hardenborg, Lasse Blom, Rolf Staflin, Joel Svensson och Johannes Berjlund.\n\n21.00 TT Reuter\n1979 tog Henrik Venant, Peter Puders, Peter Ivarss och Peter Strauss avstamp i punken och skapade helt egna uttryck. TT Reuter blev ett av de mest tongivande banden i sin genre och släppte två studioalbum och ett livealbum fram till upplösningen 1981. Bandet återuppstod under 2010-talet och släppte ett fjärde album 2021. TT Reuter består idag av: Henrik Venant: sång, gitarr Peter Polfeldt: gitarr, sång Mathias Rask-Andersen: bas, sång Jonas Eriksson Slove: trummor \n\nUnder dagen även lokalhistorisk bokrea.",
+    "about": "Program:\n14.00-19.00 Bygg ditt eget kvarter \nHämta inspiration från historien och bygg hus, träd och miljöer med hjälp av färdigmönstrade pappersmodeller. Klipp, klistra, smycka och måla. Målgrupp: barn och vuxna.\n\n14.00-16.00 Prova-på-workshop i släktforskning. Är du nyfiken på din släkt? Björklingebygdens släktforskarförening är på plats för att svara på frågor och hjälpa dig att komma igång med din släktforskning. \n\n14.30-15.30 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\n16.00-16.45 Visning av valaffischer. Jenny Jansson och Mattias Sigfridsson från Statsvetenskapliga institutionen berättar om valaffischer, politiska språket och partibudskap. \n\n17.00-17.45 Hågahögen – Svearikets vagga\nAnders Kaliff, professor i arkeologi, berättar om Hågahögen med utgångspunkt från sin bok Håga, kung Björn och Svearikets vagga: arkeologi i myternas gränsland.\n\n18.00-19.00 Boksamtal med Henrik Venant & Uppsala Musikarkiv. Skivbolaget Heartwork Records grundades av Henrik Venant som var en nyckelperson på skånska rockscenen under punk- och postpunkåren. Boken ”Vi kan inte dö – Henrik Venant, Heartwork Records och punkscenen i Malmö/Lund” berättar hela historien.\n\n18.00-19.00 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\n\n\nLivemusik i samarbete med Uppsala Musikarkiv: \n19.30 Bränneriet\nNybildat Uppsala-band som enligt en kritiker spelar ”funk utan att det är funk”. Med ett ålderspann mellan 17 och 55 i kvintetten blandas erfarenhet med barnsliga infall. Bränneriet består av Fredrik Hardenborg, Alexis Hardenborg, Lasse Blom, Rolf Staflin, Joel Svensson och Johannes Berjlund.\n\n21.00 TT Reuter\nTT Reuter tog avstamp i den svenska punkexplosionen 1979, men sökte sig snabbt bortom punkens ramar. Kantiga gitarrer, mörk intensitet och kompromisslös experimentlusta gav bandet ett helt eget uttryck och en plats bland den svenska postpunkens mest särpräglade namn. Två studioalbum och ett livealbum följde innan bandet upplöstes 1981. Under 2010-talet återvände TT Reuter till scenen, och 2021 kom bandets fjärde album. \nPå Kulturnatten blir spelningen också något av en hemkomst. Sångaren och grundaren Henrik Venant föddes i Uppsala, och med två Uppsalabor i dagens sättning finns det gott om lokala trådar i TT Reuter. \nTT Reuter idag: Henrik Venant – sång, gitarr,Erik Flodén – gitarr, sång, Mathias Rask-Andersen – bas, sång och Jonas Eriksson Slove – trummor.\n\nUnder dagen även utställning om rösträtt och lokalhistorisk bokrea.",
     "locationId": "aaaaaaaa-bbbb-cccc-8732-eab39171a002",
     "locationAlias": "Fyriskällan",
     "streetAddress": "S:t Olofsgatan 15",
@@ -21676,8 +21676,8 @@
     },
     "url": "https://kulturnatten.uppsala.se/program/event/?externalId=b979cd7e-e10c-4e1b-9f8f-52480dcf838c",
     "categoryNames": [
-      "Öppet hus och visning",
-      "Workshop och prova på"
+      "Workshop och prova på",
+      "Öppet hus och visning"
     ],
     "languageNames": [
       "Svenska"
@@ -21686,16 +21686,16 @@
       "Inomhus"
     ],
     "accessibilityNames": [
-      "Tillgänglighet anpassad för rullstol",
       "Toalett tillgänglig med rullstol",
+      "Tillgänglighet anpassad för rullstol",
       "God miljö för hörselskadade",
       "Barnvagnsvänligt"
     ],
     "created": 1788276962619,
-    "updated": 1788276962619,
-    "status": "new",
+    "updated": 1788423708071,
+    "status": "updated",
     "sortKeyTime": 463,
-    "sortKeyUpdated": 463
+    "sortKeyUpdated": 6
   },
   {
     "id": "6bd0202f-cff3-4224-aa26-91bc2577cf77",
@@ -24138,10 +24138,10 @@
     "endTimeText": "19.00",
     "startTime": "2026-09-12T16:00:00+00:00",
     "endTime": "2026-09-12T17:00:00+00:00",
-    "checked": 1788276962619,
+    "checked": 1788423708071,
     "organizer": "Fyriskällan",
     "webpage": "",
-    "about": "Program:\n14.00-19.00 Bygg ditt eget kvarter \nHämta inspiration från historien och bygg hus, träd och miljöer med hjälp av färdigmönstrade pappersmodeller. Klipp, klistra, smycka och måla. Målgrupp: barn och vuxna.\n\n14.00-16.00 Prova-på-workshop i släktforskning. Är du nyfiken på din släkt? Björklingebygdens släktforskarförening är på plats för att svara på frågor och hjälpa dig att komma igång med din släktforskning. \n\n14.30-15.30 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\n16.00-16.45 Visning av valaffischer. Jenny Jansson och Mattias Sigfridsson från Statsvetenskapliga institutionen berättar om valaffischer, politiska språket och partibudskap. \n\n17.00-17.45 Hågahögen – Svearikets vagga\nAnders Kaliff, professor i arkeologi, berättar om Hågahögen med utgångspunkt från sin bok Håga, kung Björn och Svearikets vagga: arkeologi i myternas gränsland.\n\n18.00-19.00 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\nLivemusik i samarbete med Uppsala Musikarkiv: \n19.00 Bränneriet\nNybildat Uppsala-band som enligt en kritiker spelar ”funk utan att det är funk”. Med ett ålderspann mellan 17 och 55 i kvintetten blandas erfarenhet med barnsliga infall. Fredrik Hardenborg, Alexis Hardenborg, Lasse Blom, Rolf Staflin, Joel Svensson och Johannes Berjlund.\n\n21.00 TT Reuter\n1979 tog Henrik Venant, Peter Puders, Peter Ivarss och Peter Strauss avstamp i punken och skapade helt egna uttryck. TT Reuter blev ett av de mest tongivande banden i sin genre och släppte två studioalbum och ett livealbum fram till upplösningen 1981. Bandet återuppstod under 2010-talet och släppte ett fjärde album 2021. TT Reuter består idag av: Henrik Venant: sång, gitarr Peter Polfeldt: gitarr, sång Mathias Rask-Andersen: bas, sång Jonas Eriksson Slove: trummor \n\nUnder dagen även lokalhistorisk bokrea.",
+    "about": "Program:\n14.00-19.00 Bygg ditt eget kvarter \nHämta inspiration från historien och bygg hus, träd och miljöer med hjälp av färdigmönstrade pappersmodeller. Klipp, klistra, smycka och måla. Målgrupp: barn och vuxna.\n\n14.00-16.00 Prova-på-workshop i släktforskning. Är du nyfiken på din släkt? Björklingebygdens släktforskarförening är på plats för att svara på frågor och hjälpa dig att komma igång med din släktforskning. \n\n14.30-15.30 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\n16.00-16.45 Visning av valaffischer. Jenny Jansson och Mattias Sigfridsson från Statsvetenskapliga institutionen berättar om valaffischer, politiska språket och partibudskap. \n\n17.00-17.45 Hågahögen – Svearikets vagga\nAnders Kaliff, professor i arkeologi, berättar om Hågahögen med utgångspunkt från sin bok Håga, kung Björn och Svearikets vagga: arkeologi i myternas gränsland.\n\n18.00-19.00 Boksamtal med Henrik Venant & Uppsala Musikarkiv. Skivbolaget Heartwork Records grundades av Henrik Venant som var en nyckelperson på skånska rockscenen under punk- och postpunkåren. Boken ”Vi kan inte dö – Henrik Venant, Heartwork Records och punkscenen i Malmö/Lund” berättar hela historien.\n\n18.00-19.00 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\n\n\nLivemusik i samarbete med Uppsala Musikarkiv: \n19.30 Bränneriet\nNybildat Uppsala-band som enligt en kritiker spelar ”funk utan att det är funk”. Med ett ålderspann mellan 17 och 55 i kvintetten blandas erfarenhet med barnsliga infall. Bränneriet består av Fredrik Hardenborg, Alexis Hardenborg, Lasse Blom, Rolf Staflin, Joel Svensson och Johannes Berjlund.\n\n21.00 TT Reuter\nTT Reuter tog avstamp i den svenska punkexplosionen 1979, men sökte sig snabbt bortom punkens ramar. Kantiga gitarrer, mörk intensitet och kompromisslös experimentlusta gav bandet ett helt eget uttryck och en plats bland den svenska postpunkens mest särpräglade namn. Två studioalbum och ett livealbum följde innan bandet upplöstes 1981. Under 2010-talet återvände TT Reuter till scenen, och 2021 kom bandets fjärde album. \nPå Kulturnatten blir spelningen också något av en hemkomst. Sångaren och grundaren Henrik Venant föddes i Uppsala, och med två Uppsalabor i dagens sättning finns det gott om lokala trådar i TT Reuter. \nTT Reuter idag: Henrik Venant – sång, gitarr,Erik Flodén – gitarr, sång, Mathias Rask-Andersen – bas, sång och Jonas Eriksson Slove – trummor.\n\nUnder dagen även utställning om rösträtt och lokalhistorisk bokrea.",
     "locationId": "aaaaaaaa-bbbb-cccc-8732-eab39171a002",
     "locationAlias": "Fyriskällan",
     "streetAddress": "S:t Olofsgatan 15",
@@ -24155,8 +24155,8 @@
     },
     "url": "https://kulturnatten.uppsala.se/program/event/?externalId=b979cd7e-e10c-4e1b-9f8f-52480dcf838c",
     "categoryNames": [
-      "Öppet hus och visning",
-      "Workshop och prova på"
+      "Workshop och prova på",
+      "Öppet hus och visning"
     ],
     "languageNames": [
       "Svenska"
@@ -24165,16 +24165,16 @@
       "Inomhus"
     ],
     "accessibilityNames": [
-      "Tillgänglighet anpassad för rullstol",
       "Toalett tillgänglig med rullstol",
+      "Tillgänglighet anpassad för rullstol",
       "God miljö för hörselskadade",
       "Barnvagnsvänligt"
     ],
     "created": 1788276962619,
-    "updated": 1788276962619,
-    "status": "new",
-    "sortKeyTime": 516,
-    "sortKeyUpdated": 516
+    "updated": 1788423708071,
+    "status": "updated",
+    "sortKeyTime": 517,
+    "sortKeyUpdated": 8
   },
   {
     "id": "83cb4acc-fc10-4826-9721-0a4ba353b0ee",
@@ -26640,8 +26640,8 @@
     "id": "a50905f9-3412-4b41-b81f-fbe13950d07b",
     "title": "Livemusik med Bränneriet och TT Reuter",
     "titleEnglish": "Live music with Bränneriet and TT Reuter",
-    "about": "Livemusik i samarbete med Uppsala Musikarkiv: \r\n19.00 Bränneriet\r\nNybildat Uppsala-band som enligt en kritiker spelar ”funk utan att det är funk”. Med ett ålderspann mellan 17 och 55 i kvintetten blandas erfarenhet med barnsliga infall. Fredrik Hardenborg, Alexis Hardenborg, Lasse Blom, Rolf Staflin, Joel Svensson och Johannes Berjlund.\r\n\r\n21.00 TT Reuter\r\n1979 tog Henrik Venant, Peter Puders, Peter Ivarss och Peter Strauss avstamp i punken och skapade helt egna uttryck. TT Reuter blev ett av de mest tongivande banden i sin genre och släppte två studioalbum och ett livealbum fram till upplösningen 1981. Bandet återuppstod under 2010-talet och släppte ett fjärde album 2021. TT Reuter består idag av: Henrik Venant: sång, gitarr Peter Polfeldt: gitarr, sång Mathias Rask-Andersen: bas, sång Jonas Eriksson Slove: trummor.",
-    "aboutEnglish": "Live music in collaboration with Uppsala Music Archive:\r\n19.00 Bränneriet\r\nA newly formed Uppsala band that, according to one critic, plays 'funk without it being funk.' With an age range between 17 and 55 in the quintet, experience mixes with childish whims. Fredrik Hardenborg, Alexis Hardenborg, Lasse Blom, Rolf Staflin, Joel Svensson, and Johannes Berjlund.\r\n\r\n21:00 TT Reuter \r\nIn 1979, Henrik Venant, Peter Puders, Peter Ivarss, and Peter Strauss took inspiration from punk and created their own unique expressions. TT Reuter became one of the most influential bands in its genre, releasing two studio albums and a live album before disbanding in 1981. The band re-emerged in the 2010s and released a fourth album in 2021. TT Reuter currently consists of: Henrik Venant: vocals, guitar; Peter Polfeldt: guitar, vocals; Mathias Rask-Andersen: bass, vocals; Jonas Eriksson Slove: drums.",
+    "about": "Livemusik i samarbete med Uppsala Musikarkiv: \n\n19.30 Bränneriet\nNybildat Uppsala-band som enligt en kritiker spelar ”funk utan att det är funk”. Med ett ålderspann mellan 17 och 55 i kvintetten blandas erfarenhet med barnsliga infall. Bränneriet består av Fredrik Hardenborg, Alexis Hardenborg, Lasse Blom, Rolf Staflin, Joel Svensson och Johannes Berjlund.\n\n21.00 TT Reuter\nTT Reuter tog avstamp i den svenska punkexplosionen 1979, men sökte sig snabbt bortom punkens ramar. Kantiga gitarrer, mörk intensitet och kompromisslös experimentlusta gav bandet ett helt eget uttryck och en plats bland den svenska postpunkens mest särpräglade namn. Två studioalbum och ett livealbum följde innan bandet upplöstes 1981. Under 2010-talet återvände TT Reuter till scenen, och 2021 kom bandets fjärde album. \nPå Kulturnatten blir spelningen också något av en hemkomst. Sångaren och grundaren Henrik Venant föddes i Uppsala, och med två Uppsalabor i dagens sättning finns det gott om lokala trådar i TT Reuter. \nTT Reuter idag: Henrik Venant – sång, gitarr,Erik Flodén – gitarr, sång, Mathias Rask-Andersen – bas, sång och Jonas Eriksson Slove – trummor.",
+    "aboutEnglish": "19.30 Bränneriet\nA newly formed Uppsala band that, according to one critic, plays 'funk without it being funk.' With an age range between 17 and 55 in the quintet, experience mixes with childish whims. Fredrik Hardenborg, Alexis Hardenborg, Lasse Blom, Rolf Staflin, Joel Svensson, and Johannes Berjlund.\n\n21:00 TT Reuter \nTT Reuter emerged from the Swedish punk explosion of 1979, but quickly moved beyond the boundaries of punk. Angular guitars, dark intensity, and an uncompromising spirit of experimentation gave the band a unique sound and secured its place among the most distinctive names in Swedish post-punk. Two studio albums and a live album followed before the band disbanded in 1981. During the 2010s, TT Reuter returned to the stage, and in 2021 the band released its fourth album.\n\nAt Kulturnatten, the performance will also be something of a homecoming. Singer and founder Henrik Venant was born in Uppsala, and with two Uppsala residents in the current lineup, TT Reuter has strong local connections.\n\nTT Reuter today:\n Henrik Venant – vocals, guitar\n Erik Flodén – guitar, vocals\n Mathias Rask-Andersen – bass, vocals\n Jonas Eriksson Slove – drums\n",
     "aboutShort": "Konsert med Bränneriet och TT Reuter.",
     "aboutShortEnglish": "",
     "organizer": "Fyriskällan",
@@ -26662,7 +26662,7 @@
       "longitude": 17.6356582
     },
     "url": "https://kulturnatten.uppsala.se/program/event/?externalId=a50905f9-3412-4b41-b81f-fbe13950d07b",
-    "checked": 1788284019971,
+    "checked": 1788423708071,
     "type": "event",
     "categoryNames": [
       "Musik"
@@ -26678,10 +26678,10 @@
       "Toalett tillgänglig med rullstol"
     ],
     "created": 1788276962619,
-    "updated": 1788284019971,
+    "updated": 1788423708071,
     "status": "updated",
-    "sortKeyTime": 570,
-    "sortKeyUpdated": 228
+    "sortKeyTime": 569,
+    "sortKeyUpdated": 9
   },
   {
     "id": "3e362a7e-3341-48e8-8089-113ab8f234ae",
@@ -29508,7 +29508,7 @@
     "id": "fac75ec1-ae87-4c2e-90a7-a18350a4c864",
     "title": "Improviserad Ingmar Bergman med Teater Prego",
     "titleEnglish": "Improvised Ingmar Bergman with Teater Prego",
-    "about": "Snabbt, skruvat och fullständigt oförutsägbart - precis som livet självt! Improvisationsteater med Teater Prego på Kulturnatten är ett måste.\r\n\r\nFilm- och teatermannen Ingmar Bergman är känd för att ha haft mycket bestämda konstnärliga idéer och att det var hans vilja som gällde. Vad händer när ett gäng improvisatörer släpps fria att göra precis vad de vill med Bergmans estetik?\r\n\r\nVälkomna att uppleva när Teater Prego kastar sig in i denna oändliga värld av människor, demoner, miljöer, tidsåldrar, ljus och skuggor. Ett är säkert. Det blir Bergman, såsom Bergman inte vill ha det.\r\n\r\n*** 21.00 Ingmar - improviserad Bergman med Teater Prego***\r\n*** 22.15 Improteater med Teater Prego ***\r\n -------- \r\nSprakateatern ligger på Salagatan 24 (bredvid Vaksala torg). Det är ett väldigt begränsat antal platser och där finns ingen servering. Har du några särskilda tillgänglighetsbehov så hör av dig till Teater Prego för mer information.\r\n -------- \r\nTeater Prego är en av Sveriges mest rutinerade improvisationsgrupper. De har sedan starten 2009 spelat runt om i Sverige och på internationella festivaler men också grundat en av improvärldens mest omtyckta festivaler: SWIMP - Sweden International Improv Festival. Under sexton år har de underhållit publiken under Kulturnatten på Reginateatern, och nu tar de improsuccén till Sprakateatern. Deras Kulturnattssuccé får du inte missa!",
+    "about": "Snabbt, skruvat och fullständigt oförutsägbart - precis som livet självt! Improvisationsteater med Teater Prego på Kulturnatten är ett måste.\n\nFilm- och teatermannen Ingmar Bergman är känd för att ha haft mycket bestämda konstnärliga idéer och att det var hans vilja som gällde. Vad händer när ett gäng improvisatörer släpps fria att göra precis vad de vill med Bergmans estetik?\n\nVälkomna att uppleva när Teater Prego kastar sig in i denna oändliga värld av människor, demoner, miljöer, tidsåldrar, ljus och skuggor. Ett är säkert. Det blir Bergman, såsom Bergman inte vill ha det.\n\n*** 21.00 Ingmar - improviserad Bergman med Teater Prego***\n*** 22.15 Improteater med Teater Prego ***\n -------- \nSprakateatern ligger på Salagatan 24 (bredvid Vaksala torg). Det är ett väldigt begränsat antal platser och där finns ingen servering. Har du några särskilda tillgänglighetsbehov så hör av dig till Teater Prego för mer information.\n -------- \nTeater Prego är en av Sveriges mest rutinerade improvisationsgrupper. De har sedan starten 2009 spelat runt om i Sverige och på internationella festivaler men också grundat en av improvärldens mest omtyckta festivaler: SWIMP - Sweden International Improv Festival. Under sexton år har de underhållit publiken under Kulturnatten på Reginateatern, och nu tar de improsuccén till Sprakateatern. Deras Kulturnattssuccé får du inte missa! \n\nKostnad: 160 kr ungdom tom 26 år, 250 kr ordinarie.",
     "aboutEnglish": "Fast-paced, offbeat and completely unpredictable – just like life itself! Improv theatre with Teater Prego at Kulturnatten is not to be missed.\r\n\r\nFilm and theatre director Ingmar Bergman is known for having very strong artistic ideas – and for insisting on doing things his way. So what happens when a group of improvisers is let loose to do whatever they want with Bergman’s aesthetics?\r\n\r\nWelcome to a show where Teater Prego throws itself into this endless world of people, demons, places, eras, light and shadow. One thing is certain: it will be Bergman – just not the way Bergman would have wanted it.\r\n\r\n*** 21:00 Ingmar – Improvised Bergman with Teater Prego*** \r\n*** 22:15 Improv Theatre with Teater Prego*** \r\n\r\n(Performances are in Swedish.)\r\n -------- \r\nSprakateatern is located at Salagatan 24 (next to Vaksala torg). Seating is very limited, and there will be no food or drinks available. If you have any specific accessibility requirements, please contact Teater Prego for more information.\r\n -------- \r\n\r\nTeater Prego is one of Sweden’s most experienced improv groups. Since forming in 2009, they have performed across Sweden and at international festivals, as well as founding one of the improv world’s most beloved festivals: SWIMP – Sweden International Improv Festival.\r\n\r\nFor sixteen years, they have entertained audiences at Reginateatern during Kulturnatten, and now they’re bringing their improv success to Sprakateatern. Don’t miss it!",
     "aboutShort": "Vad händer när ett gäng improvisatörer släpps fria att göra vad de vill med Bergmans estetik?",
     "aboutShortEnglish": "",
@@ -29523,14 +29523,14 @@
     "city": "75330",
     "isCancelled": false,
     "isForChildren": false,
-    "isFree": true,
+    "isFree": false,
     "price": null,
     "coordinates": {
       "latitude": 59.8621834,
       "longitude": 17.6459101
     },
     "url": "https://kulturnatten.uppsala.se/program/event/?externalId=fac75ec1-ae87-4c2e-90a7-a18350a4c864",
-    "checked": 1788284019971,
+    "checked": 1788423708071,
     "type": "event",
     "categoryNames": [
       "Teater"
@@ -29543,10 +29543,10 @@
     ],
     "accessibilityNames": [],
     "created": 1788276962619,
-    "updated": 1788284019971,
+    "updated": 1788423708071,
     "status": "updated",
-    "sortKeyTime": 633,
-    "sortKeyUpdated": 259
+    "sortKeyTime": 634,
+    "sortKeyUpdated": 12
   },
   {
     "id": "30069b9d-2b49-4669-a9ae-3e9ffc66945b",
@@ -29848,16 +29848,16 @@
     "endTimeText": null,
     "startTime": "2026-09-12T19:00:00+00:00",
     "endTime": null,
-    "checked": 1788284019971,
+    "checked": 1788423708071,
     "organizer": "Teater Prego",
     "webpage": "https://billetto.se/en/e/ingmar-improviserad-bergman-med-teater-prego-kulturnatten-biljetter-1984912",
-    "about": "Snabbt, skruvat och fullständigt oförutsägbart - precis som livet självt! Improvisationsteater med Teater Prego på Kulturnatten är ett måste.\r\n\r\nFilm- och teatermannen Ingmar Bergman är känd för att ha haft mycket bestämda konstnärliga idéer och att det var hans vilja som gällde. Vad händer när ett gäng improvisatörer släpps fria att göra precis vad de vill med Bergmans estetik?\r\n\r\nVälkomna att uppleva när Teater Prego kastar sig in i denna oändliga värld av människor, demoner, miljöer, tidsåldrar, ljus och skuggor. Ett är säkert. Det blir Bergman, såsom Bergman inte vill ha det.\r\n\r\n*** 21.00 Ingmar - improviserad Bergman med Teater Prego***\r\n*** 22.15 Improteater med Teater Prego ***\r\n -------- \r\nSprakateatern ligger på Salagatan 24 (bredvid Vaksala torg). Det är ett väldigt begränsat antal platser och där finns ingen servering. Har du några särskilda tillgänglighetsbehov så hör av dig till Teater Prego för mer information.\r\n -------- \r\nTeater Prego är en av Sveriges mest rutinerade improvisationsgrupper. De har sedan starten 2009 spelat runt om i Sverige och på internationella festivaler men också grundat en av improvärldens mest omtyckta festivaler: SWIMP - Sweden International Improv Festival. Under sexton år har de underhållit publiken under Kulturnatten på Reginateatern, och nu tar de improsuccén till Sprakateatern. Deras Kulturnattssuccé får du inte missa!",
+    "about": "Snabbt, skruvat och fullständigt oförutsägbart - precis som livet självt! Improvisationsteater med Teater Prego på Kulturnatten är ett måste.\n\nFilm- och teatermannen Ingmar Bergman är känd för att ha haft mycket bestämda konstnärliga idéer och att det var hans vilja som gällde. Vad händer när ett gäng improvisatörer släpps fria att göra precis vad de vill med Bergmans estetik?\n\nVälkomna att uppleva när Teater Prego kastar sig in i denna oändliga värld av människor, demoner, miljöer, tidsåldrar, ljus och skuggor. Ett är säkert. Det blir Bergman, såsom Bergman inte vill ha det.\n\n*** 21.00 Ingmar - improviserad Bergman med Teater Prego***\n*** 22.15 Improteater med Teater Prego ***\n -------- \nSprakateatern ligger på Salagatan 24 (bredvid Vaksala torg). Det är ett väldigt begränsat antal platser och där finns ingen servering. Har du några särskilda tillgänglighetsbehov så hör av dig till Teater Prego för mer information.\n -------- \nTeater Prego är en av Sveriges mest rutinerade improvisationsgrupper. De har sedan starten 2009 spelat runt om i Sverige och på internationella festivaler men också grundat en av improvärldens mest omtyckta festivaler: SWIMP - Sweden International Improv Festival. Under sexton år har de underhållit publiken under Kulturnatten på Reginateatern, och nu tar de improsuccén till Sprakateatern. Deras Kulturnattssuccé får du inte missa! \n\nKostnad: 160 kr ungdom tom 26 år, 250 kr ordinarie.",
     "locationId": "aaaaaaaa-bbbb-cccc-8732-eab39171a002",
     "locationAlias": "Sprakateatern",
     "streetAddress": "Salagatan 24",
     "isCancelled": false,
     "isForChildren": false,
-    "isFree": true,
+    "isFree": false,
     "price": null,
     "coordinates": {
       "latitude": 59.8621834,
@@ -29875,10 +29875,10 @@
     ],
     "accessibilityNames": [],
     "created": 1788276962619,
-    "updated": 1788284019971,
+    "updated": 1788423708071,
     "status": "updated",
-    "sortKeyTime": 640,
-    "sortKeyUpdated": 264
+    "sortKeyTime": 641,
+    "sortKeyUpdated": 13
   },
   {
     "type": "subEvent",
@@ -29974,10 +29974,10 @@
     "endTimeText": null,
     "startTime": "2026-09-12T19:00:00+00:00",
     "endTime": null,
-    "checked": 1788276962619,
+    "checked": 1788423708071,
     "organizer": "Fyriskällan",
     "webpage": "",
-    "about": "Program:\n14.00-19.00 Bygg ditt eget kvarter \nHämta inspiration från historien och bygg hus, träd och miljöer med hjälp av färdigmönstrade pappersmodeller. Klipp, klistra, smycka och måla. Målgrupp: barn och vuxna.\n\n14.00-16.00 Prova-på-workshop i släktforskning. Är du nyfiken på din släkt? Björklingebygdens släktforskarförening är på plats för att svara på frågor och hjälpa dig att komma igång med din släktforskning. \n\n14.30-15.30 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\n16.00-16.45 Visning av valaffischer. Jenny Jansson och Mattias Sigfridsson från Statsvetenskapliga institutionen berättar om valaffischer, politiska språket och partibudskap. \n\n17.00-17.45 Hågahögen – Svearikets vagga\nAnders Kaliff, professor i arkeologi, berättar om Hågahögen med utgångspunkt från sin bok Håga, kung Björn och Svearikets vagga: arkeologi i myternas gränsland.\n\n18.00-19.00 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\nLivemusik i samarbete med Uppsala Musikarkiv: \n19.00 Bränneriet\nNybildat Uppsala-band som enligt en kritiker spelar ”funk utan att det är funk”. Med ett ålderspann mellan 17 och 55 i kvintetten blandas erfarenhet med barnsliga infall. Fredrik Hardenborg, Alexis Hardenborg, Lasse Blom, Rolf Staflin, Joel Svensson och Johannes Berjlund.\n\n21.00 TT Reuter\n1979 tog Henrik Venant, Peter Puders, Peter Ivarss och Peter Strauss avstamp i punken och skapade helt egna uttryck. TT Reuter blev ett av de mest tongivande banden i sin genre och släppte två studioalbum och ett livealbum fram till upplösningen 1981. Bandet återuppstod under 2010-talet och släppte ett fjärde album 2021. TT Reuter består idag av: Henrik Venant: sång, gitarr Peter Polfeldt: gitarr, sång Mathias Rask-Andersen: bas, sång Jonas Eriksson Slove: trummor \n\nUnder dagen även lokalhistorisk bokrea.",
+    "about": "Program:\n14.00-19.00 Bygg ditt eget kvarter \nHämta inspiration från historien och bygg hus, träd och miljöer med hjälp av färdigmönstrade pappersmodeller. Klipp, klistra, smycka och måla. Målgrupp: barn och vuxna.\n\n14.00-16.00 Prova-på-workshop i släktforskning. Är du nyfiken på din släkt? Björklingebygdens släktforskarförening är på plats för att svara på frågor och hjälpa dig att komma igång med din släktforskning. \n\n14.30-15.30 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\n16.00-16.45 Visning av valaffischer. Jenny Jansson och Mattias Sigfridsson från Statsvetenskapliga institutionen berättar om valaffischer, politiska språket och partibudskap. \n\n17.00-17.45 Hågahögen – Svearikets vagga\nAnders Kaliff, professor i arkeologi, berättar om Hågahögen med utgångspunkt från sin bok Håga, kung Björn och Svearikets vagga: arkeologi i myternas gränsland.\n\n18.00-19.00 Boksamtal med Henrik Venant & Uppsala Musikarkiv. Skivbolaget Heartwork Records grundades av Henrik Venant som var en nyckelperson på skånska rockscenen under punk- och postpunkåren. Boken ”Vi kan inte dö – Henrik Venant, Heartwork Records och punkscenen i Malmö/Lund” berättar hela historien.\n\n18.00-19.00 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\n\n\nLivemusik i samarbete med Uppsala Musikarkiv: \n19.30 Bränneriet\nNybildat Uppsala-band som enligt en kritiker spelar ”funk utan att det är funk”. Med ett ålderspann mellan 17 och 55 i kvintetten blandas erfarenhet med barnsliga infall. Bränneriet består av Fredrik Hardenborg, Alexis Hardenborg, Lasse Blom, Rolf Staflin, Joel Svensson och Johannes Berjlund.\n\n21.00 TT Reuter\nTT Reuter tog avstamp i den svenska punkexplosionen 1979, men sökte sig snabbt bortom punkens ramar. Kantiga gitarrer, mörk intensitet och kompromisslös experimentlusta gav bandet ett helt eget uttryck och en plats bland den svenska postpunkens mest särpräglade namn. Två studioalbum och ett livealbum följde innan bandet upplöstes 1981. Under 2010-talet återvände TT Reuter till scenen, och 2021 kom bandets fjärde album. \nPå Kulturnatten blir spelningen också något av en hemkomst. Sångaren och grundaren Henrik Venant föddes i Uppsala, och med två Uppsalabor i dagens sättning finns det gott om lokala trådar i TT Reuter. \nTT Reuter idag: Henrik Venant – sång, gitarr,Erik Flodén – gitarr, sång, Mathias Rask-Andersen – bas, sång och Jonas Eriksson Slove – trummor.\n\nUnder dagen även utställning om rösträtt och lokalhistorisk bokrea.",
     "locationId": "aaaaaaaa-bbbb-cccc-8732-eab39171a002",
     "locationAlias": "Fyriskällan",
     "streetAddress": "S:t Olofsgatan 15",
@@ -29991,8 +29991,8 @@
     },
     "url": "https://kulturnatten.uppsala.se/program/event/?externalId=b979cd7e-e10c-4e1b-9f8f-52480dcf838c",
     "categoryNames": [
-      "Öppet hus och visning",
-      "Workshop och prova på"
+      "Workshop och prova på",
+      "Öppet hus och visning"
     ],
     "languageNames": [
       "Svenska"
@@ -30001,16 +30001,16 @@
       "Inomhus"
     ],
     "accessibilityNames": [
-      "Tillgänglighet anpassad för rullstol",
       "Toalett tillgänglig med rullstol",
+      "Tillgänglighet anpassad för rullstol",
       "God miljö för hörselskadade",
       "Barnvagnsvänligt"
     ],
     "created": 1788276962619,
-    "updated": 1788276962619,
-    "status": "new",
-    "sortKeyTime": 643,
-    "sortKeyUpdated": 643
+    "updated": 1788423708071,
+    "status": "updated",
+    "sortKeyTime": 644,
+    "sortKeyUpdated": 14
   },
   {
     "type": "subEvent",
@@ -30022,10 +30022,10 @@
     "endTimeText": null,
     "startTime": "2026-09-12T19:00:00+00:00",
     "endTime": null,
-    "checked": 1788284019971,
+    "checked": 1788423708071,
     "organizer": "Fyriskällan",
     "webpage": "",
-    "about": "Livemusik i samarbete med Uppsala Musikarkiv: \r\n19.00 Bränneriet\r\nNybildat Uppsala-band som enligt en kritiker spelar ”funk utan att det är funk”. Med ett ålderspann mellan 17 och 55 i kvintetten blandas erfarenhet med barnsliga infall. Fredrik Hardenborg, Alexis Hardenborg, Lasse Blom, Rolf Staflin, Joel Svensson och Johannes Berjlund.\r\n\r\n21.00 TT Reuter\r\n1979 tog Henrik Venant, Peter Puders, Peter Ivarss och Peter Strauss avstamp i punken och skapade helt egna uttryck. TT Reuter blev ett av de mest tongivande banden i sin genre och släppte två studioalbum och ett livealbum fram till upplösningen 1981. Bandet återuppstod under 2010-talet och släppte ett fjärde album 2021. TT Reuter består idag av: Henrik Venant: sång, gitarr Peter Polfeldt: gitarr, sång Mathias Rask-Andersen: bas, sång Jonas Eriksson Slove: trummor.",
+    "about": "Livemusik i samarbete med Uppsala Musikarkiv: \n\n19.30 Bränneriet\nNybildat Uppsala-band som enligt en kritiker spelar ”funk utan att det är funk”. Med ett ålderspann mellan 17 och 55 i kvintetten blandas erfarenhet med barnsliga infall. Bränneriet består av Fredrik Hardenborg, Alexis Hardenborg, Lasse Blom, Rolf Staflin, Joel Svensson och Johannes Berjlund.\n\n21.00 TT Reuter\nTT Reuter tog avstamp i den svenska punkexplosionen 1979, men sökte sig snabbt bortom punkens ramar. Kantiga gitarrer, mörk intensitet och kompromisslös experimentlusta gav bandet ett helt eget uttryck och en plats bland den svenska postpunkens mest särpräglade namn. Två studioalbum och ett livealbum följde innan bandet upplöstes 1981. Under 2010-talet återvände TT Reuter till scenen, och 2021 kom bandets fjärde album. \nPå Kulturnatten blir spelningen också något av en hemkomst. Sångaren och grundaren Henrik Venant föddes i Uppsala, och med två Uppsalabor i dagens sättning finns det gott om lokala trådar i TT Reuter. \nTT Reuter idag: Henrik Venant – sång, gitarr,Erik Flodén – gitarr, sång, Mathias Rask-Andersen – bas, sång och Jonas Eriksson Slove – trummor.",
     "locationId": "aaaaaaaa-bbbb-cccc-8732-eab39171a002",
     "locationAlias": "Fyriskällan",
     "streetAddress": "S:t Olofsgatan 15",
@@ -30052,10 +30052,10 @@
       "Toalett tillgänglig med rullstol"
     ],
     "created": 1788276962619,
-    "updated": 1788284019971,
+    "updated": 1788423708071,
     "status": "updated",
-    "sortKeyTime": 644,
-    "sortKeyUpdated": 266
+    "sortKeyTime": 645,
+    "sortKeyUpdated": 15
   },
   {
     "type": "subEvent",
@@ -30936,16 +30936,16 @@
     "endTimeText": null,
     "startTime": "2026-09-12T20:15:00+00:00",
     "endTime": null,
-    "checked": 1788284019971,
+    "checked": 1788423708071,
     "organizer": "Teater Prego",
     "webpage": "https://billetto.se/en/e/ingmar-improviserad-bergman-med-teater-prego-kulturnatten-biljetter-1984912",
-    "about": "Snabbt, skruvat och fullständigt oförutsägbart - precis som livet självt! Improvisationsteater med Teater Prego på Kulturnatten är ett måste.\r\n\r\nFilm- och teatermannen Ingmar Bergman är känd för att ha haft mycket bestämda konstnärliga idéer och att det var hans vilja som gällde. Vad händer när ett gäng improvisatörer släpps fria att göra precis vad de vill med Bergmans estetik?\r\n\r\nVälkomna att uppleva när Teater Prego kastar sig in i denna oändliga värld av människor, demoner, miljöer, tidsåldrar, ljus och skuggor. Ett är säkert. Det blir Bergman, såsom Bergman inte vill ha det.\r\n\r\n*** 21.00 Ingmar - improviserad Bergman med Teater Prego***\r\n*** 22.15 Improteater med Teater Prego ***\r\n -------- \r\nSprakateatern ligger på Salagatan 24 (bredvid Vaksala torg). Det är ett väldigt begränsat antal platser och där finns ingen servering. Har du några särskilda tillgänglighetsbehov så hör av dig till Teater Prego för mer information.\r\n -------- \r\nTeater Prego är en av Sveriges mest rutinerade improvisationsgrupper. De har sedan starten 2009 spelat runt om i Sverige och på internationella festivaler men också grundat en av improvärldens mest omtyckta festivaler: SWIMP - Sweden International Improv Festival. Under sexton år har de underhållit publiken under Kulturnatten på Reginateatern, och nu tar de improsuccén till Sprakateatern. Deras Kulturnattssuccé får du inte missa!",
+    "about": "Snabbt, skruvat och fullständigt oförutsägbart - precis som livet självt! Improvisationsteater med Teater Prego på Kulturnatten är ett måste.\n\nFilm- och teatermannen Ingmar Bergman är känd för att ha haft mycket bestämda konstnärliga idéer och att det var hans vilja som gällde. Vad händer när ett gäng improvisatörer släpps fria att göra precis vad de vill med Bergmans estetik?\n\nVälkomna att uppleva när Teater Prego kastar sig in i denna oändliga värld av människor, demoner, miljöer, tidsåldrar, ljus och skuggor. Ett är säkert. Det blir Bergman, såsom Bergman inte vill ha det.\n\n*** 21.00 Ingmar - improviserad Bergman med Teater Prego***\n*** 22.15 Improteater med Teater Prego ***\n -------- \nSprakateatern ligger på Salagatan 24 (bredvid Vaksala torg). Det är ett väldigt begränsat antal platser och där finns ingen servering. Har du några särskilda tillgänglighetsbehov så hör av dig till Teater Prego för mer information.\n -------- \nTeater Prego är en av Sveriges mest rutinerade improvisationsgrupper. De har sedan starten 2009 spelat runt om i Sverige och på internationella festivaler men också grundat en av improvärldens mest omtyckta festivaler: SWIMP - Sweden International Improv Festival. Under sexton år har de underhållit publiken under Kulturnatten på Reginateatern, och nu tar de improsuccén till Sprakateatern. Deras Kulturnattssuccé får du inte missa! \n\nKostnad: 160 kr ungdom tom 26 år, 250 kr ordinarie.",
     "locationId": "aaaaaaaa-bbbb-cccc-8732-eab39171a002",
     "locationAlias": "Sprakateatern",
     "streetAddress": "Salagatan 24",
     "isCancelled": false,
     "isForChildren": false,
-    "isFree": true,
+    "isFree": false,
     "price": null,
     "coordinates": {
       "latitude": 59.8621834,
@@ -30963,10 +30963,10 @@
     ],
     "accessibilityNames": [],
     "created": 1788276962619,
-    "updated": 1788284019971,
+    "updated": 1788423708071,
     "status": "updated",
-    "sortKeyTime": 665,
-    "sortKeyUpdated": 276
+    "sortKeyTime": 666,
+    "sortKeyUpdated": 16
   },
   {
     "type": "subEvent",
@@ -31446,5 +31446,146 @@
     "status": "new",
     "sortKeyTime": 4,
     "sortKeyUpdated": 1
+  },
+  {
+    "type": "subEvent",
+    "id": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c_BoksamtalmedHenrikVenantUppsalaMusikarkivSkivbolagetHeartworkRecordsgrundadesavHenrikVenantsomvarennyckelpersonpaskanskarockscenenunderpunkochpostpunkarenBokenVikanintedoHenrikVenantHeartworkRecordsochpunksceneniMalmoLundberattarhelahistorien_1789228800000",
+    "parentEventId": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c",
+    "parentTitle": "Öppet hus på Fyriskällan",
+    "title": "Boksamtal med Henrik Venant & Uppsala Musikarkiv. Skivbolaget Heartwork Records grundades av Henrik Venant som var en nyckelperson på skånska rockscenen under punkoch postpunkåren. Boken ”Vi kan inte dö – Henrik Venant, Heartwork Records och punkscenen i Malmö/Lund” berättar hela historien.",
+    "startTimeText": "18.00",
+    "endTimeText": "19.00",
+    "startTime": "2026-09-12T16:00:00+00:00",
+    "endTime": "2026-09-12T17:00:00+00:00",
+    "checked": 1788423708071,
+    "organizer": "Fyriskällan",
+    "webpage": "",
+    "about": "Program:\n14.00-19.00 Bygg ditt eget kvarter \nHämta inspiration från historien och bygg hus, träd och miljöer med hjälp av färdigmönstrade pappersmodeller. Klipp, klistra, smycka och måla. Målgrupp: barn och vuxna.\n\n14.00-16.00 Prova-på-workshop i släktforskning. Är du nyfiken på din släkt? Björklingebygdens släktforskarförening är på plats för att svara på frågor och hjälpa dig att komma igång med din släktforskning. \n\n14.30-15.30 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\n16.00-16.45 Visning av valaffischer. Jenny Jansson och Mattias Sigfridsson från Statsvetenskapliga institutionen berättar om valaffischer, politiska språket och partibudskap. \n\n17.00-17.45 Hågahögen – Svearikets vagga\nAnders Kaliff, professor i arkeologi, berättar om Hågahögen med utgångspunkt från sin bok Håga, kung Björn och Svearikets vagga: arkeologi i myternas gränsland.\n\n18.00-19.00 Boksamtal med Henrik Venant & Uppsala Musikarkiv. Skivbolaget Heartwork Records grundades av Henrik Venant som var en nyckelperson på skånska rockscenen under punk- och postpunkåren. Boken ”Vi kan inte dö – Henrik Venant, Heartwork Records och punkscenen i Malmö/Lund” berättar hela historien.\n\n18.00-19.00 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\n\n\nLivemusik i samarbete med Uppsala Musikarkiv: \n19.30 Bränneriet\nNybildat Uppsala-band som enligt en kritiker spelar ”funk utan att det är funk”. Med ett ålderspann mellan 17 och 55 i kvintetten blandas erfarenhet med barnsliga infall. Bränneriet består av Fredrik Hardenborg, Alexis Hardenborg, Lasse Blom, Rolf Staflin, Joel Svensson och Johannes Berjlund.\n\n21.00 TT Reuter\nTT Reuter tog avstamp i den svenska punkexplosionen 1979, men sökte sig snabbt bortom punkens ramar. Kantiga gitarrer, mörk intensitet och kompromisslös experimentlusta gav bandet ett helt eget uttryck och en plats bland den svenska postpunkens mest särpräglade namn. Två studioalbum och ett livealbum följde innan bandet upplöstes 1981. Under 2010-talet återvände TT Reuter till scenen, och 2021 kom bandets fjärde album. \nPå Kulturnatten blir spelningen också något av en hemkomst. Sångaren och grundaren Henrik Venant föddes i Uppsala, och med två Uppsalabor i dagens sättning finns det gott om lokala trådar i TT Reuter. \nTT Reuter idag: Henrik Venant – sång, gitarr,Erik Flodén – gitarr, sång, Mathias Rask-Andersen – bas, sång och Jonas Eriksson Slove – trummor.\n\nUnder dagen även utställning om rösträtt och lokalhistorisk bokrea.",
+    "locationId": "aaaaaaaa-bbbb-cccc-8732-eab39171a002",
+    "locationAlias": "Fyriskällan",
+    "streetAddress": "S:t Olofsgatan 15",
+    "isCancelled": false,
+    "isForChildren": true,
+    "isFree": true,
+    "price": null,
+    "coordinates": {
+      "latitude": 59.8608961,
+      "longitude": 17.6356582
+    },
+    "url": "https://kulturnatten.uppsala.se/program/event/?externalId=b979cd7e-e10c-4e1b-9f8f-52480dcf838c",
+    "categoryNames": [
+      "Workshop och prova på",
+      "Öppet hus och visning"
+    ],
+    "languageNames": [
+      "Svenska"
+    ],
+    "locationNames": [
+      "Inomhus"
+    ],
+    "accessibilityNames": [
+      "Toalett tillgänglig med rullstol",
+      "Tillgänglighet anpassad för rullstol",
+      "God miljö för hörselskadade",
+      "Barnvagnsvänligt"
+    ],
+    "created": 1788423708071,
+    "updated": 1788423708071,
+    "status": "new",
+    "sortKeyTime": 513,
+    "sortKeyUpdated": 7
+  },
+  {
+    "type": "subEvent",
+    "id": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c_Branneriet_1789234200000",
+    "parentEventId": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c",
+    "parentTitle": "Öppet hus på Fyriskällan",
+    "title": "Bränneriet",
+    "startTimeText": "19.30",
+    "endTimeText": null,
+    "startTime": "2026-09-12T17:30:00+00:00",
+    "endTime": null,
+    "checked": 1788423708071,
+    "organizer": "Fyriskällan",
+    "webpage": "",
+    "about": "Program:\n14.00-19.00 Bygg ditt eget kvarter \nHämta inspiration från historien och bygg hus, träd och miljöer med hjälp av färdigmönstrade pappersmodeller. Klipp, klistra, smycka och måla. Målgrupp: barn och vuxna.\n\n14.00-16.00 Prova-på-workshop i släktforskning. Är du nyfiken på din släkt? Björklingebygdens släktforskarförening är på plats för att svara på frågor och hjälpa dig att komma igång med din släktforskning. \n\n14.30-15.30 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\n16.00-16.45 Visning av valaffischer. Jenny Jansson och Mattias Sigfridsson från Statsvetenskapliga institutionen berättar om valaffischer, politiska språket och partibudskap. \n\n17.00-17.45 Hågahögen – Svearikets vagga\nAnders Kaliff, professor i arkeologi, berättar om Hågahögen med utgångspunkt från sin bok Håga, kung Björn och Svearikets vagga: arkeologi i myternas gränsland.\n\n18.00-19.00 Boksamtal med Henrik Venant & Uppsala Musikarkiv. Skivbolaget Heartwork Records grundades av Henrik Venant som var en nyckelperson på skånska rockscenen under punk- och postpunkåren. Boken ”Vi kan inte dö – Henrik Venant, Heartwork Records och punkscenen i Malmö/Lund” berättar hela historien.\n\n18.00-19.00 Visning av stadsarkivets och folkrörelsearkivets arkivmagasin. \n\n\n\nLivemusik i samarbete med Uppsala Musikarkiv: \n19.30 Bränneriet\nNybildat Uppsala-band som enligt en kritiker spelar ”funk utan att det är funk”. Med ett ålderspann mellan 17 och 55 i kvintetten blandas erfarenhet med barnsliga infall. Bränneriet består av Fredrik Hardenborg, Alexis Hardenborg, Lasse Blom, Rolf Staflin, Joel Svensson och Johannes Berjlund.\n\n21.00 TT Reuter\nTT Reuter tog avstamp i den svenska punkexplosionen 1979, men sökte sig snabbt bortom punkens ramar. Kantiga gitarrer, mörk intensitet och kompromisslös experimentlusta gav bandet ett helt eget uttryck och en plats bland den svenska postpunkens mest särpräglade namn. Två studioalbum och ett livealbum följde innan bandet upplöstes 1981. Under 2010-talet återvände TT Reuter till scenen, och 2021 kom bandets fjärde album. \nPå Kulturnatten blir spelningen också något av en hemkomst. Sångaren och grundaren Henrik Venant föddes i Uppsala, och med två Uppsalabor i dagens sättning finns det gott om lokala trådar i TT Reuter. \nTT Reuter idag: Henrik Venant – sång, gitarr,Erik Flodén – gitarr, sång, Mathias Rask-Andersen – bas, sång och Jonas Eriksson Slove – trummor.\n\nUnder dagen även utställning om rösträtt och lokalhistorisk bokrea.",
+    "locationId": "aaaaaaaa-bbbb-cccc-8732-eab39171a002",
+    "locationAlias": "Fyriskällan",
+    "streetAddress": "S:t Olofsgatan 15",
+    "isCancelled": false,
+    "isForChildren": true,
+    "isFree": true,
+    "price": null,
+    "coordinates": {
+      "latitude": 59.8608961,
+      "longitude": 17.6356582
+    },
+    "url": "https://kulturnatten.uppsala.se/program/event/?externalId=b979cd7e-e10c-4e1b-9f8f-52480dcf838c",
+    "categoryNames": [
+      "Workshop och prova på",
+      "Öppet hus och visning"
+    ],
+    "languageNames": [
+      "Svenska"
+    ],
+    "locationNames": [
+      "Inomhus"
+    ],
+    "accessibilityNames": [
+      "Toalett tillgänglig med rullstol",
+      "Tillgänglighet anpassad för rullstol",
+      "God miljö för hörselskadade",
+      "Barnvagnsvänligt"
+    ],
+    "created": 1788423708071,
+    "updated": 1788423708071,
+    "status": "new",
+    "sortKeyTime": 588,
+    "sortKeyUpdated": 10
+  },
+  {
+    "type": "subEvent",
+    "id": "a50905f9-3412-4b41-b81f-fbe13950d07b_Branneriet_1789234200000",
+    "parentEventId": "a50905f9-3412-4b41-b81f-fbe13950d07b",
+    "parentTitle": "Livemusik med Bränneriet och TT Reuter",
+    "title": "Bränneriet",
+    "startTimeText": "19.30",
+    "endTimeText": null,
+    "startTime": "2026-09-12T17:30:00+00:00",
+    "endTime": null,
+    "checked": 1788423708071,
+    "organizer": "Fyriskällan",
+    "webpage": "",
+    "about": "Livemusik i samarbete med Uppsala Musikarkiv: \n\n19.30 Bränneriet\nNybildat Uppsala-band som enligt en kritiker spelar ”funk utan att det är funk”. Med ett ålderspann mellan 17 och 55 i kvintetten blandas erfarenhet med barnsliga infall. Bränneriet består av Fredrik Hardenborg, Alexis Hardenborg, Lasse Blom, Rolf Staflin, Joel Svensson och Johannes Berjlund.\n\n21.00 TT Reuter\nTT Reuter tog avstamp i den svenska punkexplosionen 1979, men sökte sig snabbt bortom punkens ramar. Kantiga gitarrer, mörk intensitet och kompromisslös experimentlusta gav bandet ett helt eget uttryck och en plats bland den svenska postpunkens mest särpräglade namn. Två studioalbum och ett livealbum följde innan bandet upplöstes 1981. Under 2010-talet återvände TT Reuter till scenen, och 2021 kom bandets fjärde album. \nPå Kulturnatten blir spelningen också något av en hemkomst. Sångaren och grundaren Henrik Venant föddes i Uppsala, och med två Uppsalabor i dagens sättning finns det gott om lokala trådar i TT Reuter. \nTT Reuter idag: Henrik Venant – sång, gitarr,Erik Flodén – gitarr, sång, Mathias Rask-Andersen – bas, sång och Jonas Eriksson Slove – trummor.",
+    "locationId": "aaaaaaaa-bbbb-cccc-8732-eab39171a002",
+    "locationAlias": "Fyriskällan",
+    "streetAddress": "S:t Olofsgatan 15",
+    "isCancelled": false,
+    "isForChildren": false,
+    "isFree": true,
+    "price": null,
+    "coordinates": {
+      "latitude": 59.8608961,
+      "longitude": 17.6356582
+    },
+    "url": "https://kulturnatten.uppsala.se/program/event/?externalId=a50905f9-3412-4b41-b81f-fbe13950d07b",
+    "categoryNames": [
+      "Musik"
+    ],
+    "languageNames": [
+      "Svenska",
+      "Evenemanget kräver inga språkkunskaper"
+    ],
+    "locationNames": [
+      "Inomhus"
+    ],
+    "accessibilityNames": [
+      "Toalett tillgänglig med rullstol"
+    ],
+    "created": 1788423708071,
+    "updated": 1788423708071,
+    "status": "new",
+    "sortKeyTime": 589,
+    "sortKeyUpdated": 11
   }
 ]
