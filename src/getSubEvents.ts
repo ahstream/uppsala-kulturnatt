@@ -57,7 +57,7 @@ function subEventId(parentEvent: any, subEvent: SubEvent) {
   return `${parentId}_${title}_${timestampFromStartTime(subEvent.startTime)}`;
 }
 
-export function getSubEvents(ev: any): SubEvent[] {
+export function getSubEvents(ev: any, allEvents: any[] = []): SubEvent[] {
   const about = ev && typeof ev.about === 'string' ? ev.about : undefined;
   if (!about) return [];
 
@@ -225,5 +225,25 @@ export function getSubEvents(ev: any): SubEvent[] {
     }
   }
 
-  return subs;
+  const eventTitle = ev && typeof ev.title === 'string' ? ev.title.trim() : '';
+  const eventStartTime = ev && typeof ev.startTime === 'string' ? ev.startTime : '';
+  const eventId = ev && (ev.id ?? ev.value) != null ? String(ev.id ?? ev.value) : '';
+  return subs.filter((sub) => {
+    const duplicateEvent = allEvents.find((otherEvent) => {
+      if (!otherEvent || otherEvent.type === 'subEvent') return false;
+      const otherEventId = (otherEvent.id ?? otherEvent.value) != null ? String(otherEvent.id ?? otherEvent.value) : '';
+      return otherEventId !== eventId && typeof otherEvent.title === 'string' && otherEvent.title.trim() === sub.title.trim() && typeof otherEvent.startTime === 'string' && otherEvent.startTime === sub.startTime;
+    });
+    if (duplicateEvent) {
+      console.log('Removed duplicate subevent:', {
+        title: sub.title,
+        startTime: sub.startTime,
+        parentEventId: ev.id ?? ev.value,
+        matchingEventId: duplicateEvent.id ?? duplicateEvent.value,
+        matchingEvent: duplicateEvent,
+      });
+      return false;
+    }
+    return true;
+  });
 }

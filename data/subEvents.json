@@ -529,17 +529,6 @@
   },
   {
     "type": "subEvent",
-    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_ShowkorenHarmonyHeights_1789209600000",
-    "parentEventId": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d",
-    "parentTitle": "Livemusik på S:t Eriks torg",
-    "title": "Showkören Harmony Heights",
-    "startTimeText": "12:40",
-    "endTimeText": "13:10",
-    "startTime": "2026-09-12T10:40:00+00:00",
-    "endTime": "2026-09-12T11:10:00+00:00"
-  },
-  {
-    "type": "subEvent",
     "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_DonatelloDisciples_1789212600000",
     "parentEventId": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d",
     "parentTitle": "Livemusik på S:t Eriks torg",
@@ -562,61 +551,6 @@
   },
   {
     "type": "subEvent",
-    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_Highwater_1789218600000",
-    "parentEventId": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d",
-    "parentTitle": "Livemusik på S:t Eriks torg",
-    "title": "Highwater",
-    "startTimeText": "15:10",
-    "endTimeText": "15:40",
-    "startTime": "2026-09-12T13:10:00+00:00",
-    "endTime": "2026-09-12T13:40:00+00:00"
-  },
-  {
-    "type": "subEvent",
-    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_Rootslagen_1789221600000",
-    "parentEventId": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d",
-    "parentTitle": "Livemusik på S:t Eriks torg",
-    "title": "Rootslagen",
-    "startTimeText": "16:00",
-    "endTimeText": "16:30",
-    "startTime": "2026-09-12T14:00:00+00:00",
-    "endTime": "2026-09-12T14:30:00+00:00"
-  },
-  {
-    "type": "subEvent",
-    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_DieSchwedenbomben_1789224600000",
-    "parentEventId": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d",
-    "parentTitle": "Livemusik på S:t Eriks torg",
-    "title": "Die Schwedenbomben",
-    "startTimeText": "16:50",
-    "endTimeText": "17:20",
-    "startTime": "2026-09-12T14:50:00+00:00",
-    "endTime": "2026-09-12T15:20:00+00:00"
-  },
-  {
-    "type": "subEvent",
-    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_Ronster_1789227600000",
-    "parentEventId": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d",
-    "parentTitle": "Livemusik på S:t Eriks torg",
-    "title": "Ronster",
-    "startTimeText": "17:40",
-    "endTimeText": "18:10",
-    "startTime": "2026-09-12T15:40:00+00:00",
-    "endTime": "2026-09-12T16:10:00+00:00"
-  },
-  {
-    "type": "subEvent",
-    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_ElliTheBlackShades_1789230600000",
-    "parentEventId": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d",
-    "parentTitle": "Livemusik på S:t Eriks torg",
-    "title": "Elli & The Black Shades",
-    "startTimeText": "18:30",
-    "endTimeText": "19:00",
-    "startTime": "2026-09-12T16:30:00+00:00",
-    "endTime": "2026-09-12T17:00:00+00:00"
-  },
-  {
-    "type": "subEvent",
     "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_TheGloryfires_1789233600000",
     "parentEventId": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d",
     "parentTitle": "Livemusik på S:t Eriks torg",
@@ -625,50 +559,6 @@
     "endTimeText": "19:50",
     "startTime": "2026-09-12T17:20:00+00:00",
     "endTime": "2026-09-12T17:50:00+00:00"
-  },
-  {
-    "type": "subEvent",
-    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_ARDISCo_1789236600000",
-    "parentEventId": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d",
-    "parentTitle": "Livemusik på S:t Eriks torg",
-    "title": "ARDIS & Co",
-    "startTimeText": "20:10",
-    "endTimeText": "20:40",
-    "startTime": "2026-09-12T18:10:00+00:00",
-    "endTime": "2026-09-12T18:40:00+00:00"
-  },
-  {
-    "type": "subEvent",
-    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_ARSADI_1789239600000",
-    "parentEventId": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d",
-    "parentTitle": "Livemusik på S:t Eriks torg",
-    "title": "ARSADI",
-    "startTimeText": "21:00",
-    "endTimeText": "21:30",
-    "startTime": "2026-09-12T19:00:00+00:00",
-    "endTime": "2026-09-12T19:30:00+00:00"
-  },
-  {
-    "type": "subEvent",
-    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_Starchild_1789242600000",
-    "parentEventId": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d",
-    "parentTitle": "Livemusik på S:t Eriks torg",
-    "title": "Starchild",
-    "startTimeText": "21:50",
-    "endTimeText": "22:20",
-    "startTime": "2026-09-12T19:50:00+00:00",
-    "endTime": "2026-09-12T20:20:00+00:00"
-  },
-  {
-    "type": "subEvent",
-    "id": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d_TimeForAction_1789245600000",
-    "parentEventId": "6be8ccd8-17a0-4f43-9719-5fe3fe62855d",
-    "parentTitle": "Livemusik på S:t Eriks torg",
-    "title": "Time For Action",
-    "startTimeText": "22:40",
-    "endTimeText": "23:10",
-    "startTime": "2026-09-12T20:40:00+00:00",
-    "endTime": "2026-09-12T21:10:00+00:00"
   },
   {
     "type": "subEvent",
@@ -1736,17 +1626,6 @@
     "endTimeText": null,
     "startTime": "2026-09-12T21:00:00+00:00",
     "endTime": null
-  },
-  {
-    "type": "subEvent",
-    "id": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c_Byggdittegetkvarter_1789214400000",
-    "parentEventId": "b979cd7e-e10c-4e1b-9f8f-52480dcf838c",
-    "parentTitle": "Öppet hus på Fyriskällan",
-    "title": "Bygg ditt eget kvarter",
-    "startTimeText": "14.00",
-    "endTimeText": "19.00",
-    "startTime": "2026-09-12T12:00:00+00:00",
-    "endTime": "2026-09-12T17:00:00+00:00"
   },
   {
     "type": "subEvent",

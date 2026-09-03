@@ -133,7 +133,7 @@ header {
 .top-actions {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 3px;
 }
 
 .login-button,
@@ -209,6 +209,11 @@ header {
   padding: 8px;
   border: 1px solid var(--border-subtle);
   border-radius: 4px;
+  background: dimgray;
+}
+
+body[data-theme='light'] .filter-search-section-inner {
+  background: lightgray;
 }
 
 .primary-filters {
@@ -493,7 +498,7 @@ body[data-theme='light'] .card.cancelled {
 }
 
 .event-title {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   font-weight: 700;
 }
 

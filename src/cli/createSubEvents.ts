@@ -64,7 +64,7 @@ async function main() {
       process.exit(2);
       return;
     }
-    const subs = getSubEvents(ev);
+    const subs = getSubEvents(ev, events);
     if (!subs || subs.length === 0) {
       nonSubs.push({ type: 'event', title: ev.title ?? '', about: ev.about ?? '' });
     }
@@ -74,7 +74,7 @@ async function main() {
     }
   } else {
     for (const ev of events) {
-      const subs = getSubEvents(ev);
+      const subs = getSubEvents(ev, events);
       if (!subs || subs.length === 0) {
         nonSubs.push({ type: 'event', title: ev.title ?? '', about: ev.about ?? '' });
       }

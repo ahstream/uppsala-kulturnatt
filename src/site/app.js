@@ -1,4 +1,5 @@
 const DATA_PATH = '/data/packedEvents.json';
+const debugEnabled = new URLSearchParams(window.location.search).get('debug') === 'true';
 
 const $header = document.querySelector('header');
 const $status = document.getElementById('status');
@@ -36,6 +37,7 @@ const tabs = {
   finished: document.getElementById('tab-finished'),
   unfinished: document.getElementById('tab-unfinished'),
 };
+tabs.subevent.hidden = !debugEnabled;
 const multiFilters = [
   { menu: document.getElementById('category-menu'), options: document.getElementById('category-options'), summary: document.getElementById('category-summary'), eventProperty: 'categoryNames', allLabel: 'Alla kategorier', selectedLabel: 'categories' },
   { menu: document.getElementById('language-menu'), options: document.getElementById('language-options'), summary: document.getElementById('language-summary'), eventProperty: 'languageNames', allLabel: 'Alla språk', selectedLabel: 'languages' },
@@ -690,15 +692,9 @@ function createEventDetails(ev, eventTitle) {
     detailsList.appendChild(source);
   }
 
-  if (ev.type === 'subEvent') {
-    const startsAt = document.createElement('li');
-    startsAt.textContent = `Startar: ${formatLocalDateTime(ev.startTime) ?? ev.startTime}`;
-    detailsList.appendChild(startsAt);
-
-    const endsAt = document.createElement('li');
-    endsAt.textContent = `Slutar: ${ev.endTime ? (formatLocalDateTime(ev.endTime) ?? ev.endTime) : 'Ej angivet'}`;
-    detailsList.appendChild(endsAt);
-  }
+  const type = document.createElement('li');
+  type.textContent = `Typ: ${ev.type === 'subEvent' ? 'Del av evenemang' : 'Evenemang'}`;
+  detailsList.appendChild(type);
 
   const updated = formatLocalDateTime(ev.updated);
   if (ev.startTime) {
@@ -718,7 +714,7 @@ function createEventDetails(ev, eventTitle) {
   }
 
   const checked = formatLocalDateTime(ev.checked);
-  if (checked) {
+  if (debugEnabled && checked) {
     const checkedAt = document.createElement('li');
     checkedAt.textContent = `Kontrollerad: ${checked}`;
     detailsList.appendChild(checkedAt);
