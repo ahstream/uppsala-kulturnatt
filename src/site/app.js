@@ -59,6 +59,8 @@ let programSortMode = 'start';
 let hideFinishedEvents = false;
 let firebaseAuth = null;
 let firebaseUser = null;
+let settingsDocument = null;
+let cloudSyncTimer = null;
 let filtersOpenedAt = 0;
 let lastScrollY = window.scrollY;
 let stickyDownScrollDistance = 0;
@@ -73,6 +75,7 @@ function setTheme(theme, persist = true) {
   const label = isLight ? 'Byt till mörkt läge' : 'Byt till ljust läge';
   $themeToggle.setAttribute('aria-label', label);
   $themeToggle.title = label;
+  if (persist) scheduleCloudSettingsSync();
 }
 
 const savedTheme = localStorage.getItem('theme');
@@ -262,6 +265,15 @@ function loadFavorites() {
 }
 function saveFavorites(arr) {
   localStorage.setItem('favorites', JSON.stringify(arr));
+  scheduleCloudSettingsSync();
+}
+
+function localSettings() {
+  return {
+    theme: document.body.dataset.theme,
+    favorites: loadFavorites(),
+    hideFinishedEvents,
+  };
 }
 
 function applySettings(settings) {
@@ -272,6 +284,38 @@ function applySettings(settings) {
     localStorage.setItem('hideFinishedEvents', String(hideFinishedEvents));
   }
   updateFinishedVisibilityToggle();
+}
+
+function scheduleCloudSettingsSync() {
+  if (!settingsDocument) return;
+  window.clearTimeout(cloudSyncTimer);
+  cloudSyncTimer = window.setTimeout(() => {
+    settingsDocument.set(localSettings(), { merge: true }).catch((error) => {
+      console.error('Firebase settings sync failed:', error);
+      $status.textContent = 'Inställningarna kunde inte synkroniseras till Firebase.';
+    });
+  }, 300);
+}
+
+async function syncSettingsWithFirebase() {
+  if (!settingsDocument) return;
+  try {
+    const snapshot = await settingsDocument.get();
+    const local = localSettings();
+    const remote = snapshot.exists ? snapshot.data() : null;
+    if (remote) {
+      applySettings({
+        ...remote,
+        favorites: [...new Set([...(Array.isArray(remote.favorites) ? remote.favorites : []), ...local.favorites])],
+      });
+    }
+    await settingsDocument.set(localSettings(), { merge: true });
+    updateTabCounts();
+    setActive(activeTab);
+  } catch (error) {
+    console.error('Firebase settings sync failed:', error);
+    $status.textContent = 'Inställningarna kunde inte synkroniseras till Firebase.';
+  }
 }
 
 function showAuthMessage(message = '') {
@@ -294,7 +338,12 @@ function initFirebaseAuthentication() {
   try {
     firebase.initializeApp(FIREBASE_CONFIG);
     firebaseAuth = firebase.auth();
-    firebaseAuth.onAuthStateChanged(updateAuthenticationUi);
+    const database = firebase.firestore();
+    firebaseAuth.onAuthStateChanged(async (user) => {
+      updateAuthenticationUi(user);
+      settingsDocument = user ? database.collection('users').doc(user.uid) : null;
+      if (user) await syncSettingsWithFirebase();
+    });
   } catch (error) {
     console.error('Firebase initialization failed:', error);
     $loginButton.disabled = true;
@@ -1018,6 +1067,7 @@ $tabSelect.addEventListener('change', () => setActive($tabSelect.value));
 $finishedVisibilityToggle.addEventListener('click', () => {
   hideFinishedEvents = !hideFinishedEvents;
   localStorage.setItem('hideFinishedEvents', String(hideFinishedEvents));
+  scheduleCloudSettingsSync();
   updateFinishedVisibilityToggle();
   updateTabCounts();
   setActive(activeTab);
@@ -1066,7 +1116,9 @@ $authForm.addEventListener('submit', async (event) => {
 $googleLoginButton.addEventListener('click', async () => {
   if (!firebaseAuth) return;
   try {
-    await firebaseAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    const provider = new firebase.auth.GoogleAuthProvider();
+    provider.setCustomParameters({ prompt: 'select_account' });
+    await firebaseAuth.signInWithPopup(provider);
     $authDialog.close();
   } catch (error) {
     console.error('Firebase Google authentication failed:', error);
