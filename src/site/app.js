@@ -486,7 +486,7 @@ function updateTabCounts() {
     if (!isCancelled && Number.isFinite(event.startMs) && event.startMs > now + SOON_EVENT_WINDOW_MS) laterCount += 1;
   }
 
-  tabs.program.textContent = `\u{1F4C5} Alla evenemang (${activeCount})`;
+  tabs.program.textContent = `\u{1F4C5} Alla (${activeCount})`;
   tabs.program.title = `Alla evenemang (${activeCount} st)`;
   tabs.cancelled.textContent = `\u{1F6AB} Inställda (${cancelledCount})`;
   tabs.cancelled.title = `Inställda evenemang (${cancelledCount} st)`;
@@ -731,6 +731,10 @@ function closeFilters() {
   $showFilters.setAttribute('aria-expanded', 'false');
   $showFilters.setAttribute('aria-pressed', 'false');
   updateShowFiltersButton();
+}
+
+function clearActiveFocus() {
+  if (document.activeElement instanceof HTMLElement) document.activeElement.blur();
 }
 
 function positionFiltersDialog() {
@@ -1304,6 +1308,7 @@ $showFilters.addEventListener('click', () => {
   }
   $filterSearchSection.showModal();
   positionFiltersDialog();
+  requestAnimationFrame(clearActiveFocus);
   $showFilters.setAttribute('aria-expanded', 'true');
   $showFilters.setAttribute('aria-pressed', 'true');
   updateShowFiltersButton();

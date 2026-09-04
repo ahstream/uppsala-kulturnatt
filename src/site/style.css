@@ -409,7 +409,7 @@ header {
 
 .auth-form {
   display: grid;
-  gap: 6px;
+  gap: 11px;
   padding: 14px;
 }
 
