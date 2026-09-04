@@ -76,8 +76,6 @@ let firebaseUser = null;
 let settingsDocument = null;
 let cloudSyncTimer = null;
 updateDebugMode();
-let lastScrollY = window.scrollY;
-let stickyDownScrollDistance = 0;
 const RECENT_EVENT_WINDOW_MS = 15 * 60 * 1000;
 const SOON_EVENT_WINDOW_MS = 45 * 60 * 1000;
 
@@ -612,7 +610,6 @@ function updateSelectedFilters(filteredEventCount) {
   const selectedFilterText = `${selectedFilters.length > 0 ? selectedFilters.join(', ') : 'Inga'} + ${finishedVisibilityText}`;
   $selectedFilters.replaceChildren();
   const label = document.createElement('span');
-  label.className = 'filter-label';
   label.textContent = 'Filter:';
   const values = document.createElement('span');
   values.textContent = ` ${selectedFilterText} (${filteredEventCount})`;
@@ -964,8 +961,6 @@ function renderList(events) {
     card.classList.toggle('finished', isFinished);
 
     const timeLabel = document.createElement('span');
-    timeLabel.className = 'event-time';
-    timeLabel.classList.toggle('finished', isFinished);
     timeLabel.textContent = timeText;
 
     const eventStatus = ev.isCancelled ? '(INSTÄLLD)' : isFinished ? '(AVSLUTAD)' : null;
@@ -986,7 +981,7 @@ function renderList(events) {
     titleGroup.appendChild(titleText);
 
     const titleLine = document.createElement('div');
-    titleLine.className = 'line title-line';
+    titleLine.className = 'line';
     titleLine.appendChild(titleGroup);
 
     timeLine.prepend(timeLabel);
@@ -1099,7 +1094,7 @@ function renderList(events) {
     const updatedStatus = formatUpdatedStatus(ev);
     if (programSortMode === 'updated' && updatedStatus) {
       const updatedLine = document.createElement('div');
-      updatedLine.className = 'line secondary updated-line';
+      updatedLine.className = 'line secondary';
       updatedLine.textContent = updatedStatus;
       card.appendChild(updatedLine);
     }
@@ -1291,24 +1286,6 @@ for (const timeFilter of [$fromFilter, $toFilter]) {
     setActive(activeTab);
   });
 }
-window.addEventListener(
-  'scroll',
-  () => {
-    const currentScrollY = window.scrollY;
-    const scrollDelta = currentScrollY - lastScrollY;
-    if (Math.abs(scrollDelta) < 8) return;
-
-    if (scrollDelta < 0) {
-      stickyDownScrollDistance = 0;
-      $header.classList.remove('is-unstuck');
-    } else if (!$header.classList.contains('is-unstuck')) {
-      stickyDownScrollDistance += scrollDelta;
-      if (stickyDownScrollDistance >= window.innerHeight * 0.25) $header.classList.add('is-unstuck');
-    }
-    lastScrollY = currentScrollY;
-  },
-  { passive: true },
-);
 $clearFilters.addEventListener('click', () => {
   $search.value = '';
   $childrenFilter.checked = false;
