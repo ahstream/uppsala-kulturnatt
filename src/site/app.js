@@ -7,6 +7,9 @@ const $activeTabHeading = document.getElementById('active-tab-heading');
 const $programSortControls = document.getElementById('program-sort-controls');
 const $programSortStart = document.getElementById('program-sort-start');
 const $programSortSeen = document.getElementById('program-sort-seen');
+const $infoButton = document.getElementById('info-button');
+const $infoDialog = document.getElementById('info-dialog');
+const $infoClose = document.getElementById('info-close');
 const $finishedVisibilityToggle = document.getElementById('finished-visibility-toggle');
 const $themeToggle = document.getElementById('theme-toggle');
 const $loginButton = document.getElementById('login-button');
@@ -34,6 +37,7 @@ const $showFilters = document.getElementById('show-filters');
 const $showFiltersLabel = document.getElementById('show-filters-label');
 const $filterSearchSection = document.getElementById('filter-search-section');
 const $closeFilters = document.getElementById('close-filters');
+const $closeFiltersBottom = document.getElementById('close-filters-bottom');
 const $filterCount = document.getElementById('filter-count');
 const $selectedFilters = document.getElementById('selected-filters');
 const $tabSelect = document.getElementById('tab-select');
@@ -347,7 +351,7 @@ function openAuthenticationDialog() {
   showAuthMessage();
   $authForm.reset();
   $authDialog.showModal();
-  $authEmail.focus();
+  requestAnimationFrame(() => $googleLoginButton.focus());
 }
 
 function updateAuthenticationUi(user) {
@@ -461,6 +465,18 @@ function selectedFilterValues(filter) {
     .filter((value) => value !== 'all');
 }
 
+function displayFilterValue(filter, value) {
+  if (filter.eventProperty === 'languageNames' && String(value).toLocaleLowerCase('sv-SE').includes('kräver inga språkkunskaper')) return 'Inga språkkunskaper';
+  return value;
+}
+
+function languageFilterPriority(language) {
+  const normalizedLanguage = String(language).trim().toLocaleLowerCase('sv-SE');
+  if (normalizedLanguage === 'svenska') return 0;
+  if (normalizedLanguage === 'engelska') return 1;
+  return 2;
+}
+
 function matchesMultiFilters(event) {
   return multiFilters.every((filter) => {
     const selectedValues = selectedFilterValues(filter);
@@ -515,13 +531,14 @@ function matchesTimeFilters(event) {
 }
 
 function populateMultiFilter(filter, items) {
-  for (const item of items) {
+  const orderedItems = filter.eventProperty === 'languageNames' ? items.slice().sort((first, second) => languageFilterPriority(first?.name) - languageFilterPriority(second?.name)) : items;
+  for (const item of orderedItems) {
     if (!item?.name) continue;
     const label = document.createElement('label');
     const input = document.createElement('input');
     input.type = 'checkbox';
     input.value = item.name;
-    label.append(input, ` ${item.name}`);
+    label.append(input, ` ${displayFilterValue(filter, item.name)}`);
     filter.options.appendChild(label);
   }
 }
@@ -588,7 +605,7 @@ function updateSelectedFilters(filteredEventCount) {
   if ($adultsFilter.checked) selectedFilters.push('Vuxna');
   if ($freeFilter.checked) selectedFilters.push('Gratis');
   if ($paidFilter.checked) selectedFilters.push('Kostar');
-  for (const filter of multiFilters) selectedFilters.push(...selectedFilterValues(filter));
+  for (const filter of multiFilters) selectedFilters.push(...selectedFilterValues(filter).map((value) => displayFilterValue(filter, value)));
   if ($fromFilter.value) selectedFilters.push(`Från ${$fromFilter.value}`);
   if ($toFilter.value) selectedFilters.push(`Till ${$toFilter.value}`);
   const finishedVisibilityText = hideFinishedEvents ? 'dölj avslutade' : 'visa avslutade';
@@ -1127,6 +1144,14 @@ function setActive(tab) {
 }
 
 $tabSelect.addEventListener('change', () => setActive($tabSelect.value));
+$infoButton.addEventListener('click', () => {
+  $infoDialog.showModal();
+  requestAnimationFrame(() => $infoClose.focus());
+});
+$infoClose.addEventListener('click', () => $infoDialog.close());
+$infoDialog.addEventListener('click', (event) => {
+  if (event.target === $infoDialog) $infoDialog.close();
+});
 $finishedVisibilityToggle.addEventListener('click', () => {
   hideFinishedEvents = !hideFinishedEvents;
   localStorage.setItem('hideFinishedEvents', String(hideFinishedEvents));
@@ -1218,6 +1243,7 @@ $showFilters.addEventListener('click', () => {
   updateShowFiltersButton();
 });
 $closeFilters.addEventListener('click', closeFilters);
+$closeFiltersBottom.addEventListener('click', closeFilters);
 $filterSearchSection.addEventListener('close', () => {
   $showFilters.setAttribute('aria-expanded', 'false');
   $showFilters.setAttribute('aria-pressed', 'false');

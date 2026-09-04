@@ -26,6 +26,7 @@
       <div class="top-bar-inner">
         <a class="site-title" href="./"><img class="site-logo" src="uppsala-skyline.svg" alt="" />Uppsala Kulturnatt 2026</a>
         <div class="top-actions">
+          <button id="info-button" class="info-button" type="button" aria-label="Visa information" title="Information"><i class="fa-solid fa-circle-info" aria-hidden="true"></i></button>
           <button id="finished-visibility-toggle" class="finished-visibility-toggle" type="button" aria-label="Dölj avslutade evenemang" aria-pressed="false" title="Dölj avslutade evenemang"><i class="fa-solid fa-eye" aria-hidden="true"></i></button>
           <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Byt till ljust läge" title="Byt till ljust läge"><i class="fa-solid fa-sun" aria-hidden="true"></i></button>
           <div class="user-menu-container">
@@ -37,6 +38,18 @@
         </div>
       </div>
     </div>
+    <dialog id="info-dialog" class="info-dialog" aria-labelledby="info-dialog-title">
+      <div class="info-dialog-content">
+        <div class="info-dialog-header">
+          <h2 id="info-dialog-title">Om denna sajt</h2>
+          <button id="info-close" class="info-close" type="button" aria-label="Stäng information" title="Stäng"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+        </div>
+        <p>Här kan du söka bland evenemang under Uppsala Kulturnatt 2026, filtrera programmet och spara favoriter.</p>
+        <p>Logga in om du vill synka dina favoriter mellan flera enheter.</p>
+        <p>Ambitionen är att vara en enklare sajt för att hitta evenemang både före och under Uppsala Kulturnatt. Bland annat listas alla inslag under ett evenemang som egna evenemang.</p>
+        <p>Kontakt: hstream@gmail.com</p>
+      </div>
+    </dialog>
     <dialog id="auth-dialog" class="auth-dialog" aria-labelledby="auth-dialog-title">
       <form id="auth-form" method="dialog" class="auth-form">
         <div class="auth-dialog-header">
@@ -116,18 +129,18 @@
                 </details>
               </div>
               <div class="multi-filter">
-                <details id="location-menu" class="filter-menu">
-                  <summary id="location-summary">Alla platser</summary>
-                  <div id="location-options" class="filter-options">
-                    <label><input type="checkbox" value="all" checked /> Alla platser</label>
-                  </div>
-                </details>
-              </div>
-              <div class="multi-filter">
                 <details id="accessibility-menu" class="filter-menu">
                   <summary id="accessibility-summary">All tillgänglighet</summary>
                   <div id="accessibility-options" class="filter-options">
                     <label><input type="checkbox" value="all" checked /> All tillgänglighet</label>
+                  </div>
+                </details>
+              </div>
+              <div class="multi-filter">
+                <details id="location-menu" class="filter-menu">
+                  <summary id="location-summary">Alla platser</summary>
+                  <div id="location-options" class="filter-options">
+                    <label><input type="checkbox" value="all" checked /> Alla platser</label>
                   </div>
                 </details>
               </div>
@@ -141,6 +154,9 @@
               </div>
             </div>
           </section>
+          <div class="filter-dialog-footer">
+            <button id="close-filters-bottom" class="filter-dialog-close-bottom" type="button">Stäng</button>
+          </div>
         </div>
       </dialog>
 
