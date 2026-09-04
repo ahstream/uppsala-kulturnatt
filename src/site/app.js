@@ -1,4 +1,5 @@
 const DATA_PATH = '/data/packedEvents.json';
+const FIREBASE_SCRIPT_URLS = ['https://www.gstatic.com/firebasejs/12.18.0/firebase-app-compat.js', 'https://www.gstatic.com/firebasejs/12.18.0/firebase-auth-compat.js', 'https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore-compat.js'];
 let debugEnabled = new URL(window.location.href).searchParams.get('debug') === 'true';
 
 const $header = document.querySelector('header');
@@ -73,6 +74,7 @@ let programSortMode = 'start';
 let hideFinishedEvents = false;
 let firebaseAuth = null;
 let firebaseUser = null;
+let firebaseInitializationPromise = null;
 let settingsDocument = null;
 let cloudSyncTimer = null;
 updateDebugMode();
@@ -98,6 +100,7 @@ setTheme(initialTheme, false);
 hideFinishedEvents = localStorage.getItem('hideFinishedEvents') === 'true';
 
 function eventStartTime(event) {
+  if (Number.isFinite(event.startMs)) return event.startMs;
   return new Date(event.start || event.startTime || 0).getTime();
 }
 
@@ -106,6 +109,7 @@ function eventAssumedDuration(event) {
 }
 
 function eventEndTime(event) {
+  if (Number.isFinite(event.endMs)) return event.endMs;
   if (event.end || event.endTime) return new Date(event.end || event.endTime).getTime();
 
   const startTime = eventStartTime(event);
@@ -291,6 +295,16 @@ function saveFavorites(arr) {
   scheduleCloudSettingsSync();
 }
 
+function normalizeEvent(event) {
+  event.favoriteId = idFor(event);
+  event.startMs = eventStartTime(event);
+  event.endMs = eventEndTime(event);
+  event.startMinutes = clockMinutes(event.start || event.startTime || event.startTimeText || event.time);
+  event.endMinutes = eventEndClockMinutes(event);
+  event.searchText = [event.title, event.name, event.displayName, event.locationAlias, event.locationName, event.location].map((value) => String(value ?? '').toLocaleLowerCase('sv-SE')).join(' ');
+  return event;
+}
+
 function localSettings() {
   return {
     theme: document.body.dataset.theme,
@@ -378,15 +392,29 @@ function updateAuthenticationUi(user) {
   }
 }
 
+function loadScript(src) {
+  const existingScript = document.querySelector(`script[src="${src}"]`);
+  if (existingScript) return Promise.resolve();
+
+  return new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = src;
+    script.async = true;
+    script.onload = resolve;
+    script.onerror = () => reject(new Error(`Could not load ${src}`));
+    document.head.appendChild(script);
+  });
+}
+
 function initFirebaseAuthentication() {
-  if (typeof firebase === 'undefined' || !FIREBASE_CONFIG) {
+  if (typeof firebase === 'undefined' || typeof FIREBASE_CONFIG === 'undefined' || !FIREBASE_CONFIG) {
     $loginButton.disabled = true;
     $loginButton.title = 'Firebase är inte konfigurerat';
     return;
   }
 
   try {
-    firebase.initializeApp(FIREBASE_CONFIG);
+    if (!firebase.apps.length) firebase.initializeApp(FIREBASE_CONFIG);
     firebaseAuth = firebase.auth();
     const database = firebase.firestore();
     firebaseAuth.onAuthStateChanged(async (user) => {
@@ -401,20 +429,62 @@ function initFirebaseAuthentication() {
   }
 }
 
+async function ensureFirebaseAuthentication() {
+  if (firebaseAuth) return true;
+  if (!firebaseInitializationPromise) {
+    firebaseInitializationPromise = FIREBASE_SCRIPT_URLS.reduce((promise, src) => promise.then(() => loadScript(src)), Promise.resolve()).then(() => initFirebaseAuthentication());
+  }
+
+  try {
+    await firebaseInitializationPromise;
+  } catch (error) {
+    console.error('Firebase scripts failed to load:', error);
+    $loginButton.disabled = true;
+    $loginButton.title = 'Firebase kunde inte laddas';
+  }
+  return Boolean(firebaseAuth);
+}
+
+function scheduleFirebaseIdleLoad() {
+  const loadFirebase = () => ensureFirebaseAuthentication();
+  if ('requestIdleCallback' in window) {
+    window.requestIdleCallback(loadFirebase, { timeout: 3000 });
+  } else {
+    window.setTimeout(loadFirebase, 1500);
+  }
+}
+
 function updateTabCounts() {
   const favorites = loadFavorites();
+  const favoriteIds = new Set(favorites);
   const now = eventCurrentTime();
-  const visibleEvents = hideFinishedEvents ? allEvents.filter((event) => !isFinishedEvent(event, now)) : allEvents;
-  const activeCount = visibleEvents.filter((event) => !event.isCancelled).length;
-  const subeventCount = visibleEvents.filter((event) => event.type === 'subEvent').length;
-  const cancelledCount = allEvents.filter((event) => event.isCancelled).length;
-  const favoriteCount = visibleEvents.filter((event) => favorites.includes(idFor(event))).length;
-  const liveCount = liveEvents(visibleEvents, now).length;
-  const recentCount = eventsInWindow(visibleEvents, now - RECENT_EVENT_WINDOW_MS, now).length;
-  const soonCount = eventsInWindow(visibleEvents, now, now + SOON_EVENT_WINDOW_MS).length;
-  const laterCount = laterEvents(visibleEvents, now + SOON_EVENT_WINDOW_MS).length;
-  const finishedCount = allEvents.filter((event) => isFinishedEvent(event, now)).length;
-  const unfinishedCount = allEvents.filter((event) => !event.isCancelled && !isFinishedEvent(event, now)).length;
+  let activeCount = 0;
+  let subeventCount = 0;
+  let cancelledCount = 0;
+  let favoriteCount = 0;
+  let liveCount = 0;
+  let recentCount = 0;
+  let soonCount = 0;
+  let laterCount = 0;
+  let finishedCount = 0;
+  let unfinishedCount = 0;
+
+  for (const event of allEvents) {
+    const isCancelled = Boolean(event.isCancelled);
+    const isFinished = isFinishedEvent(event, now);
+    if (isCancelled) cancelledCount += 1;
+    if (isFinished) finishedCount += 1;
+    if (!isCancelled && !isFinished) unfinishedCount += 1;
+
+    if (hideFinishedEvents && isFinished) continue;
+    if (!isCancelled) activeCount += 1;
+    if (event.type === 'subEvent') subeventCount += 1;
+    if (favoriteIds.has(event.favoriteId)) favoriteCount += 1;
+    if (!isCancelled && Number.isFinite(event.startMs) && Number.isFinite(event.endMs) && event.startMs <= now && event.endMs >= now) liveCount += 1;
+    if (!isCancelled && Number.isFinite(event.startMs) && event.startMs >= now - RECENT_EVENT_WINDOW_MS && event.startMs <= now) recentCount += 1;
+    if (!isCancelled && Number.isFinite(event.startMs) && event.startMs >= now && event.startMs <= now + SOON_EVENT_WINDOW_MS) soonCount += 1;
+    if (!isCancelled && Number.isFinite(event.startMs) && event.startMs > now + SOON_EVENT_WINDOW_MS) laterCount += 1;
+  }
 
   tabs.program.textContent = `\u{1F4C5} Alla evenemang (${activeCount})`;
   tabs.program.title = `Alla evenemang (${activeCount} st)`;
@@ -450,11 +520,7 @@ function matchesSearch(event) {
   const searchTerm = $search.value.trim().toLocaleLowerCase('sv-SE');
   if (!searchTerm) return true;
 
-  return [event.title, event.name, event.displayName, event.locationAlias, event.locationName, event.location].some((value) =>
-    String(value ?? '')
-      .toLocaleLowerCase('sv-SE')
-      .includes(searchTerm),
-  );
+  return event.searchText.includes(searchTerm);
 }
 
 function selectedFilterValues(filter) {
@@ -521,11 +587,15 @@ function matchesTimeFilters(event) {
   const toTime = filterEndClockMinutes($toFilter.value);
   if (fromTime === null && toTime === null) return true;
 
-  const startTime = clockMinutes(event.start || event.startTime || event.startTimeText || event.time);
-  const endTime = eventEndClockMinutes(event);
+  const startTime = event.startMinutes;
+  const endTime = event.endMinutes;
   if (startTime === null || endTime === null) return false;
 
   return (fromTime === null || endTime >= fromTime) && (toTime === null || startTime <= toTime);
+}
+
+function matchesActiveFilters(event) {
+  return matchesSearch(event) && matchesChildrenFilter(event) && matchesFreeFilter(event) && matchesMultiFilters(event) && matchesTimeFilters(event);
 }
 
 function populateMultiFilter(filter, items) {
@@ -937,12 +1007,14 @@ function createEventDetails(ev, eventTitle) {
   return details.childElementCount > 0 ? details : null;
 }
 
-function renderList(events) {
+function renderList(events, favorites = loadFavorites()) {
   $list.innerHTML = '';
   if (!events || events.length === 0) {
     $list.innerHTML = '<div class="no-events">Inga evenemang</div>';
     return;
   }
+  const favoriteIds = new Set(favorites);
+  const fragment = document.createDocumentFragment();
   let openCard = null;
   for (const ev of events) {
     const card = document.createElement('div');
@@ -1022,9 +1094,8 @@ function renderList(events) {
     star.setAttribute('role', 'button');
     star.tabIndex = 0;
     star.setAttribute('aria-label', 'Toggle favorite');
-    const favs = loadFavorites();
-    const myid = idFor(ev);
-    const active = favs.includes(myid);
+    const myid = ev.favoriteId;
+    const active = favoriteIds.has(myid);
     setFavoriteIcon(star, active);
     star.setAttribute('aria-pressed', String(active));
     if (!active) star.classList.add('inactive');
@@ -1099,8 +1170,9 @@ function renderList(events) {
       card.appendChild(updatedLine);
     }
     card.appendChild(tags);
-    $list.appendChild(card);
+    fragment.appendChild(card);
   }
+  $list.appendChild(fragment);
 }
 
 function setActive(tab) {
@@ -1109,6 +1181,7 @@ function setActive(tab) {
   $activeTabHeading.textContent = `${tabIcon(tab)} ${tabTooltip(tab)}`;
   $programSortControls.hidden = tab !== 'program';
   const favs = loadFavorites();
+  const favoriteIds = new Set(favs);
   const now = eventCurrentTime();
   let events = [];
   if (tab === 'program') {
@@ -1118,7 +1191,7 @@ function setActive(tab) {
   } else if (tab === 'cancelled') {
     events = allEvents.filter((event) => event.isCancelled);
   } else if (tab === 'favorites') {
-    events = allEvents.filter((event) => favs.includes(idFor(event)));
+    events = allEvents.filter((event) => favoriteIds.has(event.favoriteId));
   } else if (tab === 'live') {
     events = liveEvents(allEvents, now);
   } else if (tab === 'recent') {
@@ -1133,9 +1206,9 @@ function setActive(tab) {
     events = allEvents.filter((event) => !event.isCancelled && !isFinishedEvent(event, now));
   }
   events = visibleByFinishedToggle(events, tab, now);
-  const filteredEvents = events.filter(matchesSearch).filter(matchesChildrenFilter).filter(matchesFreeFilter).filter(matchesMultiFilters).filter(matchesTimeFilters);
+  const filteredEvents = events.filter(matchesActiveFilters);
   updateSelectedFilters(filteredEvents.length);
-  renderList(filteredEvents);
+  renderList(filteredEvents, favs);
 }
 
 $tabSelect.addEventListener('change', () => setActive($tabSelect.value));
@@ -1159,7 +1232,7 @@ $themeToggle.addEventListener('click', () => {
   setTheme(document.body.dataset.theme === 'light' ? 'dark' : 'light');
 });
 $loginButton.addEventListener('click', async () => {
-  if (!firebaseAuth) return;
+  if (!(await ensureFirebaseAuthentication())) return;
   if (firebaseUser) {
     const willOpen = $userMenu.hidden;
     $userMenu.hidden = !willOpen;
@@ -1171,8 +1244,10 @@ $loginButton.addEventListener('click', async () => {
 });
 $syncLoginLink.addEventListener('click', (event) => {
   event.preventDefault();
-  if (!firebaseAuth || firebaseUser) return;
-  openAuthenticationDialog();
+  if (firebaseUser) return;
+  ensureFirebaseAuthentication().then((isReady) => {
+    if (isReady && !firebaseUser) openAuthenticationDialog();
+  });
 });
 $logoutButton.addEventListener('click', async () => {
   if (!firebaseAuth) return;
@@ -1186,7 +1261,7 @@ $logoutButton.addEventListener('click', async () => {
 $authClose.addEventListener('click', () => $authDialog.close());
 $authForm.addEventListener('submit', async (event) => {
   event.preventDefault();
-  if (!firebaseAuth) return;
+  if (!(await ensureFirebaseAuthentication())) return;
 
   const action = event.submitter?.value;
   const email = $authEmail.value.trim();
@@ -1205,7 +1280,7 @@ $authForm.addEventListener('submit', async (event) => {
   }
 });
 $googleLoginButton.addEventListener('click', async () => {
-  if (!firebaseAuth) return;
+  if (!(await ensureFirebaseAuthentication())) return;
   try {
     const provider = new firebase.auth.GoogleAuthProvider();
     provider.setCustomParameters({ prompt: 'select_account' });
@@ -1342,7 +1417,7 @@ async function main() {
     if (!res.ok) throw new Error('Fetch failed: ' + res.status);
     const json = await res.json();
     const events = json && Array.isArray(json.events) ? json.events : Array.isArray(json) ? json : [];
-    allEvents = events.slice().sort((a, b) => new Date(a.start || a.startTime || 0) - new Date(b.start || b.startTime || 0));
+    allEvents = events.map(normalizeEvent).sort((a, b) => a.startMs - b.startMs);
     populateMultiFilter(multiFilters[0], Array.isArray(json?.categories) ? json.categories : []);
     populateMultiFilter(multiFilters[1], Array.isArray(json?.languages) ? json.languages : []);
     populateMultiFilter(multiFilters[2], Array.isArray(json?.locations) ? json.locations : []);
@@ -1359,5 +1434,4 @@ async function main() {
   }
 }
 
-initFirebaseAuthentication();
-main();
+main().finally(scheduleFirebaseIdleLoad);

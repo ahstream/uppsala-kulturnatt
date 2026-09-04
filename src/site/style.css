@@ -864,13 +864,6 @@ body[data-theme='light'] .filter-search-section-inner {
   text-decoration: underline;
 }
 
-.clear-filter-link::before {
-  content: '|';
-  margin-right: 8px;
-  color: var(--muted);
-  text-decoration: none;
-}
-
 .clear-filter-link:hover:not(:disabled) {
   color: var(--text);
 }
