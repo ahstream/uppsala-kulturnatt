@@ -343,7 +343,7 @@ header {
   }
 
   .top-actions {
-    gap: 1px;
+    gap: 4px;
   }
 
   .info-button,
@@ -584,7 +584,7 @@ header {
   align-items: center;
   column-gap: 20px;
   row-gap: 6px;
-  margin: 4px 0 100px 0;
+  margin: 4px 0 20px 0;
   flex-wrap: wrap;
 }
 
@@ -631,7 +631,7 @@ body[data-theme='light'] .filter-search-section-inner {
   align-items: center;
   justify-content: space-between;
   margin: -8px -8px 8px;
-  padding: 4px 12px;
+  padding: 10px 14px;
   border-bottom: 1px solid var(--border-subtle);
   background: var(--detail-bg);
 }
@@ -821,6 +821,7 @@ body[data-theme='light'] .filter-search-section-inner {
 .time-filters select {
   box-sizing: border-box;
   width: 4.5rem;
+  height: 2.2rem;
   padding: 7px 9px;
   border: 1px solid var(--border);
   border-radius: 4px;
@@ -834,7 +835,7 @@ body[data-theme='light'] .filter-search-section-inner {
   padding: 4px 0 0 2px;
   overflow-wrap: anywhere;
   color: var(--muted);
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .filter-header {
@@ -882,13 +883,16 @@ body[data-theme='light'] .filter-search-section-inner {
 }
 
 .filter-menu summary {
+  box-sizing: border-box;
   min-width: 16rem;
+  height: 2.2rem;
   padding: 7px 9px;
   border: 1px solid var(--border);
   border-radius: 4px;
   background: var(--card);
   color: var(--input-text);
   cursor: pointer;
+  line-height: 1.1;
 }
 
 .filter-options {
