@@ -292,6 +292,11 @@ function saveFavorites(arr) {
   scheduleCloudSettingsSync();
 }
 
+function setStatus(message = '') {
+  $status.textContent = message;
+  $status.hidden = !message;
+}
+
 function normalizeEvent(event) {
   event.favoriteId = idFor(event);
   event.startMs = eventStartTime(event);
@@ -326,7 +331,7 @@ function scheduleCloudSettingsSync() {
   cloudSyncTimer = window.setTimeout(() => {
     settingsDocument.set(localSettings(), { merge: true }).catch((error) => {
       console.error('Firebase settings sync failed:', error);
-      $status.textContent = 'Inställningarna kunde inte synkroniseras till Firebase.';
+      setStatus('Inställningarna kunde inte synkroniseras till Firebase.');
     });
   }, 300);
 }
@@ -348,7 +353,7 @@ async function syncSettingsWithFirebase() {
     setActive(activeTab);
   } catch (error) {
     console.error('Firebase settings sync failed:', error);
-    $status.textContent = 'Inställningarna kunde inte synkroniseras till Firebase.';
+    setStatus('Inställningarna kunde inte synkroniseras till Firebase.');
   }
 }
 
@@ -1246,7 +1251,7 @@ $logoutButton.addEventListener('click', async () => {
     await firebaseAuth.signOut();
   } catch (error) {
     console.error('Firebase sign-out failed:', error);
-    $status.textContent = `Utloggningen misslyckades: ${error?.message || error}`;
+    setStatus(`Utloggningen misslyckades: ${error?.message || error}`);
   }
 });
 $authClose.addEventListener('click', () => $authDialog.close());
@@ -1401,7 +1406,7 @@ for (const filter of multiFilters) {
 
 async function main() {
   try {
-    $status.textContent = 'Loading...';
+    setStatus('Loading...');
     populateHourFilter($fromFilter);
     populateHourFilter($toFilter);
     const res = await fetch(DATA_PATH);
@@ -1417,10 +1422,10 @@ async function main() {
     updateClearFiltersButton();
     updateFilterCount();
     updateTabCounts();
-    $status.textContent = '';
+    setStatus();
     setActive('program');
   } catch (err) {
-    $status.textContent = 'Failed to load events: ' + (err && err.message ? err.message : String(err));
+    setStatus('Failed to load events: ' + (err && err.message ? err.message : String(err)));
     console.error(err);
   }
 }
