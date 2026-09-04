@@ -44,7 +44,6 @@ const $selectedFilters = document.getElementById('selected-filters');
 const $tabSelect = document.getElementById('tab-select');
 const tabs = {
   program: document.getElementById('tab-program'),
-  subevent: document.getElementById('tab-subevent'),
   cancelled: document.getElementById('tab-cancelled'),
   favorites: document.getElementById('tab-favorites'),
   live: document.getElementById('tab-live'),
@@ -57,8 +56,6 @@ const tabs = {
 
 function updateDebugMode() {
   debugEnabled = new URL(window.location.href).searchParams.get('debug') === 'true';
-  tabs.subevent.hidden = !debugEnabled;
-  if (!debugEnabled && activeTab === 'subevent') setActive('program');
 }
 
 const multiFilters = [
@@ -459,7 +456,6 @@ function updateTabCounts() {
   const favoriteIds = new Set(favorites);
   const now = eventCurrentTime();
   let activeCount = 0;
-  let subeventCount = 0;
   let cancelledCount = 0;
   let favoriteCount = 0;
   let liveCount = 0;
@@ -478,7 +474,6 @@ function updateTabCounts() {
 
     if (hideFinishedEvents && isFinished) continue;
     if (!isCancelled) activeCount += 1;
-    if (event.type === 'subEvent') subeventCount += 1;
     if (favoriteIds.has(event.favoriteId)) favoriteCount += 1;
     if (!isCancelled && Number.isFinite(event.startMs) && Number.isFinite(event.endMs) && event.startMs <= now && event.endMs >= now) liveCount += 1;
     if (!isCancelled && Number.isFinite(event.startMs) && event.startMs >= now - RECENT_EVENT_WINDOW_MS && event.startMs <= now) recentCount += 1;
@@ -488,8 +483,6 @@ function updateTabCounts() {
 
   tabs.program.textContent = `\u{1F4C5} Alla evenemang (${activeCount})`;
   tabs.program.title = `Alla evenemang (${activeCount} st)`;
-  tabs.subevent.textContent = `\u{1F4C2} Inslag i evenemang (${subeventCount})`;
-  tabs.subevent.title = `Inslag i evenemang (${subeventCount} st)`;
   tabs.cancelled.textContent = `\u{1F6AB} Inställda (${cancelledCount})`;
   tabs.cancelled.title = `Inställda evenemang (${cancelledCount} st)`;
   tabs.favorites.textContent = `\u2B50 Favoriter (${favoriteCount})`;
@@ -1186,8 +1179,6 @@ function setActive(tab) {
   let events = [];
   if (tab === 'program') {
     events = sortProgramEvents(allEvents.filter((event) => !event.isCancelled));
-  } else if (tab === 'subevent') {
-    events = allEvents.filter((event) => event.type === 'subEvent');
   } else if (tab === 'cancelled') {
     events = allEvents.filter((event) => event.isCancelled);
   } else if (tab === 'favorites') {
