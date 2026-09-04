@@ -86,13 +86,13 @@
   },
   {
     "type": "event",
-    "title": "Dansa Linedance Happy Feet",
-    "about": "Kom, dansa & upplev glädjen med Linedance. Vi dansar till alla musikstilar. Inga förkunskaper krävs"
+    "title": "Kulturnattens infocenter",
+    "about": "I infocenter kan du ställa frågor om Kulturnatten, om programmet, samt få hjälp med att skapa ett personligt schema som vi skriver ut åt dig – helt utan kostnad.\n\nKulturnatten Uppsalas Infocenter hittar du på Resecentrum.\n\nÖppettiderna för Infocenter 2026 är: \n\nFredag 11 sept, kl 10:00-19:00\nLördag 12 sept, kl 10:00-19:00\n\nVälkommen!"
   },
   {
     "type": "event",
-    "title": "Kulturnattens infocenter",
-    "about": "I infocenter kan du ställa frågor om Kulturnatten, om programmet, samt få hjälp med att skapa ett personligt schema som vi skriver ut åt dig – helt utan kostnad.\n\nKulturnatten Uppsalas Infocenter hittar du på Resecentrum.\n\nÖppettiderna för Infocenter 2026 är: \n\nFredag 11 sept, kl 10:00-19:00\nLördag 12 sept, kl 10:00-19:00\n\nVälkommen!"
+    "title": "Dansa Linedance Happy Feet",
+    "about": "Kom, dansa & upplev glädjen med Linedance. Vi dansar till alla musikstilar. Inga förkunskaper krävs"
   },
   {
     "type": "event",
@@ -476,16 +476,6 @@
   },
   {
     "type": "event",
-    "title": "Banda Verde spelar jazzmusik",
-    "about": "Banda Verde är en liten jazzkvartett med fokus på skön stämning och atmosfär. Vi spelar gärna Bossa nova, men det blir också en del annat, till exempel svenska barnvisor. Ibland glömmer vi bort att  vi ska spela i bakgrunden, bara en liten varning! "
-  },
-  {
-    "type": "event",
-    "title": "Naginata",
-    "about": "Från samurajernas slagfält till den japanska skolidrotten och dagens kampsport. Naginata är namnet både på kampsporten och den klingförsedda långa staven. Idag har naginata, med den gamla stridskonsten som grund, utvecklats till en idrottsform och stålklingan har ersatts av bambu. Naginata betonar mer den personliga utvecklingen än besegrandet av motståndaren. Naginata är en allsidig och varierad träningsform som kan utövas av folk i alla åldrar, oavsett kön. KFUM Uppsala Naginata bjuder på uppvisning och prova-på!"
-  },
-  {
-    "type": "event",
     "title": "Uppvisning av Kyudo",
     "about": "Issha Kyudo Kai visar Kyudo - pilbågens väg, det traditionella japanska bågskyttet med den karaktäristiska asymmetriska långbågen – yumi. Vi kommer under dagen visa olika ceremoniella uppvisningar i grupp samt individuellt skytte. Vi finns på plats för att svara på frågor och visar utrustningen. För den som vill finns möjlighet att prova på skjutritualen utan utrustning. Kyudo kan utövas av alla, i alla åldrar, då man använder utrustning som är anpassad efter ens egna fysiska förutsättningar."
   },
@@ -496,13 +486,23 @@
   },
   {
     "type": "event",
-    "title": "Konst av Magnus Fossum.",
-    "about": "Oljemålningar och teckningar av Magnus Fossum.\r\n\r\nVarmt välkommen!"
+    "title": "Familjeverkstad: Skapa din bästa Uppsalavy",
+    "about": "Vi samlas i museets reception och går sedan till den helt nyöppnade utställningen Uppsalavyer för att samla inspiration. Vi tittar även på utsikten som erbjuds i och utanför slottet. Vi tar med oss papper och penna ifall man vill skissa. \r\n\r\nEfter visningen fortsätter vi i verkstaden, där ni får skapa själva med inspiration från det vi sett. Fokus ligger på nyfikenhet, fantasi och att ha roligt tillsammans. Inga förkunskaper krävs – alla kan vara med! I verkstaden kommer vi sedan att vi kunna arbeta med olika material och tekniker. \r\n\r\nTina Landgren är en utbildad bildpedagog och illustratör. "
   },
   {
     "type": "event",
-    "title": "Familjeverkstad: Skapa din bästa Uppsalavy",
-    "about": "Vi samlas i museets reception och går sedan till den helt nyöppnade utställningen Uppsalavyer för att samla inspiration. Vi tittar även på utsikten som erbjuds i och utanför slottet. Vi tar med oss papper och penna ifall man vill skissa. \r\n\r\nEfter visningen fortsätter vi i verkstaden, där ni får skapa själva med inspiration från det vi sett. Fokus ligger på nyfikenhet, fantasi och att ha roligt tillsammans. Inga förkunskaper krävs – alla kan vara med! I verkstaden kommer vi sedan att vi kunna arbeta med olika material och tekniker. \r\n\r\nTina Landgren är en utbildad bildpedagog och illustratör. "
+    "title": "Banda Verde spelar jazzmusik",
+    "about": "Banda Verde är en liten jazzkvartett med fokus på skön stämning och atmosfär. Vi spelar gärna Bossa nova, men det blir också en del annat, till exempel svenska barnvisor. Ibland glömmer vi bort att  vi ska spela i bakgrunden, bara en liten varning! "
+  },
+  {
+    "type": "event",
+    "title": "Naginata",
+    "about": "Från samurajernas slagfält till den japanska skolidrotten och dagens kampsport. Naginata är namnet både på kampsporten och den klingförsedda långa staven. Idag har naginata, med den gamla stridskonsten som grund, utvecklats till en idrottsform och stålklingan har ersatts av bambu. Naginata betonar mer den personliga utvecklingen än besegrandet av motståndaren. Naginata är en allsidig och varierad träningsform som kan utövas av folk i alla åldrar, oavsett kön. KFUM Uppsala Naginata bjuder på uppvisning och prova-på!"
+  },
+  {
+    "type": "event",
+    "title": "Konst av Magnus Fossum.",
+    "about": "Oljemålningar och teckningar av Magnus Fossum.\r\n\r\nVarmt välkommen!"
   },
   {
     "type": "event",
@@ -1406,11 +1406,6 @@
   },
   {
     "type": "event",
-    "title": "Guidad tur: Drottningarnas slott",
-    "about": "I år är det 500 år sedan som Katarina Jagellonica  föddes i Polen, och det är 400 år sedan Kristina föddes i Stockholm. Flera av deras livsbanors mest dramatiska händelser skedde just här i Uppsala och runt Uppsala slott. Nu kan du få höra mer om två drottningar som båda satt sina spår i slottet och staden, spår som finns kvar än idag. Den här guidade turen tar dig med till några av dem, allt från abdikation till begravning. "
-  },
-  {
-    "type": "event",
     "title": "Interaktiv rundvandring på KMR Studios",
     "about": "Kulturnatten är här och KMR Studios vill ännu en gång bjuda in till guidade rundvandringar i Uppsalas största musikstudio – i år innefattar dessa rundvandringar även ett interaktivt, musikskapande moment! Under rundvandringen får deltagarna en exklusiv inblick i studions avancerade utrustning och arbetsprocesser, då särskilt fokus kommer att läggas på hur rumsligt ljud skapas och hanteras i en professionell miljö. Deltagarna kommer också att få möta producenter och medarbetare från KMR Studios, både när de berättar om sitt arbete, men även i ett interaktivt, musikaliskt möte: I samband med rundvandringen erbjuds möjligheten att medverka vid inspelningen av Kulturnattenlåten 2026 samt att fotograferas till singelomslaget – som blir ett stort, kollage-foto – i vår in-house fotostudio. Inga krav ställs på musikaliskt deltagande eller att bli fotograferad, utan erbjuds endast som roliga valmöjligheter – det går jättebra att följa med bara för att se studion och lyssna på vad våra medarbetare berättar om.\n\n\r\n\r\nStudion ligger på St Olofsgatan 10A, i innergården till Skandalhuset, nära både Gamla Universitetshuset och Uppsala Domkyrka.\n\n\r\n\r\nDeltagande kostar 50kr och kräver bokning som görs genom eventsidan som anges på denna sida."
   },
@@ -1418,6 +1413,11 @@
     "type": "event",
     "title": "Tänd ett ljus med Amnesty",
     "about": "Amnesty International Uppsala arrangerar en ljusmanifestation för att uppmärksamma och fira de mänskliga rättigheterna. Vi kommer också att kunna svara på era frågor om mänskliga rättigheter, Amnesty International, och våra aktiviteter i Uppsala. Kom och tänd ett ljus med oss, vi behöver dig!"
+  },
+  {
+    "type": "event",
+    "title": "Guidad tur: Drottningarnas slott",
+    "about": "I år är det 500 år sedan som Katarina Jagellonica  föddes i Polen, och det är 400 år sedan Kristina föddes i Stockholm. Flera av deras livsbanors mest dramatiska händelser skedde just här i Uppsala och runt Uppsala slott. Nu kan du få höra mer om två drottningar som båda satt sina spår i slottet och staden, spår som finns kvar än idag. Den här guidade turen tar dig med till några av dem, allt från abdikation till begravning. "
   },
   {
     "type": "event",
@@ -1776,13 +1776,13 @@
   },
   {
     "type": "event",
-    "title": "Höga toner med sopranen Irina Nyman Jönsson",
-    "about": "Missa inte en fantastisk musikupplevelse!\r\n​Lyssna till den unika och enastående koloratursopranen Irina Nyman Jönsson på Hotell Botanika. Med sin otroliga röst och ett handplockat, fängslande program bjuder hon på en konsert utöver det vanliga.\r\n​Missa inte chansen att njuta av underbara klassiska pärlor och en röst i världsklass. \r\nVarmt välkomna!"
+    "title": "Toner i trapphallen",
+    "about": "Under Uppsalas kulturnatt håller Allmänna sången återigen sin traditionsenliga trapphallskonsert i universitetshuset, denna gång i sällskap av lettiska kulturakademins kör Sōla, som kören besökte i Riga tidigare under sommaren. Tillsammans framför körerna ett program bestående av lettisk och svensk folkmusik, i traditionella som nyskrivna arrangemang, Arnold Schönbergs \"Friede auf Erden\", och mycket annat. Varmt välkomna!"
   },
   {
     "type": "event",
-    "title": "Toner i trapphallen",
-    "about": "Under Uppsalas kulturnatt håller Allmänna sången återigen sin traditionsenliga trapphallskonsert i universitetshuset, denna gång i sällskap av lettiska kulturakademins kör Sōla, som kören besökte i Riga tidigare under sommaren. Tillsammans framför körerna ett program bestående av lettisk och svensk folkmusik, i traditionella som nyskrivna arrangemang, Arnold Schönbergs \"Friede auf Erden\", och mycket annat. Varmt välkomna!"
+    "title": "Höga toner med sopranen Irina Nyman Jönsson",
+    "about": "Missa inte en fantastisk musikupplevelse!\r\n​Lyssna till den unika och enastående koloratursopranen Irina Nyman Jönsson på Hotell Botanika. Med sin otroliga röst och ett handplockat, fängslande program bjuder hon på en konsert utöver det vanliga.\r\n​Missa inte chansen att njuta av underbara klassiska pärlor och en röst i världsklass. \r\nVarmt välkomna!"
   },
   {
     "type": "event",

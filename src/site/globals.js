@@ -9,4 +9,4 @@ const FIREBASE_CONFIG = {
   appId: '1:762164855305:web:e21e965360453a2b37aed8',
 };
 
-const FAKE_TODAY_DATE = '2026-09-12';
+const FAKE_TODAY_DATE = null; // '2026-09-12';

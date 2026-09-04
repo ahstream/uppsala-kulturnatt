@@ -1,16 +1,30 @@
 <!doctype html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Uppsala Kulturnatt 2026</title>
+    <meta name="description" content="Hitta evenemang under Uppsala Kulturnatt 2026. Sök, filtrera och spara dina favoriter." />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#12323d" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href="https://uppsalakulturnatt.com/" />
+    <meta property="og:locale" content="sv_SE" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Uppsala Kulturnatt 2026" />
+    <meta property="og:description" content="Hitta evenemang under Uppsala Kulturnatt 2026. Sök, filtrera och spara dina favoriter." />
+    <meta property="og:url" content="https://uppsalakulturnatt.com/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Uppsala Kulturnatt 2026" />
+    <meta name="twitter:description" content="Hitta evenemang under Uppsala Kulturnatt 2026. Sök, filtrera och spara dina favoriter." />
+    <meta name="twitter:url" content="https://uppsalakulturnatt.com/" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="top-bar">
       <div class="top-bar-inner">
-        <a class="site-title" href="./">Uppsala Kulturnatt 2026</a>
+        <a class="site-title" href="./"><img class="site-logo" src="uppsala-skyline.svg" alt="" />Uppsala Kulturnatt 2026</a>
         <div class="top-actions">
           <button id="finished-visibility-toggle" class="finished-visibility-toggle" type="button" aria-label="Dölj avslutade evenemang" aria-pressed="false" title="Dölj avslutade evenemang"><i class="fa-solid fa-eye" aria-hidden="true"></i></button>
           <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Byt till ljust läge" title="Byt till ljust läge"><i class="fa-solid fa-sun" aria-hidden="true"></i></button>
@@ -40,7 +54,7 @@
         <button id="google-login-button" class="google-login-button" type="button"><i class="fa-brands fa-google" aria-hidden="true"></i> Fortsätt med Google</button>
       </form>
     </dialog>
-    <aside id="sync-alert" class="sync-alert" role="status" hidden><a id="sync-login-link" href="#login">Logga in</a> för att spara favoriter.</aside>
+    <aside id="sync-alert" class="sync-alert" role="status" hidden><a id="sync-login-link" href="#login">Logga in</a> för att spara favoriter</aside>
     <header>
       <select id="tab-select" class="tabs-select" aria-label="Välj vy">
         <option id="tab-program" value="program" title="xAlla evenemang (0 st)" selected>&#128197; Alla evenemang (0)</option>
@@ -126,7 +140,7 @@
       <main>
         <div id="status">Loading events…</div>
         <div class="list-subheader-row">
-          <h2 id="active-tab-heading" class="list-subheader">Alla evenemang</h2>
+          <h1 id="active-tab-heading" class="list-subheader">Alla evenemang</h1>
           <div id="program-sort-controls" class="program-sort-controls" aria-label="Sortera program">
             <span>Sortering:</span>
             <button id="program-sort-start" class="sort-option active" type="button" aria-pressed="true">Starttid</button>
