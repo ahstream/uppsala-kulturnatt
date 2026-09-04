@@ -337,6 +337,13 @@ header {
   font-size: 1.15rem;
 }
 
+.auth-help {
+  margin: -2px 0 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
 .auth-form label {
   display: grid;
   gap: 5px;
@@ -387,19 +394,20 @@ header {
   grid-template-columns: 1fr 1fr;
 }
 
-.auth-email-actions button:first-child {
+.google-login-button {
+  width: 100%;
   background: var(--accent);
   color: var(--active-tab-text);
   border-color: var(--accent);
 }
 
-.auth-email-actions button:first-child:hover {
+.google-login-button:hover {
   box-shadow: 0 2px 6px var(--card-shadow);
   filter: brightness(1.05);
 }
 
 .auth-email-actions button:not(:first-child):hover,
-.google-login-button:hover {
+.auth-email-actions button:first-child:hover {
   border-color: var(--accent-2);
   background: var(--filter-control-hover-bg);
 }
@@ -444,10 +452,6 @@ header {
   border-top: 1px solid var(--border-subtle);
 }
 
-.google-login-button {
-  width: 100%;
-}
-
 .auth-message {
   min-height: 1.2em;
   margin: -5px 0 0;
@@ -458,6 +462,8 @@ header {
 .tabs-select {
   min-width: 0;
   flex: 1 1 auto;
+  box-sizing: border-box;
+  height: 2.2rem;
   padding: 7px 9px;
   border: 1px solid var(--border);
   border-radius: 4px;
@@ -499,6 +505,12 @@ header {
 
 .filter-search-section::backdrop {
   background: rgba(2, 6, 23, 0.65);
+}
+
+@media (max-width: 640px) {
+  .filter-search-section {
+    transform: translateY(-60px);
+  }
 }
 
 @media (min-width: 641px) {
@@ -570,7 +582,7 @@ body[data-theme='light'] .filter-search-section-inner {
   flex-basis: 100%;
   align-items: center;
   gap: 8px;
-  margin-bottom: 4px;
+  margin-bottom: 0;
 }
 
 .search-field {
@@ -580,7 +592,7 @@ body[data-theme='light'] .filter-search-section-inner {
   gap: 8px;
   color: var(--muted);
   font-size: 0.95rem;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
 .search-field input {
@@ -790,7 +802,7 @@ main {
 }
 
 #status {
-  margin: 4px 0;
+  margin: 0;
   color: var(--muted);
 }
 

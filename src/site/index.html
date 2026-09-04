@@ -43,6 +43,9 @@
           <h2 id="auth-dialog-title">Logga in</h2>
           <button class="auth-close" type="button" value="cancel" aria-label="Stäng inloggning" title="Stäng"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
         </div>
+        <p class="auth-help">Logga in med ditt Google-konto eller med e-post och lösenord för att spara favoriter om du använder flera enheter.</p>
+        <button id="google-login-button" class="google-login-button" type="button"><i class="fa-brands fa-google" aria-hidden="true"></i> Fortsätt med Google</button>
+        <div class="auth-divider">eller</div>
         <label>E-post<input id="auth-email" type="email" autocomplete="email" required /></label>
         <label>Lösenord<input id="auth-password" type="password" autocomplete="current-password" minlength="6" required /></label>
         <p id="auth-message" class="auth-message" role="status" aria-live="polite"></p>
@@ -50,8 +53,6 @@
           <button type="submit" name="action" value="sign-in">Logga in</button>
           <button type="submit" name="action" value="register">Skapa konto</button>
         </div>
-        <div class="auth-divider">eller</div>
-        <button id="google-login-button" class="google-login-button" type="button"><i class="fa-brands fa-google" aria-hidden="true"></i> Fortsätt med Google</button>
       </form>
     </dialog>
     <aside id="sync-alert" class="sync-alert" role="status" hidden><a id="sync-login-link" href="#login">Logga in</a> för att spara favoriter</aside>
@@ -72,6 +73,11 @@
         <button id="show-filters" class="clear-search filter-toggle" type="button" aria-label="Visa filter" title="Visa filter" aria-expanded="false" aria-pressed="false">
           <span id="show-filters-label"><i class="fa-solid fa-filter" aria-hidden="true"></i></span> <span id="filter-count" hidden></span>
         </button>
+        <div class="search-row">
+          <label class="search-field">
+            <input id="event-search" type="search" placeholder="Sök titel eller plats" autocomplete="off" />
+          </label>
+        </div>
         <div class="filter-header">
           <div id="selected-filters" class="selected-filters" aria-live="polite"></div>
           <button id="clear-filters" class="clear-filter-link" type="button" disabled>Rensa filter</button>
@@ -148,11 +154,6 @@
             <span aria-hidden="true">|</span>
             <button id="program-sort-seen" class="sort-option" type="button" aria-pressed="false">Nyast</button>
           </div>
-        </div>
-        <div class="search-row">
-          <label class="search-field">
-            <input id="event-search" type="search" placeholder="Sök titel eller plats" autocomplete="off" />
-          </label>
         </div>
         <div id="list" class="list"></div>
       </main>
