@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { RATE_LIMIT_MS } from './globals';
 
 export interface FetchOptions {
   url?: string;
@@ -13,13 +14,21 @@ export interface FetchOptions {
 }
 
 const DEFAULT_URL = 'https://kulturnatten.uppsala.se/api/events/search';
-const DEFAULT_RATE_LIMIT_MS = 1000; // 1 second between requests
 
 function sleep(ms: number) {
   return new Promise((res) => setTimeout(res, ms));
 }
 
-async function fetchOnce(url: string, method: 'GET' | 'POST' = 'GET', rateLimitMs = DEFAULT_RATE_LIMIT_MS, headers: Record<string, string> | undefined = undefined, data: any = undefined) {
+function normalizeLineTerminators(value: any): any {
+  if (typeof value === 'string') return value.replace(/[\u0085\u2028\u2029]/g, '\n');
+  if (Array.isArray(value)) return value.map(normalizeLineTerminators);
+  if (!value || typeof value !== 'object') return value;
+
+  for (const key of Object.keys(value)) value[key] = normalizeLineTerminators(value[key]);
+  return value;
+}
+
+async function fetchOnce(url: string, method: 'GET' | 'POST' = 'GET', rateLimitMs = RATE_LIMIT_MS, headers: Record<string, string> | undefined = undefined, data: any = undefined) {
   await sleep(rateLimitMs);
   const opts: any = { timeout: 30000 };
   if (headers) opts.headers = headers;
@@ -35,7 +44,7 @@ async function fetchOnce(url: string, method: 'GET' | 'POST' = 'GET', rateLimitM
   return r.data;
 }
 
-async function fetchAll(url: string, rateLimitMs = DEFAULT_RATE_LIMIT_MS, headers?: Record<string, string>, data: any = undefined, preferPost = false) {
+async function fetchAll(url: string, rateLimitMs = RATE_LIMIT_MS, headers?: Record<string, string>, data: any = undefined, preferPost = false) {
   if (preferPost) {
     try {
       return await fetchOnce(url, 'POST', rateLimitMs, headers, data);
@@ -63,7 +72,7 @@ async function fetchAll(url: string, rateLimitMs = DEFAULT_RATE_LIMIT_MS, header
 
 export async function fetchEvents(opts: FetchOptions = {}) {
   const url = opts.url ?? DEFAULT_URL;
-  const rateLimitMs = opts.rateLimitMs ?? DEFAULT_RATE_LIMIT_MS;
+  const rateLimitMs = opts.rateLimitMs ?? RATE_LIMIT_MS;
   const payload = opts.payload ?? {};
   const method = opts.method;
   const paginate = opts.paginate ?? true;
@@ -152,10 +161,10 @@ export async function fetchEvents(opts: FetchOptions = {}) {
       }
     }
 
-    return collected;
+    return normalizeLineTerminators(collected);
   }
 
-  const data = await fetchAll(url, rateLimitMs, headers, payload, preferPost);
+  const data = normalizeLineTerminators(await fetchAll(url, rateLimitMs, headers, payload, preferPost));
   const baseUrl = 'https://kulturnatten.uppsala.se/program/event/?externalId=';
   // attach url when returning arrays or known shapes
   if (Array.isArray(data)) {

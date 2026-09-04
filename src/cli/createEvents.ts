@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import { fetchEvents } from '../fetchEvents';
+import { MINIMUM_FETCHED_EVENTS } from '../globals';
 import fs from 'fs';
 import path from 'path';
 
@@ -70,6 +71,10 @@ async function main() {
       pageKey: args.pageKey,
       onPage: (page, items, total) => console.log(`Fetched page ${page}/${total ?? '?'}: ${items} items`),
     });
+    const eventCount = Array.isArray(data) ? data.length : 0;
+    if (eventCount < MINIMUM_FETCHED_EVENTS) {
+      throw new Error(`Expected at least ${MINIMUM_FETCHED_EVENTS} events, received ${eventCount}`);
+    }
     const dir = path.dirname(outPath);
     fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(outPath, JSON.stringify(data, null, 2), { encoding: 'utf-8' });

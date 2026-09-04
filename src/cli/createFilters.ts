@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import { fetchFilters } from '../fetchFilters';
+import { MINIMUM_FETCHED_CATEGORIES } from '../globals';
 import fs from 'fs';
 import path from 'path';
 
@@ -57,6 +58,10 @@ async function main() {
       languages: resp && (resp.languages || resp.language) ? resp.languages || resp.language : [],
       accessibilities: resp && (resp.accessibilities || resp.accessibility) ? resp.accessibilities || resp.accessibility : [],
     };
+    const categoryCount = Array.isArray(filters.categories) ? filters.categories.length : 0;
+    if (categoryCount < MINIMUM_FETCHED_CATEGORIES) {
+      throw new Error(`Expected at least ${MINIMUM_FETCHED_CATEGORIES} categories, received ${categoryCount}`);
+    }
     const dir = path.dirname(outPath);
     fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(outPath, JSON.stringify(filters, null, 2), { encoding: 'utf-8' });

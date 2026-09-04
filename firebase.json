@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "redirects": [
+      {
+        "source": "**",
+        "destination": "https://your-main-site.com",
+        "type": 302
+      }
+    ]
+  }
+}

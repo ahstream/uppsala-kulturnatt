@@ -1,6 +1,6 @@
 {
   "name": "uppsala-kulturnatt",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "CLI to fetch events from Kulturnatten API",
   "main": "dist/cli/fetchEvents.js",
   "scripts": {
@@ -13,6 +13,7 @@
     "finalizeEvents": "tsx src/cli/finalizeEvents.ts",
     "packEvents": "tsx src/cli/packEvents.ts",
     "farmEvents": "tsx src/cli/farmEvents.ts",
+    "farmLooper": "tsx src/cli/farmLooper.ts",
     "start": "node scripts/startServer.js"
   },
   "dependencies": {

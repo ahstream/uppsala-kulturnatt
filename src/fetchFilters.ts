@@ -75,5 +75,6 @@ export async function fetchFilters(opts: FetchFiltersOptions = {}) {
 
   const preferPost = !!payload;
   const data = await fetchAll(url, rateLimitMs, headers, payload, preferPost);
+
   return data;
 }

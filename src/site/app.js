@@ -1,5 +1,5 @@
 const DATA_PATH = '/data/packedEvents.json';
-const debugEnabled = new URLSearchParams(window.location.search).get('debug') === 'true';
+let debugEnabled = new URL(window.location.href).searchParams.get('debug') === 'true';
 
 const $header = document.querySelector('header');
 const $status = document.getElementById('status');
@@ -10,6 +10,10 @@ const $programSortSeen = document.getElementById('program-sort-seen');
 const $finishedVisibilityToggle = document.getElementById('finished-visibility-toggle');
 const $themeToggle = document.getElementById('theme-toggle');
 const $loginButton = document.getElementById('login-button');
+const $userMenu = document.getElementById('user-menu');
+const $logoutButton = document.getElementById('logout-button');
+const $syncAlert = document.getElementById('sync-alert');
+const $syncLoginLink = document.getElementById('sync-login-link');
 const $authDialog = document.getElementById('auth-dialog');
 const $authForm = document.getElementById('auth-form');
 const $authEmail = document.getElementById('auth-email');
@@ -45,7 +49,13 @@ const tabs = {
   finished: document.getElementById('tab-finished'),
   unfinished: document.getElementById('tab-unfinished'),
 };
-tabs.subevent.hidden = !debugEnabled;
+
+function updateDebugMode() {
+  debugEnabled = new URL(window.location.href).searchParams.get('debug') === 'true';
+  tabs.subevent.hidden = !debugEnabled;
+  if (!debugEnabled && activeTab === 'subevent') setActive('program');
+}
+
 const multiFilters = [
   { menu: document.getElementById('category-menu'), options: document.getElementById('category-options'), summary: document.getElementById('category-summary'), eventProperty: 'categoryNames', allLabel: 'Alla kategorier', selectedLabel: 'categories' },
   { menu: document.getElementById('language-menu'), options: document.getElementById('language-options'), summary: document.getElementById('language-summary'), eventProperty: 'languageNames', allLabel: 'Alla språk', selectedLabel: 'languages' },
@@ -61,11 +71,14 @@ let firebaseAuth = null;
 let firebaseUser = null;
 let settingsDocument = null;
 let cloudSyncTimer = null;
+updateDebugMode();
 let filtersOpenedAt = 0;
 let lastScrollY = window.scrollY;
 let stickyDownScrollDistance = 0;
 const RECENT_EVENT_WINDOW_MS = 15 * 60 * 1000;
 const SOON_EVENT_WINDOW_MS = 45 * 60 * 1000;
+
+window.addEventListener('pageshow', updateDebugMode);
 
 function setTheme(theme, persist = true) {
   document.body.dataset.theme = theme;
@@ -251,6 +264,15 @@ function formatLocalDateTime(value) {
   return `${year}-${month}-${day} ${hour}:${minute}:${second}`;
 }
 
+function formatUpdatedStatus(event) {
+  const updated = formatLocalDateTime(event.updated);
+  if (!updated) return null;
+
+  const rawUpdateStatus = typeof event.updateStatus === 'string' ? event.updateStatus.trim() : '';
+  const updateStatus = rawUpdateStatus === 'new' || rawUpdateStatus === 'created' ? 'Skapad' : rawUpdateStatus === 'updated' ? 'Ändrad' : rawUpdateStatus;
+  return `Uppdaterad: ${updated}${updateStatus ? ` (${updateStatus})` : ''}`;
+}
+
 function idFor(e) {
   return e.id || e.externalId || e.value || e.eventId || JSON.stringify(e).slice(0, 8);
 }
@@ -322,10 +344,37 @@ function showAuthMessage(message = '') {
   $authMessage.textContent = message;
 }
 
+function openAuthenticationDialog() {
+  showAuthMessage();
+  $authForm.reset();
+  $authDialog.showModal();
+  $authEmail.focus();
+}
+
 function updateAuthenticationUi(user) {
   firebaseUser = user;
-  $loginButton.textContent = user ? 'Logga ut' : 'Logga in';
-  $loginButton.title = user ? `Logga ut (${user.displayName || user.email || 'användare'})` : 'Logga in';
+  $syncAlert.hidden = Boolean(user);
+  $userMenu.hidden = true;
+  $loginButton.setAttribute('aria-expanded', 'false');
+  $loginButton.replaceChildren();
+  if (!user) {
+    $loginButton.setAttribute('aria-label', 'Logga in');
+    $loginButton.title = 'Logga in';
+    $loginButton.append(Object.assign(document.createElement('i'), { className: 'fa-regular fa-user', ariaHidden: 'true' }));
+    return;
+  }
+
+  $loginButton.setAttribute('aria-label', `Konto: ${user.displayName || user.email || 'användare'}`);
+  $loginButton.title = `Inloggad som ${user.displayName || user.email || 'användare'}`;
+  if (user.photoURL) {
+    const image = document.createElement('img');
+    image.className = 'user-avatar';
+    image.src = user.photoURL;
+    image.alt = '';
+    $loginButton.append(image);
+  } else {
+    $loginButton.append(Object.assign(document.createElement('i'), { className: 'fa-solid fa-user-check', ariaHidden: 'true' }));
+  }
 }
 
 function initFirebaseAuthentication() {
@@ -794,7 +843,7 @@ function createEventDetails(ev, eventTitle) {
   type.textContent = `Typ: ${ev.type === 'subEvent' ? 'Del av evenemang' : 'Evenemang'}`;
   detailsList.appendChild(type);
 
-  const updated = formatLocalDateTime(ev.updated);
+  const updatedStatus = formatUpdatedStatus(ev);
   if (ev.startTime) {
     const startsAt = document.createElement('li');
     startsAt.textContent = `Startar: ${formatLocalDateTime(ev.startTime) ?? ev.startTime}`;
@@ -805,9 +854,9 @@ function createEventDetails(ev, eventTitle) {
     detailsList.appendChild(endsAt);
   }
 
-  if (updated) {
+  if (updatedStatus) {
     const updatedAt = document.createElement('li');
-    updatedAt.textContent = `Uppdaterad ${updated}`;
+    updatedAt.textContent = updatedStatus;
     detailsList.appendChild(updatedAt);
   }
 
@@ -1016,11 +1065,11 @@ function renderList(events) {
     card.appendChild(titleLine);
     if (parentLine) card.appendChild(parentLine);
     if (locationLine.textContent) card.appendChild(locationLine);
-    const updated = formatLocalDateTime(ev.updated);
-    if (programSortMode === 'updated' && updated) {
+    const updatedStatus = formatUpdatedStatus(ev);
+    if (programSortMode === 'updated' && updatedStatus) {
       const updatedLine = document.createElement('div');
       updatedLine.className = 'line secondary updated-line';
-      updatedLine.textContent = `Uppdaterad ${updated}`;
+      updatedLine.textContent = updatedStatus;
       card.appendChild(updatedLine);
     }
     card.appendChild(tags);
@@ -1078,19 +1127,27 @@ $themeToggle.addEventListener('click', () => {
 $loginButton.addEventListener('click', async () => {
   if (!firebaseAuth) return;
   if (firebaseUser) {
-    try {
-      await firebaseAuth.signOut();
-    } catch (error) {
-      console.error('Firebase sign-out failed:', error);
-      $status.textContent = `Utloggningen misslyckades: ${error?.message || error}`;
-    }
+    const willOpen = $userMenu.hidden;
+    $userMenu.hidden = !willOpen;
+    $loginButton.setAttribute('aria-expanded', String(willOpen));
     return;
   }
 
-  showAuthMessage();
-  $authForm.reset();
-  $authDialog.showModal();
-  $authEmail.focus();
+  openAuthenticationDialog();
+});
+$syncLoginLink.addEventListener('click', (event) => {
+  event.preventDefault();
+  if (!firebaseAuth || firebaseUser) return;
+  openAuthenticationDialog();
+});
+$logoutButton.addEventListener('click', async () => {
+  if (!firebaseAuth) return;
+  try {
+    await firebaseAuth.signOut();
+  } catch (error) {
+    console.error('Firebase sign-out failed:', error);
+    $status.textContent = `Utloggningen misslyckades: ${error?.message || error}`;
+  }
 });
 $authClose.addEventListener('click', () => $authDialog.close());
 $authForm.addEventListener('submit', async (event) => {
@@ -1215,11 +1272,14 @@ $clearFilters.addEventListener('click', () => {
   updateClearFiltersButton();
   updateFilterCount();
   setActive(activeTab);
-  $search.focus();
 });
 document.addEventListener('click', (event) => {
   for (const filter of multiFilters) {
     if (filter.menu.open && !event.composedPath().includes(filter.menu)) filter.menu.open = false;
+  }
+  if (!$userMenu.hidden && !event.composedPath().includes($loginButton) && !event.composedPath().includes($userMenu)) {
+    $userMenu.hidden = true;
+    $loginButton.setAttribute('aria-expanded', 'false');
   }
 });
 for (const filter of multiFilters) {

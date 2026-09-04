@@ -14,7 +14,12 @@
         <div class="top-actions">
           <button id="finished-visibility-toggle" class="finished-visibility-toggle" type="button" aria-label="Dölj avslutade evenemang" aria-pressed="false" title="Dölj avslutade evenemang"><i class="fa-solid fa-eye" aria-hidden="true"></i></button>
           <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Byt till ljust läge" title="Byt till ljust läge"><i class="fa-solid fa-sun" aria-hidden="true"></i></button>
-          <button id="login-button" class="login-button" type="button">Logga in</button>
+          <div class="user-menu-container">
+            <button id="login-button" class="user-button" type="button" aria-label="Logga in" aria-expanded="false" aria-haspopup="menu" title="Logga in"><i class="fa-regular fa-user" aria-hidden="true"></i></button>
+            <div id="user-menu" class="user-menu" role="menu" hidden>
+              <button id="logout-button" type="button" role="menuitem">Logga ut</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -35,6 +40,7 @@
         <button id="google-login-button" class="google-login-button" type="button"><i class="fa-brands fa-google" aria-hidden="true"></i> Fortsätt med Google</button>
       </form>
     </dialog>
+    <aside id="sync-alert" class="sync-alert" role="status" hidden><a id="sync-login-link" href="#login">Logga in</a> för att spara favoriter.</aside>
     <header>
       <select id="tab-select" class="tabs-select" aria-label="Välj vy">
         <option id="tab-program" value="program" title="xAlla evenemang (0 st)" selected>&#128197; Alla evenemang (0)</option>
@@ -54,13 +60,13 @@
         <label class="search-field">
           <input id="event-search" type="search" placeholder="Sök titel eller plats" autocomplete="off" />
         </label>
-        <button id="clear-filters" class="clear-search clear-icon" type="button" aria-label="Rensa filter" title="Rensa filter" disabled><span aria-hidden="true">&#10005;</span></button>
         <button id="show-filters" class="clear-search filter-toggle" type="button" aria-label="Visa filter" title="Visa filter" aria-expanded="false" aria-pressed="false">
           <span id="show-filters-label"><i class="fa-solid fa-filter" aria-hidden="true"></i></span> <span id="filter-count" hidden></span>
         </button>
       </div>
       <div class="filter-header">
         <div id="selected-filters" class="selected-filters" aria-live="polite"></div>
+        <button id="clear-filters" class="clear-filter-link" type="button" disabled>Rensa filter</button>
       </div>
       <div id="filter-search-section" class="filter-search-section" hidden>
         <div class="filter-search-section-inner">

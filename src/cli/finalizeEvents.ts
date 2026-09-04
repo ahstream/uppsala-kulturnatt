@@ -115,6 +115,7 @@ async function main() {
         event.created = event.checked;
         event.updated = event.checked;
         event.status = 'new';
+        event.updateStatus = 'new';
         historic.events.push(event);
         if (id) historic.byId.set(id, { event, index: historic.events.length - 1 });
         continue;
@@ -125,10 +126,19 @@ async function main() {
       event.updated = historicEvent.updated;
       event.status = 'old';
 
+      if (event.created === event.updated) {
+        event.updateStatus = 'created';
+      } else {
+        event.updateStatus = 'updated';
+      }
+
+      // TODO: merge .status and .updateStatus
+
       const changedProperties = historicChangedProperties(event, historicEvent);
       if (changedProperties.length > 0) {
         event.status = 'updated';
         event.updated = event.checked;
+        event.updateStatus = 'updated';
         console.log(
           'Updated event detected:',
           JSON.stringify(
