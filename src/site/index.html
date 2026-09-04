@@ -56,35 +56,36 @@
     </dialog>
     <aside id="sync-alert" class="sync-alert" role="status" hidden><a id="sync-login-link" href="#login">Logga in</a> för att spara favoriter</aside>
     <header>
-      <select id="tab-select" class="tabs-select" aria-label="Välj vy">
-        <option id="tab-program" value="program" title="xAlla evenemang (0 st)" selected>&#128197; Alla evenemang (0)</option>
-        <option id="tab-subevent" value="subevent" title="Del av evenemang (0 st)">&#128194; Inslag i evenemang (0)</option>
-        <option id="tab-cancelled" value="cancelled" title="Inställda evenemang (0 st)">&#128683; Inställda evenemang (0)</option>
-        <option id="tab-favorites" value="favorites" title="Favoritevenemang (0 st)">&#11088; Favoriter (0)</option>
-        <option id="tab-live" value="live" title="Pågående evenemang (0 st)">&#128336; Pågående (0)</option>
-        <option id="tab-recent" value="recent" title="Just startade evenemang (0 st)">&#9194; Just startade (0)</option>
-        <option id="tab-soon" value="soon" title="Strax startade evenemang (0 st)">&#9193; Startar strax (0)</option>
-        <option id="tab-later" value="later" title="Senare startade evenemang (0 st)">&#8987; Startar senare (0)</option>
-        <option id="tab-finished" value="finished" title="Avslutade evenemang (0 st)">&#9989; Avslutade (0)</option>
-        <option id="tab-unfinished" value="unfinished" title="Ej avslutade evenemang (0 st)">&#9711; Ej avslutade (0)</option>
-      </select>
-    </header>
-    <div class="page-content">
-      <div class="search-row">
-        <label class="search-field">
-          <input id="event-search" type="search" placeholder="Sök titel eller plats" autocomplete="off" />
-        </label>
+      <div class="view-controls">
+        <select id="tab-select" class="tabs-select" aria-label="Välj vy">
+          <option id="tab-program" value="program" title="xAlla evenemang (0 st)" selected>&#128197; Alla evenemang (0)</option>
+          <option id="tab-subevent" value="subevent" title="Del av evenemang (0 st)">&#128194; Inslag i evenemang (0)</option>
+          <option id="tab-cancelled" value="cancelled" title="Inställda evenemang (0 st)">&#128683; Inställda evenemang (0)</option>
+          <option id="tab-favorites" value="favorites" title="Favoritevenemang (0 st)">&#11088; Favoriter (0)</option>
+          <option id="tab-live" value="live" title="Pågående evenemang (0 st)">&#128336; Pågående (0)</option>
+          <option id="tab-recent" value="recent" title="Just startade evenemang (0 st)">&#9194; Just startade (0)</option>
+          <option id="tab-soon" value="soon" title="Strax startade evenemang (0 st)">&#9193; Startar strax (0)</option>
+          <option id="tab-later" value="later" title="Senare startade evenemang (0 st)">&#8987; Startar senare (0)</option>
+          <option id="tab-finished" value="finished" title="Avslutade evenemang (0 st)">&#9989; Avslutade (0)</option>
+          <option id="tab-unfinished" value="unfinished" title="Ej avslutade evenemang (0 st)">&#9711; Ej avslutade (0)</option>
+        </select>
         <button id="show-filters" class="clear-search filter-toggle" type="button" aria-label="Visa filter" title="Visa filter" aria-expanded="false" aria-pressed="false">
           <span id="show-filters-label"><i class="fa-solid fa-filter" aria-hidden="true"></i></span> <span id="filter-count" hidden></span>
         </button>
+        <div class="filter-header">
+          <div id="selected-filters" class="selected-filters" aria-live="polite"></div>
+          <button id="clear-filters" class="clear-filter-link" type="button" disabled>Rensa filter</button>
+        </div>
       </div>
-      <div class="filter-header">
-        <div id="selected-filters" class="selected-filters" aria-live="polite"></div>
-        <button id="clear-filters" class="clear-filter-link" type="button" disabled>Rensa filter</button>
-      </div>
-      <div id="filter-search-section" class="filter-search-section" hidden>
+    </header>
+    <div class="page-content">
+      <dialog id="filter-search-section" class="filter-search-section" aria-labelledby="filter-dialog-title">
         <div class="filter-search-section-inner">
-          <section id="filter-panel" class="filter-panel" aria-label="Filters" hidden>
+          <div class="filter-dialog-header">
+            <h2 id="filter-dialog-title">Filter</h2>
+            <button id="close-filters" class="filter-dialog-close" type="button" aria-label="Stäng filter" title="Stäng"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+          </div>
+          <section id="filter-panel" class="filter-panel" aria-label="Filter">
             <div class="primary-filters">
               <label><input id="children-filter" type="checkbox" /> Barn</label>
               <label><input id="adults-filter" type="checkbox" /> Vuxna</label>
@@ -135,7 +136,7 @@
             </div>
           </section>
         </div>
-      </div>
+      </dialog>
 
       <main>
         <div id="status">Loading events…</div>
@@ -147,6 +148,11 @@
             <span aria-hidden="true">|</span>
             <button id="program-sort-seen" class="sort-option" type="button" aria-pressed="false">Nyast</button>
           </div>
+        </div>
+        <div class="search-row">
+          <label class="search-field">
+            <input id="event-search" type="search" placeholder="Sök titel eller plats" autocomplete="off" />
+          </label>
         </div>
         <div id="list" class="list"></div>
       </main>

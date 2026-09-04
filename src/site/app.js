@@ -33,7 +33,7 @@ const $toFilter = document.getElementById('to-filter');
 const $showFilters = document.getElementById('show-filters');
 const $showFiltersLabel = document.getElementById('show-filters-label');
 const $filterSearchSection = document.getElementById('filter-search-section');
-const $filterPanel = document.getElementById('filter-panel');
+const $closeFilters = document.getElementById('close-filters');
 const $filterCount = document.getElementById('filter-count');
 const $selectedFilters = document.getElementById('selected-filters');
 const $tabSelect = document.getElementById('tab-select');
@@ -72,7 +72,6 @@ let firebaseUser = null;
 let settingsDocument = null;
 let cloudSyncTimer = null;
 updateDebugMode();
-let filtersOpenedAt = 0;
 let lastScrollY = window.scrollY;
 let stickyDownScrollDistance = 0;
 const RECENT_EVENT_WINDOW_MS = 15 * 60 * 1000;
@@ -576,7 +575,7 @@ function updateFilterCount() {
 
 function updateShowFiltersButton(countLabel = $filterCount.textContent) {
   const label = '<i class="fa-solid fa-filter" aria-hidden="true"></i>';
-  const actionLabel = $filterPanel.hidden ? 'Visa filter' : 'Dölj filter';
+  const actionLabel = $filterSearchSection.open ? 'Dölj filter' : 'Visa filter';
   $showFiltersLabel.innerHTML = label;
   $showFilters.setAttribute('aria-label', `${actionLabel}${countLabel}`);
   $showFilters.title = `${actionLabel}${countLabel}`;
@@ -646,11 +645,26 @@ function accessibilityIconClass(accessibility) {
 }
 
 function closeFilters() {
-  $filterSearchSection.hidden = true;
-  $filterPanel.hidden = true;
+  if ($filterSearchSection.open) $filterSearchSection.close();
   $showFilters.setAttribute('aria-expanded', 'false');
   $showFilters.setAttribute('aria-pressed', 'false');
   updateShowFiltersButton();
+}
+
+function positionFiltersDialog() {
+  if (!window.matchMedia('(min-width: 641px)').matches) {
+    $filterSearchSection.style.top = '';
+    $filterSearchSection.style.right = '';
+    $filterSearchSection.style.left = '';
+    return;
+  }
+
+  const buttonBounds = $showFilters.getBoundingClientRect();
+  const horizontalMargin = 12;
+
+  $filterSearchSection.style.top = `${buttonBounds.bottom + 8}px`;
+  $filterSearchSection.style.right = `${Math.max(horizontalMargin, window.innerWidth - buttonBounds.right)}px`;
+  $filterSearchSection.style.left = 'auto';
 }
 
 function createEventDetails(ev, eventTitle) {
@@ -1193,13 +1207,27 @@ $programSortSeen.addEventListener('click', () => {
   setActive('program');
 });
 $showFilters.addEventListener('click', () => {
-  const openingFilters = $filterSearchSection.hidden;
-  $filterSearchSection.hidden = !openingFilters;
-  $filterPanel.hidden = !openingFilters;
-  if (openingFilters) filtersOpenedAt = Date.now();
-  $showFilters.setAttribute('aria-expanded', String(!$filterSearchSection.hidden));
-  $showFilters.setAttribute('aria-pressed', String(!$filterSearchSection.hidden));
+  if ($filterSearchSection.open) {
+    closeFilters();
+    return;
+  }
+  $filterSearchSection.showModal();
+  positionFiltersDialog();
+  $showFilters.setAttribute('aria-expanded', 'true');
+  $showFilters.setAttribute('aria-pressed', 'true');
   updateShowFiltersButton();
+});
+$closeFilters.addEventListener('click', closeFilters);
+$filterSearchSection.addEventListener('close', () => {
+  $showFilters.setAttribute('aria-expanded', 'false');
+  $showFilters.setAttribute('aria-pressed', 'false');
+  updateShowFiltersButton();
+});
+$filterSearchSection.addEventListener('click', (event) => {
+  if (event.target === $filterSearchSection) closeFilters();
+});
+window.addEventListener('resize', () => {
+  if ($filterSearchSection.open) positionFiltersDialog();
 });
 $search.addEventListener('input', () => {
   updateClearFiltersButton();
@@ -1240,7 +1268,6 @@ for (const timeFilter of [$fromFilter, $toFilter]) {
 window.addEventListener(
   'scroll',
   () => {
-    if (!$filterPanel.hidden && Date.now() - filtersOpenedAt > 200) closeFilters();
     const currentScrollY = window.scrollY;
     const scrollDelta = currentScrollY - lastScrollY;
     if (Math.abs(scrollDelta) < 8) return;
